@@ -1,0 +1,14 @@
+{
+  "seeds": {
+    "version": "dev",
+    "components": "dev",
+    "snapshots": {
+      "recommended": {
+        "path": "../recommended.netsy"
+      },
+      "minimal": {
+        "path": "../minimal.netsy"
+      }
+    }
+  }
+}

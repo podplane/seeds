@@ -1,0 +1,107 @@
+# Podplane <https://podplane.dev>
+# Copyright The Podplane Authors
+# SPDX-License-Identifier: Apache-2.0
+#
+# Release workflow: publishes signed metadata for committed seed snapshots.
+#
+# For tag vX.Y.Z-N, this:
+#   1. Validates recommended.netsy and minimal.netsy.
+#   2. Generates seeds_X.Y.Z-N.json pointing at tagged raw GitHub URLs.
+#   3. Writes seeds_X.Y.Z-N_checksums.txt (sha512) covering the manifest and
+#      committed snapshot files.
+#   4. Signs the checksums file keyless with cosign, producing a Sigstore bundle.
+#   5. Creates a GitHub Release and uploads generated metadata only.
+
+name: release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set version vars
+        id: meta
+        run: |
+          set -euo pipefail
+          if [[ ! "${GITHUB_REF_NAME}" =~ ^v[0-9]+\.[0-9]+\.[0-9]+-[0-9]+$ ]]; then
+            echo "Tag must match v<components-version>-<seed-revision>, e.g. v1.2.3-1" >&2
+            exit 1
+          fi
+          VERSION="${GITHUB_REF_NAME#v}"
+          COMPONENTS_VERSION="${VERSION%-*}"
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "components_version=${COMPONENTS_VERSION}" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: stable
+
+      - name: Install shellcheck
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y shellcheck
+
+      - name: Install cosign
+        uses: sigstore/cosign-installer@v3
+
+      - name: Install Netsy file reader
+        run: go install github.com/netsy-dev/netsy/cmd/read-netsy-file@latest
+
+      - name: Check and validate
+        run: make ci
+
+      - name: Generate seeds manifest
+        env:
+          VERSION: ${{ steps.meta.outputs.version }}
+          COMPONENTS_VERSION: ${{ steps.meta.outputs.components_version }}
+          REPO: ${{ github.repository }}
+        run: make manifests VERSION="${VERSION}" REPO="${REPO}"
+
+      - name: Generate checksums file
+        env:
+          VERSION: ${{ steps.meta.outputs.version }}
+          COMPONENTS_VERSION: ${{ steps.meta.outputs.components_version }}
+        run: |
+          set -euo pipefail
+          checksums="dist/release/seeds_${VERSION}_checksums.txt"
+          {
+            echo "# seeds: v${VERSION}"
+            echo "# components: v${COMPONENTS_VERSION}"
+            shasum -a 512 "dist/release/seeds_${VERSION}.json" recommended.netsy minimal.netsy \
+              | sed 's#dist/release/##' \
+              | sort -k2
+          } > "$checksums"
+          cat "$checksums"
+
+      - name: Sign checksums file with cosign
+        working-directory: dist/release
+        env:
+          VERSION: ${{ steps.meta.outputs.version }}
+        run: |
+          cosign sign-blob \
+            --yes \
+            --bundle="seeds_${VERSION}_checksums.txt.bundle" \
+            "seeds_${VERSION}_checksums.txt"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/release/seeds_*.json
+            dist/release/seeds_*_checksums.txt
+            dist/release/seeds_*_checksums.txt.bundle
+          generate_release_notes: true
+          prerelease: true
+          fail_on_unmatched_files: true
