@@ -103,5 +103,5 @@ jobs:
             dist/release/seeds_*_checksums.txt
             dist/release/seeds_*_checksums.txt.bundle
           generate_release_notes: true
-          prerelease: true
+          prerelease: false
           fail_on_unmatched_files: true
