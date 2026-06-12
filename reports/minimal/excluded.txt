@@ -1,0 +1,9 @@
+/registry/configmaps/default/kube-root-ca.crt
+/registry/configmaps/kube-node-lease/kube-root-ca.crt
+/registry/configmaps/kube-public/kube-root-ca.crt
+/registry/configmaps/kube-system/kube-root-ca.crt
+/registry/configmaps/platform-cilium/kube-root-ca.crt
+/registry/configmaps/platform-cluster/kube-root-ca.crt
+/registry/configmaps/platform-components/kube-root-ca.crt
+/registry/configmaps/platform-coredns/kube-root-ca.crt
+/registry/configmaps/platform-fluxcd/kube-root-ca.crt
