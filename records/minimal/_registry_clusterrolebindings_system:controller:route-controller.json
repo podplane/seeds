@@ -1,0 +1,30 @@
+{
+  "key": "/registry/clusterrolebindings/system:controller:route-controller",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRoleBinding",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "system:controller:route-controller",
+      "uid": "b60ef73e-8e8b-4949-80fb-dfe228340639"
+    },
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "ClusterRole",
+      "name": "system:controller:route-controller"
+    },
+    "subjects": [
+      {
+        "kind": "ServiceAccount",
+        "name": "route-controller",
+        "namespace": "kube-system"
+      }
+    ]
+  }
+}

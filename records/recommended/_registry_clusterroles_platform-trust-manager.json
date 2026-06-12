@@ -1,0 +1,104 @@
+{
+  "key": "/registry/clusterroles/platform-trust-manager",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRole",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-trust-manager",
+        "meta.helm.sh/release-namespace": "platform-trust-manager"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/instance": "platform-trust-manager",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "platform-trust-manager",
+        "app.kubernetes.io/version": "v0.18.0",
+        "helm.sh/chart": "trust-manager-v0.18.0",
+        "helm.toolkit.fluxcd.io/name": "trust-manager",
+        "helm.toolkit.fluxcd.io/namespace": "platform-trust-manager"
+      },
+      "name": "platform-trust-manager",
+      "uid": "e7dda83b-9849-41bd-9b15-5f9a290dfaeb"
+    },
+    "rules": [
+      {
+        "apiGroups": [
+          "trust.cert-manager.io"
+        ],
+        "resources": [
+          "bundles"
+        ],
+        "verbs": [
+          "get",
+          "list",
+          "watch",
+          "patch"
+        ]
+      },
+      {
+        "apiGroups": [
+          "trust.cert-manager.io"
+        ],
+        "resources": [
+          "bundles/finalizers"
+        ],
+        "verbs": [
+          "update"
+        ]
+      },
+      {
+        "apiGroups": [
+          "trust.cert-manager.io"
+        ],
+        "resources": [
+          "bundles/status"
+        ],
+        "verbs": [
+          "patch"
+        ]
+      },
+      {
+        "apiGroups": [
+          ""
+        ],
+        "resources": [
+          "configmaps"
+        ],
+        "verbs": [
+          "get",
+          "list",
+          "create",
+          "patch",
+          "watch",
+          "delete"
+        ]
+      },
+      {
+        "apiGroups": [
+          ""
+        ],
+        "resources": [
+          "namespaces"
+        ],
+        "verbs": [
+          "get",
+          "list",
+          "watch"
+        ]
+      },
+      {
+        "apiGroups": [
+          ""
+        ],
+        "resources": [
+          "events"
+        ],
+        "verbs": [
+          "create",
+          "patch"
+        ]
+      }
+    ]
+  }
+}

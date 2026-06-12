@@ -1,0 +1,28 @@
+{
+  "key": "/registry/gateway.networking.k8s.io/gatewayclasses/platform-traefik",
+  "value": {
+    "apiVersion": "gateway.networking.k8s.io/v1",
+    "kind": "GatewayClass",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-traefik",
+        "meta.helm.sh/release-namespace": "platform-traefik"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/instance": "platform-traefik-platform-traefik",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "traefik",
+        "helm.sh/chart": "traefik-40.2.0",
+        "helm.toolkit.fluxcd.io/name": "traefik",
+        "helm.toolkit.fluxcd.io/namespace": "platform-traefik"
+      },
+      "name": "platform-traefik",
+      "uid": "b1f06b6c-eb83-48de-be5e-7a767d5dfe14"
+    },
+    "spec": {
+      "controllerName": "traefik.io/gateway-controller"
+    }
+  }
+}

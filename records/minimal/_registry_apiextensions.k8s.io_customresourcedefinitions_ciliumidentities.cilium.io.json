@@ -1,0 +1,98 @@
+{
+  "key": "/registry/apiextensions.k8s.io/customresourcedefinitions/ciliumidentities.cilium.io",
+  "value": {
+    "apiVersion": "apiextensions.k8s.io/v1beta1",
+    "kind": "CustomResourceDefinition",
+    "metadata": {
+      "annotations": {
+        "controller-gen.kubebuilder.io/version": "v0.19.0",
+        "meta.helm.sh/release-name": "platform-cilium-crds",
+        "meta.helm.sh/release-namespace": "platform-cluster"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "cilium-crds",
+        "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
+      },
+      "name": "ciliumidentities.cilium.io",
+      "uid": "49568fc6-924c-441c-b581-b5a5d2470196"
+    },
+    "spec": {
+      "additionalPrinterColumns": [
+        {
+          "JSONPath": ".metadata.labels.io\\.kubernetes\\.pod\\.namespace",
+          "description": "The namespace of the entity",
+          "name": "Namespace",
+          "type": "string"
+        },
+        {
+          "JSONPath": ".metadata.creationTimestamp",
+          "description": "The age of the identity",
+          "name": "Age",
+          "type": "date"
+        }
+      ],
+      "conversion": {
+        "strategy": "None"
+      },
+      "group": "cilium.io",
+      "names": {
+        "categories": [
+          "cilium"
+        ],
+        "kind": "CiliumIdentity",
+        "listKind": "CiliumIdentityList",
+        "plural": "ciliumidentities",
+        "shortNames": [
+          "ciliumid"
+        ],
+        "singular": "ciliumidentity"
+      },
+      "preserveUnknownFields": false,
+      "scope": "Cluster",
+      "subresources": {
+        "status": {}
+      },
+      "validation": {
+        "openAPIV3Schema": {
+          "description": "CiliumIdentity is a CRD that represents an identity managed by Cilium.\nIt is intended as a backing store for identity allocation, acting as the\nglobal coordination backend, and can be used in place of a KVStore (such as\netcd).\nThe name of the CRD is the numeric identity and the labels on the CRD object\nare the kubernetes sourced labels seen by cilium. This is currently the\nonly label source possible when running under kubernetes. Non-kubernetes\nlabels are filtered but all labels, from all sources, are places in the\nSecurityLabels field. These also include the source and are used to define\nthe identity.\nThe labels under metav1.ObjectMeta can be used when searching for\nCiliumIdentity instances that include particular labels. This can be done\nwith invocations such as:\n\n\tkubectl get ciliumid -l 'foo=bar'",
+          "properties": {
+            "apiVersion": {
+              "description": "APIVersion defines the versioned schema of this representation of an object.\nServers should convert recognized schemas to the latest internal value, and\nmay reject unrecognized values.\nMore info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+              "type": "string"
+            },
+            "kind": {
+              "description": "Kind is a string value representing the REST resource this object represents.\nServers may infer this from the endpoint the client submits requests to.\nCannot be updated.\nIn CamelCase.\nMore info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+              "type": "string"
+            },
+            "metadata": {
+              "type": "object"
+            },
+            "security-labels": {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "description": "SecurityLabels is the source-of-truth set of labels for this identity.",
+              "type": "object"
+            }
+          },
+          "required": [
+            "metadata",
+            "security-labels"
+          ],
+          "type": "object"
+        }
+      },
+      "version": "v2",
+      "versions": [
+        {
+          "name": "v2",
+          "served": true,
+          "storage": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "key": "/registry/ipaddresses/fdc6::ffff",
+  "value": {
+    "apiVersion": "networking.k8s.io/v1",
+    "kind": "IPAddress",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "ipaddress.kubernetes.io/ip-family": "IPv6",
+        "ipaddress.kubernetes.io/managed-by": "ipallocator.k8s.io"
+      },
+      "name": "fdc6::ffff",
+      "uid": "5054ae02-6b93-438f-ba33-94ae34277247"
+    },
+    "spec": {
+      "parentRef": {
+        "name": "platform-coredns",
+        "namespace": "platform-coredns",
+        "resource": "services"
+      }
+    }
+  }
+}

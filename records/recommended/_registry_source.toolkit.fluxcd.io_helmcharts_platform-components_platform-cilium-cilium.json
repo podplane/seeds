@@ -1,0 +1,31 @@
+{
+  "key": "/registry/source.toolkit.fluxcd.io/helmcharts/platform-components/platform-cilium-cilium",
+  "value": {
+    "apiVersion": "source.toolkit.fluxcd.io/v1",
+    "kind": "HelmChart",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "finalizers": [
+        "finalizers.fluxcd.io"
+      ],
+      "generation": 1,
+      "labels": {
+        "helm.toolkit.fluxcd.io/name": "cilium",
+        "helm.toolkit.fluxcd.io/namespace": "platform-cilium"
+      },
+      "name": "platform-cilium-cilium",
+      "namespace": "platform-components",
+      "uid": "33237186-06fa-46c0-a6da-1e2f8c71ea0e"
+    },
+    "spec": {
+      "chart": "./charts/cilium",
+      "interval": "10m0s",
+      "reconcileStrategy": "ChartVersion",
+      "sourceRef": {
+        "kind": "GitRepository",
+        "name": "podplane-components"
+      },
+      "version": "*"
+    }
+  }
+}

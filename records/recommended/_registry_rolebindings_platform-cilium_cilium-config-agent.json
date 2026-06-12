@@ -1,0 +1,35 @@
+{
+  "key": "/registry/rolebindings/platform-cilium/cilium-config-agent",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "RoleBinding",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-cilium",
+        "meta.helm.sh/release-namespace": "platform-cilium"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/part-of": "cilium",
+        "helm.toolkit.fluxcd.io/name": "cilium",
+        "helm.toolkit.fluxcd.io/namespace": "platform-cilium"
+      },
+      "name": "cilium-config-agent",
+      "namespace": "platform-cilium",
+      "uid": "9533dbc7-5db8-4532-a2f7-770edcb76908"
+    },
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "Role",
+      "name": "cilium-config-agent"
+    },
+    "subjects": [
+      {
+        "kind": "ServiceAccount",
+        "name": "cilium",
+        "namespace": "platform-cilium"
+      }
+    ]
+  }
+}

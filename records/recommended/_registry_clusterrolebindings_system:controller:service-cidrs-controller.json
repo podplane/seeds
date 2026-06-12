@@ -1,0 +1,30 @@
+{
+  "key": "/registry/clusterrolebindings/system:controller:service-cidrs-controller",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRoleBinding",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "system:controller:service-cidrs-controller",
+      "uid": "e0058462-6d7b-4cfe-8dc9-2c0ce88a9746"
+    },
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "ClusterRole",
+      "name": "system:controller:service-cidrs-controller"
+    },
+    "subjects": [
+      {
+        "kind": "ServiceAccount",
+        "name": "service-cidrs-controller",
+        "namespace": "kube-system"
+      }
+    ]
+  }
+}

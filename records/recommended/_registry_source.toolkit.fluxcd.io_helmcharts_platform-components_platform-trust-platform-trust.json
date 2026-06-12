@@ -1,0 +1,31 @@
+{
+  "key": "/registry/source.toolkit.fluxcd.io/helmcharts/platform-components/platform-trust-platform-trust",
+  "value": {
+    "apiVersion": "source.toolkit.fluxcd.io/v1",
+    "kind": "HelmChart",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "finalizers": [
+        "finalizers.fluxcd.io"
+      ],
+      "generation": 1,
+      "labels": {
+        "helm.toolkit.fluxcd.io/name": "platform-trust",
+        "helm.toolkit.fluxcd.io/namespace": "platform-trust"
+      },
+      "name": "platform-trust-platform-trust",
+      "namespace": "platform-components",
+      "uid": "95c426c9-0545-4bbb-ac52-c61ec5d54501"
+    },
+    "spec": {
+      "chart": "./charts/platform-trust",
+      "interval": "10m0s",
+      "reconcileStrategy": "ChartVersion",
+      "sourceRef": {
+        "kind": "GitRepository",
+        "name": "podplane-components"
+      },
+      "version": "*"
+    }
+  }
+}

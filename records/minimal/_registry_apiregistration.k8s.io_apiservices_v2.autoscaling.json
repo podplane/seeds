@@ -1,0 +1,21 @@
+{
+  "key": "/registry/apiregistration.k8s.io/apiservices/v2.autoscaling",
+  "value": {
+    "apiVersion": "apiregistration.k8s.io/v1",
+    "kind": "APIService",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kube-aggregator.kubernetes.io/automanaged": "onstart"
+      },
+      "name": "v2.autoscaling",
+      "uid": "4a1d8475-08b1-4b31-aa67-54fc12a61d54"
+    },
+    "spec": {
+      "group": "autoscaling",
+      "groupPriorityMinimum": 17500,
+      "version": "v2",
+      "versionPriority": 30
+    }
+  }
+}

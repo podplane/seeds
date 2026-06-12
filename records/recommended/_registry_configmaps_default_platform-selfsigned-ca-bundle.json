@@ -1,0 +1,32 @@
+{
+  "key": "/registry/configmaps/default/platform-selfsigned-ca-bundle",
+  "value": {
+    "apiVersion": "v1",
+    "data": {
+      "ca.crt": "-----BEGIN CERTIFICATE-----\nMIIC/zCCAeegAwIBAgIRAMatmtACb1qDmRtQ+HiqiYMwDQYJKoZIhvcNAQELBQAw\nGTEXMBUGA1UEAxMOcG9kcGxhbmUubG9jYWwwHhcNMjYwNjEyMDcxNDM3WhcNMjYw\nOTEwMDcxNDM3WjAZMRcwFQYDVQQDEw5wb2RwbGFuZS5sb2NhbDCCASIwDQYJKoZI\nhvcNAQEBBQADggEPADCCAQoCggEBAK2XZMka1dEK9ANft46p9q7kd0UYeb/d9iWd\nE7R9EGIYqub1kFwOr9hEVbllOMCJcbco40Ef0BDLhJTGMoZzlAzb9smKvt3zD9uK\nlMjJEOcf7KqoXKkruWUdUOksG1htoi0Ig+3PSZ2wV8SCZI9IhG76C5yVDq+kYH2x\nO9b+YaKVjomKjPkkB1DebSGIklH8Fj1o1JbeRjfGe7BSnjBR/wgZNhI/Iw4wKJYI\nRHJhOVu/qE0xt8cwWrDFF4psv9kPW6TXP47Y8lEZ9OM3/Lmqr1Kmnxx3PgsQJMV+\nUbQlyTkElFSdefMe9fGdG7/+6kClTKeWaehuyfvCwvAa3S/FQHsCAwEAAaNCMEAw\nDgYDVR0PAQH/BAQDAgKkMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFOWrS5Ik\nl4sUH/3HTYYz361YPOFoMA0GCSqGSIb3DQEBCwUAA4IBAQA6HMo6AAkonyTj9vgK\nTuoVrbxKf9psSiyKXn62bS3kBYjt6k6k8G1gAx33BQwFTOc6tcAe5u2Rjgyfqqgy\ndZnFWCpXm+/bWSpWEQFVGVPZtmxdspga7dsjxMiV96y/7O3jM04qlR9zWSdssGdr\n8fcR0B1Dj4oS4/VLkChCyD7Odys7gSRzKYuTJ78c56MB8RN7W8e80aWeGA38P0sG\nt/ncy2zKs7x4KYD3spzIK2MjUx/2rpAknJopc/vETWgBeJtIAX7d8vFBEJ+rtqGg\nvk0+uRwLAttqiM4XC2gNayrgdggzbXkA+BoO9HdhWpiuMikNcuKe41ZbapUM3Ypo\nDGpk\n-----END CERTIFICATE-----"
+    },
+    "kind": "ConfigMap",
+    "metadata": {
+      "annotations": {
+        "trust.cert-manager.io/hash": "9ab2872b06f8b40259b91668f0edd79a82da73177afa3aac0e297f906cf56131"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "trust.cert-manager.io/bundle": "platform-selfsigned-ca-bundle"
+      },
+      "name": "platform-selfsigned-ca-bundle",
+      "namespace": "default",
+      "ownerReferences": [
+        {
+          "apiVersion": "trust.cert-manager.io/v1alpha1",
+          "blockOwnerDeletion": true,
+          "controller": true,
+          "kind": "Bundle",
+          "name": "platform-selfsigned-ca-bundle",
+          "uid": "47c5b0f4-b287-4964-a558-0b6dc27ded8c"
+        }
+      ],
+      "uid": "7952f1a5-3099-407d-bf96-bfbc24dea5ff"
+    }
+  }
+}

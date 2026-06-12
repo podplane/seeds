@@ -1,0 +1,31 @@
+{
+  "key": "/registry/source.toolkit.fluxcd.io/helmcharts/platform-components/platform-agent-sandbox-agent-sandbox",
+  "value": {
+    "apiVersion": "source.toolkit.fluxcd.io/v1",
+    "kind": "HelmChart",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "finalizers": [
+        "finalizers.fluxcd.io"
+      ],
+      "generation": 1,
+      "labels": {
+        "helm.toolkit.fluxcd.io/name": "agent-sandbox",
+        "helm.toolkit.fluxcd.io/namespace": "platform-agent-sandbox"
+      },
+      "name": "platform-agent-sandbox-agent-sandbox",
+      "namespace": "platform-components",
+      "uid": "94849dee-e6fd-4811-b708-037ce18a7e2f"
+    },
+    "spec": {
+      "chart": "./charts/agent-sandbox",
+      "interval": "10m0s",
+      "reconcileStrategy": "ChartVersion",
+      "sourceRef": {
+        "kind": "GitRepository",
+        "name": "podplane-components"
+      },
+      "version": "*"
+    }
+  }
+}

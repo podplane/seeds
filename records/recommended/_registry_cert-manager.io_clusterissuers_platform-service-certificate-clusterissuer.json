@@ -1,0 +1,27 @@
+{
+  "key": "/registry/cert-manager.io/clusterissuers/platform-service-certificate-clusterissuer",
+  "value": {
+    "apiVersion": "cert-manager.io/v1",
+    "kind": "ClusterIssuer",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-certs",
+        "meta.helm.sh/release-namespace": "platform-certs"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-certs",
+        "helm.toolkit.fluxcd.io/namespace": "platform-certs"
+      },
+      "name": "platform-service-certificate-clusterissuer",
+      "uid": "99dfe713-e856-4925-bfae-cb523d95b3df"
+    },
+    "spec": {
+      "ca": {
+        "secretName": "platform-selfsigned-ca-certificate-secret"
+      }
+    }
+  }
+}

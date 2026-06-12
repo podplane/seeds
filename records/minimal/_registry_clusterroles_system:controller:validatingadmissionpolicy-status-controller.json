@@ -1,0 +1,60 @@
+{
+  "key": "/registry/clusterroles/system:controller:validatingadmissionpolicy-status-controller",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRole",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "system:controller:validatingadmissionpolicy-status-controller",
+      "uid": "357dcaf9-984e-4c71-b90e-a3f5b76c19b1"
+    },
+    "rules": [
+      {
+        "apiGroups": [
+          "admissionregistration.k8s.io"
+        ],
+        "resources": [
+          "validatingadmissionpolicies"
+        ],
+        "verbs": [
+          "get",
+          "list",
+          "watch"
+        ]
+      },
+      {
+        "apiGroups": [
+          "admissionregistration.k8s.io"
+        ],
+        "resources": [
+          "validatingadmissionpolicies/status"
+        ],
+        "verbs": [
+          "get",
+          "patch",
+          "update"
+        ]
+      },
+      {
+        "apiGroups": [
+          "",
+          "events.k8s.io"
+        ],
+        "resources": [
+          "events"
+        ],
+        "verbs": [
+          "create",
+          "patch",
+          "update"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "/registry/namespaces/platform-fluxcd",
+  "value": {
+    "apiVersion": "v1",
+    "kind": "Namespace",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/metadata.name": "platform-fluxcd",
+        "name": "platform-fluxcd"
+      },
+      "name": "platform-fluxcd",
+      "uid": "aaeb1bbe-9289-46b6-a656-d6229e5490d8"
+    },
+    "spec": {
+      "finalizers": [
+        "kubernetes"
+      ]
+    }
+  }
+}

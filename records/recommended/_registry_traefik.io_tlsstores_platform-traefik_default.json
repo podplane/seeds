@@ -1,0 +1,28 @@
+{
+  "key": "/registry/traefik.io/tlsstores/platform-traefik/default",
+  "value": {
+    "apiVersion": "traefik.io/v1alpha1",
+    "kind": "TLSStore",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-traefik",
+        "meta.helm.sh/release-namespace": "platform-traefik"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "traefik",
+        "helm.toolkit.fluxcd.io/namespace": "platform-traefik"
+      },
+      "name": "default",
+      "namespace": "platform-traefik",
+      "uid": "2e3cec2f-b663-4e3a-a37c-8eef7c034c57"
+    },
+    "spec": {
+      "defaultCertificate": {
+        "secretName": "platform-traefik-default-localhost-tls"
+      }
+    }
+  }
+}

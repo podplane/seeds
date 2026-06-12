@@ -1,0 +1,29 @@
+{
+  "key": "/registry/namespaces/default",
+  "value": {
+    "apiVersion": "v1",
+    "kind": "Namespace",
+    "metadata": {
+      "annotations": {
+        "helm.sh/resource-policy": "keep",
+        "meta.helm.sh/release-name": "platform-components",
+        "meta.helm.sh/release-namespace": "platform-components"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "cluster.podplane.dev/bundles-selfsigned-ca": "from-platform-trust",
+        "helm.toolkit.fluxcd.io/name": "platform-components",
+        "helm.toolkit.fluxcd.io/namespace": "platform-components",
+        "kubernetes.io/metadata.name": "default"
+      },
+      "name": "default",
+      "uid": "5b262019-4ec4-4970-9ec8-f901016b1e52"
+    },
+    "spec": {
+      "finalizers": [
+        "kubernetes"
+      ]
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "key": "/registry/clusterrolebindings/crd-controller",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRoleBinding",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-fluxcd",
+        "meta.helm.sh/release-namespace": "platform-fluxcd"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/instance": "platform-fluxcd",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/part-of": "flux",
+        "app.kubernetes.io/version": "2.8.5",
+        "helm.sh/chart": "flux2-2.18.3",
+        "helm.toolkit.fluxcd.io/name": "fluxcd",
+        "helm.toolkit.fluxcd.io/namespace": "platform-fluxcd"
+      },
+      "name": "crd-controller",
+      "uid": "8ff3a57d-f779-40b0-8c14-ea5512940ebb"
+    },
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "ClusterRole",
+      "name": "crd-controller"
+    },
+    "subjects": [
+      {
+        "kind": "ServiceAccount",
+        "name": "kustomize-controller",
+        "namespace": "platform-fluxcd"
+      },
+      {
+        "kind": "ServiceAccount",
+        "name": "helm-controller",
+        "namespace": "platform-fluxcd"
+      },
+      {
+        "kind": "ServiceAccount",
+        "name": "source-controller",
+        "namespace": "platform-fluxcd"
+      },
+      {
+        "kind": "ServiceAccount",
+        "name": "notification-controller",
+        "namespace": "platform-fluxcd"
+      },
+      {
+        "kind": "ServiceAccount",
+        "name": "image-reflector-controller",
+        "namespace": "platform-fluxcd"
+      },
+      {
+        "kind": "ServiceAccount",
+        "name": "image-automation-controller",
+        "namespace": "platform-fluxcd"
+      },
+      {
+        "kind": "ServiceAccount",
+        "name": "source-watcher-controller",
+        "namespace": "platform-fluxcd"
+      }
+    ]
+  }
+}

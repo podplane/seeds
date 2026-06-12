@@ -1,0 +1,34 @@
+{
+  "key": "/registry/clusterroles/platform-use-certificaterequestpolicies-cr",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRole",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-certs",
+        "meta.helm.sh/release-namespace": "platform-certs"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-certs",
+        "helm.toolkit.fluxcd.io/namespace": "platform-certs"
+      },
+      "name": "platform-use-certificaterequestpolicies-cr",
+      "uid": "f5113782-9dce-46f8-8536-f21829c0689c"
+    },
+    "rules": [
+      {
+        "apiGroups": [
+          "policy.cert-manager.io"
+        ],
+        "resources": [
+          "certificaterequestpolicies"
+        ],
+        "verbs": [
+          "use"
+        ]
+      }
+    ]
+  }
+}

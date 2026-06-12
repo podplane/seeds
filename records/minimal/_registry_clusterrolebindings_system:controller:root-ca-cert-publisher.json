@@ -1,0 +1,30 @@
+{
+  "key": "/registry/clusterrolebindings/system:controller:root-ca-cert-publisher",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRoleBinding",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "system:controller:root-ca-cert-publisher",
+      "uid": "4ff0f401-6c00-449d-a6ed-6a8f499d6944"
+    },
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "ClusterRole",
+      "name": "system:controller:root-ca-cert-publisher"
+    },
+    "subjects": [
+      {
+        "kind": "ServiceAccount",
+        "name": "root-ca-cert-publisher",
+        "namespace": "kube-system"
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "key": "/registry/apiregistration.k8s.io/apiservices/v1beta1.gateway.networking.k8s.io",
+  "value": {
+    "apiVersion": "apiregistration.k8s.io/v1",
+    "kind": "APIService",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kube-aggregator.kubernetes.io/automanaged": "true"
+      },
+      "name": "v1beta1.gateway.networking.k8s.io",
+      "uid": "15059cf0-9226-46e3-af57-b5b5d7089187"
+    },
+    "spec": {
+      "group": "gateway.networking.k8s.io",
+      "groupPriorityMinimum": 1000,
+      "version": "v1beta1",
+      "versionPriority": 100
+    }
+  }
+}

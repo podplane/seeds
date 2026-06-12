@@ -1,0 +1,21 @@
+{
+  "key": "/registry/apiregistration.k8s.io/apiservices/v1alpha1.agents.x-k8s.io",
+  "value": {
+    "apiVersion": "apiregistration.k8s.io/v1",
+    "kind": "APIService",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kube-aggregator.kubernetes.io/automanaged": "true"
+      },
+      "name": "v1alpha1.agents.x-k8s.io",
+      "uid": "c1bcc65f-c822-41f9-a8f0-f0d9cafacabd"
+    },
+    "spec": {
+      "group": "agents.x-k8s.io",
+      "groupPriorityMinimum": 1000,
+      "version": "v1alpha1",
+      "versionPriority": 100
+    }
+  }
+}

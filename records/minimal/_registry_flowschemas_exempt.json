@@ -1,0 +1,61 @@
+{
+  "key": "/registry/flowschemas/exempt",
+  "value": {
+    "apiVersion": "flowcontrol.apiserver.k8s.io/v1",
+    "kind": "FlowSchema",
+    "metadata": {
+      "annotations": {
+        "apf.kubernetes.io/autoupdate-spec": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "name": "exempt",
+      "uid": "5b3574a4-0e27-450e-8fad-62f413f58f07"
+    },
+    "spec": {
+      "matchingPrecedence": 1,
+      "priorityLevelConfiguration": {
+        "name": "exempt"
+      },
+      "rules": [
+        {
+          "nonResourceRules": [
+            {
+              "nonResourceURLs": [
+                "*"
+              ],
+              "verbs": [
+                "*"
+              ]
+            }
+          ],
+          "resourceRules": [
+            {
+              "apiGroups": [
+                "*"
+              ],
+              "clusterScope": true,
+              "namespaces": [
+                "*"
+              ],
+              "resources": [
+                "*"
+              ],
+              "verbs": [
+                "*"
+              ]
+            }
+          ],
+          "subjects": [
+            {
+              "group": {
+                "name": "system:masters"
+              },
+              "kind": "Group"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

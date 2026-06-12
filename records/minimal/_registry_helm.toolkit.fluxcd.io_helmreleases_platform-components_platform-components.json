@@ -1,0 +1,35 @@
+{
+  "key": "/registry/helm.toolkit.fluxcd.io/helmreleases/platform-components/platform-components",
+  "value": {
+    "apiVersion": "helm.toolkit.fluxcd.io/v2",
+    "kind": "HelmRelease",
+    "metadata": {
+      "annotations": {},
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "finalizers": [
+        "finalizers.fluxcd.io"
+      ],
+      "generation": 1,
+      "name": "platform-components",
+      "namespace": "platform-components",
+      "uid": "834ebfaa-ca41-4178-abfc-27405fa18a54"
+    },
+    "spec": {
+      "chart": {
+        "spec": {
+          "chart": "./charts/platform-components",
+          "reconcileStrategy": "ChartVersion",
+          "sourceRef": {
+            "kind": "GitRepository",
+            "name": "podplane-components",
+            "namespace": "platform-components"
+          },
+          "version": "*"
+        }
+      },
+      "interval": "10m",
+      "maxHistory": 3,
+      "releaseName": "platform-components"
+    }
+  }
+}

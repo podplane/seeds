@@ -1,0 +1,52 @@
+{
+  "key": "/registry/services/specs/platform-fluxcd/source-controller",
+  "value": {
+    "apiVersion": "v1",
+    "kind": "Service",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-fluxcd",
+        "meta.helm.sh/release-namespace": "platform-fluxcd"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/instance": "platform-fluxcd",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/part-of": "flux",
+        "app.kubernetes.io/version": "2.8.5",
+        "control-plane": "controller",
+        "helm.sh/chart": "flux2-2.18.3",
+        "helm.toolkit.fluxcd.io/name": "fluxcd",
+        "helm.toolkit.fluxcd.io/namespace": "platform-fluxcd"
+      },
+      "name": "source-controller",
+      "namespace": "platform-fluxcd",
+      "uid": "b25f6909-7954-4067-9a17-8af331073b6d"
+    },
+    "spec": {
+      "clusterIP": "198.18.0.2",
+      "clusterIPs": [
+        "198.18.0.2"
+      ],
+      "internalTrafficPolicy": "Cluster",
+      "ipFamilies": [
+        "IPv4",
+        "IPv6"
+      ],
+      "ipFamilyPolicy": "PreferDualStack",
+      "ports": [
+        {
+          "name": "http",
+          "port": 80,
+          "protocol": "TCP",
+          "targetPort": "http"
+        }
+      ],
+      "selector": {
+        "app": "source-controller"
+      },
+      "sessionAffinity": "None",
+      "type": "ClusterIP"
+    }
+  }
+}

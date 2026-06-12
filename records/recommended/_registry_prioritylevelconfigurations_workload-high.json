@@ -1,0 +1,31 @@
+{
+  "key": "/registry/prioritylevelconfigurations/workload-high",
+  "value": {
+    "apiVersion": "flowcontrol.apiserver.k8s.io/v1",
+    "kind": "PriorityLevelConfiguration",
+    "metadata": {
+      "annotations": {
+        "apf.kubernetes.io/autoupdate-spec": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "name": "workload-high",
+      "uid": "632da3f5-2b80-4e66-9029-25cde12c36bc"
+    },
+    "spec": {
+      "limited": {
+        "lendablePercent": 50,
+        "limitResponse": {
+          "queuing": {
+            "handSize": 6,
+            "queueLengthLimit": 50,
+            "queues": 128
+          },
+          "type": "Queue"
+        },
+        "nominalConcurrencyShares": 40
+      },
+      "type": "Limited"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "key": "/registry/clusterrolebindings/system:controller:attachdetach-controller",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRoleBinding",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "system:controller:attachdetach-controller",
+      "uid": "3ac862d6-b8ec-4340-b4fc-2167180a50b0"
+    },
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "ClusterRole",
+      "name": "system:controller:attachdetach-controller"
+    },
+    "subjects": [
+      {
+        "kind": "ServiceAccount",
+        "name": "attachdetach-controller",
+        "namespace": "kube-system"
+      }
+    ]
+  }
+}

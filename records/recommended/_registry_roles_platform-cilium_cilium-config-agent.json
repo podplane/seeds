@@ -1,0 +1,38 @@
+{
+  "key": "/registry/roles/platform-cilium/cilium-config-agent",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "Role",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-cilium",
+        "meta.helm.sh/release-namespace": "platform-cilium"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/part-of": "cilium",
+        "helm.toolkit.fluxcd.io/name": "cilium",
+        "helm.toolkit.fluxcd.io/namespace": "platform-cilium"
+      },
+      "name": "cilium-config-agent",
+      "namespace": "platform-cilium",
+      "uid": "cba6e36d-4b54-4689-85bb-1271c89a316d"
+    },
+    "rules": [
+      {
+        "apiGroups": [
+          ""
+        ],
+        "resources": [
+          "configmaps"
+        ],
+        "verbs": [
+          "get",
+          "list",
+          "watch"
+        ]
+      }
+    ]
+  }
+}

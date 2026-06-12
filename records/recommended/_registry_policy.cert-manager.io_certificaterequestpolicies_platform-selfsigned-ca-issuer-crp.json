@@ -1,0 +1,88 @@
+{
+  "key": "/registry/policy.cert-manager.io/certificaterequestpolicies/platform-selfsigned-ca-issuer-crp",
+  "value": {
+    "apiVersion": "policy.cert-manager.io/v1alpha1",
+    "kind": "CertificateRequestPolicy",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-certs",
+        "meta.helm.sh/release-namespace": "platform-certs"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-certs",
+        "helm.toolkit.fluxcd.io/namespace": "platform-certs"
+      },
+      "name": "platform-selfsigned-ca-issuer-crp",
+      "uid": "73cda1ef-7885-42e3-bcd7-3b2b1eaf9a53"
+    },
+    "spec": {
+      "allowed": {
+        "commonName": {
+          "required": true,
+          "value": "podplane.local"
+        },
+        "isCA": true,
+        "subject": {
+          "countries": {
+            "values": [
+              "*"
+            ]
+          },
+          "localities": {
+            "values": [
+              "*"
+            ]
+          },
+          "organizationalUnits": {
+            "values": [
+              "*"
+            ]
+          },
+          "organizations": {
+            "values": [
+              "*"
+            ]
+          },
+          "postalCodes": {
+            "values": [
+              "*"
+            ]
+          },
+          "provinces": {
+            "values": [
+              "*"
+            ]
+          },
+          "serialNumber": {
+            "value": "*"
+          },
+          "streetAddresses": {
+            "values": [
+              "*"
+            ]
+          }
+        },
+        "usages": [
+          "digital signature",
+          "key encipherment",
+          "cert sign",
+          "crl sign"
+        ]
+      },
+      "selector": {
+        "issuerRef": {
+          "kind": "Issuer",
+          "name": "platform-selfsigned-ca-issuer"
+        },
+        "namespace": {
+          "matchNames": [
+            "platform-certs"
+          ]
+        }
+      }
+    }
+  }
+}

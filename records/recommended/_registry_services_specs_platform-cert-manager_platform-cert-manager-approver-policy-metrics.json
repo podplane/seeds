@@ -1,0 +1,52 @@
+{
+  "key": "/registry/services/specs/platform-cert-manager/platform-cert-manager-approver-policy-metrics",
+  "value": {
+    "apiVersion": "v1",
+    "kind": "Service",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-cert-manager",
+        "meta.helm.sh/release-namespace": "platform-cert-manager"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app": "platform-cert-manager-approver-policy",
+        "app.kubernetes.io/instance": "platform-cert-manager",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "platform-cert-manager-approver-policy",
+        "app.kubernetes.io/version": "v0.21.0",
+        "helm.sh/chart": "cert-manager-approver-policy-v0.21.0",
+        "helm.toolkit.fluxcd.io/name": "cert-manager",
+        "helm.toolkit.fluxcd.io/namespace": "platform-cert-manager"
+      },
+      "name": "platform-cert-manager-approver-policy-metrics",
+      "namespace": "platform-cert-manager",
+      "uid": "8be302de-09bc-4c42-8fdf-9f5f59c55177"
+    },
+    "spec": {
+      "clusterIP": "198.18.0.5",
+      "clusterIPs": [
+        "198.18.0.5"
+      ],
+      "internalTrafficPolicy": "Cluster",
+      "ipFamilies": [
+        "IPv4",
+        "IPv6"
+      ],
+      "ipFamilyPolicy": "PreferDualStack",
+      "ports": [
+        {
+          "name": "metrics",
+          "port": 9402,
+          "protocol": "TCP",
+          "targetPort": 9402
+        }
+      ],
+      "selector": {
+        "app": "platform-cert-manager-approver-policy"
+      },
+      "sessionAffinity": "None",
+      "type": "ClusterIP"
+    }
+  }
+}

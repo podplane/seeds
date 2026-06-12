@@ -1,0 +1,20 @@
+{
+  "key": "/registry/apiregistration.k8s.io/apiservices/v1.",
+  "value": {
+    "apiVersion": "apiregistration.k8s.io/v1",
+    "kind": "APIService",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kube-aggregator.kubernetes.io/automanaged": "onstart"
+      },
+      "name": "v1.",
+      "uid": "1463ee8c-11df-47a4-98a0-2da91ca6de5e"
+    },
+    "spec": {
+      "groupPriorityMinimum": 18000,
+      "version": "v1",
+      "versionPriority": 1
+    }
+  }
+}

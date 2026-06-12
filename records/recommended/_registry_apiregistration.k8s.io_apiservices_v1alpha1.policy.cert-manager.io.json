@@ -1,0 +1,21 @@
+{
+  "key": "/registry/apiregistration.k8s.io/apiservices/v1alpha1.policy.cert-manager.io",
+  "value": {
+    "apiVersion": "apiregistration.k8s.io/v1",
+    "kind": "APIService",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kube-aggregator.kubernetes.io/automanaged": "true"
+      },
+      "name": "v1alpha1.policy.cert-manager.io",
+      "uid": "c3a4c32a-ce86-436f-b78e-48567cf9b054"
+    },
+    "spec": {
+      "group": "policy.cert-manager.io",
+      "groupPriorityMinimum": 1000,
+      "version": "v1alpha1",
+      "versionPriority": 100
+    }
+  }
+}

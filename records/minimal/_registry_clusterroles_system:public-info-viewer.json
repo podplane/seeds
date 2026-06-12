@@ -1,0 +1,32 @@
+{
+  "key": "/registry/clusterroles/system:public-info-viewer",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRole",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "system:public-info-viewer",
+      "uid": "4f9d4af8-0013-4473-bc1b-34f73f598ecc"
+    },
+    "rules": [
+      {
+        "nonResourceURLs": [
+          "/healthz",
+          "/livez",
+          "/readyz",
+          "/version",
+          "/version/"
+        ],
+        "verbs": [
+          "get"
+        ]
+      }
+    ]
+  }
+}

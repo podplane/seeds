@@ -1,0 +1,69 @@
+{
+  "key": "/registry/flowschemas/system-node-high",
+  "value": {
+    "apiVersion": "flowcontrol.apiserver.k8s.io/v1",
+    "kind": "FlowSchema",
+    "metadata": {
+      "annotations": {
+        "apf.kubernetes.io/autoupdate-spec": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "name": "system-node-high",
+      "uid": "2b64a3d8-e5dd-46e0-8d71-52e0c1a462ff"
+    },
+    "spec": {
+      "distinguisherMethod": {
+        "type": "ByUser"
+      },
+      "matchingPrecedence": 400,
+      "priorityLevelConfiguration": {
+        "name": "node-high"
+      },
+      "rules": [
+        {
+          "resourceRules": [
+            {
+              "apiGroups": [
+                ""
+              ],
+              "clusterScope": true,
+              "namespaces": [
+                "*"
+              ],
+              "resources": [
+                "nodes",
+                "nodes/status"
+              ],
+              "verbs": [
+                "*"
+              ]
+            },
+            {
+              "apiGroups": [
+                "coordination.k8s.io"
+              ],
+              "namespaces": [
+                "*"
+              ],
+              "resources": [
+                "leases"
+              ],
+              "verbs": [
+                "*"
+              ]
+            }
+          ],
+          "subjects": [
+            {
+              "group": {
+                "name": "system:nodes"
+              },
+              "kind": "Group"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

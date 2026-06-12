@@ -247,7 +247,6 @@
 /registry/helm.toolkit.fluxcd.io/helmreleases/platform-coredns/coredns
 /registry/helm.toolkit.fluxcd.io/helmreleases/platform-fluxcd/fluxcd
 /registry/ipaddresses/198.18.0.1
-/registry/ipaddresses/198.18.49.106
 /registry/ipaddresses/198.19.255.254
 /registry/ipaddresses/fdc6::ffff
 /registry/namespaces/default

@@ -1,0 +1,31 @@
+{
+  "key": "/registry/source.toolkit.fluxcd.io/helmcharts/platform-components/platform-trust-manager-trust-manager",
+  "value": {
+    "apiVersion": "source.toolkit.fluxcd.io/v1",
+    "kind": "HelmChart",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "finalizers": [
+        "finalizers.fluxcd.io"
+      ],
+      "generation": 1,
+      "labels": {
+        "helm.toolkit.fluxcd.io/name": "trust-manager",
+        "helm.toolkit.fluxcd.io/namespace": "platform-trust-manager"
+      },
+      "name": "platform-trust-manager-trust-manager",
+      "namespace": "platform-components",
+      "uid": "f3463646-3066-4a01-a940-34a255bfdd05"
+    },
+    "spec": {
+      "chart": "./charts/trust-manager",
+      "interval": "10m0s",
+      "reconcileStrategy": "ChartVersion",
+      "sourceRef": {
+        "kind": "GitRepository",
+        "name": "podplane-components"
+      },
+      "version": "*"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "key": "/registry/traefik.io/ingressroutes/platform-traefik/platform-traefik-dashboard",
+  "value": {
+    "apiVersion": "traefik.io/v1alpha1",
+    "kind": "IngressRoute",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-traefik",
+        "meta.helm.sh/release-namespace": "platform-traefik"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/instance": "platform-traefik-platform-traefik",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "traefik",
+        "helm.sh/chart": "traefik-40.2.0",
+        "helm.toolkit.fluxcd.io/name": "traefik",
+        "helm.toolkit.fluxcd.io/namespace": "platform-traefik"
+      },
+      "name": "platform-traefik-dashboard",
+      "namespace": "platform-traefik",
+      "uid": "f4c6d191-df0b-4866-afff-37ead63d2f21"
+    },
+    "spec": {
+      "entryPoints": [
+        "traefik"
+      ],
+      "routes": [
+        {
+          "kind": "Rule",
+          "match": "PathPrefix(`/dashboard`) || PathPrefix(`/api`)",
+          "services": [
+            {
+              "kind": "TraefikService",
+              "name": "api@internal"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

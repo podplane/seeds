@@ -1,0 +1,31 @@
+{
+  "key": "/registry/configmaps/platform-coredns/platform-coredns",
+  "value": {
+    "apiVersion": "v1",
+    "data": {
+      "Corefile": ".:53 {\n    errors\n    health {\n        lameduck 10s\n    }\n    ready\n    kubernetes cluster.local in-addr.arpa ip6.arpa {\n        pods insecure\n        fallthrough in-addr.arpa ip6.arpa\n        ttl 30\n    }\n    autopath @kubernetes\n    prometheus 0.0.0.0:9153\n    forward . /etc/resolv.conf\n    cache 30\n    loop\n    reload\n    loadbalance\n}"
+    },
+    "kind": "ConfigMap",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-coredns",
+        "meta.helm.sh/release-namespace": "platform-coredns"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/instance": "platform-coredns",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "coredns",
+        "helm.sh/chart": "coredns-1.36.1",
+        "helm.toolkit.fluxcd.io/name": "coredns",
+        "helm.toolkit.fluxcd.io/namespace": "platform-coredns",
+        "k8s-app": "coredns",
+        "kubernetes.io/cluster-service": "true",
+        "kubernetes.io/name": "CoreDNS"
+      },
+      "name": "platform-coredns",
+      "namespace": "platform-coredns",
+      "uid": "27f91b3d-9b49-4409-bc31-c9630e7a495e"
+    }
+  }
+}

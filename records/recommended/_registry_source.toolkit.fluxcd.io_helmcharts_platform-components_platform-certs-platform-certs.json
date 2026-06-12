@@ -1,0 +1,31 @@
+{
+  "key": "/registry/source.toolkit.fluxcd.io/helmcharts/platform-components/platform-certs-platform-certs",
+  "value": {
+    "apiVersion": "source.toolkit.fluxcd.io/v1",
+    "kind": "HelmChart",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "finalizers": [
+        "finalizers.fluxcd.io"
+      ],
+      "generation": 1,
+      "labels": {
+        "helm.toolkit.fluxcd.io/name": "platform-certs",
+        "helm.toolkit.fluxcd.io/namespace": "platform-certs"
+      },
+      "name": "platform-certs-platform-certs",
+      "namespace": "platform-components",
+      "uid": "5c14aba2-21c5-43fb-a550-31d05aafe613"
+    },
+    "spec": {
+      "chart": "./charts/platform-certs",
+      "interval": "10m0s",
+      "reconcileStrategy": "ChartVersion",
+      "sourceRef": {
+        "kind": "GitRepository",
+        "name": "podplane-components"
+      },
+      "version": "*"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "key": "/registry/clusterrolebindings/system:controller:deployment-controller",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRoleBinding",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "system:controller:deployment-controller",
+      "uid": "f16a041e-51ec-40e1-a9c5-c6fe03d67219"
+    },
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "ClusterRole",
+      "name": "system:controller:deployment-controller"
+    },
+    "subjects": [
+      {
+        "kind": "ServiceAccount",
+        "name": "deployment-controller",
+        "namespace": "kube-system"
+      }
+    ]
+  }
+}

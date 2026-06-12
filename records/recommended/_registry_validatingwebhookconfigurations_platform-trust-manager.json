@@ -1,0 +1,69 @@
+{
+  "key": "/registry/validatingwebhookconfigurations/platform-trust-manager",
+  "value": {
+    "apiVersion": "admissionregistration.k8s.io/v1",
+    "kind": "ValidatingWebhookConfiguration",
+    "metadata": {
+      "annotations": {
+        "cert-manager.io/inject-ca-from": "platform-trust-manager/platform-trust-manager",
+        "meta.helm.sh/release-name": "platform-trust-manager",
+        "meta.helm.sh/release-namespace": "platform-trust-manager"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 2,
+      "labels": {
+        "app": "platform-trust-manager",
+        "app.kubernetes.io/instance": "platform-trust-manager",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "platform-trust-manager",
+        "app.kubernetes.io/version": "v0.18.0",
+        "helm.sh/chart": "trust-manager-v0.18.0",
+        "helm.toolkit.fluxcd.io/name": "trust-manager",
+        "helm.toolkit.fluxcd.io/namespace": "platform-trust-manager"
+      },
+      "name": "platform-trust-manager",
+      "uid": "3d960ddf-dc22-4de2-ba7c-ce9d2c4da20b"
+    },
+    "webhooks": [
+      {
+        "admissionReviewVersions": [
+          "v1"
+        ],
+        "clientConfig": {
+          "caBundle": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURZVENDQWttZ0F3SUJBZ0lSQU50TFZGVDdONEw3U3JyLzE5ZTVGUlF3RFFZSktvWklodmNOQVFFTEJRQXcKUERFNk1EZ0dBMVVFQXhNeGNHeGhkR1p2Y20wdGRISjFjM1F0YldGdVlXZGxjaTV3YkdGMFptOXliUzEwY25WegpkQzF0WVc1aFoyVnlMbk4yWXpBZUZ3MHlOakEyTVRJd056RTFNRGhhRncweU5qQTVNVEF3TnpFMU1EaGFNRHd4Ck9qQTRCZ05WQkFNVE1YQnNZWFJtYjNKdExYUnlkWE4wTFcxaGJtRm5aWEl1Y0d4aGRHWnZjbTB0ZEhKMWMzUXQKYldGdVlXZGxjaTV6ZG1Nd2dnRWlNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0SUJEd0F3Z2dFS0FvSUJBUUMwK0ZVdApxK3JDOHdhZlpMU2FINFRkOTJFWUdHZkpmUDQzc1d0aHFKcjAyWTZMOHAxN2RLbFVteUs2RHRnQkhidHROMmh6CkZwbkx2dnZnWCtDRkZnZkdmazI2YTlHUWc3aWMzSkxWaG9IaG9kM3NJZGYzNlo1dnNLRnhkeWVMRE5wYUxJS3cKVTE2UzRHbFpNcUJFZk91T1JxOTVNOSs0MWFQek9wYlBqbGw1RnNhckZ1SUVsSnQ4RUVnaW1vV1k2aUtPTmwxQgpoOEIwc3UxcUlYblJySzVzTkwwOUxDQUZDZEZncllhOWgzdjNWRXpGNFo1Y3JPOHJOekZVb2FZODdLNVlSb2JaCnNBaGpHVHQxblpDVjA2MGdrMGMzK0VFUVJVR2JqNmZVeHhyT2ptOEFLU3hDZ0pWVTFtU1pUTHNHSHhjODZzVGgKQVlmQ0Z5YnFvVm5udncvdkFnTUJBQUdqWGpCY01BNEdBMVVkRHdFQi93UUVBd0lGb0RBTUJnTlZIUk1CQWY4RQpBakFBTUR3R0ExVWRFUVExTURPQ01YQnNZWFJtYjNKdExYUnlkWE4wTFcxaGJtRm5aWEl1Y0d4aGRHWnZjbTB0CmRISjFjM1F0YldGdVlXZGxjaTV6ZG1Nd0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFIemltUW5MU09FblRFTGoKWHJXbnJWZDhyY1FXVUd2Rm55bnZ2a0cwYXMyL2k5UEhGMWRFUEhWRzFaMXA5ZGpIODNxSS9IakxZMjZ4N2NMVQo4YmhwTmFwQ0dGTHpoR0t5ZzBJZnZzMlc2U3JCT2RKWHNjK3BLblQxUzcwbW5MbTFZMlU1WHRaWmxHdUp0SGlFCjdmRVpLTEdBNGRiL1BVRHNaRW9FU0tHSStvS0RYcFdGV2U2ZDFUM1kzeXI3cXNBVWZMT1VEUmkyczlGdXorVGIKaW1IWEtsZE9VQ1c3TFhNY1o1YitpUmJTbXVwTzJSTkpwNzNmK1A1djNJWGZ0a1VtZ29iS3pTYlJlVk9pR0E0cwpSQkhmOEdBcnBkZVU2c004VjdiWk5RVjRsTjA1ZVl2Qm03eFBsQUtUWkhSQngzdXlvdTFqRERrNm1GeEhETVNFCnQ3Nm1iNUE9Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K",
+          "service": {
+            "name": "platform-trust-manager",
+            "namespace": "platform-trust-manager",
+            "path": "/validate-trust-cert-manager-io-v1alpha1-bundle",
+            "port": 443
+          }
+        },
+        "failurePolicy": "Fail",
+        "matchPolicy": "Equivalent",
+        "name": "trust.cert-manager.io",
+        "namespaceSelector": {},
+        "objectSelector": {},
+        "rules": [
+          {
+            "apiGroups": [
+              "trust.cert-manager.io"
+            ],
+            "apiVersions": [
+              "*"
+            ],
+            "operations": [
+              "CREATE",
+              "UPDATE"
+            ],
+            "resources": [
+              "*/*"
+            ],
+            "scope": "*"
+          }
+        ],
+        "sideEffects": "None",
+        "timeoutSeconds": 5
+      }
+    ]
+  }
+}

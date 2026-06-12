@@ -1,0 +1,39 @@
+{
+  "key": "/registry/clusterrolebindings/platform-coredns",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRoleBinding",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-coredns",
+        "meta.helm.sh/release-namespace": "platform-coredns"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/instance": "platform-coredns",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "coredns",
+        "helm.sh/chart": "coredns-1.36.1",
+        "helm.toolkit.fluxcd.io/name": "coredns",
+        "helm.toolkit.fluxcd.io/namespace": "platform-coredns",
+        "k8s-app": "coredns",
+        "kubernetes.io/cluster-service": "true",
+        "kubernetes.io/name": "CoreDNS"
+      },
+      "name": "platform-coredns",
+      "uid": "4644be28-44fd-40ed-9d4c-038568b34b6a"
+    },
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "ClusterRole",
+      "name": "platform-coredns"
+    },
+    "subjects": [
+      {
+        "kind": "ServiceAccount",
+        "name": "default",
+        "namespace": "platform-coredns"
+      }
+    ]
+  }
+}

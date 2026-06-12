@@ -1,0 +1,31 @@
+{
+  "key": "/registry/namespaces/platform-trust",
+  "value": {
+    "apiVersion": "v1",
+    "kind": "Namespace",
+    "metadata": {
+      "annotations": {
+        "helm.sh/resource-policy": "keep",
+        "meta.helm.sh/release-name": "platform-components",
+        "meta.helm.sh/release-namespace": "platform-components"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "cluster.podplane.dev/bundles-default-ca": "from-platform-trust",
+        "cluster.podplane.dev/bundles-selfsigned-and-default-ca": "from-platform-trust",
+        "cluster.podplane.dev/bundles-selfsigned-ca": "from-platform-trust",
+        "helm.toolkit.fluxcd.io/name": "platform-components",
+        "helm.toolkit.fluxcd.io/namespace": "platform-components",
+        "kubernetes.io/metadata.name": "platform-trust"
+      },
+      "name": "platform-trust",
+      "uid": "7a883fd3-f378-4767-8a19-5e9bb777787e"
+    },
+    "spec": {
+      "finalizers": [
+        "kubernetes"
+      ]
+    }
+  }
+}

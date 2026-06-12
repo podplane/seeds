@@ -1,0 +1,21 @@
+{
+  "key": "/registry/apiregistration.k8s.io/apiservices/v2alpha1.cilium.io",
+  "value": {
+    "apiVersion": "apiregistration.k8s.io/v1",
+    "kind": "APIService",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kube-aggregator.kubernetes.io/automanaged": "true"
+      },
+      "name": "v2alpha1.cilium.io",
+      "uid": "12ff0dfe-7cdb-4d2c-b7ad-a73d92b09aa7"
+    },
+    "spec": {
+      "group": "cilium.io",
+      "groupPriorityMinimum": 1000,
+      "version": "v2alpha1",
+      "versionPriority": 100
+    }
+  }
+}

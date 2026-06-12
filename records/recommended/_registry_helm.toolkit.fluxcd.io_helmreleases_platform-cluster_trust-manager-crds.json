@@ -1,0 +1,43 @@
+{
+  "key": "/registry/helm.toolkit.fluxcd.io/helmreleases/platform-cluster/trust-manager-crds",
+  "value": {
+    "apiVersion": "helm.toolkit.fluxcd.io/v2",
+    "kind": "HelmRelease",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-components",
+        "meta.helm.sh/release-namespace": "platform-components"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "finalizers": [
+        "finalizers.fluxcd.io"
+      ],
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-components",
+        "helm.toolkit.fluxcd.io/namespace": "platform-components"
+      },
+      "name": "trust-manager-crds",
+      "namespace": "platform-cluster",
+      "uid": "65410b3d-3390-4df3-85e5-adbcd3282ff8"
+    },
+    "spec": {
+      "chart": {
+        "spec": {
+          "chart": "./charts/trust-manager-crds",
+          "reconcileStrategy": "ChartVersion",
+          "sourceRef": {
+            "kind": "GitRepository",
+            "name": "podplane-components",
+            "namespace": "platform-components"
+          },
+          "version": "*"
+        }
+      },
+      "interval": "10m",
+      "maxHistory": 3,
+      "releaseName": "platform-trust-manager-crds"
+    }
+  }
+}

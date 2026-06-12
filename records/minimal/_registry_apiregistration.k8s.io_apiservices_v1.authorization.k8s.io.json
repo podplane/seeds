@@ -1,0 +1,21 @@
+{
+  "key": "/registry/apiregistration.k8s.io/apiservices/v1.authorization.k8s.io",
+  "value": {
+    "apiVersion": "apiregistration.k8s.io/v1",
+    "kind": "APIService",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kube-aggregator.kubernetes.io/automanaged": "onstart"
+      },
+      "name": "v1.authorization.k8s.io",
+      "uid": "47f50b1c-73f2-49f2-9a48-7e0f74274e7c"
+    },
+    "spec": {
+      "group": "authorization.k8s.io",
+      "groupPriorityMinimum": 17600,
+      "version": "v1",
+      "versionPriority": 15
+    }
+  }
+}

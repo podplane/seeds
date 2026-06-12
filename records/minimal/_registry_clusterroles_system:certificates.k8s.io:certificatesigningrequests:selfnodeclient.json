@@ -1,0 +1,31 @@
+{
+  "key": "/registry/clusterroles/system:certificates.k8s.io:certificatesigningrequests:selfnodeclient",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRole",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "system:certificates.k8s.io:certificatesigningrequests:selfnodeclient",
+      "uid": "eec03187-be8c-4b67-a5f2-bbfb310e8cac"
+    },
+    "rules": [
+      {
+        "apiGroups": [
+          "certificates.k8s.io"
+        ],
+        "resources": [
+          "certificatesigningrequests/selfnodeclient"
+        ],
+        "verbs": [
+          "create"
+        ]
+      }
+    ]
+  }
+}

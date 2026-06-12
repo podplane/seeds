@@ -1,0 +1,56 @@
+{
+  "key": "/registry/gateway.networking.k8s.io/httproutes/platform-traefik/platform-http-to-https-redirect-httproute",
+  "value": {
+    "apiVersion": "gateway.networking.k8s.io/v1",
+    "kind": "HTTPRoute",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-traefik",
+        "meta.helm.sh/release-namespace": "platform-traefik",
+        "traefik.io/priority": "1"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "traefik",
+        "helm.toolkit.fluxcd.io/namespace": "platform-traefik"
+      },
+      "name": "platform-http-to-https-redirect-httproute",
+      "namespace": "platform-traefik",
+      "uid": "22ddceca-5e83-435a-a18e-f9292aa3199e"
+    },
+    "spec": {
+      "parentRefs": [
+        {
+          "group": "gateway.networking.k8s.io",
+          "kind": "Gateway",
+          "name": "platform-traefik-gateway",
+          "namespace": "platform-traefik",
+          "sectionName": "http"
+        }
+      ],
+      "rules": [
+        {
+          "filters": [
+            {
+              "requestRedirect": {
+                "scheme": "https",
+                "statusCode": 301
+              },
+              "type": "RequestRedirect"
+            }
+          ],
+          "matches": [
+            {
+              "path": {
+                "type": "PathPrefix",
+                "value": "/"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

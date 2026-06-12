@@ -1,0 +1,30 @@
+{
+  "key": "/registry/clusterrolebindings/system:controller:resourcequota-controller",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRoleBinding",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "system:controller:resourcequota-controller",
+      "uid": "389cc2dc-a1be-468e-b762-a0d989f02795"
+    },
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "ClusterRole",
+      "name": "system:controller:resourcequota-controller"
+    },
+    "subjects": [
+      {
+        "kind": "ServiceAccount",
+        "name": "resourcequota-controller",
+        "namespace": "kube-system"
+      }
+    ]
+  }
+}

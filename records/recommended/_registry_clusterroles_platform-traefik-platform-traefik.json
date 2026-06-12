@@ -1,0 +1,162 @@
+{
+  "key": "/registry/clusterroles/platform-traefik-platform-traefik",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRole",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-traefik",
+        "meta.helm.sh/release-namespace": "platform-traefik"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/instance": "platform-traefik-platform-traefik",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "traefik",
+        "helm.sh/chart": "traefik-40.2.0",
+        "helm.toolkit.fluxcd.io/name": "traefik",
+        "helm.toolkit.fluxcd.io/namespace": "platform-traefik"
+      },
+      "name": "platform-traefik-platform-traefik",
+      "uid": "4dbfb014-f1fc-4557-870f-a532dada332c"
+    },
+    "rules": [
+      {
+        "apiGroups": [
+          ""
+        ],
+        "resources": [
+          "configmaps",
+          "nodes",
+          "services"
+        ],
+        "verbs": [
+          "get",
+          "list",
+          "watch"
+        ]
+      },
+      {
+        "apiGroups": [
+          "discovery.k8s.io"
+        ],
+        "resources": [
+          "endpointslices"
+        ],
+        "verbs": [
+          "list",
+          "watch"
+        ]
+      },
+      {
+        "apiGroups": [
+          ""
+        ],
+        "resources": [
+          "pods"
+        ],
+        "verbs": [
+          "get"
+        ]
+      },
+      {
+        "apiGroups": [
+          ""
+        ],
+        "resources": [
+          "secrets"
+        ],
+        "verbs": [
+          "get",
+          "list",
+          "watch"
+        ]
+      },
+      {
+        "apiGroups": [
+          "extensions",
+          "networking.k8s.io"
+        ],
+        "resources": [
+          "ingressclasses"
+        ],
+        "verbs": [
+          "get",
+          "list",
+          "watch"
+        ]
+      },
+      {
+        "apiGroups": [
+          "traefik.io"
+        ],
+        "resources": [
+          "ingressroutes",
+          "ingressroutetcps",
+          "ingressrouteudps",
+          "middlewares",
+          "middlewaretcps",
+          "serverstransports",
+          "serverstransporttcps",
+          "tlsoptions",
+          "tlsstores",
+          "traefikservices"
+        ],
+        "verbs": [
+          "get",
+          "list",
+          "watch"
+        ]
+      },
+      {
+        "apiGroups": [
+          ""
+        ],
+        "resources": [
+          "namespaces"
+        ],
+        "verbs": [
+          "list",
+          "watch"
+        ]
+      },
+      {
+        "apiGroups": [
+          "gateway.networking.k8s.io"
+        ],
+        "resources": [
+          "backendtlspolicies",
+          "gatewayclasses",
+          "gateways",
+          "grpcroutes",
+          "httproutes",
+          "referencegrants",
+          "tcproutes",
+          "tlsroutes"
+        ],
+        "verbs": [
+          "get",
+          "list",
+          "watch"
+        ]
+      },
+      {
+        "apiGroups": [
+          "gateway.networking.k8s.io"
+        ],
+        "resources": [
+          "backendtlspolicies/status",
+          "gatewayclasses/status",
+          "gateways/status",
+          "grpcroutes/status",
+          "httproutes/status",
+          "tcproutes/status",
+          "tlsroutes/status"
+        ],
+        "verbs": [
+          "update"
+        ]
+      }
+    ]
+  }
+}

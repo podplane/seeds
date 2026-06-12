@@ -1,0 +1,70 @@
+{
+  "key": "/registry/validatingwebhookconfigurations/platform-cert-manager-approver-policy",
+  "value": {
+    "apiVersion": "admissionregistration.k8s.io/v1",
+    "kind": "ValidatingWebhookConfiguration",
+    "metadata": {
+      "annotations": {
+        "cert-manager.io/inject-ca-from-secret": "platform-cert-manager/platform-cert-manager-approver-policy-tls",
+        "meta.helm.sh/release-name": "platform-cert-manager",
+        "meta.helm.sh/release-namespace": "platform-cert-manager"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 2,
+      "labels": {
+        "app": "platform-cert-manager-approver-policy",
+        "app.kubernetes.io/instance": "platform-cert-manager",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "platform-cert-manager-approver-policy",
+        "app.kubernetes.io/version": "v0.21.0",
+        "helm.sh/chart": "cert-manager-approver-policy-v0.21.0",
+        "helm.toolkit.fluxcd.io/name": "cert-manager",
+        "helm.toolkit.fluxcd.io/namespace": "platform-cert-manager"
+      },
+      "name": "platform-cert-manager-approver-policy",
+      "uid": "e5a083e0-6eb7-4961-a0c7-ac71504dc0b1"
+    },
+    "webhooks": [
+      {
+        "admissionReviewVersions": [
+          "v1",
+          "v1beta1"
+        ],
+        "clientConfig": {
+          "caBundle": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJ4ekNDQVUyZ0F3SUJBZ0lRZDg1VFBoakFoK1RGR0tYVGpkQ1dHekFLQmdncWhrak9QUVFEQXpBbE1TTXcKSVFZRFZRUURFeHBoY0hCeWIzWmxjaTF3YjJ4cFkza3RkMlZpYUc5dmF5MWpZVEFlRncweU5qQTJNVEl3TnpFMApNVFZhRncweU56QTJNVEl3TnpFME1UVmFNQ1V4SXpBaEJnTlZCQU1UR21Gd2NISnZkbVZ5TFhCdmJHbGplUzEzClpXSm9iMjlyTFdOaE1IWXdFQVlIS29aSXpqMENBUVlGSzRFRUFDSURZZ0FFVy9xZ1h5cFo1eHNueEFRMVYrVlUKa2JlZTVMVUJTWGV3S3c0Rll4Y29NSTRxSDhaUG0wSWpuWkQvcmNGeEdod0NhNkQxQUI3WkhuajJDRjVEZGdKTwpGWDZqSlpjOUUwOUdqRGRXb3piTlVEbWM1cnBCOE4rUlZkSnNqeVNxelE2SW8wSXdRREFPQmdOVkhROEJBZjhFCkJBTUNBcVF3RHdZRFZSMFRBUUgvQkFVd0F3RUIvekFkQmdOVkhRNEVGZ1FVWVBORkhUcExTdXF6Ung2d2xreHQKc1dZbS9YVXdDZ1lJS29aSXpqMEVBd01EYUFBd1pRSXhBT0FmZmVTWkE4K3o3SWQvekpEdlVlR3Bib2Vla2FBdApqWUp0WnprUHI4M0IvdFliN3djeHhaTlpUNFdiQjJtWUpBSXdVRWlseUJ4N3FBOHowYjRWSVoydlZpbHdZOEhGCnVrT3k3cWY4SFdoM3RtbG5Zam8yRFZlYzA1Uk1pV25yOWJVSAotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==",
+          "service": {
+            "name": "platform-cert-manager-approver-policy",
+            "namespace": "platform-cert-manager",
+            "path": "/validate-policy-cert-manager-io-v1alpha1-certificaterequestpolicy",
+            "port": 443
+          }
+        },
+        "failurePolicy": "Fail",
+        "matchPolicy": "Equivalent",
+        "name": "policy.cert-manager.io",
+        "namespaceSelector": {},
+        "objectSelector": {},
+        "rules": [
+          {
+            "apiGroups": [
+              "policy.cert-manager.io"
+            ],
+            "apiVersions": [
+              "*"
+            ],
+            "operations": [
+              "CREATE",
+              "UPDATE"
+            ],
+            "resources": [
+              "*/*"
+            ],
+            "scope": "*"
+          }
+        ],
+        "sideEffects": "None",
+        "timeoutSeconds": 5
+      }
+    ]
+  }
+}

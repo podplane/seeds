@@ -1,0 +1,199 @@
+{
+  "key": "/registry/deployments/platform-cilium/cilium-operator",
+  "value": {
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "annotations": {
+        "deployment.kubernetes.io/revision": "1",
+        "meta.helm.sh/release-name": "platform-cilium",
+        "meta.helm.sh/release-namespace": "platform-cilium"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "cilium-operator",
+        "app.kubernetes.io/part-of": "cilium",
+        "helm.toolkit.fluxcd.io/name": "cilium",
+        "helm.toolkit.fluxcd.io/namespace": "platform-cilium",
+        "io.cilium/app": "operator",
+        "name": "cilium-operator"
+      },
+      "name": "cilium-operator",
+      "namespace": "platform-cilium",
+      "uid": "a3f71b1c-748a-476f-ab1c-dba553a89220"
+    },
+    "spec": {
+      "progressDeadlineSeconds": 600,
+      "replicas": 1,
+      "revisionHistoryLimit": 10,
+      "selector": {
+        "matchLabels": {
+          "io.cilium/app": "operator",
+          "name": "cilium-operator"
+        }
+      },
+      "strategy": {
+        "rollingUpdate": {
+          "maxSurge": "25%",
+          "maxUnavailable": "100%"
+        },
+        "type": "RollingUpdate"
+      },
+      "template": {
+        "metadata": {
+          "annotations": {
+            "prometheus.io/port": "9963",
+            "prometheus.io/scrape": "true"
+          },
+          "creationTimestamp": null,
+          "labels": {
+            "app.kubernetes.io/name": "cilium-operator",
+            "app.kubernetes.io/part-of": "cilium",
+            "io.cilium/app": "operator",
+            "name": "cilium-operator"
+          }
+        },
+        "spec": {
+          "affinity": {
+            "podAntiAffinity": {
+              "requiredDuringSchedulingIgnoredDuringExecution": [
+                {
+                  "labelSelector": {
+                    "matchLabels": {
+                      "io.cilium/app": "operator"
+                    }
+                  },
+                  "topologyKey": "kubernetes.io/hostname"
+                }
+              ]
+            }
+          },
+          "automountServiceAccountToken": true,
+          "containers": [
+            {
+              "args": [
+                "--config-dir=/tmp/cilium/config-map",
+                "--debug=$(CILIUM_DEBUG)"
+              ],
+              "command": [
+                "cilium-operator-generic"
+              ],
+              "env": [
+                {
+                  "name": "K8S_NODE_NAME",
+                  "valueFrom": {
+                    "fieldRef": {
+                      "apiVersion": "v1",
+                      "fieldPath": "spec.nodeName"
+                    }
+                  }
+                },
+                {
+                  "name": "CILIUM_K8S_NAMESPACE",
+                  "valueFrom": {
+                    "fieldRef": {
+                      "apiVersion": "v1",
+                      "fieldPath": "metadata.namespace"
+                    }
+                  }
+                },
+                {
+                  "name": "CILIUM_DEBUG",
+                  "valueFrom": {
+                    "configMapKeyRef": {
+                      "key": "debug",
+                      "name": "cilium-config",
+                      "optional": true
+                    }
+                  }
+                },
+                {
+                  "name": "KUBERNETES_SERVICE_HOST",
+                  "value": "kube-apiserver.podplane.internal"
+                },
+                {
+                  "name": "KUBERNETES_SERVICE_PORT",
+                  "value": "6443"
+                }
+              ],
+              "image": "quay.io/cilium/operator-generic:v1.16.3@sha256:6e2925ef47a1c76e183c48f95d4ce0d34a1e5e848252f910476c3e11ce1ec94b",
+              "imagePullPolicy": "IfNotPresent",
+              "livenessProbe": {
+                "failureThreshold": 3,
+                "httpGet": {
+                  "host": "127.0.0.1",
+                  "path": "/healthz",
+                  "port": 9234,
+                  "scheme": "HTTP"
+                },
+                "initialDelaySeconds": 60,
+                "periodSeconds": 10,
+                "successThreshold": 1,
+                "timeoutSeconds": 3
+              },
+              "name": "cilium-operator",
+              "ports": [
+                {
+                  "containerPort": 9963,
+                  "hostPort": 9963,
+                  "name": "prometheus",
+                  "protocol": "TCP"
+                }
+              ],
+              "readinessProbe": {
+                "failureThreshold": 5,
+                "httpGet": {
+                  "host": "127.0.0.1",
+                  "path": "/healthz",
+                  "port": 9234,
+                  "scheme": "HTTP"
+                },
+                "periodSeconds": 5,
+                "successThreshold": 1,
+                "timeoutSeconds": 3
+              },
+              "resources": {},
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "FallbackToLogsOnError",
+              "volumeMounts": [
+                {
+                  "mountPath": "/tmp/cilium/config-map",
+                  "name": "cilium-config-path",
+                  "readOnly": true
+                }
+              ]
+            }
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "hostNetwork": true,
+          "nodeSelector": {
+            "kubernetes.io/os": "linux"
+          },
+          "priorityClassName": "system-cluster-critical",
+          "restartPolicy": "Always",
+          "schedulerName": "default-scheduler",
+          "securityContext": {},
+          "serviceAccount": "cilium-operator",
+          "serviceAccountName": "cilium-operator",
+          "terminationGracePeriodSeconds": 30,
+          "tolerations": [
+            {
+              "operator": "Exists"
+            }
+          ],
+          "volumes": [
+            {
+              "configMap": {
+                "defaultMode": 420,
+                "name": "cilium-config"
+              },
+              "name": "cilium-config-path"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

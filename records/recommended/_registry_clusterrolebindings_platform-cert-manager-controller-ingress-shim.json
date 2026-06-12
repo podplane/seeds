@@ -1,0 +1,39 @@
+{
+  "key": "/registry/clusterrolebindings/platform-cert-manager-controller-ingress-shim",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRoleBinding",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-cert-manager",
+        "meta.helm.sh/release-namespace": "platform-cert-manager"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app": "cert-manager",
+        "app.kubernetes.io/component": "controller",
+        "app.kubernetes.io/instance": "platform-cert-manager",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "cert-manager",
+        "app.kubernetes.io/version": "v1.16.2",
+        "helm.sh/chart": "cert-manager-v1.16.2",
+        "helm.toolkit.fluxcd.io/name": "cert-manager",
+        "helm.toolkit.fluxcd.io/namespace": "platform-cert-manager"
+      },
+      "name": "platform-cert-manager-controller-ingress-shim",
+      "uid": "8ed92fff-385b-4cad-b6dc-96d7b1936374"
+    },
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "ClusterRole",
+      "name": "platform-cert-manager-controller-ingress-shim"
+    },
+    "subjects": [
+      {
+        "kind": "ServiceAccount",
+        "name": "platform-cert-manager",
+        "namespace": "platform-cert-manager"
+      }
+    ]
+  }
+}

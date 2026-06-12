@@ -1,0 +1,112 @@
+{
+  "key": "/registry/apiextensions.k8s.io/customresourcedefinitions/middlewaretcps.traefik.io",
+  "value": {
+    "apiVersion": "apiextensions.k8s.io/v1beta1",
+    "kind": "CustomResourceDefinition",
+    "metadata": {
+      "annotations": {
+        "controller-gen.kubebuilder.io/version": "v0.19.0",
+        "meta.helm.sh/release-name": "platform-traefik-crds",
+        "meta.helm.sh/release-namespace": "platform-cluster"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "traefik-crds",
+        "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
+      },
+      "name": "middlewaretcps.traefik.io",
+      "uid": "17430243-62d9-4d9a-bcd3-f2054bed375d"
+    },
+    "spec": {
+      "conversion": {
+        "strategy": "None"
+      },
+      "group": "traefik.io",
+      "names": {
+        "kind": "MiddlewareTCP",
+        "listKind": "MiddlewareTCPList",
+        "plural": "middlewaretcps",
+        "singular": "middlewaretcp"
+      },
+      "preserveUnknownFields": false,
+      "scope": "Namespaced",
+      "validation": {
+        "openAPIV3Schema": {
+          "description": "MiddlewareTCP is the CRD implementation of a Traefik TCP middleware.\nMore info: https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/middlewares/overview/",
+          "properties": {
+            "apiVersion": {
+              "description": "APIVersion defines the versioned schema of this representation of an object.\nServers should convert recognized schemas to the latest internal value, and\nmay reject unrecognized values.\nMore info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+              "type": "string"
+            },
+            "kind": {
+              "description": "Kind is a string value representing the REST resource this object represents.\nServers may infer this from the endpoint the client submits requests to.\nCannot be updated.\nIn CamelCase.\nMore info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+              "type": "string"
+            },
+            "metadata": {
+              "type": "object"
+            },
+            "spec": {
+              "description": "MiddlewareTCPSpec defines the desired state of a MiddlewareTCP.",
+              "properties": {
+                "inFlightConn": {
+                  "description": "InFlightConn defines the InFlightConn middleware configuration.",
+                  "properties": {
+                    "amount": {
+                      "description": "Amount defines the maximum amount of allowed simultaneous connections.\nThe middleware closes the connection if there are already amount connections opened.",
+                      "format": "int64",
+                      "minimum": 0,
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "ipAllowList": {
+                  "description": "IPAllowList defines the IPAllowList middleware configuration.\nThis middleware accepts/refuses connections based on the client IP.\nMore info: https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/middlewares/ipallowlist/",
+                  "properties": {
+                    "sourceRange": {
+                      "description": "SourceRange defines the allowed IPs (or ranges of allowed IPs by using CIDR notation).",
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                },
+                "ipWhiteList": {
+                  "description": "IPWhiteList defines the IPWhiteList middleware configuration.\nThis middleware accepts/refuses connections based on the client IP.\nMore info: https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/middlewares/ipwhitelist/\n\nDeprecated: please use IPAllowList instead.",
+                  "properties": {
+                    "sourceRange": {
+                      "description": "SourceRange defines the allowed IPs (or ranges of allowed IPs by using CIDR notation).",
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "required": [
+            "metadata",
+            "spec"
+          ],
+          "type": "object"
+        }
+      },
+      "version": "v1alpha1",
+      "versions": [
+        {
+          "name": "v1alpha1",
+          "served": true,
+          "storage": true
+        }
+      ]
+    }
+  }
+}

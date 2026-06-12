@@ -1,0 +1,90 @@
+{
+  "key": "/registry/validatingadmissionpolicies/platform-deny-privileged-vap",
+  "value": {
+    "apiVersion": "admissionregistration.k8s.io/v1",
+    "kind": "ValidatingAdmissionPolicy",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-rbac",
+        "meta.helm.sh/release-namespace": "platform-cluster"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-rbac",
+        "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
+      },
+      "name": "platform-deny-privileged-vap",
+      "uid": "89cbda80-ccf2-4691-b7ed-f28886ac8415"
+    },
+    "spec": {
+      "failurePolicy": "Fail",
+      "matchConstraints": {
+        "matchPolicy": "Equivalent",
+        "namespaceSelector": {},
+        "objectSelector": {},
+        "resourceRules": [
+          {
+            "apiGroups": [
+              ""
+            ],
+            "apiVersions": [
+              "v1"
+            ],
+            "operations": [
+              "CREATE",
+              "UPDATE"
+            ],
+            "resources": [
+              "pods"
+            ],
+            "scope": "*"
+          },
+          {
+            "apiGroups": [
+              "apps"
+            ],
+            "apiVersions": [
+              "v1"
+            ],
+            "operations": [
+              "CREATE",
+              "UPDATE"
+            ],
+            "resources": [
+              "deployments",
+              "replicasets",
+              "daemonsets",
+              "statefulsets"
+            ],
+            "scope": "*"
+          },
+          {
+            "apiGroups": [
+              "batch"
+            ],
+            "apiVersions": [
+              "v1"
+            ],
+            "operations": [
+              "CREATE",
+              "UPDATE"
+            ],
+            "resources": [
+              "jobs",
+              "cronjobs"
+            ],
+            "scope": "*"
+          }
+        ]
+      },
+      "validations": [
+        {
+          "expression": "object.metadata.namespace.startsWith('kube-') || object.metadata.namespace.startsWith('platform-') || !(has(object.spec.containers)) || object.spec.containers.all(container, !(has(container.securityContext)) || (\n\n\n  (!(has(container.securityContext.privileged)) || container.securityContext.privileged != true) &&\n  (!(has(container.securityContext.capabilities)) || !(has(container.securityContext.capabilities.add)) ||\n  container.securityContext.capabilities.add.all(cap, cap != 'SYS_ADM')))\n)\n",
+          "message": "Privileged containers are not allowed."
+        }
+      ]
+    }
+  }
+}

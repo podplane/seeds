@@ -1,0 +1,173 @@
+{
+  "key": "/registry/clusterroles/cilium",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRole",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-cilium",
+        "meta.helm.sh/release-namespace": "platform-cilium"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/part-of": "cilium",
+        "helm.toolkit.fluxcd.io/name": "cilium",
+        "helm.toolkit.fluxcd.io/namespace": "platform-cilium"
+      },
+      "name": "cilium",
+      "uid": "029a69e7-cf48-4e69-adf5-29847a5512d1"
+    },
+    "rules": [
+      {
+        "apiGroups": [
+          "networking.k8s.io"
+        ],
+        "resources": [
+          "networkpolicies"
+        ],
+        "verbs": [
+          "get",
+          "list",
+          "watch"
+        ]
+      },
+      {
+        "apiGroups": [
+          "discovery.k8s.io"
+        ],
+        "resources": [
+          "endpointslices"
+        ],
+        "verbs": [
+          "get",
+          "list",
+          "watch"
+        ]
+      },
+      {
+        "apiGroups": [
+          ""
+        ],
+        "resources": [
+          "namespaces",
+          "services",
+          "pods",
+          "endpoints",
+          "nodes"
+        ],
+        "verbs": [
+          "get",
+          "list",
+          "watch"
+        ]
+      },
+      {
+        "apiGroups": [
+          "apiextensions.k8s.io"
+        ],
+        "resources": [
+          "customresourcedefinitions"
+        ],
+        "verbs": [
+          "list",
+          "watch",
+          "get"
+        ]
+      },
+      {
+        "apiGroups": [
+          "cilium.io"
+        ],
+        "resources": [
+          "ciliumloadbalancerippools",
+          "ciliumbgppeeringpolicies",
+          "ciliumbgpnodeconfigs",
+          "ciliumbgpadvertisements",
+          "ciliumbgppeerconfigs",
+          "ciliumclusterwideenvoyconfigs",
+          "ciliumclusterwidenetworkpolicies",
+          "ciliumegressgatewaypolicies",
+          "ciliumendpoints",
+          "ciliumendpointslices",
+          "ciliumenvoyconfigs",
+          "ciliumidentities",
+          "ciliumlocalredirectpolicies",
+          "ciliumnetworkpolicies",
+          "ciliumnodes",
+          "ciliumnodeconfigs",
+          "ciliumcidrgroups",
+          "ciliuml2announcementpolicies",
+          "ciliumpodippools"
+        ],
+        "verbs": [
+          "list",
+          "watch"
+        ]
+      },
+      {
+        "apiGroups": [
+          "cilium.io"
+        ],
+        "resources": [
+          "ciliumidentities",
+          "ciliumendpoints",
+          "ciliumnodes"
+        ],
+        "verbs": [
+          "create"
+        ]
+      },
+      {
+        "apiGroups": [
+          "cilium.io"
+        ],
+        "resources": [
+          "ciliumidentities"
+        ],
+        "verbs": [
+          "update"
+        ]
+      },
+      {
+        "apiGroups": [
+          "cilium.io"
+        ],
+        "resources": [
+          "ciliumendpoints"
+        ],
+        "verbs": [
+          "delete",
+          "get"
+        ]
+      },
+      {
+        "apiGroups": [
+          "cilium.io"
+        ],
+        "resources": [
+          "ciliumnodes",
+          "ciliumnodes/status"
+        ],
+        "verbs": [
+          "get",
+          "update"
+        ]
+      },
+      {
+        "apiGroups": [
+          "cilium.io"
+        ],
+        "resources": [
+          "ciliumendpoints/status",
+          "ciliumendpoints",
+          "ciliuml2announcementpolicies/status",
+          "ciliumbgpnodeconfigs/status"
+        ],
+        "verbs": [
+          "patch"
+        ]
+      }
+    ]
+  }
+}

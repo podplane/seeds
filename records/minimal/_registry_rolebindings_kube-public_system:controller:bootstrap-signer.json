@@ -1,0 +1,31 @@
+{
+  "key": "/registry/rolebindings/kube-public/system:controller:bootstrap-signer",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "RoleBinding",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "system:controller:bootstrap-signer",
+      "namespace": "kube-public",
+      "uid": "3454ca32-9cd2-4cd0-abd2-b39f0490c5d1"
+    },
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "Role",
+      "name": "system:controller:bootstrap-signer"
+    },
+    "subjects": [
+      {
+        "kind": "ServiceAccount",
+        "name": "bootstrap-signer",
+        "namespace": "kube-system"
+      }
+    ]
+  }
+}

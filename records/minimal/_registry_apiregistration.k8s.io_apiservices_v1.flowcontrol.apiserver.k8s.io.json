@@ -1,0 +1,21 @@
+{
+  "key": "/registry/apiregistration.k8s.io/apiservices/v1.flowcontrol.apiserver.k8s.io",
+  "value": {
+    "apiVersion": "apiregistration.k8s.io/v1",
+    "kind": "APIService",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kube-aggregator.kubernetes.io/automanaged": "onstart"
+      },
+      "name": "v1.flowcontrol.apiserver.k8s.io",
+      "uid": "fe7ac10e-3ead-4014-a0ea-08f00857c50d"
+    },
+    "spec": {
+      "group": "flowcontrol.apiserver.k8s.io",
+      "groupPriorityMinimum": 16100,
+      "version": "v1",
+      "versionPriority": 21
+    }
+  }
+}

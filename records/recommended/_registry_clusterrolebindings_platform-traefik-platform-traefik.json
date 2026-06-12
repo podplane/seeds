@@ -1,0 +1,36 @@
+{
+  "key": "/registry/clusterrolebindings/platform-traefik-platform-traefik",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRoleBinding",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-traefik",
+        "meta.helm.sh/release-namespace": "platform-traefik"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/instance": "platform-traefik-platform-traefik",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "traefik",
+        "helm.sh/chart": "traefik-40.2.0",
+        "helm.toolkit.fluxcd.io/name": "traefik",
+        "helm.toolkit.fluxcd.io/namespace": "platform-traefik"
+      },
+      "name": "platform-traefik-platform-traefik",
+      "uid": "2562a30d-f3b2-482b-acd3-5ddb03fda48c"
+    },
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "ClusterRole",
+      "name": "platform-traefik-platform-traefik"
+    },
+    "subjects": [
+      {
+        "kind": "ServiceAccount",
+        "name": "platform-traefik",
+        "namespace": "platform-traefik"
+      }
+    ]
+  }
+}

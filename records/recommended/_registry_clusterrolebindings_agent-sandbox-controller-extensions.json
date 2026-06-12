@@ -1,0 +1,37 @@
+{
+  "key": "/registry/clusterrolebindings/agent-sandbox-controller-extensions",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRoleBinding",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-agent-sandbox",
+        "meta.helm.sh/release-namespace": "platform-agent-sandbox"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/instance": "platform-agent-sandbox",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "agent-sandbox",
+        "app.kubernetes.io/version": "v0.4.6",
+        "helm.sh/chart": "agent-sandbox-1.0.0",
+        "helm.toolkit.fluxcd.io/name": "agent-sandbox",
+        "helm.toolkit.fluxcd.io/namespace": "platform-agent-sandbox"
+      },
+      "name": "agent-sandbox-controller-extensions",
+      "uid": "f01b359e-aa65-4a2a-81a7-9093400ad186"
+    },
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "ClusterRole",
+      "name": "agent-sandbox-controller-extensions"
+    },
+    "subjects": [
+      {
+        "kind": "ServiceAccount",
+        "name": "agent-sandbox-controller",
+        "namespace": "platform-agent-sandbox"
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "key": "/registry/source.toolkit.fluxcd.io/helmcharts/platform-components/platform-cert-manager-cert-manager",
+  "value": {
+    "apiVersion": "source.toolkit.fluxcd.io/v1",
+    "kind": "HelmChart",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "finalizers": [
+        "finalizers.fluxcd.io"
+      ],
+      "generation": 1,
+      "labels": {
+        "helm.toolkit.fluxcd.io/name": "cert-manager",
+        "helm.toolkit.fluxcd.io/namespace": "platform-cert-manager"
+      },
+      "name": "platform-cert-manager-cert-manager",
+      "namespace": "platform-components",
+      "uid": "efa435aa-83ac-4a39-af02-f24e7376338e"
+    },
+    "spec": {
+      "chart": "./charts/cert-manager",
+      "interval": "10m0s",
+      "reconcileStrategy": "ChartVersion",
+      "sourceRef": {
+        "kind": "GitRepository",
+        "name": "podplane-components"
+      },
+      "version": "*"
+    }
+  }
+}

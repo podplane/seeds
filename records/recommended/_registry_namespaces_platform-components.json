@@ -1,0 +1,21 @@
+{
+  "key": "/registry/namespaces/platform-components",
+  "value": {
+    "apiVersion": "v1",
+    "kind": "Namespace",
+    "metadata": {
+      "annotations": {},
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/metadata.name": "platform-components"
+      },
+      "name": "platform-components",
+      "uid": "952d41c2-113f-46eb-b44d-5340eb1c04ee"
+    },
+    "spec": {
+      "finalizers": [
+        "kubernetes"
+      ]
+    }
+  }
+}

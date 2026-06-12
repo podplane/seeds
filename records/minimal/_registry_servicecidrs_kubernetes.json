@@ -1,0 +1,21 @@
+{
+  "key": "/registry/servicecidrs/kubernetes",
+  "value": {
+    "apiVersion": "networking.k8s.io/v1",
+    "kind": "ServiceCIDR",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "finalizers": [
+        "networking.k8s.io/service-cidr-finalizer"
+      ],
+      "name": "kubernetes",
+      "uid": "b54e952e-4b6a-48ed-b663-37189d208e65"
+    },
+    "spec": {
+      "cidrs": [
+        "198.18.0.0/15",
+        "fdc6::/108"
+      ]
+    }
+  }
+}

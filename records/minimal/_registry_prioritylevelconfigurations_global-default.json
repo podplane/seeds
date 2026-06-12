@@ -1,0 +1,31 @@
+{
+  "key": "/registry/prioritylevelconfigurations/global-default",
+  "value": {
+    "apiVersion": "flowcontrol.apiserver.k8s.io/v1",
+    "kind": "PriorityLevelConfiguration",
+    "metadata": {
+      "annotations": {
+        "apf.kubernetes.io/autoupdate-spec": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "name": "global-default",
+      "uid": "b40abb9f-fa63-4fb7-ab2b-16e751fa719d"
+    },
+    "spec": {
+      "limited": {
+        "lendablePercent": 50,
+        "limitResponse": {
+          "queuing": {
+            "handSize": 6,
+            "queueLengthLimit": 50,
+            "queues": 128
+          },
+          "type": "Queue"
+        },
+        "nominalConcurrencyShares": 20
+      },
+      "type": "Limited"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "key": "/registry/flowschemas/catch-all",
+  "value": {
+    "apiVersion": "flowcontrol.apiserver.k8s.io/v1",
+    "kind": "FlowSchema",
+    "metadata": {
+      "annotations": {
+        "apf.kubernetes.io/autoupdate-spec": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "name": "catch-all",
+      "uid": "fc411696-a91a-4db0-9041-3607f7a9c164"
+    },
+    "spec": {
+      "distinguisherMethod": {
+        "type": "ByUser"
+      },
+      "matchingPrecedence": 10000,
+      "priorityLevelConfiguration": {
+        "name": "catch-all"
+      },
+      "rules": [
+        {
+          "nonResourceRules": [
+            {
+              "nonResourceURLs": [
+                "*"
+              ],
+              "verbs": [
+                "*"
+              ]
+            }
+          ],
+          "resourceRules": [
+            {
+              "apiGroups": [
+                "*"
+              ],
+              "clusterScope": true,
+              "namespaces": [
+                "*"
+              ],
+              "resources": [
+                "*"
+              ],
+              "verbs": [
+                "*"
+              ]
+            }
+          ],
+          "subjects": [
+            {
+              "group": {
+                "name": "system:unauthenticated"
+              },
+              "kind": "Group"
+            },
+            {
+              "group": {
+                "name": "system:authenticated"
+              },
+              "kind": "Group"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

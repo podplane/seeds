@@ -1,0 +1,203 @@
+{
+  "key": "/registry/deployments/platform-trust-manager/platform-trust-manager",
+  "value": {
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "annotations": {
+        "deployment.kubernetes.io/revision": "1",
+        "meta.helm.sh/release-name": "platform-trust-manager",
+        "meta.helm.sh/release-namespace": "platform-trust-manager"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/instance": "platform-trust-manager",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "platform-trust-manager",
+        "app.kubernetes.io/version": "v0.18.0",
+        "helm.sh/chart": "trust-manager-v0.18.0",
+        "helm.toolkit.fluxcd.io/name": "trust-manager",
+        "helm.toolkit.fluxcd.io/namespace": "platform-trust-manager"
+      },
+      "name": "platform-trust-manager",
+      "namespace": "platform-trust-manager",
+      "uid": "0d5e4ff8-af60-4a4a-895d-62e885f9a1a8"
+    },
+    "spec": {
+      "progressDeadlineSeconds": 600,
+      "replicas": 1,
+      "revisionHistoryLimit": 10,
+      "selector": {
+        "matchLabels": {
+          "app": "platform-trust-manager"
+        }
+      },
+      "strategy": {
+        "rollingUpdate": {
+          "maxSurge": "25%",
+          "maxUnavailable": "25%"
+        },
+        "type": "RollingUpdate"
+      },
+      "template": {
+        "metadata": {
+          "creationTimestamp": null,
+          "labels": {
+            "app": "platform-trust-manager",
+            "app.kubernetes.io/instance": "platform-trust-manager",
+            "app.kubernetes.io/managed-by": "Helm",
+            "app.kubernetes.io/name": "platform-trust-manager",
+            "app.kubernetes.io/version": "v0.18.0",
+            "helm.sh/chart": "trust-manager-v0.18.0"
+          }
+        },
+        "spec": {
+          "automountServiceAccountToken": true,
+          "containers": [
+            {
+              "args": [
+                "--log-format=text",
+                "--log-level=1",
+                "--metrics-port=9402",
+                "--readiness-probe-port=6060",
+                "--readiness-probe-path=/readyz",
+                "--leader-elect=true",
+                "--leader-election-lease-duration=15s",
+                "--leader-election-renew-deadline=10s",
+                "--trust-namespace=platform-certs",
+                "--webhook-host=0.0.0.0",
+                "--webhook-port=6443",
+                "--webhook-certificate-dir=/tls",
+                "--default-package-location=/packages/cert-manager-package-debian.json"
+              ],
+              "image": "quay.io/jetstack/trust-manager:v0.18.0",
+              "imagePullPolicy": "IfNotPresent",
+              "name": "platform-trust-manager",
+              "ports": [
+                {
+                  "containerPort": 6443,
+                  "name": "webhook",
+                  "protocol": "TCP"
+                },
+                {
+                  "containerPort": 9402,
+                  "name": "metrics",
+                  "protocol": "TCP"
+                }
+              ],
+              "readinessProbe": {
+                "failureThreshold": 3,
+                "httpGet": {
+                  "path": "/readyz",
+                  "port": 6060,
+                  "scheme": "HTTP"
+                },
+                "initialDelaySeconds": 3,
+                "periodSeconds": 7,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "resources": {},
+              "securityContext": {
+                "allowPrivilegeEscalation": false,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ]
+                },
+                "readOnlyRootFilesystem": true,
+                "runAsNonRoot": true,
+                "seccompProfile": {
+                  "type": "RuntimeDefault"
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/tls",
+                  "name": "tls",
+                  "readOnly": true
+                },
+                {
+                  "mountPath": "/packages",
+                  "name": "packages",
+                  "readOnly": true
+                }
+              ]
+            }
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "initContainers": [
+            {
+              "args": [
+                "/copyandmaybepause",
+                "/debian-package",
+                "/packages"
+              ],
+              "image": "quay.io/jetstack/trust-pkg-debian-bookworm:20230311.0",
+              "imagePullPolicy": "IfNotPresent",
+              "name": "cert-manager-package-debian",
+              "resources": {
+                "limits": {
+                  "cpu": "100m",
+                  "memory": "128Mi"
+                },
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "128Mi"
+                }
+              },
+              "securityContext": {
+                "allowPrivilegeEscalation": false,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ]
+                },
+                "readOnlyRootFilesystem": true,
+                "runAsNonRoot": true,
+                "seccompProfile": {
+                  "type": "RuntimeDefault"
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/packages",
+                  "name": "packages"
+                }
+              ]
+            }
+          ],
+          "nodeSelector": {
+            "kubernetes.io/os": "linux"
+          },
+          "restartPolicy": "Always",
+          "schedulerName": "default-scheduler",
+          "securityContext": {},
+          "serviceAccount": "platform-trust-manager",
+          "serviceAccountName": "platform-trust-manager",
+          "terminationGracePeriodSeconds": 30,
+          "volumes": [
+            {
+              "emptyDir": {
+                "sizeLimit": "50M"
+              },
+              "name": "packages"
+            },
+            {
+              "name": "tls",
+              "secret": {
+                "defaultMode": 420,
+                "secretName": "platform-trust-manager-tls"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

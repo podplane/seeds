@@ -1,0 +1,32 @@
+{
+  "key": "/registry/cert-manager.io/certificates/platform-certs/platform-selfsigned-ca-certificate",
+  "value": {
+    "apiVersion": "cert-manager.io/v1",
+    "kind": "Certificate",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-certs",
+        "meta.helm.sh/release-namespace": "platform-certs"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-certs",
+        "helm.toolkit.fluxcd.io/namespace": "platform-certs"
+      },
+      "name": "platform-selfsigned-ca-certificate",
+      "namespace": "platform-certs",
+      "uid": "55a60be2-4449-4361-9e1d-78b0ff46bb83"
+    },
+    "spec": {
+      "commonName": "podplane.local",
+      "isCA": true,
+      "issuerRef": {
+        "kind": "Issuer",
+        "name": "platform-selfsigned-ca-issuer"
+      },
+      "secretName": "platform-selfsigned-ca-certificate-secret"
+    }
+  }
+}

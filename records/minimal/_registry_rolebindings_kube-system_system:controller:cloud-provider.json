@@ -1,0 +1,31 @@
+{
+  "key": "/registry/rolebindings/kube-system/system:controller:cloud-provider",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "RoleBinding",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "system:controller:cloud-provider",
+      "namespace": "kube-system",
+      "uid": "18c376d8-0260-4162-9523-a6d4a69bfe64"
+    },
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "Role",
+      "name": "system:controller:cloud-provider"
+    },
+    "subjects": [
+      {
+        "kind": "ServiceAccount",
+        "name": "cloud-provider",
+        "namespace": "kube-system"
+      }
+    ]
+  }
+}

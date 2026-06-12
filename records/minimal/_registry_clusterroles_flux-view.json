@@ -1,0 +1,44 @@
+{
+  "key": "/registry/clusterroles/flux-view",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRole",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-fluxcd",
+        "meta.helm.sh/release-namespace": "platform-fluxcd"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "fluxcd",
+        "helm.toolkit.fluxcd.io/namespace": "platform-fluxcd",
+        "rbac.authorization.k8s.io/aggregate-to-admin": "true",
+        "rbac.authorization.k8s.io/aggregate-to-edit": "true",
+        "rbac.authorization.k8s.io/aggregate-to-view": "true"
+      },
+      "name": "flux-view",
+      "uid": "0eb54aea-4065-4b3e-b8ef-eceee7abbfa4"
+    },
+    "rules": [
+      {
+        "apiGroups": [
+          "notification.toolkit.fluxcd.io",
+          "source.toolkit.fluxcd.io",
+          "source.extensions.fluxcd.io",
+          "helm.toolkit.fluxcd.io",
+          "image.toolkit.fluxcd.io",
+          "kustomize.toolkit.fluxcd.io"
+        ],
+        "resources": [
+          "*"
+        ],
+        "verbs": [
+          "get",
+          "list",
+          "watch"
+        ]
+      }
+    ]
+  }
+}

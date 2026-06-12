@@ -1,0 +1,21 @@
+{
+  "key": "/registry/apiregistration.k8s.io/apiservices/v1.discovery.k8s.io",
+  "value": {
+    "apiVersion": "apiregistration.k8s.io/v1",
+    "kind": "APIService",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kube-aggregator.kubernetes.io/automanaged": "onstart"
+      },
+      "name": "v1.discovery.k8s.io",
+      "uid": "ab18dec6-e7fd-4eda-90d0-c709658ac206"
+    },
+    "spec": {
+      "group": "discovery.k8s.io",
+      "groupPriorityMinimum": 16200,
+      "version": "v1",
+      "versionPriority": 15
+    }
+  }
+}

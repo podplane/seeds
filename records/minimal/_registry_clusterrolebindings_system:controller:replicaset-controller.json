@@ -1,0 +1,30 @@
+{
+  "key": "/registry/clusterrolebindings/system:controller:replicaset-controller",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRoleBinding",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "system:controller:replicaset-controller",
+      "uid": "ab9bafd1-f667-4638-9c13-e8828a003681"
+    },
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "ClusterRole",
+      "name": "system:controller:replicaset-controller"
+    },
+    "subjects": [
+      {
+        "kind": "ServiceAccount",
+        "name": "replicaset-controller",
+        "namespace": "kube-system"
+      }
+    ]
+  }
+}

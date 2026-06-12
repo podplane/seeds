@@ -1,0 +1,30 @@
+{
+  "key": "/registry/clusterrolebindings/system:controller:job-controller",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRoleBinding",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "system:controller:job-controller",
+      "uid": "2fca5d0b-a693-4049-8c36-a9054663a11e"
+    },
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "ClusterRole",
+      "name": "system:controller:job-controller"
+    },
+    "subjects": [
+      {
+        "kind": "ServiceAccount",
+        "name": "job-controller",
+        "namespace": "kube-system"
+      }
+    ]
+  }
+}

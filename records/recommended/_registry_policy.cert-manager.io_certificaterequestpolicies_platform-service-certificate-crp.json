@@ -1,0 +1,97 @@
+{
+  "key": "/registry/policy.cert-manager.io/certificaterequestpolicies/platform-service-certificate-crp",
+  "value": {
+    "apiVersion": "policy.cert-manager.io/v1alpha1",
+    "kind": "CertificateRequestPolicy",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-certs",
+        "meta.helm.sh/release-namespace": "platform-certs"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-certs",
+        "helm.toolkit.fluxcd.io/namespace": "platform-certs"
+      },
+      "name": "platform-service-certificate-crp",
+      "uid": "f5e9891a-1c92-4c9a-b80a-dbbb816db711"
+    },
+    "spec": {
+      "allowed": {
+        "commonName": {
+          "required": false,
+          "validations": [
+            {
+              "message": "commonName must match the service namespace",
+              "rule": "self == (cr.name + '.' + cr.namespace)\n"
+            }
+          ]
+        },
+        "dnsNames": {
+          "required": true,
+          "validations": [
+            {
+              "message": "DNS names can only contain exactly the 4 service DNS patterns: service-name, service-name.namespace, service-name.namespace.svc, service-name.namespace.svc.cluster.local",
+              "rule": "self.endsWith('.' + cr.namespace + '.svc.cluster.local') ||\nself.endsWith('.' + cr.namespace + '.svc') ||\nself.endsWith('.' + cr.namespace) ||\n!self.contains('.')\n"
+            }
+          ]
+        },
+        "isCA": false,
+        "subject": {
+          "countries": {
+            "values": [
+              "*"
+            ]
+          },
+          "localities": {
+            "values": [
+              "*"
+            ]
+          },
+          "organizationalUnits": {
+            "values": [
+              "*"
+            ]
+          },
+          "organizations": {
+            "values": [
+              "*"
+            ]
+          },
+          "postalCodes": {
+            "values": [
+              "*"
+            ]
+          },
+          "provinces": {
+            "values": [
+              "*"
+            ]
+          },
+          "serialNumber": {
+            "value": "*"
+          },
+          "streetAddresses": {
+            "values": [
+              "*"
+            ]
+          }
+        },
+        "usages": [
+          "digital signature",
+          "key encipherment",
+          "server auth",
+          "client auth"
+        ]
+      },
+      "selector": {
+        "issuerRef": {
+          "kind": "ClusterIssuer",
+          "name": "platform-service-certificate-clusterissuer"
+        }
+      }
+    }
+  }
+}

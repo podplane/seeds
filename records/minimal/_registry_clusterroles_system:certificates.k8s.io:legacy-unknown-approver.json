@@ -1,0 +1,34 @@
+{
+  "key": "/registry/clusterroles/system:certificates.k8s.io:legacy-unknown-approver",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRole",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "system:certificates.k8s.io:legacy-unknown-approver",
+      "uid": "ad982424-8ea8-43b3-9c68-74211285876a"
+    },
+    "rules": [
+      {
+        "apiGroups": [
+          "certificates.k8s.io"
+        ],
+        "resourceNames": [
+          "kubernetes.io/legacy-unknown"
+        ],
+        "resources": [
+          "signers"
+        ],
+        "verbs": [
+          "approve"
+        ]
+      }
+    ]
+  }
+}

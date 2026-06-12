@@ -1,0 +1,23 @@
+{
+  "key": "/registry/prioritylevelconfigurations/exempt",
+  "value": {
+    "apiVersion": "flowcontrol.apiserver.k8s.io/v1",
+    "kind": "PriorityLevelConfiguration",
+    "metadata": {
+      "annotations": {
+        "apf.kubernetes.io/autoupdate-spec": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "name": "exempt",
+      "uid": "2c91f403-6127-4992-b9ec-69224581134d"
+    },
+    "spec": {
+      "exempt": {
+        "lendablePercent": 0,
+        "nominalConcurrencyShares": 0
+      },
+      "type": "Exempt"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "key": "/registry/cert-manager.io/certificates/platform-trust-manager/platform-trust-manager",
+  "value": {
+    "apiVersion": "cert-manager.io/v1",
+    "kind": "Certificate",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-trust-manager",
+        "meta.helm.sh/release-namespace": "platform-trust-manager"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/instance": "platform-trust-manager",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "platform-trust-manager",
+        "app.kubernetes.io/version": "v0.18.0",
+        "helm.sh/chart": "trust-manager-v0.18.0",
+        "helm.toolkit.fluxcd.io/name": "trust-manager",
+        "helm.toolkit.fluxcd.io/namespace": "platform-trust-manager"
+      },
+      "name": "platform-trust-manager",
+      "namespace": "platform-trust-manager",
+      "uid": "ab490563-45a7-45bd-86b8-b50747b1d18b"
+    },
+    "spec": {
+      "commonName": "platform-trust-manager.platform-trust-manager.svc",
+      "dnsNames": [
+        "platform-trust-manager.platform-trust-manager.svc"
+      ],
+      "issuerRef": {
+        "group": "cert-manager.io",
+        "kind": "Issuer",
+        "name": "platform-trust-manager"
+      },
+      "revisionHistoryLimit": 1,
+      "secretName": "platform-trust-manager-tls"
+    }
+  }
+}

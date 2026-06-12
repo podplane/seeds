@@ -1,0 +1,62 @@
+{
+  "key": "/registry/services/specs/platform-coredns/platform-coredns",
+  "value": {
+    "apiVersion": "v1",
+    "kind": "Service",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-coredns",
+        "meta.helm.sh/release-namespace": "platform-coredns"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/instance": "platform-coredns",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "coredns",
+        "helm.sh/chart": "coredns-1.36.1",
+        "helm.toolkit.fluxcd.io/name": "coredns",
+        "helm.toolkit.fluxcd.io/namespace": "platform-coredns",
+        "k8s-app": "coredns",
+        "kubernetes.io/cluster-service": "true",
+        "kubernetes.io/name": "CoreDNS"
+      },
+      "name": "platform-coredns",
+      "namespace": "platform-coredns",
+      "uid": "04bc8aaf-db01-40d6-8bed-acce16d8d8e5"
+    },
+    "spec": {
+      "clusterIP": "198.19.255.254",
+      "clusterIPs": [
+        "198.19.255.254",
+        "fdc6::ffff"
+      ],
+      "internalTrafficPolicy": "Cluster",
+      "ipFamilies": [
+        "IPv4",
+        "IPv6"
+      ],
+      "ipFamilyPolicy": "PreferDualStack",
+      "ports": [
+        {
+          "name": "udp-53",
+          "port": 53,
+          "protocol": "UDP",
+          "targetPort": 53
+        },
+        {
+          "name": "tcp-53",
+          "port": 53,
+          "protocol": "TCP",
+          "targetPort": 53
+        }
+      ],
+      "selector": {
+        "app.kubernetes.io/instance": "platform-coredns",
+        "app.kubernetes.io/name": "coredns",
+        "k8s-app": "coredns"
+      },
+      "sessionAffinity": "None",
+      "type": "ClusterIP"
+    }
+  }
+}

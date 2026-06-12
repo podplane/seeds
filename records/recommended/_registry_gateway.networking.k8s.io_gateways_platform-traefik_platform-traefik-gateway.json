@@ -1,0 +1,80 @@
+{
+  "key": "/registry/gateway.networking.k8s.io/gateways/platform-traefik/platform-traefik-gateway",
+  "value": {
+    "apiVersion": "gateway.networking.k8s.io/v1",
+    "kind": "Gateway",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-traefik",
+        "meta.helm.sh/release-namespace": "platform-traefik"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "traefik",
+        "helm.toolkit.fluxcd.io/namespace": "platform-traefik"
+      },
+      "name": "platform-traefik-gateway",
+      "namespace": "platform-traefik",
+      "uid": "2512aaa0-5ec4-43f1-a094-6aaf02256ad9"
+    },
+    "spec": {
+      "gatewayClassName": "platform-traefik",
+      "listeners": [
+        {
+          "allowedRoutes": {
+            "namespaces": {
+              "from": "All"
+            }
+          },
+          "name": "http",
+          "port": 80,
+          "protocol": "HTTP"
+        },
+        {
+          "allowedRoutes": {
+            "namespaces": {
+              "from": "All"
+            }
+          },
+          "hostname": "default.localhost",
+          "name": "https-default-localhost",
+          "port": 443,
+          "protocol": "HTTPS",
+          "tls": {
+            "certificateRefs": [
+              {
+                "group": "",
+                "kind": "Secret",
+                "name": "platform-traefik-default-localhost-tls"
+              }
+            ],
+            "mode": "Terminate"
+          }
+        },
+        {
+          "allowedRoutes": {
+            "namespaces": {
+              "from": "All"
+            }
+          },
+          "hostname": "*.default.localhost",
+          "name": "https-wildcard-default-localhost",
+          "port": 443,
+          "protocol": "HTTPS",
+          "tls": {
+            "certificateRefs": [
+              {
+                "group": "",
+                "kind": "Secret",
+                "name": "platform-traefik-default-localhost-tls"
+              }
+            ],
+            "mode": "Terminate"
+          }
+        }
+      ]
+    }
+  }
+}

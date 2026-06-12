@@ -1,0 +1,26 @@
+{
+  "key": "/registry/source.toolkit.fluxcd.io/gitrepositories/platform-components/podplane-components",
+  "value": {
+    "apiVersion": "source.toolkit.fluxcd.io/v1",
+    "kind": "GitRepository",
+    "metadata": {
+      "annotations": {},
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "finalizers": [
+        "finalizers.fluxcd.io"
+      ],
+      "generation": 1,
+      "name": "podplane-components",
+      "namespace": "platform-components",
+      "uid": "681761aa-fbbe-4d92-8cc1-c460e33de576"
+    },
+    "spec": {
+      "interval": "10m",
+      "ref": {
+        "branch": "main"
+      },
+      "timeout": "60s",
+      "url": "https://github.com/podplane/components.git"
+    }
+  }
+}

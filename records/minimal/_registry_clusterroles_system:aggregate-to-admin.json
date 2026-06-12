@@ -1,0 +1,51 @@
+{
+  "key": "/registry/clusterroles/system:aggregate-to-admin",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRole",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults",
+        "rbac.authorization.k8s.io/aggregate-to-admin": "true"
+      },
+      "name": "system:aggregate-to-admin",
+      "uid": "d6252bbb-92be-4dd3-9dee-29373af79888"
+    },
+    "rules": [
+      {
+        "apiGroups": [
+          "authorization.k8s.io"
+        ],
+        "resources": [
+          "localsubjectaccessreviews"
+        ],
+        "verbs": [
+          "create"
+        ]
+      },
+      {
+        "apiGroups": [
+          "rbac.authorization.k8s.io"
+        ],
+        "resources": [
+          "rolebindings",
+          "roles"
+        ],
+        "verbs": [
+          "create",
+          "delete",
+          "deletecollection",
+          "get",
+          "list",
+          "patch",
+          "update",
+          "watch"
+        ]
+      }
+    ]
+  }
+}

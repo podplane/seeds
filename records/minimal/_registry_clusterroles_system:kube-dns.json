@@ -1,0 +1,33 @@
+{
+  "key": "/registry/clusterroles/system:kube-dns",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRole",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "system:kube-dns",
+      "uid": "57aaf2f0-b9b4-47c0-ace4-19b1d388e975"
+    },
+    "rules": [
+      {
+        "apiGroups": [
+          ""
+        ],
+        "resources": [
+          "endpoints",
+          "services"
+        ],
+        "verbs": [
+          "list",
+          "watch"
+        ]
+      }
+    ]
+  }
+}

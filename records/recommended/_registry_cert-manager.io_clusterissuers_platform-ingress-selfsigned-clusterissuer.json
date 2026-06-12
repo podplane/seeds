@@ -1,0 +1,27 @@
+{
+  "key": "/registry/cert-manager.io/clusterissuers/platform-ingress-selfsigned-clusterissuer",
+  "value": {
+    "apiVersion": "cert-manager.io/v1",
+    "kind": "ClusterIssuer",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-certs",
+        "meta.helm.sh/release-namespace": "platform-certs"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-certs",
+        "helm.toolkit.fluxcd.io/namespace": "platform-certs"
+      },
+      "name": "platform-ingress-selfsigned-clusterissuer",
+      "uid": "adc96642-e621-4af5-b6a5-18efcfa0f9b8"
+    },
+    "spec": {
+      "ca": {
+        "secretName": "platform-selfsigned-ca-certificate-secret"
+      }
+    }
+  }
+}

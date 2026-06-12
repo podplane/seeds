@@ -1,0 +1,61 @@
+{
+  "key": "/registry/services/specs/platform-traefik/platform-traefik",
+  "value": {
+    "apiVersion": "v1",
+    "kind": "Service",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-traefik",
+        "meta.helm.sh/release-namespace": "platform-traefik"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/instance": "platform-traefik-platform-traefik",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "traefik",
+        "helm.sh/chart": "traefik-40.2.0",
+        "helm.toolkit.fluxcd.io/name": "traefik",
+        "helm.toolkit.fluxcd.io/namespace": "platform-traefik"
+      },
+      "name": "platform-traefik",
+      "namespace": "platform-traefik",
+      "uid": "f5fa36a7-1881-472d-b2de-76251ce4824a"
+    },
+    "spec": {
+      "allocateLoadBalancerNodePorts": true,
+      "clusterIP": "198.18.0.11",
+      "clusterIPs": [
+        "198.18.0.11"
+      ],
+      "externalTrafficPolicy": "Cluster",
+      "internalTrafficPolicy": "Cluster",
+      "ipFamilies": [
+        "IPv4",
+        "IPv6"
+      ],
+      "ipFamilyPolicy": "PreferDualStack",
+      "ports": [
+        {
+          "name": "web",
+          "nodePort": 31619,
+          "port": 80,
+          "protocol": "TCP",
+          "targetPort": "web"
+        },
+        {
+          "name": "websecure",
+          "nodePort": 31701,
+          "port": 443,
+          "protocol": "TCP",
+          "targetPort": "websecure"
+        }
+      ],
+      "selector": {
+        "app.kubernetes.io/instance": "platform-traefik-platform-traefik",
+        "app.kubernetes.io/name": "traefik"
+      },
+      "sessionAffinity": "None",
+      "type": "LoadBalancer"
+    }
+  }
+}

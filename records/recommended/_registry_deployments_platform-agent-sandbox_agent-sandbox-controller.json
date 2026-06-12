@@ -1,0 +1,114 @@
+{
+  "key": "/registry/deployments/platform-agent-sandbox/agent-sandbox-controller",
+  "value": {
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "annotations": {
+        "deployment.kubernetes.io/revision": "1",
+        "meta.helm.sh/release-name": "platform-agent-sandbox",
+        "meta.helm.sh/release-namespace": "platform-agent-sandbox"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/instance": "platform-agent-sandbox",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "agent-sandbox",
+        "app.kubernetes.io/version": "v0.4.6",
+        "helm.sh/chart": "agent-sandbox-1.0.0",
+        "helm.toolkit.fluxcd.io/name": "agent-sandbox",
+        "helm.toolkit.fluxcd.io/namespace": "platform-agent-sandbox"
+      },
+      "name": "agent-sandbox-controller",
+      "namespace": "platform-agent-sandbox",
+      "uid": "6a37021f-14c9-4c1d-b609-ffb3f6ec1c9d"
+    },
+    "spec": {
+      "progressDeadlineSeconds": 600,
+      "replicas": 1,
+      "revisionHistoryLimit": 10,
+      "selector": {
+        "matchLabels": {
+          "app.kubernetes.io/instance": "platform-agent-sandbox",
+          "app.kubernetes.io/name": "agent-sandbox"
+        }
+      },
+      "strategy": {
+        "rollingUpdate": {
+          "maxSurge": "25%",
+          "maxUnavailable": "25%"
+        },
+        "type": "RollingUpdate"
+      },
+      "template": {
+        "metadata": {
+          "creationTimestamp": null,
+          "labels": {
+            "app.kubernetes.io/instance": "platform-agent-sandbox",
+            "app.kubernetes.io/name": "agent-sandbox"
+          }
+        },
+        "spec": {
+          "containers": [
+            {
+              "args": [
+                "--leader-elect=true",
+                "--extensions=true"
+              ],
+              "image": "registry.k8s.io/agent-sandbox/agent-sandbox-controller:v0.4.6",
+              "imagePullPolicy": "IfNotPresent",
+              "livenessProbe": {
+                "failureThreshold": 3,
+                "httpGet": {
+                  "path": "/healthz",
+                  "port": "healthz",
+                  "scheme": "HTTP"
+                },
+                "initialDelaySeconds": 15,
+                "periodSeconds": 20,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "name": "agent-sandbox-controller",
+              "ports": [
+                {
+                  "containerPort": 8080,
+                  "name": "metrics",
+                  "protocol": "TCP"
+                },
+                {
+                  "containerPort": 8081,
+                  "name": "healthz",
+                  "protocol": "TCP"
+                }
+              ],
+              "readinessProbe": {
+                "failureThreshold": 3,
+                "httpGet": {
+                  "path": "/readyz",
+                  "port": "healthz",
+                  "scheme": "HTTP"
+                },
+                "initialDelaySeconds": 5,
+                "periodSeconds": 10,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "resources": {},
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File"
+            }
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "restartPolicy": "Always",
+          "schedulerName": "default-scheduler",
+          "securityContext": {},
+          "serviceAccount": "agent-sandbox-controller",
+          "serviceAccountName": "agent-sandbox-controller",
+          "terminationGracePeriodSeconds": 30
+        }
+      }
+    }
+  }
+}

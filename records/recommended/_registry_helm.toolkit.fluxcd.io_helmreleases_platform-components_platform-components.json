@@ -1,0 +1,96 @@
+{
+  "key": "/registry/helm.toolkit.fluxcd.io/helmreleases/platform-components/platform-components",
+  "value": {
+    "apiVersion": "helm.toolkit.fluxcd.io/v2",
+    "kind": "HelmRelease",
+    "metadata": {
+      "annotations": {},
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "finalizers": [
+        "finalizers.fluxcd.io"
+      ],
+      "generation": 1,
+      "name": "platform-components",
+      "namespace": "platform-components",
+      "uid": "834ebfaa-ca41-4178-abfc-27405fa18a54"
+    },
+    "spec": {
+      "chart": {
+        "spec": {
+          "chart": "./charts/platform-components",
+          "reconcileStrategy": "ChartVersion",
+          "sourceRef": {
+            "kind": "GitRepository",
+            "name": "podplane-components",
+            "namespace": "platform-components"
+          },
+          "version": "*"
+        }
+      },
+      "interval": "10m",
+      "maxHistory": 3,
+      "releaseName": "platform-components",
+      "values": {
+        "platform": {
+          "components": {
+            "apps": {
+              "agent-sandbox": {
+                "enabled": true
+              },
+              "cert-manager": {
+                "enabled": true
+              },
+              "platform-certs": {
+                "enabled": true
+              },
+              "platform-trust": {
+                "enabled": true
+              },
+              "traefik": {
+                "enabled": true
+              },
+              "trust-manager": {
+                "enabled": true
+              }
+            },
+            "crds": {
+              "agent-sandbox-crds": {
+                "enabled": true
+              },
+              "cert-manager-crds": {
+                "enabled": true
+              },
+              "traefik-crds": {
+                "enabled": true
+              },
+              "trust-manager-crds": {
+                "enabled": true
+              }
+            },
+            "values": {
+              "traefik": {
+                "platform": {
+                  "traefik": {
+                    "ingress": {
+                      "domains": [
+                        {
+                          "default": true,
+                          "zone": "default.localhost"
+                        }
+                      ],
+                      "enabled": true,
+                      "issuerRef": {
+                        "kind": "ClusterIssuer",
+                        "name": "platform-ingress-selfsigned-clusterissuer"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "key": "/registry/prioritylevelconfigurations/catch-all",
+  "value": {
+    "apiVersion": "flowcontrol.apiserver.k8s.io/v1",
+    "kind": "PriorityLevelConfiguration",
+    "metadata": {
+      "annotations": {
+        "apf.kubernetes.io/autoupdate-spec": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "name": "catch-all",
+      "uid": "247202e7-db1a-446e-ba69-501af7457f97"
+    },
+    "spec": {
+      "limited": {
+        "lendablePercent": 0,
+        "limitResponse": {
+          "type": "Reject"
+        },
+        "nominalConcurrencyShares": 5
+      },
+      "type": "Limited"
+    }
+  }
+}

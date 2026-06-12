@@ -1,0 +1,45 @@
+{
+  "key": "/registry/clusterroles/flux-edit",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRole",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-fluxcd",
+        "meta.helm.sh/release-namespace": "platform-fluxcd"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "fluxcd",
+        "helm.toolkit.fluxcd.io/namespace": "platform-fluxcd",
+        "rbac.authorization.k8s.io/aggregate-to-admin": "true",
+        "rbac.authorization.k8s.io/aggregate-to-edit": "true"
+      },
+      "name": "flux-edit",
+      "uid": "56fe5298-3456-4d96-81c8-53ae12f15c84"
+    },
+    "rules": [
+      {
+        "apiGroups": [
+          "notification.toolkit.fluxcd.io",
+          "source.toolkit.fluxcd.io",
+          "source.extensions.fluxcd.io",
+          "helm.toolkit.fluxcd.io",
+          "image.toolkit.fluxcd.io",
+          "kustomize.toolkit.fluxcd.io"
+        ],
+        "resources": [
+          "*"
+        ],
+        "verbs": [
+          "create",
+          "delete",
+          "deletecollection",
+          "patch",
+          "update"
+        ]
+      }
+    ]
+  }
+}

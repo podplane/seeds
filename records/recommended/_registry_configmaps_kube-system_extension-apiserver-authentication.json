@@ -1,0 +1,16 @@
+{
+  "key": "/registry/configmaps/kube-system/extension-apiserver-authentication",
+  "value": {
+    "apiVersion": "v1",
+    "data": {
+      "client-ca-file": "-----BEGIN CERTIFICATE-----\nMIIBUjCCAQSgAwIBAgIBATAFBgMrZXAwITENMAsGA1UEChMEVGVzdDEQMA4GA1UE\nAxMHVGVzdCBDQTAeFw0yNjA1MjIxMzE5MzVaFw0yNzA1MjIxMzE5MzVaMCExDTAL\nBgNVBAoTBFRlc3QxEDAOBgNVBAMTB1Rlc3QgQ0EwKjAFBgMrZXADIQD2cNpIERx5\nJW83iZGjdRVK3qkCsMPYb+YInqSCEZawk6NhMF8wDgYDVR0PAQH/BAQDAgKEMB0G\nA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAPBgNVHRMBAf8EBTADAQH/MB0G\nA1UdDgQWBBRabxefnxzV10w8GcD2LU1J/wmObTAFBgMrZXADQQAORScmVbMZrO+y\nycl3BRhU8zdtTxVtSHV48bd0XR1YFilCJXZgN7Wlj+amu64cPN1EuT5NcZ4/gjgb\nE0UgXJAA\n-----END CERTIFICATE-----\n"
+    },
+    "kind": "ConfigMap",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "name": "extension-apiserver-authentication",
+      "namespace": "kube-system",
+      "uid": "a71f64da-f182-4102-b891-9a90494f1e47"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "key": "/registry/clusterrolebindings/system:controller:statefulset-controller",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRoleBinding",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "system:controller:statefulset-controller",
+      "uid": "d5e536e5-82a7-4044-b472-867a9f15f2c3"
+    },
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "ClusterRole",
+      "name": "system:controller:statefulset-controller"
+    },
+    "subjects": [
+      {
+        "kind": "ServiceAccount",
+        "name": "statefulset-controller",
+        "namespace": "kube-system"
+      }
+    ]
+  }
+}

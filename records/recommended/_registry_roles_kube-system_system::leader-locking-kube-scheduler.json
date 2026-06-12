@@ -1,0 +1,51 @@
+{
+  "key": "/registry/roles/kube-system/system::leader-locking-kube-scheduler",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "Role",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "system::leader-locking-kube-scheduler",
+      "namespace": "kube-system",
+      "uid": "dd757f09-6ee3-434c-b9e8-33fbdb2a9fd0"
+    },
+    "rules": [
+      {
+        "apiGroups": [
+          "coordination.k8s.io"
+        ],
+        "resources": [
+          "leases"
+        ],
+        "verbs": [
+          "create",
+          "get",
+          "list",
+          "update",
+          "watch"
+        ]
+      },
+      {
+        "apiGroups": [
+          "coordination.k8s.io"
+        ],
+        "resources": [
+          "leasecandidates"
+        ],
+        "verbs": [
+          "create",
+          "get",
+          "list",
+          "update",
+          "watch"
+        ]
+      }
+    ]
+  }
+}

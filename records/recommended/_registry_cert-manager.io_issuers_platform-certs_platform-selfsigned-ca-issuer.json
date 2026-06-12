@@ -1,0 +1,26 @@
+{
+  "key": "/registry/cert-manager.io/issuers/platform-certs/platform-selfsigned-ca-issuer",
+  "value": {
+    "apiVersion": "cert-manager.io/v1",
+    "kind": "Issuer",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-certs",
+        "meta.helm.sh/release-namespace": "platform-certs"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-certs",
+        "helm.toolkit.fluxcd.io/namespace": "platform-certs"
+      },
+      "name": "platform-selfsigned-ca-issuer",
+      "namespace": "platform-certs",
+      "uid": "c0854688-c55b-44ec-8210-de62e03fdfc0"
+    },
+    "spec": {
+      "selfSigned": {}
+    }
+  }
+}

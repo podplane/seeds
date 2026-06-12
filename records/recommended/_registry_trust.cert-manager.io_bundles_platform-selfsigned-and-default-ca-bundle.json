@@ -1,0 +1,45 @@
+{
+  "key": "/registry/trust.cert-manager.io/bundles/platform-selfsigned-and-default-ca-bundle",
+  "value": {
+    "apiVersion": "trust.cert-manager.io/v1alpha1",
+    "kind": "Bundle",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-trust",
+        "meta.helm.sh/release-namespace": "platform-trust"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-trust",
+        "helm.toolkit.fluxcd.io/namespace": "platform-trust"
+      },
+      "name": "platform-selfsigned-and-default-ca-bundle",
+      "uid": "7cd27997-039a-47bb-ad9c-e4435ca9e3f1"
+    },
+    "spec": {
+      "sources": [
+        {
+          "useDefaultCAs": true
+        },
+        {
+          "secret": {
+            "key": "tls.crt",
+            "name": "platform-selfsigned-ca-certificate-secret"
+          }
+        }
+      ],
+      "target": {
+        "configMap": {
+          "key": "ca.crt"
+        },
+        "namespaceSelector": {
+          "matchLabels": {
+            "cluster.podplane.dev/bundles-selfsigned-and-default-ca": "from-platform-trust"
+          }
+        }
+      }
+    }
+  }
+}

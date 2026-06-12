@@ -1,0 +1,31 @@
+{
+  "key": "/registry/source.toolkit.fluxcd.io/helmcharts/platform-components/platform-fluxcd-fluxcd",
+  "value": {
+    "apiVersion": "source.toolkit.fluxcd.io/v1",
+    "kind": "HelmChart",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "finalizers": [
+        "finalizers.fluxcd.io"
+      ],
+      "generation": 1,
+      "labels": {
+        "helm.toolkit.fluxcd.io/name": "fluxcd",
+        "helm.toolkit.fluxcd.io/namespace": "platform-fluxcd"
+      },
+      "name": "platform-fluxcd-fluxcd",
+      "namespace": "platform-components",
+      "uid": "70b57ace-e8c9-4d86-8d7f-5201426ad99b"
+    },
+    "spec": {
+      "chart": "./charts/fluxcd",
+      "interval": "10m0s",
+      "reconcileStrategy": "ChartVersion",
+      "sourceRef": {
+        "kind": "GitRepository",
+        "name": "podplane-components"
+      },
+      "version": "*"
+    }
+  }
+}

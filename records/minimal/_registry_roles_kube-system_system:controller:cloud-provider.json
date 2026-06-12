@@ -1,0 +1,35 @@
+{
+  "key": "/registry/roles/kube-system/system:controller:cloud-provider",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "Role",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "system:controller:cloud-provider",
+      "namespace": "kube-system",
+      "uid": "90ac4505-284c-43ec-998e-74fd45883fa0"
+    },
+    "rules": [
+      {
+        "apiGroups": [
+          ""
+        ],
+        "resources": [
+          "configmaps"
+        ],
+        "verbs": [
+          "create",
+          "get",
+          "list",
+          "watch"
+        ]
+      }
+    ]
+  }
+}

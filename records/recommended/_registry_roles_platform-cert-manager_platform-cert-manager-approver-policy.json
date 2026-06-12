@@ -1,0 +1,72 @@
+{
+  "key": "/registry/roles/platform-cert-manager/platform-cert-manager-approver-policy",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "Role",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-cert-manager",
+        "meta.helm.sh/release-namespace": "platform-cert-manager"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/instance": "platform-cert-manager",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "platform-cert-manager-approver-policy",
+        "app.kubernetes.io/version": "v0.21.0",
+        "helm.sh/chart": "cert-manager-approver-policy-v0.21.0",
+        "helm.toolkit.fluxcd.io/name": "cert-manager",
+        "helm.toolkit.fluxcd.io/namespace": "platform-cert-manager"
+      },
+      "name": "platform-cert-manager-approver-policy",
+      "namespace": "platform-cert-manager",
+      "uid": "22dfee76-5d4f-4f71-b17a-981be8b48643"
+    },
+    "rules": [
+      {
+        "apiGroups": [
+          "coordination.k8s.io"
+        ],
+        "resources": [
+          "leases"
+        ],
+        "verbs": [
+          "create"
+        ]
+      },
+      {
+        "apiGroups": [
+          "coordination.k8s.io"
+        ],
+        "resourceNames": [
+          "policy.cert-manager.io"
+        ],
+        "resources": [
+          "leases"
+        ],
+        "verbs": [
+          "get",
+          "update"
+        ]
+      },
+      {
+        "apiGroups": [
+          ""
+        ],
+        "resourceNames": [
+          "platform-cert-manager-approver-policy-tls"
+        ],
+        "resources": [
+          "secrets"
+        ],
+        "verbs": [
+          "get",
+          "list",
+          "watch",
+          "create",
+          "update"
+        ]
+      }
+    ]
+  }
+}

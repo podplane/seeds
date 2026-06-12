@@ -1,0 +1,52 @@
+{
+  "key": "/registry/flowschemas/probes",
+  "value": {
+    "apiVersion": "flowcontrol.apiserver.k8s.io/v1",
+    "kind": "FlowSchema",
+    "metadata": {
+      "annotations": {
+        "apf.kubernetes.io/autoupdate-spec": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "name": "probes",
+      "uid": "a9f372bf-f0ad-4251-a07f-86cc075dcc2a"
+    },
+    "spec": {
+      "matchingPrecedence": 2,
+      "priorityLevelConfiguration": {
+        "name": "exempt"
+      },
+      "rules": [
+        {
+          "nonResourceRules": [
+            {
+              "nonResourceURLs": [
+                "/healthz",
+                "/readyz",
+                "/livez"
+              ],
+              "verbs": [
+                "get"
+              ]
+            }
+          ],
+          "subjects": [
+            {
+              "group": {
+                "name": "system:unauthenticated"
+              },
+              "kind": "Group"
+            },
+            {
+              "group": {
+                "name": "system:authenticated"
+              },
+              "kind": "Group"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

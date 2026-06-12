@@ -1,0 +1,39 @@
+{
+  "key": "/registry/cert-manager.io/certificates/platform-traefik/platform-traefik-default-localhost",
+  "value": {
+    "apiVersion": "cert-manager.io/v1",
+    "kind": "Certificate",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-traefik",
+        "meta.helm.sh/release-namespace": "platform-traefik"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "traefik",
+        "helm.toolkit.fluxcd.io/namespace": "platform-traefik"
+      },
+      "name": "platform-traefik-default-localhost",
+      "namespace": "platform-traefik",
+      "uid": "f5a23682-d4f3-4868-a3cb-51baab9ad510"
+    },
+    "spec": {
+      "dnsNames": [
+        "default.localhost",
+        "*.default.localhost"
+      ],
+      "issuerRef": {
+        "kind": "ClusterIssuer",
+        "name": "platform-ingress-selfsigned-clusterissuer"
+      },
+      "privateKey": {
+        "algorithm": "ECDSA",
+        "rotationPolicy": "Always",
+        "size": 256
+      },
+      "secretName": "platform-traefik-default-localhost-tls"
+    }
+  }
+}

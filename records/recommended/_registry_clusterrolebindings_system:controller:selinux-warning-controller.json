@@ -1,0 +1,30 @@
+{
+  "key": "/registry/clusterrolebindings/system:controller:selinux-warning-controller",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRoleBinding",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "system:controller:selinux-warning-controller",
+      "uid": "9253cec6-4131-4cae-a62c-06a6fdc4f8de"
+    },
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "ClusterRole",
+      "name": "system:controller:selinux-warning-controller"
+    },
+    "subjects": [
+      {
+        "kind": "ServiceAccount",
+        "name": "selinux-warning-controller",
+        "namespace": "kube-system"
+      }
+    ]
+  }
+}

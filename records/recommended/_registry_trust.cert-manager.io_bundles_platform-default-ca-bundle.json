@@ -1,0 +1,39 @@
+{
+  "key": "/registry/trust.cert-manager.io/bundles/platform-default-ca-bundle",
+  "value": {
+    "apiVersion": "trust.cert-manager.io/v1alpha1",
+    "kind": "Bundle",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-trust",
+        "meta.helm.sh/release-namespace": "platform-trust"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-trust",
+        "helm.toolkit.fluxcd.io/namespace": "platform-trust"
+      },
+      "name": "platform-default-ca-bundle",
+      "uid": "8e8c6479-5c6a-4275-8bcb-420938d85c03"
+    },
+    "spec": {
+      "sources": [
+        {
+          "useDefaultCAs": true
+        }
+      ],
+      "target": {
+        "configMap": {
+          "key": "ca.crt"
+        },
+        "namespaceSelector": {
+          "matchLabels": {
+            "cluster.podplane.dev/bundles-default-ca": "from-platform-trust"
+          }
+        }
+      }
+    }
+  }
+}

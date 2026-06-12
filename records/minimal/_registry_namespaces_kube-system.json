@@ -1,0 +1,20 @@
+{
+  "key": "/registry/namespaces/kube-system",
+  "value": {
+    "apiVersion": "v1",
+    "kind": "Namespace",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/metadata.name": "kube-system"
+      },
+      "name": "kube-system",
+      "uid": "8460ef91-9d32-4636-b514-a6e9581284fe"
+    },
+    "spec": {
+      "finalizers": [
+        "kubernetes"
+      ]
+    }
+  }
+}

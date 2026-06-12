@@ -1,0 +1,30 @@
+{
+  "key": "/registry/clusterrolebindings/system:controller:cronjob-controller",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRoleBinding",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "system:controller:cronjob-controller",
+      "uid": "8311a07d-d445-4771-989f-1039a203989a"
+    },
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "ClusterRole",
+      "name": "system:controller:cronjob-controller"
+    },
+    "subjects": [
+      {
+        "kind": "ServiceAccount",
+        "name": "cronjob-controller",
+        "namespace": "kube-system"
+      }
+    ]
+  }
+}
