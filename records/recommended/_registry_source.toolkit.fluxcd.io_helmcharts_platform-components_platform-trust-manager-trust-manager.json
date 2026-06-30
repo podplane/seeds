@@ -15,12 +15,12 @@
       },
       "name": "platform-trust-manager-trust-manager",
       "namespace": "platform-components",
-      "uid": "f3463646-3066-4a01-a940-34a255bfdd05"
+      "uid": "bf1d23cf-a156-4c65-924a-0c1eb30be4ca"
     },
     "spec": {
       "chart": "./charts/trust-manager",
       "interval": "10m0s",
-      "reconcileStrategy": "ChartVersion",
+      "reconcileStrategy": "Revision",
       "sourceRef": {
         "kind": "GitRepository",
         "name": "podplane-components"

@@ -20,13 +20,13 @@
       },
       "name": "platform-rbac",
       "namespace": "platform-cluster",
-      "uid": "a2ea56c0-4cbd-4b44-b136-d865a867c065"
+      "uid": "6a0a769f-5e11-4a73-a6d9-1b24ac721bb7"
     },
     "spec": {
       "chart": {
         "spec": {
           "chart": "./charts/platform-rbac",
-          "reconcileStrategy": "ChartVersion",
+          "reconcileStrategy": "Revision",
           "sourceRef": {
             "kind": "GitRepository",
             "name": "podplane-components",

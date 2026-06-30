@@ -17,7 +17,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "sandboxwarmpools.extensions.agents.x-k8s.io",
-      "uid": "7c25a608-af18-42c9-b53d-37d673ae8430"
+      "uid": "1c8eab05-be53-430e-b18b-e7f58ce0e8b7"
     },
     "spec": {
       "additionalPrinterColumns": [
@@ -128,10 +128,10 @@
           "type": "object"
         }
       },
-      "version": "v1alpha1",
+      "version": "v1beta1",
       "versions": [
         {
-          "name": "v1alpha1",
+          "name": "v1beta1",
           "served": true,
           "storage": true
         }

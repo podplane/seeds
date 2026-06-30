@@ -20,7 +20,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "backendtlspolicies.gateway.networking.k8s.io",
-      "uid": "4261ae55-e541-484b-9fb3-82b22ecd632e"
+      "uid": "b6cb7e9b-39ba-4929-a2d7-db062311d206"
     },
     "spec": {
       "conversion": {

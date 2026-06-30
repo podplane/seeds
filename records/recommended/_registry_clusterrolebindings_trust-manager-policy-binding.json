@@ -19,7 +19,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-trust-manager"
       },
       "name": "trust-manager-policy-binding",
-      "uid": "b3e5eb6e-d501-4d69-a416-efd057088b10"
+      "uid": "9ab853f4-43e5-4863-bb0a-7b3c8c787070"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

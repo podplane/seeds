@@ -20,13 +20,13 @@
       },
       "name": "coredns",
       "namespace": "platform-coredns",
-      "uid": "49233353-560b-4ba2-8c39-89f59450f030"
+      "uid": "96ea0f92-8886-4b2f-8b9a-b6448356d042"
     },
     "spec": {
       "chart": {
         "spec": {
           "chart": "./charts/coredns",
-          "reconcileStrategy": "ChartVersion",
+          "reconcileStrategy": "Revision",
           "sourceRef": {
             "kind": "GitRepository",
             "name": "podplane-components",
@@ -54,6 +54,13 @@
         "crds": "Skip",
         "remediation": {
           "retries": 3
+        }
+      },
+      "values": {
+        "coredns": {
+          "image": {
+            "repository": "default-registry.local/mirror/docker.io/coredns/coredns"
+          }
         }
       }
     }

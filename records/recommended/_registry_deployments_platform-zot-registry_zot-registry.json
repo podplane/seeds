@@ -1,0 +1,142 @@
+{
+  "key": "/registry/deployments/platform-zot-registry/zot-registry",
+  "value": {
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "annotations": {
+        "deployment.kubernetes.io/revision": "1",
+        "meta.helm.sh/release-name": "platform-zot-registry",
+        "meta.helm.sh/release-namespace": "platform-zot-registry"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/instance": "platform-zot-registry",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "zot",
+        "app.kubernetes.io/version": "v2.1.18",
+        "helm.sh/chart": "zot-0.1.118",
+        "helm.toolkit.fluxcd.io/name": "zot-registry",
+        "helm.toolkit.fluxcd.io/namespace": "platform-zot-registry"
+      },
+      "name": "zot-registry",
+      "namespace": "platform-zot-registry",
+      "uid": "faeb82f4-2d1b-4e61-a7b4-08a8560fe472"
+    },
+    "spec": {
+      "progressDeadlineSeconds": 600,
+      "replicas": 1,
+      "revisionHistoryLimit": 10,
+      "selector": {
+        "matchLabels": {
+          "app.kubernetes.io/instance": "platform-zot-registry",
+          "app.kubernetes.io/name": "zot"
+        }
+      },
+      "strategy": {
+        "rollingUpdate": {
+          "maxSurge": "25%",
+          "maxUnavailable": "25%"
+        },
+        "type": "RollingUpdate"
+      },
+      "template": {
+        "metadata": {
+          "creationTimestamp": null,
+          "labels": {
+            "app.kubernetes.io/instance": "platform-zot-registry",
+            "app.kubernetes.io/name": "zot"
+          }
+        },
+        "spec": {
+          "containers": [
+            {
+              "image": "default-registry.local/mirror/ghcr.io/project-zot/zot:v2.1.18",
+              "imagePullPolicy": "IfNotPresent",
+              "livenessProbe": {
+                "failureThreshold": 3,
+                "httpGet": {
+                  "path": "/livez",
+                  "port": 5000,
+                  "scheme": "HTTP"
+                },
+                "initialDelaySeconds": 5,
+                "periodSeconds": 10,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "name": "zot",
+              "ports": [
+                {
+                  "containerPort": 5000,
+                  "name": "zot",
+                  "protocol": "TCP"
+                }
+              ],
+              "readinessProbe": {
+                "failureThreshold": 3,
+                "httpGet": {
+                  "path": "/readyz",
+                  "port": 5000,
+                  "scheme": "HTTP"
+                },
+                "initialDelaySeconds": 5,
+                "periodSeconds": 10,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "resources": {},
+              "startupProbe": {
+                "failureThreshold": 3,
+                "httpGet": {
+                  "path": "/startupz",
+                  "port": 5000,
+                  "scheme": "HTTP"
+                },
+                "initialDelaySeconds": 5,
+                "periodSeconds": 10,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/lib/registry",
+                  "name": "data"
+                },
+                {
+                  "mountPath": "/etc/zot/config.json",
+                  "name": "podplane-zot-config",
+                  "readOnly": true,
+                  "subPath": "config.json"
+                }
+              ]
+            }
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "restartPolicy": "Always",
+          "schedulerName": "default-scheduler",
+          "securityContext": {},
+          "serviceAccount": "zot-registry",
+          "serviceAccountName": "zot-registry",
+          "terminationGracePeriodSeconds": 30,
+          "volumes": [
+            {
+              "emptyDir": {},
+              "name": "data"
+            },
+            {
+              "configMap": {
+                "defaultMode": 420,
+                "name": "zot-registry-config"
+              },
+              "name": "podplane-zot-config"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -21,7 +21,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "admin",
-      "uid": "970c48f2-9e5c-41f7-b9ce-dcecf42852e4"
+      "uid": "cd82289b-f7e5-4bc2-bfac-bee4e10fc2bf"
     },
     "rules": [
       {
@@ -55,79 +55,6 @@
         ],
         "resources": [
           "*"
-        ],
-        "verbs": [
-          "get",
-          "list",
-          "watch"
-        ]
-      },
-      {
-        "apiGroups": [
-          "cert-manager.io"
-        ],
-        "resources": [
-          "certificates",
-          "certificaterequests",
-          "issuers"
-        ],
-        "verbs": [
-          "create",
-          "delete",
-          "deletecollection",
-          "patch",
-          "update"
-        ]
-      },
-      {
-        "apiGroups": [
-          "cert-manager.io"
-        ],
-        "resources": [
-          "certificates/status"
-        ],
-        "verbs": [
-          "update"
-        ]
-      },
-      {
-        "apiGroups": [
-          "acme.cert-manager.io"
-        ],
-        "resources": [
-          "challenges",
-          "orders"
-        ],
-        "verbs": [
-          "create",
-          "delete",
-          "deletecollection",
-          "patch",
-          "update"
-        ]
-      },
-      {
-        "apiGroups": [
-          "cert-manager.io"
-        ],
-        "resources": [
-          "certificates",
-          "certificaterequests",
-          "issuers"
-        ],
-        "verbs": [
-          "get",
-          "list",
-          "watch"
-        ]
-      },
-      {
-        "apiGroups": [
-          "acme.cert-manager.io"
-        ],
-        "resources": [
-          "challenges",
-          "orders"
         ],
         "verbs": [
           "get",

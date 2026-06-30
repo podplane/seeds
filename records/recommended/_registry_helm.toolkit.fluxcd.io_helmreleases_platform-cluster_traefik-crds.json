@@ -20,13 +20,13 @@
       },
       "name": "traefik-crds",
       "namespace": "platform-cluster",
-      "uid": "7bfe137d-edf8-4ee4-9bc1-cd4b62362e88"
+      "uid": "3b958dc5-df72-4d1e-85c1-ec4b8980ab87"
     },
     "spec": {
       "chart": {
         "spec": {
           "chart": "./charts/traefik-crds",
-          "reconcileStrategy": "ChartVersion",
+          "reconcileStrategy": "Revision",
           "sourceRef": {
             "kind": "GitRepository",
             "name": "podplane-components",

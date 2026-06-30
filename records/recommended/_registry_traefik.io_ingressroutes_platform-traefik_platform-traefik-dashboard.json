@@ -20,7 +20,7 @@
       },
       "name": "platform-traefik-dashboard",
       "namespace": "platform-traefik",
-      "uid": "f4c6d191-df0b-4866-afff-37ead63d2f21"
+      "uid": "9b9d31a6-d069-4829-862a-0d0bb79a9e24"
     },
     "spec": {
       "entryPoints": [

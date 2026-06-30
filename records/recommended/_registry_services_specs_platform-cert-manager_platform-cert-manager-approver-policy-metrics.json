@@ -21,12 +21,12 @@
       },
       "name": "platform-cert-manager-approver-policy-metrics",
       "namespace": "platform-cert-manager",
-      "uid": "8be302de-09bc-4c42-8fdf-9f5f59c55177"
+      "uid": "1f73d05f-6ec0-42f0-9ce4-8a6c5af6689a"
     },
     "spec": {
-      "clusterIP": "198.18.0.5",
+      "clusterIP": "198.18.0.7",
       "clusterIPs": [
-        "198.18.0.5"
+        "198.18.0.7"
       ],
       "internalTrafficPolicy": "Cluster",
       "ipFamilies": [

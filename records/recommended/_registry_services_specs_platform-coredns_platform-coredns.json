@@ -22,7 +22,7 @@
       },
       "name": "platform-coredns",
       "namespace": "platform-coredns",
-      "uid": "04bc8aaf-db01-40d6-8bed-acce16d8d8e5"
+      "uid": "1ebcc544-e0a9-4d76-9476-5f82d3864966"
     },
     "spec": {
       "clusterIP": "198.19.255.254",

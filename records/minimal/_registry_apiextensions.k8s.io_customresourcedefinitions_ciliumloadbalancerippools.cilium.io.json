@@ -17,7 +17,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "ciliumloadbalancerippools.cilium.io",
-      "uid": "17a2fd98-e0b6-442c-bc6f-8f14bcd0e444"
+      "uid": "5a6cd782-b024-4f2d-a2a2-c31c306c8552"
     },
     "spec": {
       "additionalPrinterColumns": [

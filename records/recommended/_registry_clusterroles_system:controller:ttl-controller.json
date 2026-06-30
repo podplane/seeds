@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:controller:ttl-controller",
-      "uid": "90b8018b-3a5a-4421-afd3-23fe67210f59"
+      "uid": "6e1a75f4-8503-4673-8903-ec2bd0156470"
     },
     "rules": [
       {

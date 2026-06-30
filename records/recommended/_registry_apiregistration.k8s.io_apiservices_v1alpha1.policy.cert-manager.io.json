@@ -9,7 +9,7 @@
         "kube-aggregator.kubernetes.io/automanaged": "true"
       },
       "name": "v1alpha1.policy.cert-manager.io",
-      "uid": "c3a4c32a-ce86-436f-b78e-48567cf9b054"
+      "uid": "9ef821d4-bf9a-4914-872d-2621da432dee"
     },
     "spec": {
       "group": "policy.cert-manager.io",

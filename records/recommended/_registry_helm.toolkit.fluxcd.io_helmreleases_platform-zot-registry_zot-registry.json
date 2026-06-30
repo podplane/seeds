@@ -1,0 +1,88 @@
+{
+  "key": "/registry/helm.toolkit.fluxcd.io/helmreleases/platform-zot-registry/zot-registry",
+  "value": {
+    "apiVersion": "helm.toolkit.fluxcd.io/v2",
+    "kind": "HelmRelease",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-components",
+        "meta.helm.sh/release-namespace": "platform-components"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "finalizers": [
+        "finalizers.fluxcd.io"
+      ],
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-components",
+        "helm.toolkit.fluxcd.io/namespace": "platform-components"
+      },
+      "name": "zot-registry",
+      "namespace": "platform-zot-registry",
+      "uid": "cba73837-7c65-4553-83f8-ad8eec5b647e"
+    },
+    "spec": {
+      "chart": {
+        "spec": {
+          "chart": "./charts/zot-registry",
+          "reconcileStrategy": "Revision",
+          "sourceRef": {
+            "kind": "GitRepository",
+            "name": "podplane-components",
+            "namespace": "platform-components"
+          },
+          "version": "*"
+        }
+      },
+      "dependsOn": [
+        {
+          "name": "platform-certs",
+          "namespace": "platform-certs"
+        }
+      ],
+      "install": {
+        "crds": "Skip",
+        "remediation": {
+          "retries": 10
+        }
+      },
+      "interval": "10m",
+      "maxHistory": 3,
+      "releaseName": "platform-zot-registry",
+      "upgrade": {
+        "crds": "Skip",
+        "remediation": {
+          "retries": 3
+        }
+      },
+      "values": {
+        "platform": {
+          "zotRegistry": {
+            "oidc": {
+              "audience": "default",
+              "groupsClaim": "groups",
+              "issuer": "https://oidc.localhost:49647/oidc",
+              "usernameClaim": "email"
+            },
+            "registryHostname": "default-registry.local",
+            "storage": {
+              "accessKeyID": "test",
+              "bucket": "registry",
+              "endpoint": "http://10.0.2.2:49646/s3/cache",
+              "forcePathStyle": true,
+              "region": "local",
+              "secretAccessKey": "test",
+              "secure": false
+            }
+          }
+        },
+        "zot": {
+          "image": {
+            "repository": "default-registry.local/mirror/ghcr.io/project-zot/zot"
+          }
+        }
+      }
+    }
+  }
+}

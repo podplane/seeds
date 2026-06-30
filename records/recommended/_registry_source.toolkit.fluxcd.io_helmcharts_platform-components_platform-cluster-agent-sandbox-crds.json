@@ -15,12 +15,12 @@
       },
       "name": "platform-cluster-agent-sandbox-crds",
       "namespace": "platform-components",
-      "uid": "9d4af39e-26bc-42ad-afc9-b8d6e61ba0bf"
+      "uid": "85378a97-1576-4ddc-8da4-e86edba27fde"
     },
     "spec": {
       "chart": "./charts/agent-sandbox-crds",
       "interval": "10m0s",
-      "reconcileStrategy": "ChartVersion",
+      "reconcileStrategy": "Revision",
       "sourceRef": {
         "kind": "GitRepository",
         "name": "podplane-components"

@@ -24,7 +24,7 @@
       },
       "name": "helm-controller",
       "namespace": "platform-fluxcd",
-      "uid": "d22db0a0-aa81-4487-b40c-2a8ce0e345e9"
+      "uid": "4be5b428-f7fe-4b42-899f-a6b5a49b4e19"
     },
     "spec": {
       "progressDeadlineSeconds": 600,
@@ -74,7 +74,7 @@
                   }
                 }
               ],
-              "image": "ghcr.io/fluxcd/helm-controller:v1.5.3",
+              "image": "default-registry.local/mirror/ghcr.io/fluxcd/helm-controller:v1.5.3",
               "imagePullPolicy": "IfNotPresent",
               "livenessProbe": {
                 "failureThreshold": 3,

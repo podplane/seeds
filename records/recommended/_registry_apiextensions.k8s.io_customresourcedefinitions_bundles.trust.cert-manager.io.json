@@ -21,7 +21,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "bundles.trust.cert-manager.io",
-      "uid": "c146180d-2aa5-426c-a817-895e393e1dd9"
+      "uid": "642f2f83-fe34-48f9-9cc6-eeeda85fa2ad"
     },
     "spec": {
       "additionalPrinterColumns": [

@@ -24,7 +24,7 @@
       },
       "name": "platform-cert-manager",
       "namespace": "platform-cert-manager",
-      "uid": "858ca68f-cfb7-408b-9696-727bc6538177"
+      "uid": "8ca124fe-4649-452f-9ebc-bfc00363f333"
     },
     "spec": {
       "progressDeadlineSeconds": 600,
@@ -84,7 +84,7 @@
                   }
                 }
               ],
-              "image": "quay.io/jetstack/cert-manager-controller:v1.16.2",
+              "image": "default-registry.local/mirror/quay.io/jetstack/cert-manager-controller:v1.16.2",
               "imagePullPolicy": "IfNotPresent",
               "livenessProbe": {
                 "failureThreshold": 8,

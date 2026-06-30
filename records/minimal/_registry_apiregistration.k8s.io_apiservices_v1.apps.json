@@ -9,7 +9,7 @@
         "kube-aggregator.kubernetes.io/automanaged": "onstart"
       },
       "name": "v1.apps",
-      "uid": "48ded149-6601-41e7-ba38-8766d16d3550"
+      "uid": "f4bb40bb-99f7-4f4b-a2c2-c983587f7b19"
     },
     "spec": {
       "group": "apps",

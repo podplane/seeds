@@ -1,0 +1,54 @@
+{
+  "key": "/registry/validatingadmissionpolicies/platform-deny-editor-shell-vap",
+  "value": {
+    "apiVersion": "admissionregistration.k8s.io/v1",
+    "kind": "ValidatingAdmissionPolicy",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-rbac",
+        "meta.helm.sh/release-namespace": "platform-cluster"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-rbac",
+        "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
+      },
+      "name": "platform-deny-editor-shell-vap",
+      "uid": "fe8f08b3-2294-472b-bf47-d8265b2b3408"
+    },
+    "spec": {
+      "failurePolicy": "Fail",
+      "matchConstraints": {
+        "matchPolicy": "Equivalent",
+        "namespaceSelector": {},
+        "objectSelector": {},
+        "resourceRules": [
+          {
+            "apiGroups": [
+              ""
+            ],
+            "apiVersions": [
+              "v1"
+            ],
+            "operations": [
+              "CONNECT"
+            ],
+            "resources": [
+              "pods/exec",
+              "pods/attach"
+            ],
+            "scope": "*"
+          }
+        ]
+      },
+      "validations": [
+        {
+          "expression": "!(request.userInfo.groups.exists(group, group == \"podplane:editors\")) || request.userInfo.groups.exists(group,\n\n\n  group == \"podplane:admins\" ||\n  group == \"podplane:managers\" ||\n  group == \"podplane:operators\" ||\n  group == \"system:masters\")\n",
+          "message": "Podplane editors are not permitted to use pod shell access."
+        }
+      ]
+    }
+  }
+}

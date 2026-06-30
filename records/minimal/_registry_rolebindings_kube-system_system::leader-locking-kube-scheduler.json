@@ -13,7 +13,7 @@
       },
       "name": "system::leader-locking-kube-scheduler",
       "namespace": "kube-system",
-      "uid": "422f57b5-3005-482b-a634-b9cda2fa26bc"
+      "uid": "11dc0e65-b955-4595-b34f-8752990a9711"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

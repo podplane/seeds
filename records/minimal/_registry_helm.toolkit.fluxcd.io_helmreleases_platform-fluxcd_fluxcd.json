@@ -20,13 +20,13 @@
       },
       "name": "fluxcd",
       "namespace": "platform-fluxcd",
-      "uid": "7de24b77-f02a-4920-9355-c8288679b817"
+      "uid": "f1eef404-76df-4132-b148-aa19a339c8cc"
     },
     "spec": {
       "chart": {
         "spec": {
           "chart": "./charts/fluxcd",
-          "reconcileStrategy": "ChartVersion",
+          "reconcileStrategy": "Revision",
           "sourceRef": {
             "kind": "GitRepository",
             "name": "podplane-components",
@@ -54,6 +54,19 @@
         "crds": "Skip",
         "remediation": {
           "retries": 3
+        }
+      },
+      "values": {
+        "flux2": {
+          "cli": {
+            "image": "default-registry.local/mirror/ghcr.io/fluxcd/flux-cli"
+          },
+          "helmController": {
+            "image": "default-registry.local/mirror/ghcr.io/fluxcd/helm-controller"
+          },
+          "sourceController": {
+            "image": "default-registry.local/mirror/ghcr.io/fluxcd/source-controller"
+          }
         }
       }
     }

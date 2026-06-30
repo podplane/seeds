@@ -20,7 +20,7 @@
       },
       "name": "platform-trust-manager",
       "namespace": "platform-certs",
-      "uid": "efed332a-eebb-43d8-9a18-be2014689699"
+      "uid": "a93f45ac-dc22-426d-880b-50e81d89b62c"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

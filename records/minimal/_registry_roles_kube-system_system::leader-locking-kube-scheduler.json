@@ -13,7 +13,7 @@
       },
       "name": "system::leader-locking-kube-scheduler",
       "namespace": "kube-system",
-      "uid": "dd757f09-6ee3-434c-b9e8-33fbdb2a9fd0"
+      "uid": "fc767a47-2be9-47ac-b0be-04293338080e"
     },
     "rules": [
       {

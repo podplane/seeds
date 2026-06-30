@@ -22,7 +22,7 @@
       },
       "name": "platform-trust-manager",
       "namespace": "platform-trust-manager",
-      "uid": "0d5e4ff8-af60-4a4a-895d-62e885f9a1a8"
+      "uid": "c8106f8a-9d6a-4f98-9efc-b561c5ce27f2"
     },
     "spec": {
       "progressDeadlineSeconds": 600,
@@ -71,7 +71,7 @@
                 "--webhook-certificate-dir=/tls",
                 "--default-package-location=/packages/cert-manager-package-debian.json"
               ],
-              "image": "quay.io/jetstack/trust-manager:v0.18.0",
+              "image": "default-registry.local/mirror/quay.io/jetstack/trust-manager:v0.18.0",
               "imagePullPolicy": "IfNotPresent",
               "name": "platform-trust-manager",
               "ports": [
@@ -136,7 +136,7 @@
                 "/debian-package",
                 "/packages"
               ],
-              "image": "quay.io/jetstack/trust-pkg-debian-bookworm:20230311.0",
+              "image": "default-registry.local/mirror/quay.io/jetstack/trust-pkg-debian-bookworm:20230311.0",
               "imagePullPolicy": "IfNotPresent",
               "name": "cert-manager-package-debian",
               "resources": {

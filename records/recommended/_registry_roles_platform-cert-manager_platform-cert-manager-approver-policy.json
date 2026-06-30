@@ -20,7 +20,7 @@
       },
       "name": "platform-cert-manager-approver-policy",
       "namespace": "platform-cert-manager",
-      "uid": "22dfee76-5d4f-4f71-b17a-981be8b48643"
+      "uid": "f7afce37-4f48-4716-974d-3876e4106cec"
     },
     "rules": [
       {

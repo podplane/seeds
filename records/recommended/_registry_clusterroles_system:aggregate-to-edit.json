@@ -13,7 +13,7 @@
         "rbac.authorization.k8s.io/aggregate-to-edit": "true"
       },
       "name": "system:aggregate-to-edit",
-      "uid": "4053fab0-c3a3-4c9f-8be8-09ad8f3a3696"
+      "uid": "6ccfbf7b-776c-439c-8092-ad5cb1f0d5b8"
     },
     "rules": [
       {

@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:controller:job-controller",
-      "uid": "04f86c33-e03f-4eae-bdc9-6f53e596a92e"
+      "uid": "4eed5e54-61a5-417d-8960-8ac0fea8d243"
     },
     "rules": [
       {

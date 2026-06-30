@@ -15,7 +15,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-certs"
       },
       "name": "platform-use-certificaterequestpolicies-crb",
-      "uid": "aead4f9a-94d3-4234-9636-8e23ab467dfa"
+      "uid": "1c8309e1-c5e0-4e8b-aa38-01d6639d420c"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

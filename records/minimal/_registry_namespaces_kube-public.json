@@ -9,7 +9,7 @@
         "kubernetes.io/metadata.name": "kube-public"
       },
       "name": "kube-public",
-      "uid": "1ca77f69-f9d1-4769-9936-c2b7b376cd8d"
+      "uid": "bd557fdc-1297-4918-b407-f07f9a828d3f"
     },
     "spec": {
       "finalizers": [

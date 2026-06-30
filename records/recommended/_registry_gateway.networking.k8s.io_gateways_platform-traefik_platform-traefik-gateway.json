@@ -17,7 +17,7 @@
       },
       "name": "platform-traefik-gateway",
       "namespace": "platform-traefik",
-      "uid": "2512aaa0-5ec4-43f1-a094-6aaf02256ad9"
+      "uid": "8c132c2c-1b31-4b02-9fa4-1d730e3fae84"
     },
     "spec": {
       "gatewayClassName": "platform-traefik",

@@ -20,13 +20,13 @@
       },
       "name": "cert-manager",
       "namespace": "platform-cert-manager",
-      "uid": "6f4b9b21-79a5-4a02-b101-c5d2465f1458"
+      "uid": "191f91f2-d33e-4f04-8497-f51bcddbcf71"
     },
     "spec": {
       "chart": {
         "spec": {
           "chart": "./charts/cert-manager",
-          "reconcileStrategy": "ChartVersion",
+          "reconcileStrategy": "Revision",
           "sourceRef": {
             "kind": "GitRepository",
             "name": "podplane-components",
@@ -54,6 +54,28 @@
         "crds": "Skip",
         "remediation": {
           "retries": 3
+        }
+      },
+      "values": {
+        "cert-manager": {
+          "cainjector": {
+            "image": {
+              "repository": "default-registry.local/mirror/quay.io/jetstack/cert-manager-cainjector"
+            }
+          },
+          "image": {
+            "repository": "default-registry.local/mirror/quay.io/jetstack/cert-manager-controller"
+          },
+          "webhook": {
+            "image": {
+              "repository": "default-registry.local/mirror/quay.io/jetstack/cert-manager-webhook"
+            }
+          }
+        },
+        "cert-manager-approver-policy": {
+          "image": {
+            "repository": "default-registry.local/mirror/quay.io/jetstack/cert-manager-approver-policy"
+          }
         }
       }
     }

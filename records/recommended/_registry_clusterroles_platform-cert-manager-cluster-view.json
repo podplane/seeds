@@ -22,7 +22,7 @@
         "rbac.authorization.k8s.io/aggregate-to-cluster-reader": "true"
       },
       "name": "platform-cert-manager-cluster-view",
-      "uid": "76c93bdc-cf52-4428-af46-07c6307f4cf7"
+      "uid": "610f9f44-2715-440b-b23c-066124a0c820"
     },
     "rules": [
       {

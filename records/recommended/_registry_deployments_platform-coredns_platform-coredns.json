@@ -25,7 +25,7 @@
       },
       "name": "platform-coredns",
       "namespace": "platform-coredns",
-      "uid": "01bb8187-3190-4b26-a88f-e06d92c8cd58"
+      "uid": "01ea3562-4625-4a7e-afee-782896e61f71"
     },
     "spec": {
       "progressDeadlineSeconds": 600,
@@ -66,7 +66,7 @@
                 "-conf",
                 "/etc/coredns/Corefile"
               ],
-              "image": "docker.io/coredns/coredns:1.11.3",
+              "image": "default-registry.local/mirror/docker.io/coredns/coredns:1.11.3",
               "imagePullPolicy": "IfNotPresent",
               "livenessProbe": {
                 "failureThreshold": 5,
@@ -105,8 +105,8 @@
                   "port": 8181,
                   "scheme": "HTTP"
                 },
-                "initialDelaySeconds": 30,
-                "periodSeconds": 10,
+                "initialDelaySeconds": 2,
+                "periodSeconds": 5,
                 "successThreshold": 1,
                 "timeoutSeconds": 5
               },

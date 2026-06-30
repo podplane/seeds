@@ -21,12 +21,12 @@
       },
       "name": "platform-trust-manager-metrics",
       "namespace": "platform-trust-manager",
-      "uid": "ac115727-bad4-4212-a823-7071fbe1de7e"
+      "uid": "6a29ce48-6f4a-4aec-a9af-1b1bf2c08305"
     },
     "spec": {
-      "clusterIP": "198.18.0.10",
+      "clusterIP": "198.18.0.12",
       "clusterIPs": [
-        "198.18.0.10"
+        "198.18.0.12"
       ],
       "internalTrafficPolicy": "Cluster",
       "ipFamilies": [

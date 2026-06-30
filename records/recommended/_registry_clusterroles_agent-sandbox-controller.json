@@ -15,7 +15,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-agent-sandbox"
       },
       "name": "agent-sandbox-controller",
-      "uid": "9b4fab31-b4df-4e97-a492-21b3985fec5c"
+      "uid": "11a7c837-5eee-4224-89e0-034637983d51"
     },
     "rules": [
       {
@@ -61,6 +61,25 @@
         "resources": [
           "sandboxes/finalizers",
           "sandboxes/status"
+        ],
+        "verbs": [
+          "get",
+          "patch",
+          "update"
+        ]
+      },
+      {
+        "apiGroups": [
+          "apiextensions.k8s.io"
+        ],
+        "resourceNames": [
+          "sandboxclaims.extensions.agents.x-k8s.io",
+          "sandboxes.agents.x-k8s.io",
+          "sandboxtemplates.extensions.agents.x-k8s.io",
+          "sandboxwarmpools.extensions.agents.x-k8s.io"
+        ],
+        "resources": [
+          "customresourcedefinitions"
         ],
         "verbs": [
           "get",

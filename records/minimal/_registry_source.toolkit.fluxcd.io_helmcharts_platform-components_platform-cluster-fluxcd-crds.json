@@ -15,12 +15,12 @@
       },
       "name": "platform-cluster-fluxcd-crds",
       "namespace": "platform-components",
-      "uid": "246cec7e-9cb5-45a6-9486-8109db7e5497"
+      "uid": "be7836cf-1f19-402e-a30d-d4a6d17187c0"
     },
     "spec": {
       "chart": "./charts/fluxcd-crds",
       "interval": "10m0s",
-      "reconcileStrategy": "ChartVersion",
+      "reconcileStrategy": "Revision",
       "sourceRef": {
         "kind": "GitRepository",
         "name": "podplane-components"

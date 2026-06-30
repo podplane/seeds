@@ -21,7 +21,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cert-manager"
       },
       "name": "platform-cert-manager-controller-orders",
-      "uid": "627ab362-f6c9-4b00-9f9a-12ada83ff398"
+      "uid": "2c8ad8eb-ecb1-40dd-b049-575a9f1a4436"
     },
     "rules": [
       {

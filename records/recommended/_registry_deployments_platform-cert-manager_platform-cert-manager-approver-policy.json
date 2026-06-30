@@ -22,7 +22,7 @@
       },
       "name": "platform-cert-manager-approver-policy",
       "namespace": "platform-cert-manager",
-      "uid": "fb1b6075-cb62-4288-855b-1ff2166e3a5b"
+      "uid": "039d0a82-0789-42b8-8bd2-5b42198df50f"
     },
     "spec": {
       "progressDeadlineSeconds": 600,
@@ -66,7 +66,7 @@
                 "--webhook-ca-secret-namespace=platform-cert-manager",
                 "--webhook-ca-secret-name=platform-cert-manager-approver-policy-tls"
               ],
-              "image": "quay.io/jetstack/cert-manager-approver-policy:v0.21.0",
+              "image": "default-registry.local/mirror/quay.io/jetstack/cert-manager-approver-policy:v0.21.0",
               "imagePullPolicy": "IfNotPresent",
               "name": "platform-cert-manager-approver-policy",
               "ports": [

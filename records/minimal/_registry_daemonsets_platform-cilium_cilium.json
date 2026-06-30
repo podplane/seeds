@@ -21,7 +21,7 @@
       },
       "name": "cilium",
       "namespace": "platform-cilium",
-      "uid": "1499f204-34c4-407d-a546-e583523603b9"
+      "uid": "4125852f-54ed-4efa-97e9-34f0b5fbe2d2"
     },
     "spec": {
       "revisionHistoryLimit": 10,
@@ -104,7 +104,7 @@
                   "value": "6443"
                 }
               ],
-              "image": "quay.io/cilium/cilium:v1.16.3@sha256:62d2a09bbef840a46099ac4c69421c90f84f28d018d479749049011329aa7f28",
+              "image": "default-registry.local/mirror/quay.io/cilium/cilium:v1.16.3@sha256:62d2a09bbef840a46099ac4c69421c90f84f28d018d479749049011329aa7f28",
               "imagePullPolicy": "IfNotPresent",
               "lifecycle": {
                 "postStart": {
@@ -157,7 +157,7 @@
                   "port": 9879,
                   "scheme": "HTTP"
                 },
-                "periodSeconds": 30,
+                "periodSeconds": 5,
                 "successThreshold": 1,
                 "timeoutSeconds": 5
               },
@@ -287,7 +287,7 @@
                   "value": "6443"
                 }
               ],
-              "image": "quay.io/cilium/cilium:v1.16.3@sha256:62d2a09bbef840a46099ac4c69421c90f84f28d018d479749049011329aa7f28",
+              "image": "default-registry.local/mirror/quay.io/cilium/cilium:v1.16.3@sha256:62d2a09bbef840a46099ac4c69421c90f84f28d018d479749049011329aa7f28",
               "imagePullPolicy": "IfNotPresent",
               "name": "config",
               "resources": {},
@@ -316,7 +316,7 @@
                   "value": "/opt/cni/bin"
                 }
               ],
-              "image": "quay.io/cilium/cilium:v1.16.3@sha256:62d2a09bbef840a46099ac4c69421c90f84f28d018d479749049011329aa7f28",
+              "image": "default-registry.local/mirror/quay.io/cilium/cilium:v1.16.3@sha256:62d2a09bbef840a46099ac4c69421c90f84f28d018d479749049011329aa7f28",
               "imagePullPolicy": "IfNotPresent",
               "name": "mount-cgroup",
               "resources": {},
@@ -361,7 +361,7 @@
                   "value": "/opt/cni/bin"
                 }
               ],
-              "image": "quay.io/cilium/cilium:v1.16.3@sha256:62d2a09bbef840a46099ac4c69421c90f84f28d018d479749049011329aa7f28",
+              "image": "default-registry.local/mirror/quay.io/cilium/cilium:v1.16.3@sha256:62d2a09bbef840a46099ac4c69421c90f84f28d018d479749049011329aa7f28",
               "imagePullPolicy": "IfNotPresent",
               "name": "apply-sysctl-overwrites",
               "resources": {},
@@ -403,7 +403,7 @@
                 "-c",
                 "--"
               ],
-              "image": "quay.io/cilium/cilium:v1.16.3@sha256:62d2a09bbef840a46099ac4c69421c90f84f28d018d479749049011329aa7f28",
+              "image": "default-registry.local/mirror/quay.io/cilium/cilium:v1.16.3@sha256:62d2a09bbef840a46099ac4c69421c90f84f28d018d479749049011329aa7f28",
               "imagePullPolicy": "IfNotPresent",
               "name": "mount-bpf-fs",
               "resources": {},
@@ -464,7 +464,7 @@
                   "value": "6443"
                 }
               ],
-              "image": "quay.io/cilium/cilium:v1.16.3@sha256:62d2a09bbef840a46099ac4c69421c90f84f28d018d479749049011329aa7f28",
+              "image": "default-registry.local/mirror/quay.io/cilium/cilium:v1.16.3@sha256:62d2a09bbef840a46099ac4c69421c90f84f28d018d479749049011329aa7f28",
               "imagePullPolicy": "IfNotPresent",
               "name": "clean-cilium-state",
               "resources": {},
@@ -507,7 +507,7 @@
               "command": [
                 "/install-plugin.sh"
               ],
-              "image": "quay.io/cilium/cilium:v1.16.3@sha256:62d2a09bbef840a46099ac4c69421c90f84f28d018d479749049011329aa7f28",
+              "image": "default-registry.local/mirror/quay.io/cilium/cilium:v1.16.3@sha256:62d2a09bbef840a46099ac4c69421c90f84f28d018d479749049011329aa7f28",
               "imagePullPolicy": "IfNotPresent",
               "name": "install-cni-binaries",
               "resources": {

@@ -9,7 +9,7 @@
         "kube-aggregator.kubernetes.io/automanaged": "onstart"
       },
       "name": "v1.node.k8s.io",
-      "uid": "529de739-3d95-4f52-8bba-93c956fd5fc6"
+      "uid": "59e351f3-dcde-4ac9-9e75-a2cffa983a4c"
     },
     "spec": {
       "group": "node.k8s.io",

@@ -9,7 +9,7 @@
         "kube-aggregator.kubernetes.io/automanaged": "true"
       },
       "name": "v1alpha1.hub.traefik.io",
-      "uid": "82d06204-7ba8-4cd0-9247-65d0d010b20c"
+      "uid": "3e772e06-1ecf-4b99-96e2-46cca8928c6e"
     },
     "spec": {
       "group": "hub.traefik.io",

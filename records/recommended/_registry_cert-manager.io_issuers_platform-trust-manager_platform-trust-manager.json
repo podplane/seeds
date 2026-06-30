@@ -21,7 +21,7 @@
       },
       "name": "platform-trust-manager",
       "namespace": "platform-trust-manager",
-      "uid": "05f37b2e-f293-4b4c-9a65-f33989583f71"
+      "uid": "39a1eff9-d2ad-45dd-8ceb-8815b689ec28"
     },
     "spec": {
       "selfSigned": {}

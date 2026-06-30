@@ -18,7 +18,7 @@
         "rbac.authorization.k8s.io/aggregate-to-view": "true"
       },
       "name": "flux-view",
-      "uid": "0eb54aea-4065-4b3e-b8ef-eceee7abbfa4"
+      "uid": "8122760e-9349-40bf-ba8b-d45d1bc06745"
     },
     "rules": [
       {

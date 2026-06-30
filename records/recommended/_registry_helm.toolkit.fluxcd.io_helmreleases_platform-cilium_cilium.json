@@ -20,13 +20,13 @@
       },
       "name": "cilium",
       "namespace": "platform-cilium",
-      "uid": "9a42b707-1623-4b9d-9a2b-07bddc16b02f"
+      "uid": "c3ad432b-16d3-40ab-8918-8c9b57e87eed"
     },
     "spec": {
       "chart": {
         "spec": {
           "chart": "./charts/cilium",
-          "reconcileStrategy": "ChartVersion",
+          "reconcileStrategy": "Revision",
           "sourceRef": {
             "kind": "GitRepository",
             "name": "podplane-components",
@@ -54,6 +54,18 @@
         "crds": "Skip",
         "remediation": {
           "retries": 3
+        }
+      },
+      "values": {
+        "cilium": {
+          "image": {
+            "repository": "default-registry.local/mirror/quay.io/cilium/cilium"
+          },
+          "operator": {
+            "image": {
+              "repository": "default-registry.local/mirror/quay.io/cilium/operator"
+            }
+          }
         }
       }
     }

@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:kube-dns",
-      "uid": "dcf5c128-ac34-4d39-a507-67a11394d5f1"
+      "uid": "b8729ffc-1c94-44e4-adc3-f5205159c72a"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

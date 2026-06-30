@@ -20,13 +20,13 @@
       },
       "name": "traefik",
       "namespace": "platform-traefik",
-      "uid": "166d7b05-2312-48ce-bf8e-b3c3ad01b3c0"
+      "uid": "ad0dbfc9-d1fb-4663-835f-dc6504e49358"
     },
     "spec": {
       "chart": {
         "spec": {
           "chart": "./charts/traefik",
-          "reconcileStrategy": "ChartVersion",
+          "reconcileStrategy": "Revision",
           "sourceRef": {
             "kind": "GitRepository",
             "name": "podplane-components",
@@ -68,6 +68,11 @@
         "platform": {
           "traefik": {
             "ingress": {
+              "bootstrapTLS": {
+                "image": {
+                  "repository": "default-registry.local/mirror/docker.io/library/golang"
+                }
+              },
               "domains": [
                 {
                   "default": true,
@@ -80,6 +85,12 @@
                 "name": "platform-ingress-selfsigned-clusterissuer"
               }
             }
+          }
+        },
+        "traefik": {
+          "image": {
+            "registry": "default-registry.local/mirror/docker.io",
+            "repository": "traefik"
           }
         }
       }

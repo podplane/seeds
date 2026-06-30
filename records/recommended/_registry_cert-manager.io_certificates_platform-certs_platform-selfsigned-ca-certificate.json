@@ -17,7 +17,7 @@
       },
       "name": "platform-selfsigned-ca-certificate",
       "namespace": "platform-certs",
-      "uid": "55a60be2-4449-4361-9e1d-78b0ff46bb83"
+      "uid": "d3a44fb8-cb5f-4902-b822-b0dcc464ec2b"
     },
     "spec": {
       "commonName": "podplane.local",

@@ -22,7 +22,7 @@
       },
       "name": "platform-cert-manager-platform-cert-manager-tokenrequest",
       "namespace": "platform-cert-manager",
-      "uid": "faa17884-6670-4c72-8265-0d4562a1bf3a"
+      "uid": "1f82d58a-4bd1-4540-9ffb-c03574711330"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

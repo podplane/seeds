@@ -15,12 +15,12 @@
       },
       "name": "platform-cluster-cert-manager-crds",
       "namespace": "platform-components",
-      "uid": "cc835a44-e117-48fd-91c6-0b6b6b9b3c11"
+      "uid": "465cdbe2-5682-4cec-b2ca-9b64666c181b"
     },
     "spec": {
       "chart": "./charts/cert-manager-crds",
       "interval": "10m0s",
-      "reconcileStrategy": "ChartVersion",
+      "reconcileStrategy": "Revision",
       "sourceRef": {
         "kind": "GitRepository",
         "name": "podplane-components"

@@ -16,7 +16,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-certs"
       },
       "name": "platform-ingress-selfsigned-clusterissuer",
-      "uid": "adc96642-e621-4af5-b6a5-18efcfa0f9b8"
+      "uid": "7dbac676-83ed-4118-a7fe-6bec97dd33dd"
     },
     "spec": {
       "ca": {

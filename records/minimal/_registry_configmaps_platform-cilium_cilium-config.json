@@ -48,7 +48,7 @@
       "enable-k8s-networkpolicy": "true",
       "enable-k8s-terminating-endpoint": "true",
       "enable-l2-neigh-discovery": "true",
-      "enable-l7-proxy": "true",
+      "enable-l7-proxy": "false",
       "enable-local-redirect-policy": "false",
       "enable-masquerade-to-route-source": "false",
       "enable-metrics": "true",
@@ -135,7 +135,7 @@
       },
       "name": "cilium-config",
       "namespace": "platform-cilium",
-      "uid": "32fdadd2-2255-4af7-95c3-5867d49d19b3"
+      "uid": "e223ddf0-50dd-4de9-ba26-ae5959bc61ac"
     }
   }
 }

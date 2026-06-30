@@ -17,7 +17,7 @@
         "kubernetes.io/metadata.name": "platform-trust-manager"
       },
       "name": "platform-trust-manager",
-      "uid": "fa6e7e48-0668-4d35-a45a-2a6995703c14"
+      "uid": "63365eb2-a67d-445e-8533-bc323625f386"
     },
     "spec": {
       "finalizers": [

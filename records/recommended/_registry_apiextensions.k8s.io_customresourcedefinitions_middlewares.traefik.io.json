@@ -17,7 +17,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "middlewares.traefik.io",
-      "uid": "0cf36d29-a876-4fe1-941f-46dbae7f5c86"
+      "uid": "304b9379-8c44-49f5-a3b0-c61ee8170fed"
     },
     "spec": {
       "conversion": {

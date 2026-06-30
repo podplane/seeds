@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:controller:node-controller",
-      "uid": "4efe2e7b-9c8e-4db1-bc74-e3053ec7974e"
+      "uid": "57befeb8-099f-4512-85e2-f2de13581c5a"
     },
     "rules": [
       {

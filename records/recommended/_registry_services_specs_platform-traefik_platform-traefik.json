@@ -19,13 +19,13 @@
       },
       "name": "platform-traefik",
       "namespace": "platform-traefik",
-      "uid": "f5fa36a7-1881-472d-b2de-76251ce4824a"
+      "uid": "78a31591-fd22-43da-8258-fd688ec72e88"
     },
     "spec": {
       "allocateLoadBalancerNodePorts": true,
-      "clusterIP": "198.18.0.11",
+      "clusterIP": "198.18.0.13",
       "clusterIPs": [
-        "198.18.0.11"
+        "198.18.0.13"
       ],
       "externalTrafficPolicy": "Cluster",
       "internalTrafficPolicy": "Cluster",
@@ -37,14 +37,14 @@
       "ports": [
         {
           "name": "web",
-          "nodePort": 31619,
+          "nodePort": 32602,
           "port": 80,
           "protocol": "TCP",
           "targetPort": "web"
         },
         {
           "name": "websecure",
-          "nodePort": 31701,
+          "nodePort": 31626,
           "port": 443,
           "protocol": "TCP",
           "targetPort": "websecure"

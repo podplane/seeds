@@ -1,0 +1,31 @@
+{
+  "key": "/registry/source.toolkit.fluxcd.io/helmcharts/platform-components/platform-zot-registry-zot-registry",
+  "value": {
+    "apiVersion": "source.toolkit.fluxcd.io/v1",
+    "kind": "HelmChart",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "finalizers": [
+        "finalizers.fluxcd.io"
+      ],
+      "generation": 1,
+      "labels": {
+        "helm.toolkit.fluxcd.io/name": "zot-registry",
+        "helm.toolkit.fluxcd.io/namespace": "platform-zot-registry"
+      },
+      "name": "platform-zot-registry-zot-registry",
+      "namespace": "platform-components",
+      "uid": "e84e10db-2c0c-4861-8a36-88755ddb9c7f"
+    },
+    "spec": {
+      "chart": "./charts/zot-registry",
+      "interval": "10m0s",
+      "reconcileStrategy": "Revision",
+      "sourceRef": {
+        "kind": "GitRepository",
+        "name": "podplane-components"
+      },
+      "version": "*"
+    }
+  }
+}

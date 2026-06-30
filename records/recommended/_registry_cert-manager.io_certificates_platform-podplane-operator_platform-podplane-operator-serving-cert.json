@@ -1,0 +1,40 @@
+{
+  "key": "/registry/cert-manager.io/certificates/platform-podplane-operator/platform-podplane-operator-serving-cert",
+  "value": {
+    "apiVersion": "cert-manager.io/v1",
+    "kind": "Certificate",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-podplane-operator",
+        "meta.helm.sh/release-namespace": "platform-podplane-operator"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/component": "operator",
+        "app.kubernetes.io/instance": "platform-podplane-operator",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "podplane-operator",
+        "helm.sh/chart": "podplane-operator-1.0.0_68b8cd3b0f10",
+        "helm.toolkit.fluxcd.io/name": "podplane-operator",
+        "helm.toolkit.fluxcd.io/namespace": "platform-podplane-operator"
+      },
+      "name": "platform-podplane-operator-serving-cert",
+      "namespace": "platform-podplane-operator",
+      "uid": "f23d0010-5d52-4ca0-b987-bba611413dc2"
+    },
+    "spec": {
+      "dnsNames": [
+        "platform-podplane-operator-aggregated-api",
+        "platform-podplane-operator-aggregated-api.platform-podplane-operator",
+        "platform-podplane-operator-aggregated-api.platform-podplane-operator.svc",
+        "platform-podplane-operator-aggregated-api.platform-podplane-operator.svc.cluster.local"
+      ],
+      "issuerRef": {
+        "kind": "ClusterIssuer",
+        "name": "platform-service-certificate-clusterissuer"
+      },
+      "secretName": "platform-podplane-operator-tls"
+    }
+  }
+}

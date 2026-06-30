@@ -20,13 +20,13 @@
       },
       "name": "trust-manager",
       "namespace": "platform-trust-manager",
-      "uid": "1ec32577-d0aa-43e2-82fb-d2e86d6db88a"
+      "uid": "7e670892-528a-4541-840f-89f3045526cd"
     },
     "spec": {
       "chart": {
         "spec": {
           "chart": "./charts/trust-manager",
-          "reconcileStrategy": "ChartVersion",
+          "reconcileStrategy": "Revision",
           "sourceRef": {
             "kind": "GitRepository",
             "name": "podplane-components",
@@ -58,6 +58,16 @@
         "crds": "Skip",
         "remediation": {
           "retries": 3
+        }
+      },
+      "values": {
+        "trust-manager": {
+          "defaultPackageImage": {
+            "repository": "default-registry.local/mirror/quay.io/jetstack/trust-pkg-debian-bookworm"
+          },
+          "image": {
+            "repository": "default-registry.local/mirror/quay.io/jetstack/trust-manager"
+          }
         }
       }
     }

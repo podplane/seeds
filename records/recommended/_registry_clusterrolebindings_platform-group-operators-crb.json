@@ -15,7 +15,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "platform-group-operators-crb",
-      "uid": "4d86df40-1026-4872-8359-c1b86231f525"
+      "uid": "97f30a4f-3277-480e-8235-b95fdb4d9c1a"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

@@ -21,7 +21,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cert-manager"
       },
       "name": "platform-cert-manager-controller-ingress-shim",
-      "uid": "8ed92fff-385b-4cad-b6dc-96d7b1936374"
+      "uid": "5e8fd5a4-e9db-4010-b688-7328ad055eb1"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

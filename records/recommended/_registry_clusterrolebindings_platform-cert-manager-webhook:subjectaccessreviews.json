@@ -21,7 +21,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cert-manager"
       },
       "name": "platform-cert-manager-webhook:subjectaccessreviews",
-      "uid": "34649464-46cd-4e61-894a-901ff51aa8bc"
+      "uid": "7cbac481-bf1d-46bd-9fc6-e8ed44751a6d"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

@@ -19,7 +19,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cert-manager"
       },
       "name": "platform-cert-manager-approver-policy",
-      "uid": "988638ed-5f95-4853-97af-d72d99aae668"
+      "uid": "494546c1-a80e-487a-9a6e-10123a242e0a"
     },
     "rules": [
       {

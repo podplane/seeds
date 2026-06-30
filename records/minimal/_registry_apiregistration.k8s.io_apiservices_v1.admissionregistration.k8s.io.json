@@ -9,7 +9,7 @@
         "kube-aggregator.kubernetes.io/automanaged": "onstart"
       },
       "name": "v1.admissionregistration.k8s.io",
-      "uid": "d753d266-5f01-46eb-be58-68e084f61ced"
+      "uid": "751ded81-b7a7-4f46-994e-85a179525c37"
     },
     "spec": {
       "group": "admissionregistration.k8s.io",

@@ -24,7 +24,7 @@
       },
       "name": "platform-cert-manager-cainjector",
       "namespace": "platform-cert-manager",
-      "uid": "3fbcfc1a-5c98-43a0-a075-fc5863973dc2"
+      "uid": "39d560e4-f901-43ab-ba20-57bec0cd5703"
     },
     "spec": {
       "progressDeadlineSeconds": 600,
@@ -80,7 +80,7 @@
                   }
                 }
               ],
-              "image": "quay.io/jetstack/cert-manager-cainjector:v1.16.2",
+              "image": "default-registry.local/mirror/quay.io/jetstack/cert-manager-cainjector:v1.16.2",
               "imagePullPolicy": "IfNotPresent",
               "name": "cert-manager-cainjector",
               "ports": [

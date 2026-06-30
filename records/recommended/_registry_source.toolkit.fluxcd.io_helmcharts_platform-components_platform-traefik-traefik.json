@@ -15,12 +15,12 @@
       },
       "name": "platform-traefik-traefik",
       "namespace": "platform-components",
-      "uid": "0ed08ac7-a469-4cd4-b650-ba7e0bff171d"
+      "uid": "6946c4c7-561e-4bf7-93fd-3980c0f8229d"
     },
     "spec": {
       "chart": "./charts/traefik",
       "interval": "10m0s",
-      "reconcileStrategy": "ChartVersion",
+      "reconcileStrategy": "Revision",
       "sourceRef": {
         "kind": "GitRepository",
         "name": "podplane-components"

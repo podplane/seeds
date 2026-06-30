@@ -22,7 +22,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "certificaterequests.cert-manager.io",
-      "uid": "a2636fae-01f6-4d4d-a583-5f81166261c0"
+      "uid": "c6edc1d3-011e-4d22-9361-865abae2a14a"
     },
     "spec": {
       "additionalPrinterColumns": [

@@ -1,0 +1,52 @@
+{
+  "key": "/registry/services/specs/platform-zot-registry/zot-registry",
+  "value": {
+    "apiVersion": "v1",
+    "kind": "Service",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-zot-registry",
+        "meta.helm.sh/release-namespace": "platform-zot-registry"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/instance": "platform-zot-registry",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "zot",
+        "app.kubernetes.io/version": "v2.1.18",
+        "helm.sh/chart": "zot-0.1.118",
+        "helm.toolkit.fluxcd.io/name": "zot-registry",
+        "helm.toolkit.fluxcd.io/namespace": "platform-zot-registry"
+      },
+      "name": "zot-registry",
+      "namespace": "platform-zot-registry",
+      "uid": "ced3adb7-36d2-463d-8637-e9b66e87796e"
+    },
+    "spec": {
+      "clusterIP": "198.18.0.10",
+      "clusterIPs": [
+        "198.18.0.10"
+      ],
+      "internalTrafficPolicy": "Cluster",
+      "ipFamilies": [
+        "IPv4",
+        "IPv6"
+      ],
+      "ipFamilyPolicy": "PreferDualStack",
+      "ports": [
+        {
+          "name": "zot",
+          "port": 5000,
+          "protocol": "TCP",
+          "targetPort": "zot"
+        }
+      ],
+      "selector": {
+        "app.kubernetes.io/instance": "platform-zot-registry",
+        "app.kubernetes.io/name": "zot"
+      },
+      "sessionAffinity": "None",
+      "type": "ClusterIP"
+    }
+  }
+}

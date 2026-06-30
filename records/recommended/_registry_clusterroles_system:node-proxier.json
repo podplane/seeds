@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:node-proxier",
-      "uid": "748db958-01d4-48ae-b228-87f4d14febc0"
+      "uid": "47fcc5cd-a999-4eff-a7e7-472855fd5d1b"
     },
     "rules": [
       {

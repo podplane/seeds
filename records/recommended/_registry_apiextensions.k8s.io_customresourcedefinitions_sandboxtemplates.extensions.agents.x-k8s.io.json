@@ -17,7 +17,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "sandboxtemplates.extensions.agents.x-k8s.io",
-      "uid": "9e1fcaf2-6951-4673-9acc-f0cbdebbed26"
+      "uid": "0fe41ac0-c809-4c99-a111-0a24b3fd7bb1"
     },
     "spec": {
       "conversion": {
@@ -35,9 +35,6 @@
       },
       "preserveUnknownFields": false,
       "scope": "Namespaced",
-      "subresources": {
-        "status": {}
-      },
       "validation": {
         "openAPIV3Schema": {
           "properties": {
@@ -6308,14 +6305,20 @@
                   },
                   "type": "array",
                   "x-kubernetes-list-type": "atomic"
+                },
+                "volumeClaimTemplatesPolicy": {
+                  "default": "Disallowed",
+                  "enum": [
+                    "Disallowed",
+                    "Allowed",
+                    "Overrides"
+                  ],
+                  "type": "string"
                 }
               },
               "required": [
                 "podTemplate"
               ],
-              "type": "object"
-            },
-            "status": {
               "type": "object"
             }
           },
@@ -6325,10 +6328,10 @@
           "type": "object"
         }
       },
-      "version": "v1alpha1",
+      "version": "v1beta1",
       "versions": [
         {
-          "name": "v1alpha1",
+          "name": "v1beta1",
           "served": true,
           "storage": true
         }

@@ -15,12 +15,12 @@
       },
       "name": "platform-coredns-coredns",
       "namespace": "platform-components",
-      "uid": "d49b45e9-6a2d-453e-b010-a5e6bc5ad266"
+      "uid": "95ee23ba-1c24-4ce6-97b0-15fa959f7c19"
     },
     "spec": {
       "chart": "./charts/coredns",
       "interval": "10m0s",
-      "reconcileStrategy": "ChartVersion",
+      "reconcileStrategy": "Revision",
       "sourceRef": {
         "kind": "GitRepository",
         "name": "podplane-components"

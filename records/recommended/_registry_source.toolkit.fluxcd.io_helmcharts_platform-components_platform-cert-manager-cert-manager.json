@@ -15,12 +15,12 @@
       },
       "name": "platform-cert-manager-cert-manager",
       "namespace": "platform-components",
-      "uid": "efa435aa-83ac-4a39-af02-f24e7376338e"
+      "uid": "6c159db1-c265-42d1-9d0e-093be765bf26"
     },
     "spec": {
       "chart": "./charts/cert-manager",
       "interval": "10m0s",
-      "reconcileStrategy": "ChartVersion",
+      "reconcileStrategy": "Revision",
       "sourceRef": {
         "kind": "GitRepository",
         "name": "podplane-components"

@@ -13,7 +13,7 @@
       },
       "name": "system:controller:bootstrap-signer",
       "namespace": "kube-system",
-      "uid": "4d2cf6a2-e893-4f4e-9f21-87a35b4af1d0"
+      "uid": "998b6b56-0b67-4fdd-81a6-9b469cd528d5"
     },
     "rules": [
       {

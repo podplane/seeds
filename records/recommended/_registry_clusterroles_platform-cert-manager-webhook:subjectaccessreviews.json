@@ -21,7 +21,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cert-manager"
       },
       "name": "platform-cert-manager-webhook:subjectaccessreviews",
-      "uid": "540c2920-057d-4efa-a860-a375dfcaa24f"
+      "uid": "6a2a5a14-c355-40a5-ba07-2a9964ffc8dc"
     },
     "rules": [
       {

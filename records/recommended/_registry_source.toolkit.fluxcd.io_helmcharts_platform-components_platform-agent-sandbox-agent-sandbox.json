@@ -15,12 +15,12 @@
       },
       "name": "platform-agent-sandbox-agent-sandbox",
       "namespace": "platform-components",
-      "uid": "94849dee-e6fd-4811-b708-037ce18a7e2f"
+      "uid": "2befcb13-86cc-4713-a433-10cc73198f7b"
     },
     "spec": {
       "chart": "./charts/agent-sandbox",
       "interval": "10m0s",
-      "reconcileStrategy": "ChartVersion",
+      "reconcileStrategy": "Revision",
       "sourceRef": {
         "kind": "GitRepository",
         "name": "podplane-components"

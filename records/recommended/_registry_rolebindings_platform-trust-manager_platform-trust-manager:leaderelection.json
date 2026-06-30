@@ -20,7 +20,7 @@
       },
       "name": "platform-trust-manager:leaderelection",
       "namespace": "platform-trust-manager",
-      "uid": "3e54214e-1083-4c44-8dab-e1bdd0946b0b"
+      "uid": "37c1cb34-7c44-444f-af15-378553571fec"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

@@ -20,13 +20,13 @@
       },
       "name": "agent-sandbox",
       "namespace": "platform-agent-sandbox",
-      "uid": "4e0266ee-792b-4f53-a859-35866b835bbe"
+      "uid": "deb6f16c-edf1-4c63-a676-bb8c3c1bf40b"
     },
     "spec": {
       "chart": {
         "spec": {
           "chart": "./charts/agent-sandbox",
-          "reconcileStrategy": "ChartVersion",
+          "reconcileStrategy": "Revision",
           "sourceRef": {
             "kind": "GitRepository",
             "name": "podplane-components",
@@ -54,6 +54,11 @@
         "crds": "Skip",
         "remediation": {
           "retries": 3
+        }
+      },
+      "values": {
+        "image": {
+          "repository": "default-registry.local/mirror/registry.k8s.io/agent-sandbox/agent-sandbox-controller"
         }
       }
     }

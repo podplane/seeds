@@ -17,7 +17,7 @@
       },
       "name": "platform-selfsigned-ca-issuer",
       "namespace": "platform-certs",
-      "uid": "c0854688-c55b-44ec-8210-de62e03fdfc0"
+      "uid": "223b229f-fd80-493c-9e01-046bc7a97002"
     },
     "spec": {
       "selfSigned": {}

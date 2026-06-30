@@ -1,0 +1,29 @@
+{
+  "key": "/registry/configmaps/platform-podplane-operator/platform-podplane-operator-config",
+  "value": {
+    "apiVersion": "v1",
+    "data": {
+      "config.json": "{\n  \"cluster\": {\n    \"id\": \"default\",\n    \"oidc\": {\n      \"client_id\": \"default\",\n      \"groups_claim\": \"groups\",\n      \"issuer_url\": \"https://oidc.localhost:49647/oidc\",\n      \"username_claim\": \"email\"\n    }\n  },\n  \"registry\": {\n    \"auth\": {\n      \"enabled\": false\n    }\n  },\n  \"secrets\": {\n    \"allow_sync_to_kubernetes_secrets\": false,\n    \"key_rotation\": \"6h\",\n    \"providers\": {}\n  }\n}"
+    },
+    "kind": "ConfigMap",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-podplane-operator",
+        "meta.helm.sh/release-namespace": "platform-podplane-operator"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/component": "operator",
+        "app.kubernetes.io/instance": "platform-podplane-operator",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "podplane-operator",
+        "helm.sh/chart": "podplane-operator-1.0.0_68b8cd3b0f10",
+        "helm.toolkit.fluxcd.io/name": "podplane-operator",
+        "helm.toolkit.fluxcd.io/namespace": "platform-podplane-operator"
+      },
+      "name": "platform-podplane-operator-config",
+      "namespace": "platform-podplane-operator",
+      "uid": "787d9ee1-47a9-41e7-8ca1-e6a2343e0834"
+    }
+  }
+}

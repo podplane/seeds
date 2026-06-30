@@ -15,12 +15,12 @@
       },
       "name": "platform-certs-platform-certs",
       "namespace": "platform-components",
-      "uid": "5c14aba2-21c5-43fb-a550-31d05aafe613"
+      "uid": "ada98de3-d638-44c7-8422-96768b8beaff"
     },
     "spec": {
       "chart": "./charts/platform-certs",
       "interval": "10m0s",
-      "reconcileStrategy": "ChartVersion",
+      "reconcileStrategy": "Revision",
       "sourceRef": {
         "kind": "GitRepository",
         "name": "podplane-components"

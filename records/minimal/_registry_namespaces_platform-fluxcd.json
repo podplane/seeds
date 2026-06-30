@@ -10,7 +10,7 @@
         "name": "platform-fluxcd"
       },
       "name": "platform-fluxcd",
-      "uid": "aaeb1bbe-9289-46b6-a656-d6229e5490d8"
+      "uid": "ba431276-92d0-4edf-8201-6469981676d4"
     },
     "spec": {
       "finalizers": [

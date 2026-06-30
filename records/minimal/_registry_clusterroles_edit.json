@@ -22,7 +22,7 @@
         "rbac.authorization.k8s.io/aggregate-to-admin": "true"
       },
       "name": "edit",
-      "uid": "586c1aec-1873-4ec0-b1aa-96d23a9da811"
+      "uid": "566c7123-d7c9-4c9c-8e6e-2713c29c6528"
     },
     "rules": [
       {
@@ -56,79 +56,6 @@
         ],
         "resources": [
           "*"
-        ],
-        "verbs": [
-          "get",
-          "list",
-          "watch"
-        ]
-      },
-      {
-        "apiGroups": [
-          "cert-manager.io"
-        ],
-        "resources": [
-          "certificates",
-          "certificaterequests",
-          "issuers"
-        ],
-        "verbs": [
-          "create",
-          "delete",
-          "deletecollection",
-          "patch",
-          "update"
-        ]
-      },
-      {
-        "apiGroups": [
-          "cert-manager.io"
-        ],
-        "resources": [
-          "certificates/status"
-        ],
-        "verbs": [
-          "update"
-        ]
-      },
-      {
-        "apiGroups": [
-          "acme.cert-manager.io"
-        ],
-        "resources": [
-          "challenges",
-          "orders"
-        ],
-        "verbs": [
-          "create",
-          "delete",
-          "deletecollection",
-          "patch",
-          "update"
-        ]
-      },
-      {
-        "apiGroups": [
-          "cert-manager.io"
-        ],
-        "resources": [
-          "certificates",
-          "certificaterequests",
-          "issuers"
-        ],
-        "verbs": [
-          "get",
-          "list",
-          "watch"
-        ]
-      },
-      {
-        "apiGroups": [
-          "acme.cert-manager.io"
-        ],
-        "resources": [
-          "challenges",
-          "orders"
         ],
         "verbs": [
           "get",

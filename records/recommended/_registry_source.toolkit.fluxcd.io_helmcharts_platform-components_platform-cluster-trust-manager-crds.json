@@ -15,12 +15,12 @@
       },
       "name": "platform-cluster-trust-manager-crds",
       "namespace": "platform-components",
-      "uid": "4af8b1ec-935d-4abc-979a-9809b48aa400"
+      "uid": "715ea6cf-7917-435f-b5d8-896a29840acb"
     },
     "spec": {
       "chart": "./charts/trust-manager-crds",
       "interval": "10m0s",
-      "reconcileStrategy": "ChartVersion",
+      "reconcileStrategy": "Revision",
       "sourceRef": {
         "kind": "GitRepository",
         "name": "podplane-components"

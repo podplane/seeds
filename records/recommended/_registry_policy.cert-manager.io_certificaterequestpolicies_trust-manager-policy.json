@@ -20,7 +20,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-trust-manager"
       },
       "name": "trust-manager-policy",
-      "uid": "93aebc33-a413-4ff3-bc3b-de719f840c5d"
+      "uid": "a8299845-4f43-4579-8b50-65ce78ca02fb"
     },
     "spec": {
       "allowed": {

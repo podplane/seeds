@@ -22,7 +22,7 @@
         "rbac.authorization.k8s.io/aggregate-to-edit": "true"
       },
       "name": "view",
-      "uid": "0647ce18-e44b-4df1-be74-4bee94483130"
+      "uid": "0a8d8b98-700d-4a82-bb9b-26a0eeb98cce"
     },
     "rules": [
       {
@@ -36,35 +36,6 @@
         ],
         "resources": [
           "*"
-        ],
-        "verbs": [
-          "get",
-          "list",
-          "watch"
-        ]
-      },
-      {
-        "apiGroups": [
-          "cert-manager.io"
-        ],
-        "resources": [
-          "certificates",
-          "certificaterequests",
-          "issuers"
-        ],
-        "verbs": [
-          "get",
-          "list",
-          "watch"
-        ]
-      },
-      {
-        "apiGroups": [
-          "acme.cert-manager.io"
-        ],
-        "resources": [
-          "challenges",
-          "orders"
         ],
         "verbs": [
           "get",

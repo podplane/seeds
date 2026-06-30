@@ -20,13 +20,13 @@
       },
       "name": "platform-trust",
       "namespace": "platform-trust",
-      "uid": "7c9ada0a-b285-4360-b0f6-f6c1da1853bc"
+      "uid": "b2f48e60-b8e0-4d0c-b3b6-a9dd613eda80"
     },
     "spec": {
       "chart": {
         "spec": {
           "chart": "./charts/platform-trust",
-          "reconcileStrategy": "ChartVersion",
+          "reconcileStrategy": "Revision",
           "sourceRef": {
             "kind": "GitRepository",
             "name": "podplane-components",

@@ -21,7 +21,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "admin",
-      "uid": "970c48f2-9e5c-41f7-b9ce-dcecf42852e4"
+      "uid": "cd82289b-f7e5-4bc2-bfac-bee4e10fc2bf"
     },
     "rules": [
       {
@@ -133,6 +133,37 @@
           "get",
           "list",
           "watch"
+        ]
+      },
+      {
+        "apiGroups": [
+          "secrets-api.podplane.dev"
+        ],
+        "resourceNames": [
+          "latest"
+        ],
+        "resources": [
+          "publickeys"
+        ],
+        "verbs": [
+          "get"
+        ]
+      },
+      {
+        "apiGroups": [
+          "secrets-store.csi.x-k8s.io"
+        ],
+        "resources": [
+          "secretproviderclasses"
+        ],
+        "verbs": [
+          "get",
+          "list",
+          "watch",
+          "create",
+          "update",
+          "patch",
+          "delete"
         ]
       },
       {
@@ -386,6 +417,32 @@
       },
       {
         "apiGroups": [
+          "secrets-store.csi.x-k8s.io"
+        ],
+        "resources": [
+          "secretproviderclasses"
+        ],
+        "verbs": [
+          "get",
+          "list",
+          "watch"
+        ]
+      },
+      {
+        "apiGroups": [
+          "secrets-store.csi.x-k8s.io"
+        ],
+        "resources": [
+          "secretproviderclasspodstatuses"
+        ],
+        "verbs": [
+          "get",
+          "list",
+          "watch"
+        ]
+      },
+      {
+        "apiGroups": [
           ""
         ],
         "resources": [
@@ -586,6 +643,22 @@
           "get",
           "list",
           "watch"
+        ]
+      },
+      {
+        "apiGroups": [
+          "secrets-api.podplane.dev"
+        ],
+        "resources": [
+          "secretproviderkeyspaces"
+        ],
+        "verbs": [
+          "get",
+          "update",
+          "delete",
+          "overwrite",
+          "restore",
+          "destroy"
         ]
       },
       {

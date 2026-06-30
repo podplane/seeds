@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:controller:service-cidrs-controller",
-      "uid": "e0058462-6d7b-4cfe-8dc9-2c0ce88a9746"
+      "uid": "2cb5e007-97d9-402e-b56d-166f401a2f87"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

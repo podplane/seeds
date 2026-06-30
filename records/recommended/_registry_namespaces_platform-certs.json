@@ -17,7 +17,7 @@
         "kubernetes.io/metadata.name": "platform-certs"
       },
       "name": "platform-certs",
-      "uid": "4be874d4-e555-48ea-918d-8a0ebbcba47e"
+      "uid": "b5c41590-8eea-457d-8f12-9298f0c7117e"
     },
     "spec": {
       "finalizers": [

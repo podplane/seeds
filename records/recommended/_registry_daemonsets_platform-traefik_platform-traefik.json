@@ -21,7 +21,7 @@
       },
       "name": "platform-traefik",
       "namespace": "platform-traefik",
-      "uid": "5cf52eb9-00f8-4b62-ab04-b5a9d4951e48"
+      "uid": "f729eb20-d47c-468d-a575-3138a228932c"
     },
     "spec": {
       "revisionHistoryLimit": 10,
@@ -95,7 +95,7 @@
                   "value": "traefik"
                 }
               ],
-              "image": "docker.io/traefik:v3.7.1",
+              "image": "default-registry.local/mirror/docker.io/traefik:v3.7.1",
               "imagePullPolicy": "IfNotPresent",
               "livenessProbe": {
                 "failureThreshold": 3,
@@ -143,7 +143,7 @@
                   "scheme": "HTTP"
                 },
                 "initialDelaySeconds": 2,
-                "periodSeconds": 10,
+                "periodSeconds": 5,
                 "successThreshold": 1,
                 "timeoutSeconds": 2
               },

@@ -24,7 +24,7 @@
       },
       "name": "platform-cert-manager-webhook",
       "namespace": "platform-cert-manager",
-      "uid": "75e9b196-2814-490e-870e-905f93ab4232"
+      "uid": "7fa74fcf-8059-4c6c-ad31-66695e5d504f"
     },
     "spec": {
       "progressDeadlineSeconds": 600,
@@ -85,7 +85,7 @@
                   }
                 }
               ],
-              "image": "quay.io/jetstack/cert-manager-webhook:v1.16.2",
+              "image": "default-registry.local/mirror/quay.io/jetstack/cert-manager-webhook:v1.16.2",
               "imagePullPolicy": "IfNotPresent",
               "livenessProbe": {
                 "failureThreshold": 3,

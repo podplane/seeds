@@ -15,12 +15,12 @@
       },
       "name": "platform-fluxcd-fluxcd",
       "namespace": "platform-components",
-      "uid": "70b57ace-e8c9-4d86-8d7f-5201426ad99b"
+      "uid": "32d1d327-5e20-4475-8ffa-0bf7e526b068"
     },
     "spec": {
       "chart": "./charts/fluxcd",
       "interval": "10m0s",
-      "reconcileStrategy": "ChartVersion",
+      "reconcileStrategy": "Revision",
       "sourceRef": {
         "kind": "GitRepository",
         "name": "podplane-components"

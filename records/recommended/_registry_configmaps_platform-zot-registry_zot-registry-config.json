@@ -1,0 +1,26 @@
+{
+  "key": "/registry/configmaps/platform-zot-registry/zot-registry-config",
+  "value": {
+    "apiVersion": "v1",
+    "data": {
+      "config.json": "{\n  \"distSpecVersion\": \"1.1.1\",\n  \"http\": {\n    \"accessControl\": {\n      \"repositories\": {\n        \"**\": {\n          \"defaultPolicy\": [],\n          \"policies\": [\n            {\n              \"actions\": [\n                \"read\",\n                \"create\",\n                \"update\",\n                \"delete\"\n              ],\n              \"groups\": [\n                \"podplane:registry:admin\",\n                \"podplane:admins\",\n                \"system:masters\"\n              ]\n            },\n            {\n              \"actions\": [\n                \"read\"\n              ],\n              \"groups\": [\n                \"podplane:registry:edit\",\n                \"podplane:editors\",\n                \"podplane:operators\"\n              ]\n            },\n            {\n              \"actions\": [\n                \"read\"\n              ],\n              \"groups\": [\n                \"podplane:registry:view\",\n                \"podplane:viewers\"\n              ]\n            }\n          ]\n        },\n        \"apps/**\": {\n          \"defaultPolicy\": [],\n          \"policies\": [\n            {\n              \"actions\": [\n                \"create\"\n              ],\n              \"groups\": [\n                \"podplane:registry:edit\",\n                \"podplane:editors\",\n                \"podplane:operators\"\n              ]\n            }\n          ]\n        }\n      }\n    },\n    \"address\": \"0.0.0.0\",\n    \"auth\": {\n      \"bearer\": {\n        \"oidc\": [\n          {\n            \"audiences\": [\n              \"default\"\n            ],\n            \"claimMapping\": {\n              \"groups\": \"claims.groups\",\n              \"username\": \"claims.email\"\n            },\n            \"issuer\": \"https://oidc.localhost:49647/oidc\"\n          }\n        ],\n        \"realm\": \"zot\",\n        \"service\": \"default-registry.local\"\n      }\n    },\n    \"port\": \"5000\",\n    \"readTimeout\": \"60s\",\n    \"writeTimeout\": \"60s\"\n  },\n  \"log\": {\n    \"level\": \"info\"\n  },\n  \"storage\": {\n    \"dedupe\": false,\n    \"rootDirectory\": \"/var/lib/registry\",\n    \"storageDriver\": {\n      \"accesskey\": \"test\",\n      \"bucket\": \"registry\",\n      \"forcepathstyle\": true,\n      \"name\": \"s3\",\n      \"region\": \"local\",\n      \"regionendpoint\": \"http://10.0.2.2:49646/s3/cache\",\n      \"secretkey\": \"test\",\n      \"secure\": false,\n      \"skipverify\": false\n    }\n  }\n}"
+    },
+    "kind": "ConfigMap",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-zot-registry",
+        "meta.helm.sh/release-namespace": "platform-zot-registry"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "zot-registry",
+        "helm.toolkit.fluxcd.io/name": "zot-registry",
+        "helm.toolkit.fluxcd.io/namespace": "platform-zot-registry"
+      },
+      "name": "zot-registry-config",
+      "namespace": "platform-zot-registry",
+      "uid": "8a9f0159-7e64-4155-86cd-413968d76f8b"
+    }
+  }
+}

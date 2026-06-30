@@ -20,13 +20,13 @@
       },
       "name": "gateway-api-crds",
       "namespace": "platform-cluster",
-      "uid": "cfe295a0-d822-49d9-b821-266d8f9cd20b"
+      "uid": "87666aa4-7883-447f-a323-37fbbf0404a4"
     },
     "spec": {
       "chart": {
         "spec": {
           "chart": "./charts/gateway-api-crds",
-          "reconcileStrategy": "ChartVersion",
+          "reconcileStrategy": "Revision",
           "sourceRef": {
             "kind": "GitRepository",
             "name": "podplane-components",

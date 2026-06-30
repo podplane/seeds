@@ -1,4 +1,5 @@
 /registry/cert-manager.io/certificaterequests/platform-certs/platform-selfsigned-ca-certificate-1
+/registry/cert-manager.io/certificaterequests/platform-podplane-operator/platform-podplane-operator-serving-cert-1
 /registry/cert-manager.io/certificaterequests/platform-traefik/platform-traefik-default-localhost-1
 /registry/cert-manager.io/certificaterequests/platform-trust-manager/platform-trust-manager-1
 /registry/configmaps/kube-node-lease/kube-root-ca.crt
@@ -7,6 +8,9 @@
 /registry/configmaps/platform-cilium/kube-root-ca.crt
 /registry/configmaps/platform-coredns/kube-root-ca.crt
 /registry/configmaps/platform-fluxcd/kube-root-ca.crt
+/registry/configmaps/platform-podplane-operator/kube-root-ca.crt
+/registry/configmaps/platform-secrets-store-csi-driver/kube-root-ca.crt
 /registry/configmaps/platform-trust/kube-root-ca.crt
-/registry/events/platform-cert-manager/policy.cert-manager.io.18b844087d5bc2d7
+/registry/configmaps/platform-zot-registry/kube-root-ca.crt
+/registry/events/platform-cert-manager/policy.cert-manager.io.18bdfeb6a5533bf4
 /registry/leases/platform-cert-manager/policy.cert-manager.io

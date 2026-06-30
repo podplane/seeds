@@ -18,7 +18,7 @@
       },
       "name": "platform-http-to-https-redirect-httproute",
       "namespace": "platform-traefik",
-      "uid": "22ddceca-5e83-435a-a18e-f9292aa3199e"
+      "uid": "ab4185ce-a710-4215-8a8d-92e276223dea"
     },
     "spec": {
       "parentRefs": [

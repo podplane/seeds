@@ -12,15 +12,15 @@
       "generation": 1,
       "name": "podplane-components",
       "namespace": "platform-components",
-      "uid": "681761aa-fbbe-4d92-8cc1-c460e33de576"
+      "uid": "9ef1be3f-3394-430b-b62c-5bd158384275"
     },
     "spec": {
       "interval": "10m",
       "ref": {
-        "branch": "main"
+        "branch": "local-dev"
       },
       "timeout": "60s",
-      "url": "https://github.com/podplane/components.git"
+      "url": "https://10.0.2.15:19443/git/components.git"
     }
   }
 }

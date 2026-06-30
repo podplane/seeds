@@ -17,7 +17,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "tlsstores.traefik.io",
-      "uid": "8bff7ac4-e846-480c-a015-d528255738fc"
+      "uid": "25bef3d3-7a7d-4bfe-8f61-cc43d46fdc43"
     },
     "spec": {
       "conversion": {

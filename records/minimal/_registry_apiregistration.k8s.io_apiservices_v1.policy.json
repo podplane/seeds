@@ -9,7 +9,7 @@
         "kube-aggregator.kubernetes.io/automanaged": "onstart"
       },
       "name": "v1.policy",
-      "uid": "19b82fdf-b20b-4022-a152-b2f2cd3c246b"
+      "uid": "0c6aefb3-76a1-4612-b278-c5fed8965acf"
     },
     "spec": {
       "group": "policy",

@@ -20,13 +20,13 @@
       },
       "name": "cilium-crds",
       "namespace": "platform-cluster",
-      "uid": "7ea09af8-1f28-4d90-a65d-5ae14085d9ab"
+      "uid": "b91b7fcb-88c1-43bb-a0f5-1c14e82c5693"
     },
     "spec": {
       "chart": {
         "spec": {
           "chart": "./charts/cilium-crds",
-          "reconcileStrategy": "ChartVersion",
+          "reconcileStrategy": "Revision",
           "sourceRef": {
             "kind": "GitRepository",
             "name": "podplane-components",

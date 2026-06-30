@@ -1,0 +1,38 @@
+{
+  "key": "/registry/rolebindings/kube-system/platform-podplane-operator-extension-apiserver-authentication-reader",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "RoleBinding",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-podplane-operator",
+        "meta.helm.sh/release-namespace": "platform-podplane-operator"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/component": "operator",
+        "app.kubernetes.io/instance": "platform-podplane-operator",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "podplane-operator",
+        "helm.sh/chart": "podplane-operator-1.0.0_68b8cd3b0f10",
+        "helm.toolkit.fluxcd.io/name": "podplane-operator",
+        "helm.toolkit.fluxcd.io/namespace": "platform-podplane-operator"
+      },
+      "name": "platform-podplane-operator-extension-apiserver-authentication-reader",
+      "namespace": "kube-system",
+      "uid": "c9ff9594-1ebf-4b0b-a505-1f5560e6e540"
+    },
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "Role",
+      "name": "extension-apiserver-authentication-reader"
+    },
+    "subjects": [
+      {
+        "kind": "ServiceAccount",
+        "name": "platform-podplane-operator",
+        "namespace": "platform-podplane-operator"
+      }
+    ]
+  }
+}

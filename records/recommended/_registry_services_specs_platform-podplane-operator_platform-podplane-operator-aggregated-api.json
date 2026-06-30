@@ -1,0 +1,53 @@
+{
+  "key": "/registry/services/specs/platform-podplane-operator/platform-podplane-operator-aggregated-api",
+  "value": {
+    "apiVersion": "v1",
+    "kind": "Service",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-podplane-operator",
+        "meta.helm.sh/release-namespace": "platform-podplane-operator"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/component": "operator",
+        "app.kubernetes.io/instance": "platform-podplane-operator",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "podplane-operator",
+        "helm.sh/chart": "podplane-operator-1.0.0_68b8cd3b0f10",
+        "helm.toolkit.fluxcd.io/name": "podplane-operator",
+        "helm.toolkit.fluxcd.io/namespace": "platform-podplane-operator"
+      },
+      "name": "platform-podplane-operator-aggregated-api",
+      "namespace": "platform-podplane-operator",
+      "uid": "8bb42c4d-18d9-4575-b64e-55c9e9bab066"
+    },
+    "spec": {
+      "clusterIP": "198.18.0.14",
+      "clusterIPs": [
+        "198.18.0.14"
+      ],
+      "internalTrafficPolicy": "Cluster",
+      "ipFamilies": [
+        "IPv4",
+        "IPv6"
+      ],
+      "ipFamilyPolicy": "PreferDualStack",
+      "ports": [
+        {
+          "name": "aggregated-api",
+          "port": 443,
+          "protocol": "TCP",
+          "targetPort": "aggregated-api"
+        }
+      ],
+      "selector": {
+        "app.kubernetes.io/component": "operator",
+        "app.kubernetes.io/instance": "platform-podplane-operator",
+        "app.kubernetes.io/name": "podplane-operator"
+      },
+      "sessionAffinity": "None",
+      "type": "ClusterIP"
+    }
+  }
+}

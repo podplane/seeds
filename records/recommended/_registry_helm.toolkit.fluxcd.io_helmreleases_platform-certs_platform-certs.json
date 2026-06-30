@@ -20,13 +20,13 @@
       },
       "name": "platform-certs",
       "namespace": "platform-certs",
-      "uid": "f2d5c084-f9c5-41c8-93e5-c09856110f0c"
+      "uid": "6e08c014-0754-46dd-8c47-841327f8f1c8"
     },
     "spec": {
       "chart": {
         "spec": {
           "chart": "./charts/platform-certs",
-          "reconcileStrategy": "ChartVersion",
+          "reconcileStrategy": "Revision",
           "sourceRef": {
             "kind": "GitRepository",
             "name": "podplane-components",
@@ -54,6 +54,17 @@
         "crds": "Skip",
         "remediation": {
           "retries": 3
+        }
+      },
+      "values": {
+        "platform": {
+          "certs": {
+            "secretSync": {
+              "image": {
+                "repository": "default-registry.local/mirror/docker.io/library/golang"
+              }
+            }
+          }
         }
       }
     }

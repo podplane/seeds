@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:controller:ephemeral-volume-controller",
-      "uid": "088439de-d7a9-45e4-a7d6-2a0a763e52d6"
+      "uid": "ef2df4f9-7950-44ec-96f4-1f9a7b071aa9"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",
