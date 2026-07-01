@@ -3,12 +3,12 @@
   "value": {
     "apiVersion": "v1",
     "data": {
-      "ca.crt": "-----BEGIN CERTIFICATE-----\nMIIC/zCCAeegAwIBAgIRALqNaJ3yK6v79Rknre35eg0wDQYJKoZIhvcNAQELBQAw\nGTEXMBUGA1UEAxMOcG9kcGxhbmUubG9jYWwwHhcNMjYwNjMwMjMxMTUwWhcNMjYw\nOTI4MjMxMTUwWjAZMRcwFQYDVQQDEw5wb2RwbGFuZS5sb2NhbDCCASIwDQYJKoZI\nhvcNAQEBBQADggEPADCCAQoCggEBALCvnqiBcZOkYPigS2MaFg60Bl9Y4TsyqwC2\nEY81YEcOYQMae40PvqFMdNhlPvYSQ9GtBBRO901c5kX4HwBg3XpeK3GGvC0bOIlG\nFGr9wAa7IP8q4+6RHIUnrU6vYyU08Qi1kTQ5zb/dmjbLyCBC9k2L8SM4EwVeDcqK\nVjkb6NLuGQmSMASkZAKSPAw8vitQ43rq4D1n/bplf+u5NMnvR51IN4fKoCNjrEZG\ny4gV0uGGgVyYj60ChAoGwvzaGQzzpNB8UAnwJWV6YD84/AMHsgt3eR3dUjPA4nya\nyYX01+EY7BhoTuT7DFw5frUib2pidvCg1i6Ullh+fKViLNLF/T8CAwEAAaNCMEAw\nDgYDVR0PAQH/BAQDAgKkMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFJlYIETb\nbT2ol3OzHp2FbM4lgYaeMA0GCSqGSIb3DQEBCwUAA4IBAQBw5UCPVvmjtRxpZkAq\n2dBlOfT6ZuQO62n4v8K4wKq1qQhbmg/IpgcBkno7b8AJBy/tgd8ddluY3jMtfoAc\nH05GTF1uGkw2ohPB1ssrCkDjXoVl5vCSNC0whLkCQMc+uW5pyFEWLwOYul8Wjmac\nmpKVQp4jM9epByIRutGEkKaVOAU2Io5vcQ7N7IcLLbiOTWT5cUVcFVne5YbakheE\na3rHF1ne2Sg+Fkkwn5gu4AjLAvcQBFBBIWiIwPE6R2ANwjY+Jp6WWnuA6GNNvSwT\nSfqMz5XYIJOp0QS2SCx/7kn+SKuWy3EO9DztIK5/7SjxY0p42EiPLZgNbQluiH1/\n8cst\n-----END CERTIFICATE-----"
+      "ca.crt": "-----BEGIN CERTIFICATE-----\nMIIC/jCCAeagAwIBAgIQASzuJHBb+XGbEEbfDqI5aDANBgkqhkiG9w0BAQsFADAZ\nMRcwFQYDVQQDEw5wb2RwbGFuZS5sb2NhbDAeFw0yNjA3MDEwNjExNDVaFw0yNjA5\nMjkwNjExNDVaMBkxFzAVBgNVBAMTDnBvZHBsYW5lLmxvY2FsMIIBIjANBgkqhkiG\n9w0BAQEFAAOCAQ8AMIIBCgKCAQEA32Jm5vdTYN18e6xaK9B5tc/qiwzNcihAMZ1/\ng3RvBwoIT3sdQBrvTY8EqsGpiIm/4rAOVPCLvyGuyMjPEWYeHtvUmAMvQANZAEHJ\nk8w5cpORXm7BhPrDwNYbVrDJpkUIJT5qD6q1qNmmJZCXUrYwL1UWSt1Z4fHEt4+O\nt+wLvpN+hUnKp8DyNNrMyvs2PgLVz9aNcuuWzNsRzmX0HYzs0AR6rIGXk4LBqHPG\nIWqXDwbRTxpK1BqHrzol7bXvnmZ0YCrXE0pX63OhEMm7wYGzZmvfdxnCo9u1vgzD\nw+BDhuNV1xhppdcF1zwGIBL+C1MDBeUP6YXKLw7t85tmdcO2lQIDAQABo0IwQDAO\nBgNVHQ8BAf8EBAMCAqQwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUQCq+cQtL\nZu6U1kZle8O8kpIs1WMwDQYJKoZIhvcNAQELBQADggEBAIGtJiFlMOLiHvtvQvJh\nZvMIKCnEnfv2NbXcNBAzu8kkYb/pGMzSZKtZC2AsilTqamB+v1zQSY+oi/Ij7N+P\n7E+4GzaEFeoNzs1dmdhJZ17t6mZz97t2dRVOHuRvFzqZQknsKHrKWK79+G224Dok\n3yTdMDDXsRCoZiPklRqANutDGqXw0ff86/syS22mgBqElGANvJnzWJwF/J8gpCGs\nEeUeOGfO4nEWcD9FZVsHoFqHkIHURp1TjSk/FZxy9IfqkUi281QgGc36e5cLhbMf\n57ZbNDdkvpD1LYQupIxUSnxXKU8+YCCiN3eF+HzjnZ4Uk1EYBj32lFNSPvcQFpcD\neyc=\n-----END CERTIFICATE-----"
     },
     "kind": "ConfigMap",
     "metadata": {
       "annotations": {
-        "trust.cert-manager.io/hash": "9cf66b9c3509124ad4ae7b88b26959425864eb75ffbb086ce12c69ce3357c98e"
+        "trust.cert-manager.io/hash": "81ce715d9ca9c18d78147ca1b6bbbb553a0fcaab60149bf2f6fb5b794fefb39e"
       },
       "creationTimestamp": "2015-07-11T04:02:31Z",
       "labels": {
@@ -23,10 +23,10 @@
           "controller": true,
           "kind": "Bundle",
           "name": "platform-selfsigned-ca-bundle",
-          "uid": "d5738e69-4fb0-456c-a1f1-3e26127d581b"
+          "uid": "9297fe20-5ba8-496c-b336-911efb06187d"
         }
       ],
-      "uid": "7fe8f58e-23b1-43b4-9522-73b1763f4421"
+      "uid": "84f04f98-1174-4ec2-a178-071f9873c40c"
     }
   }
 }

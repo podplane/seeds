@@ -21,7 +21,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "admin",
-      "uid": "cd82289b-f7e5-4bc2-bfac-bee4e10fc2bf"
+      "uid": "a29f8bec-30a1-4ea5-a639-f5aafe169314"
     },
     "rules": [
       {

@@ -3,7 +3,7 @@
   "value": {
     "apiVersion": "v1",
     "data": {
-      "config.json": "{\n  \"cluster\": {\n    \"id\": \"default\",\n    \"oidc\": {\n      \"client_id\": \"default\",\n      \"groups_claim\": \"groups\",\n      \"issuer_url\": \"https://oidc.localhost:49647/oidc\",\n      \"username_claim\": \"email\"\n    }\n  },\n  \"registry\": {\n    \"auth\": {\n      \"enabled\": false\n    }\n  },\n  \"secrets\": {\n    \"allow_sync_to_kubernetes_secrets\": false,\n    \"key_rotation\": \"6h\",\n    \"providers\": {}\n  }\n}"
+      "config.json": "{\n  \"cluster\": {\n    \"id\": \"default\",\n    \"oidc\": {\n      \"client_id\": \"default\",\n      \"groups_claim\": \"groups\",\n      \"issuer_url\": \"https://oidc.localhost:59284/oidc\",\n      \"username_claim\": \"email\"\n    }\n  },\n  \"registry\": {\n    \"auth\": {\n      \"enabled\": false\n    }\n  },\n  \"secrets\": {\n    \"allow_sync_to_kubernetes_secrets\": false,\n    \"key_rotation\": \"6h\",\n    \"providers\": {}\n  }\n}"
     },
     "kind": "ConfigMap",
     "metadata": {
@@ -17,13 +17,13 @@
         "app.kubernetes.io/instance": "platform-podplane-operator",
         "app.kubernetes.io/managed-by": "Helm",
         "app.kubernetes.io/name": "podplane-operator",
-        "helm.sh/chart": "podplane-operator-1.0.0_68b8cd3b0f10",
+        "helm.sh/chart": "podplane-operator-1.0.0_439136ca710c",
         "helm.toolkit.fluxcd.io/name": "podplane-operator",
         "helm.toolkit.fluxcd.io/namespace": "platform-podplane-operator"
       },
       "name": "platform-podplane-operator-config",
       "namespace": "platform-podplane-operator",
-      "uid": "787d9ee1-47a9-41e7-8ca1-e6a2343e0834"
+      "uid": "943dd2e7-369f-4907-a63d-da3e52cb514a"
     }
   }
 }

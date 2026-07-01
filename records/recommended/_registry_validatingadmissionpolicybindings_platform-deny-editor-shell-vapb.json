@@ -16,7 +16,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "platform-deny-editor-shell-vapb",
-      "uid": "a901b6cb-7b18-40ac-a56d-47d670bbec42"
+      "uid": "96021751-4b9e-4e22-9053-e7f06f471d38"
     },
     "spec": {
       "matchResources": {

@@ -17,7 +17,7 @@
       },
       "name": "platform-traefik-default-localhost",
       "namespace": "platform-traefik",
-      "uid": "94351390-ab81-487f-897c-533130e4c387"
+      "uid": "56f2c150-ecf9-429e-9463-98a488ed457c"
     },
     "spec": {
       "dnsNames": [

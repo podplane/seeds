@@ -24,7 +24,7 @@
       },
       "name": "platform-cert-manager-webhook",
       "namespace": "platform-cert-manager",
-      "uid": "7fa74fcf-8059-4c6c-ad31-66695e5d504f"
+      "uid": "6bcc4c58-89ec-43ad-ab17-2aea1c96d945"
     },
     "spec": {
       "progressDeadlineSeconds": 600,

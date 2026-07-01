@@ -17,7 +17,7 @@
         "kubernetes.io/metadata.name": "platform-agent-sandbox"
       },
       "name": "platform-agent-sandbox",
-      "uid": "50d2ab89-a21b-4e1a-925c-abc312e7d08e"
+      "uid": "1b5bcaf9-2a89-417b-89e7-98f21adcd7f5"
     },
     "spec": {
       "finalizers": [

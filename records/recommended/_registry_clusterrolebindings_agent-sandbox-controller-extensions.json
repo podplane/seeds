@@ -14,12 +14,12 @@
         "app.kubernetes.io/managed-by": "Helm",
         "app.kubernetes.io/name": "agent-sandbox",
         "app.kubernetes.io/version": "v0.5.0",
-        "helm.sh/chart": "agent-sandbox-1.0.0_68b8cd3b0f10",
+        "helm.sh/chart": "agent-sandbox-1.0.0_439136ca710c",
         "helm.toolkit.fluxcd.io/name": "agent-sandbox",
         "helm.toolkit.fluxcd.io/namespace": "platform-agent-sandbox"
       },
       "name": "agent-sandbox-controller-extensions",
-      "uid": "8bf93c62-74e0-4f4b-83b4-dbd42bc78f2a"
+      "uid": "00b6d48e-b9ac-4e36-9687-4becfece9dd6"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

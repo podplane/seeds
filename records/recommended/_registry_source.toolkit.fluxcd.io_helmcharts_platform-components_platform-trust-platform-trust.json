@@ -15,7 +15,7 @@
       },
       "name": "platform-trust-platform-trust",
       "namespace": "platform-components",
-      "uid": "80f207f9-87e2-4807-a4c1-b2a13525e085"
+      "uid": "2c9934be-03f6-41a6-9bd8-f648e7769ad2"
     },
     "spec": {
       "chart": "./charts/platform-trust",

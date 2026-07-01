@@ -17,7 +17,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "sandboxtemplates.extensions.agents.x-k8s.io",
-      "uid": "0fe41ac0-c809-4c99-a111-0a24b3fd7bb1"
+      "uid": "a30e7fcc-9b32-409d-89d9-df5782c7e0aa"
     },
     "spec": {
       "conversion": {

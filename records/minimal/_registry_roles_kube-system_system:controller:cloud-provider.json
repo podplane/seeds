@@ -13,7 +13,7 @@
       },
       "name": "system:controller:cloud-provider",
       "namespace": "kube-system",
-      "uid": "501ae3a2-130f-4cf0-8cf9-f568031886f2"
+      "uid": "61ed0781-faad-44b2-b0e8-c5e4d37f01f7"
     },
     "rules": [
       {

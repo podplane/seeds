@@ -20,7 +20,7 @@
       },
       "name": "traefik-crds",
       "namespace": "platform-cluster",
-      "uid": "3b958dc5-df72-4d1e-85c1-ec4b8980ab87"
+      "uid": "35f2d454-9e9e-4caa-bece-f999234e3d87"
     },
     "spec": {
       "chart": {

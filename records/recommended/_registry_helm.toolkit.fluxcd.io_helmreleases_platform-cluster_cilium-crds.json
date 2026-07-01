@@ -20,7 +20,7 @@
       },
       "name": "cilium-crds",
       "namespace": "platform-cluster",
-      "uid": "b91b7fcb-88c1-43bb-a0f5-1c14e82c5693"
+      "uid": "172b014e-2ed5-486e-9b21-f4f143c1e7d9"
     },
     "spec": {
       "chart": {

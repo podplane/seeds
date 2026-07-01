@@ -14,18 +14,18 @@
         "app.kubernetes.io/managed-by": "Helm",
         "app.kubernetes.io/name": "agent-sandbox",
         "app.kubernetes.io/version": "v0.5.0",
-        "helm.sh/chart": "agent-sandbox-1.0.0_68b8cd3b0f10",
+        "helm.sh/chart": "agent-sandbox-1.0.0_439136ca710c",
         "helm.toolkit.fluxcd.io/name": "agent-sandbox",
         "helm.toolkit.fluxcd.io/namespace": "platform-agent-sandbox"
       },
       "name": "agent-sandbox-controller",
       "namespace": "platform-agent-sandbox",
-      "uid": "1ef1a264-56f6-4e9c-8ac8-f9546b09c85c"
+      "uid": "5f34c95b-c8fc-47f9-9958-ad33ddbc1ca3"
     },
     "spec": {
-      "clusterIP": "198.18.0.2",
+      "clusterIP": "198.18.0.3",
       "clusterIPs": [
-        "198.18.0.2"
+        "198.18.0.3"
       ],
       "internalTrafficPolicy": "Cluster",
       "ipFamilies": [

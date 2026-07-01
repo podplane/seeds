@@ -22,12 +22,12 @@
       },
       "name": "platform-cert-manager-cainjector",
       "namespace": "platform-cert-manager",
-      "uid": "75b8c04b-0f2a-49f7-bf38-02c9fa2fba16"
+      "uid": "b55fcf8f-5d30-4886-ab1d-4fc2f4e849be"
     },
     "spec": {
-      "clusterIP": "198.18.0.6",
+      "clusterIP": "198.18.0.4",
       "clusterIPs": [
-        "198.18.0.6"
+        "198.18.0.4"
       ],
       "internalTrafficPolicy": "Cluster",
       "ipFamilies": [

@@ -20,7 +20,7 @@
         "kubernetes.io/metadata.name": "platform-trust"
       },
       "name": "platform-trust",
-      "uid": "c83f6f56-343b-454e-9484-a368fac7e731"
+      "uid": "74eec36e-c9f8-4ca5-b102-5658fc6383e1"
     },
     "spec": {
       "finalizers": [

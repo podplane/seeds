@@ -15,7 +15,7 @@
       },
       "name": "platform-certs-platform-certs",
       "namespace": "platform-components",
-      "uid": "ada98de3-d638-44c7-8422-96768b8beaff"
+      "uid": "f3ef3493-feae-4152-8d66-0050124dd802"
     },
     "spec": {
       "chart": "./charts/platform-certs",

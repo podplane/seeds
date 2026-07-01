@@ -20,7 +20,7 @@
       },
       "name": "trust-manager",
       "namespace": "platform-trust-manager",
-      "uid": "7e670892-528a-4541-840f-89f3045526cd"
+      "uid": "876aeb2c-c89b-42be-9f28-297c36324140"
     },
     "spec": {
       "chart": {

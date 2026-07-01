@@ -12,5 +12,5 @@
 /registry/configmaps/platform-secrets-store-csi-driver/kube-root-ca.crt
 /registry/configmaps/platform-trust/kube-root-ca.crt
 /registry/configmaps/platform-zot-registry/kube-root-ca.crt
-/registry/events/platform-cert-manager/policy.cert-manager.io.18bdfeb6a5533bf4
+/registry/events/platform-cert-manager/policy.cert-manager.io.18be15a036e88adc
 /registry/leases/platform-cert-manager/policy.cert-manager.io

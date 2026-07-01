@@ -21,7 +21,7 @@
       },
       "name": "platform-trust-manager",
       "namespace": "platform-trust-manager",
-      "uid": "faa5c5ac-da3e-4882-af27-0a9cf0c7d3b9"
+      "uid": "e53c8c94-1d06-4f57-a705-82f729c4ac1e"
     },
     "spec": {
       "clusterIP": "198.18.0.11",

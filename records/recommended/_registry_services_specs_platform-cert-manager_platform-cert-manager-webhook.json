@@ -22,12 +22,12 @@
       },
       "name": "platform-cert-manager-webhook",
       "namespace": "platform-cert-manager",
-      "uid": "79365bf9-37bf-4eee-86d7-e2cb5ce7061e"
+      "uid": "f4a1bb4b-6c74-42ec-995c-61016a608b16"
     },
     "spec": {
-      "clusterIP": "198.18.0.4",
+      "clusterIP": "198.18.0.5",
       "clusterIPs": [
-        "198.18.0.4"
+        "198.18.0.5"
       ],
       "internalTrafficPolicy": "Cluster",
       "ipFamilies": [

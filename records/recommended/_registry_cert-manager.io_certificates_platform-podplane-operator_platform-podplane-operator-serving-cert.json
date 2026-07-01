@@ -15,13 +15,13 @@
         "app.kubernetes.io/instance": "platform-podplane-operator",
         "app.kubernetes.io/managed-by": "Helm",
         "app.kubernetes.io/name": "podplane-operator",
-        "helm.sh/chart": "podplane-operator-1.0.0_68b8cd3b0f10",
+        "helm.sh/chart": "podplane-operator-1.0.0_439136ca710c",
         "helm.toolkit.fluxcd.io/name": "podplane-operator",
         "helm.toolkit.fluxcd.io/namespace": "platform-podplane-operator"
       },
       "name": "platform-podplane-operator-serving-cert",
       "namespace": "platform-podplane-operator",
-      "uid": "f23d0010-5d52-4ca0-b987-bba611413dc2"
+      "uid": "6bf0da42-61cc-44d2-b81e-1f006e5c3caa"
     },
     "spec": {
       "dnsNames": [

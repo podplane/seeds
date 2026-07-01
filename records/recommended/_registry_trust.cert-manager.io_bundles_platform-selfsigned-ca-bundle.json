@@ -16,7 +16,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-trust"
       },
       "name": "platform-selfsigned-ca-bundle",
-      "uid": "d5738e69-4fb0-456c-a1f1-3e26127d581b"
+      "uid": "9297fe20-5ba8-496c-b336-911efb06187d"
     },
     "spec": {
       "sources": [

@@ -21,7 +21,7 @@
       },
       "name": "platform-traefik",
       "namespace": "platform-traefik",
-      "uid": "f729eb20-d47c-468d-a575-3138a228932c"
+      "uid": "8da8ae1d-e28f-4d3f-bf21-0758370f4c62"
     },
     "spec": {
       "revisionHistoryLimit": 10,

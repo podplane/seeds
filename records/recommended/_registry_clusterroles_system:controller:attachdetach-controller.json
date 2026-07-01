@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:controller:attachdetach-controller",
-      "uid": "f61fce93-fb68-4293-84a6-4d89c4662ef4"
+      "uid": "01089848-9bf0-4a21-a72d-41fa05024e1b"
     },
     "rules": [
       {

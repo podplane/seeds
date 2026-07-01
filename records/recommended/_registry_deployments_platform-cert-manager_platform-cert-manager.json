@@ -24,7 +24,7 @@
       },
       "name": "platform-cert-manager",
       "namespace": "platform-cert-manager",
-      "uid": "8ca124fe-4649-452f-9ebc-bfc00363f333"
+      "uid": "e8b90e5a-05b9-4f40-8b59-0ae915e495a6"
     },
     "spec": {
       "progressDeadlineSeconds": 600,

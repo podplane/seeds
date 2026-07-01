@@ -10,7 +10,7 @@
         "kubernetes.io/metadata.name": "platform-components"
       },
       "name": "platform-components",
-      "uid": "92271123-e004-4739-afc2-3795107cc85b"
+      "uid": "2ad76a9b-12b8-4bcc-8034-1f7b8074b5bf"
     },
     "spec": {
       "finalizers": [

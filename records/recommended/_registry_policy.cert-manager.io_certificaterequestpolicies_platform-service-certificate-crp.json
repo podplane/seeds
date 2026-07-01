@@ -16,7 +16,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-certs"
       },
       "name": "platform-service-certificate-crp",
-      "uid": "a149e420-daa0-4dae-8e2d-6bb0544f3971"
+      "uid": "a0026c6a-7d90-4e4f-85e4-4944adc954f5"
     },
     "spec": {
       "allowed": {

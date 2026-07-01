@@ -21,7 +21,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cert-manager"
       },
       "name": "platform-cert-manager-controller-ingress-shim",
-      "uid": "f522c7c9-57bf-4ca2-90c7-d4dc15ee25de"
+      "uid": "ab8de1a8-c0c3-4116-b16d-a0a19d92d5c1"
     },
     "rules": [
       {

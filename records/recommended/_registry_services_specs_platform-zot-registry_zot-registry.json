@@ -20,12 +20,12 @@
       },
       "name": "zot-registry",
       "namespace": "platform-zot-registry",
-      "uid": "ced3adb7-36d2-463d-8637-e9b66e87796e"
+      "uid": "a0665ad8-9d87-4468-a4fe-631b5f49eb19"
     },
     "spec": {
-      "clusterIP": "198.18.0.10",
+      "clusterIP": "198.18.0.12",
       "clusterIPs": [
-        "198.18.0.10"
+        "198.18.0.12"
       ],
       "internalTrafficPolicy": "Cluster",
       "ipFamilies": [

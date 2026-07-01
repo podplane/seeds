@@ -20,7 +20,7 @@
       },
       "name": "cert-manager-crds",
       "namespace": "platform-cluster",
-      "uid": "60e10b83-d6d1-4884-8bef-0c4bc856ca62"
+      "uid": "be2882a2-cee5-4c87-8c0e-6408e19da177"
     },
     "spec": {
       "chart": {

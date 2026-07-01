@@ -17,7 +17,7 @@
         "kubernetes.io/metadata.name": "platform-traefik"
       },
       "name": "platform-traefik",
-      "uid": "bde7c3d2-00da-4425-9841-7e5a3503dd91"
+      "uid": "0609734d-1236-4b87-90de-2af2d2176fec"
     },
     "spec": {
       "finalizers": [

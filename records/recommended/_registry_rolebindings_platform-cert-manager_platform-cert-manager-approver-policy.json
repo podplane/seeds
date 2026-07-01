@@ -20,7 +20,7 @@
       },
       "name": "platform-cert-manager-approver-policy",
       "namespace": "platform-cert-manager",
-      "uid": "a0f588cd-ce69-44b6-97cb-301065c6b1dc"
+      "uid": "25abe10e-d180-43d8-871c-ae8babbc7acd"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

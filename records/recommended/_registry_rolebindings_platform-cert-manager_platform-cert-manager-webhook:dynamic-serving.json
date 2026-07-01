@@ -22,7 +22,7 @@
       },
       "name": "platform-cert-manager-webhook:dynamic-serving",
       "namespace": "platform-cert-manager",
-      "uid": "d2a64b34-6ba4-4888-a430-645792ee867f"
+      "uid": "e9e4a0b4-dda7-4256-88e0-27beaeeddc3e"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

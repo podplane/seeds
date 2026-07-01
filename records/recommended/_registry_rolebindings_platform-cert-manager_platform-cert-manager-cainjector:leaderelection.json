@@ -22,7 +22,7 @@
       },
       "name": "platform-cert-manager-cainjector:leaderelection",
       "namespace": "platform-cert-manager",
-      "uid": "dc25269c-a70d-4ea9-b321-f744277bb988"
+      "uid": "7291f08a-4962-445d-aaf9-0d1c95cc6c1d"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

@@ -25,7 +25,7 @@
         "rbac.authorization.k8s.io/aggregate-to-view": "true"
       },
       "name": "platform-cert-manager-view",
-      "uid": "ba5d42dd-6911-4e9c-87c9-3b75e77db363"
+      "uid": "a4e8e5c7-e4da-490a-ba1f-b6b4bdc5ae9c"
     },
     "rules": [
       {

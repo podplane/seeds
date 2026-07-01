@@ -18,7 +18,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-traefik"
       },
       "name": "platform-traefik-platform-traefik",
-      "uid": "6363dee6-908d-4d92-8724-be0b134136d2"
+      "uid": "aacaf906-e3e5-46f2-a692-e465d62a7259"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

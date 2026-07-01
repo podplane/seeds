@@ -15,12 +15,12 @@
         "app.kubernetes.io/instance": "platform-podplane-operator",
         "app.kubernetes.io/managed-by": "Helm",
         "app.kubernetes.io/name": "podplane-operator",
-        "helm.sh/chart": "podplane-operator-1.0.0_68b8cd3b0f10",
+        "helm.sh/chart": "podplane-operator-1.0.0_439136ca710c",
         "helm.toolkit.fluxcd.io/name": "podplane-operator",
         "helm.toolkit.fluxcd.io/namespace": "platform-podplane-operator"
       },
       "name": "platform-podplane-operator-spc-restriction-vap",
-      "uid": "76f88a21-2213-43b2-884d-64804c6a8fc5"
+      "uid": "eaf02f2d-e98e-471f-b8d2-03b322998a6c"
     },
     "spec": {
       "failurePolicy": "Fail",

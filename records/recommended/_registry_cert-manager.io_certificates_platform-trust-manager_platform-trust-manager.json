@@ -21,7 +21,7 @@
       },
       "name": "platform-trust-manager",
       "namespace": "platform-trust-manager",
-      "uid": "3beb6708-fcb2-4fac-8ea7-271c9e49cabe"
+      "uid": "671d422a-d89e-4941-96f8-eddde7bfa221"
     },
     "spec": {
       "commonName": "platform-trust-manager.platform-trust-manager.svc",

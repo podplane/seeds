@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:controller:resource-claim-controller",
-      "uid": "030903c4-9f4e-438a-b8fa-6d9c4c2adfec"
+      "uid": "8145af1a-3491-47ae-869f-af73ca8f833d"
     },
     "rules": [
       {

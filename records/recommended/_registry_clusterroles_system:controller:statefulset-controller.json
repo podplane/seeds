@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:controller:statefulset-controller",
-      "uid": "aab7446f-51ff-4f8b-b1c9-862212597504"
+      "uid": "40609b56-ee59-4c85-ab1d-a7629332070b"
     },
     "rules": [
       {

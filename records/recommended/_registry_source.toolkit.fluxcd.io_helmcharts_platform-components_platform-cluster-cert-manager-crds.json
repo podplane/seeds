@@ -15,7 +15,7 @@
       },
       "name": "platform-cluster-cert-manager-crds",
       "namespace": "platform-components",
-      "uid": "465cdbe2-5682-4cec-b2ca-9b64666c181b"
+      "uid": "8c57f205-596c-47a1-98b3-e376a59562e1"
     },
     "spec": {
       "chart": "./charts/cert-manager-crds",

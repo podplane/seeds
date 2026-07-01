@@ -18,7 +18,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-traefik"
       },
       "name": "platform-traefik-platform-traefik",
-      "uid": "b52257de-60e7-43d5-a4a2-3db7563fccad"
+      "uid": "6de404f9-8385-4550-88dc-0cbdbe4bb68e"
     },
     "rules": [
       {

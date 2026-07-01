@@ -19,7 +19,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-traefik"
       },
       "name": "platform-traefik",
-      "uid": "f8e6df4c-bd72-4abc-bc0f-13dde649d73c"
+      "uid": "95cefdf7-4b08-4f30-9c02-45e2b1a427e5"
     },
     "spec": {
       "controllerName": "traefik.io/gateway-controller"

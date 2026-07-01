@@ -15,7 +15,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-certs"
       },
       "name": "platform-use-certificaterequestpolicies-cr",
-      "uid": "0bd2a3f6-f20a-4a71-9626-b89942073daa"
+      "uid": "8cfc12c2-3bbc-4776-9385-a36496eec765"
     },
     "rules": [
       {

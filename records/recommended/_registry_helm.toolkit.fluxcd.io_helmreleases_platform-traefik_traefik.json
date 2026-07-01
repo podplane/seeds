@@ -20,7 +20,7 @@
       },
       "name": "traefik",
       "namespace": "platform-traefik",
-      "uid": "ad0dbfc9-d1fb-4663-835f-dc6504e49358"
+      "uid": "69030c32-c728-4e54-ba6e-eb596d325ab3"
     },
     "spec": {
       "chart": {

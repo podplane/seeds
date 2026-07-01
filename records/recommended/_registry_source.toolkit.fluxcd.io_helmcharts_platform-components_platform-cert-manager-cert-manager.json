@@ -15,7 +15,7 @@
       },
       "name": "platform-cert-manager-cert-manager",
       "namespace": "platform-components",
-      "uid": "6c159db1-c265-42d1-9d0e-093be765bf26"
+      "uid": "ad4370bc-a8d6-4f8f-b8a6-bb34f734df60"
     },
     "spec": {
       "chart": "./charts/cert-manager",

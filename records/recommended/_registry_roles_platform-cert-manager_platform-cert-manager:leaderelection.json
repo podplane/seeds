@@ -22,7 +22,7 @@
       },
       "name": "platform-cert-manager:leaderelection",
       "namespace": "platform-cert-manager",
-      "uid": "a2297043-330a-474b-a3f2-35a2c8358b93"
+      "uid": "a737f637-811e-45a3-8625-2094ad64aa56"
     },
     "rules": [
       {

@@ -14,13 +14,13 @@
         "app.kubernetes.io/instance": "platform-podplane-operator",
         "app.kubernetes.io/managed-by": "Helm",
         "app.kubernetes.io/name": "podplane-operator",
-        "helm.sh/chart": "podplane-operator-1.0.0_68b8cd3b0f10",
+        "helm.sh/chart": "podplane-operator-1.0.0_439136ca710c",
         "helm.toolkit.fluxcd.io/name": "podplane-operator",
         "helm.toolkit.fluxcd.io/namespace": "platform-podplane-operator"
       },
       "name": "platform-podplane-operator-extension-apiserver-authentication-reader",
       "namespace": "kube-system",
-      "uid": "c9ff9594-1ebf-4b0b-a505-1f5560e6e540"
+      "uid": "f2b95130-319f-4264-aaad-a91c4ec16fc5"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

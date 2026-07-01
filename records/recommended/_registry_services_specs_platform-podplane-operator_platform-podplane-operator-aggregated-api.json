@@ -14,13 +14,13 @@
         "app.kubernetes.io/instance": "platform-podplane-operator",
         "app.kubernetes.io/managed-by": "Helm",
         "app.kubernetes.io/name": "podplane-operator",
-        "helm.sh/chart": "podplane-operator-1.0.0_68b8cd3b0f10",
+        "helm.sh/chart": "podplane-operator-1.0.0_439136ca710c",
         "helm.toolkit.fluxcd.io/name": "podplane-operator",
         "helm.toolkit.fluxcd.io/namespace": "platform-podplane-operator"
       },
       "name": "platform-podplane-operator-aggregated-api",
       "namespace": "platform-podplane-operator",
-      "uid": "8bb42c4d-18d9-4575-b64e-55c9e9bab066"
+      "uid": "c4b73041-963d-4018-8f08-53c20e57a49b"
     },
     "spec": {
       "clusterIP": "198.18.0.14",

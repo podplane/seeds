@@ -19,7 +19,7 @@
       },
       "name": "platform-traefik",
       "namespace": "platform-traefik",
-      "uid": "78a31591-fd22-43da-8258-fd688ec72e88"
+      "uid": "6d65375c-4bf4-4536-b324-f4d4411bb1f2"
     },
     "spec": {
       "allocateLoadBalancerNodePorts": true,
@@ -37,14 +37,14 @@
       "ports": [
         {
           "name": "web",
-          "nodePort": 32602,
+          "nodePort": 31302,
           "port": 80,
           "protocol": "TCP",
           "targetPort": "web"
         },
         {
           "name": "websecure",
-          "nodePort": 31626,
+          "nodePort": 30231,
           "port": 443,
           "protocol": "TCP",
           "targetPort": "websecure"

@@ -16,7 +16,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-certs"
       },
       "name": "platform-service-certificate-clusterissuer",
-      "uid": "c6679738-2f35-4951-9899-b2a9d3535119"
+      "uid": "58a00776-a641-47d1-978f-efa631edce06"
     },
     "spec": {
       "ca": {

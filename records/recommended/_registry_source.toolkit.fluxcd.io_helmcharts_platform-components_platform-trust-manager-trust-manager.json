@@ -15,7 +15,7 @@
       },
       "name": "platform-trust-manager-trust-manager",
       "namespace": "platform-components",
-      "uid": "bf1d23cf-a156-4c65-924a-0c1eb30be4ca"
+      "uid": "e63dd338-f5a6-4d29-8b90-a8bd7b193201"
     },
     "spec": {
       "chart": "./charts/trust-manager",

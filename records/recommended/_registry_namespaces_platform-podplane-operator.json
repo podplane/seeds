@@ -17,7 +17,7 @@
         "kubernetes.io/metadata.name": "platform-podplane-operator"
       },
       "name": "platform-podplane-operator",
-      "uid": "a63e690e-1b5d-42ce-841e-e90fe88107be"
+      "uid": "0625c9c3-b943-4e2f-b52a-15959664aed2"
     },
     "spec": {
       "finalizers": [

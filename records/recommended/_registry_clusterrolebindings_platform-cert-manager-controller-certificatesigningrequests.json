@@ -21,7 +21,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cert-manager"
       },
       "name": "platform-cert-manager-controller-certificatesigningrequests",
-      "uid": "c8b61544-a934-49a3-ab1d-fbc3f262aee2"
+      "uid": "d049186d-1958-484a-9f14-19b1e82ad973"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

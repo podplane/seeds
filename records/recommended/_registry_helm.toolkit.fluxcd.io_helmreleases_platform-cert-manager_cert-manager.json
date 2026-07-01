@@ -20,7 +20,7 @@
       },
       "name": "cert-manager",
       "namespace": "platform-cert-manager",
-      "uid": "191f91f2-d33e-4f04-8497-f51bcddbcf71"
+      "uid": "e74844b1-fd4a-4e02-b580-be9acdb6fab2"
     },
     "spec": {
       "chart": {

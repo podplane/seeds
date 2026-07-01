@@ -20,7 +20,7 @@
       },
       "name": "trust-manager-crds",
       "namespace": "platform-cluster",
-      "uid": "aa7de0b5-07fd-475d-81d5-c9f22c28de51"
+      "uid": "74ab9748-7bea-4891-8414-66025ab71718"
     },
     "spec": {
       "chart": {

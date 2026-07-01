@@ -17,7 +17,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "sandboxwarmpools.extensions.agents.x-k8s.io",
-      "uid": "1c8eab05-be53-430e-b18b-e7f58ce0e8b7"
+      "uid": "5b20d9b6-d597-4e35-bd9a-5331a69267ee"
     },
     "spec": {
       "additionalPrinterColumns": [

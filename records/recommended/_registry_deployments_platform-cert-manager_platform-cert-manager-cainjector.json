@@ -24,7 +24,7 @@
       },
       "name": "platform-cert-manager-cainjector",
       "namespace": "platform-cert-manager",
-      "uid": "39d560e4-f901-43ab-ba20-57bec0cd5703"
+      "uid": "bf192105-6ef8-4944-b9f1-9cc4ee2c2aa6"
     },
     "spec": {
       "progressDeadlineSeconds": 600,

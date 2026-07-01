@@ -15,7 +15,7 @@
       },
       "name": "platform-cluster-trust-manager-crds",
       "namespace": "platform-components",
-      "uid": "715ea6cf-7917-435f-b5d8-896a29840acb"
+      "uid": "a073ff79-5a20-404e-b1dd-aab7f0bbb8f8"
     },
     "spec": {
       "chart": "./charts/trust-manager-crds",

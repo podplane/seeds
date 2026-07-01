@@ -17,7 +17,7 @@
         "rbac.authorization.k8s.io/aggregate-to-edit": "true"
       },
       "name": "flux-edit",
-      "uid": "74b08bfb-a452-4f25-b6ba-51bd1eda066a"
+      "uid": "2377bf61-95f6-4028-950f-d6d0ebc87c30"
     },
     "rules": [
       {

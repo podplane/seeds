@@ -22,7 +22,7 @@
       },
       "name": "platform-cert-manager-webhook:dynamic-serving",
       "namespace": "platform-cert-manager",
-      "uid": "c372618a-0044-4335-87ad-b966066dac5a"
+      "uid": "a735ca1b-33b5-49fd-b62b-fb0a349c5637"
     },
     "rules": [
       {

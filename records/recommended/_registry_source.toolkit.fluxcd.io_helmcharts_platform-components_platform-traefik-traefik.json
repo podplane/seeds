@@ -15,7 +15,7 @@
       },
       "name": "platform-traefik-traefik",
       "namespace": "platform-components",
-      "uid": "6946c4c7-561e-4bf7-93fd-3980c0f8229d"
+      "uid": "71ecb56b-a5a0-4fc2-8e81-955df9d5d77f"
     },
     "spec": {
       "chart": "./charts/traefik",

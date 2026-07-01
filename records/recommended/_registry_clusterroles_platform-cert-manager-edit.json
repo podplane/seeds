@@ -23,7 +23,7 @@
         "rbac.authorization.k8s.io/aggregate-to-edit": "true"
       },
       "name": "platform-cert-manager-edit",
-      "uid": "2f9e372c-fc33-4317-87a1-4be3211d5ec4"
+      "uid": "0b8b6ed5-5d26-4721-938d-a6c171d4360d"
     },
     "rules": [
       {

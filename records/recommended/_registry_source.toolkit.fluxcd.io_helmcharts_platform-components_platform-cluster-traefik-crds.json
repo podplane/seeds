@@ -15,7 +15,7 @@
       },
       "name": "platform-cluster-traefik-crds",
       "namespace": "platform-components",
-      "uid": "f7f73e0a-e6fa-429b-a6a3-7198ab5f72cb"
+      "uid": "2e7d01b0-e17a-45db-bc0b-72f9f3c429c1"
     },
     "spec": {
       "chart": "./charts/traefik-crds",

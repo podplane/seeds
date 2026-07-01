@@ -17,7 +17,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "ingressroutes.traefik.io",
-      "uid": "073061d0-cc60-4ec0-9d6a-2ae1cb2b350e"
+      "uid": "3f04279a-bc9c-4540-b74d-39e2f8619482"
     },
     "spec": {
       "conversion": {

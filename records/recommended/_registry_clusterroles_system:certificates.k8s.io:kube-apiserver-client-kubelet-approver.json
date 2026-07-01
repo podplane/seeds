@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:certificates.k8s.io:kube-apiserver-client-kubelet-approver",
-      "uid": "7833a8a5-e918-41f5-b074-c54105ff9da8"
+      "uid": "a19087a9-9c2e-4679-a91d-6dd6a0bcb716"
     },
     "rules": [
       {
