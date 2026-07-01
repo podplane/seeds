@@ -434,6 +434,7 @@
 /registry/rolebindings/kube-system/system:controller:bootstrap-signer
 /registry/rolebindings/kube-system/system:controller:cloud-provider
 /registry/rolebindings/kube-system/system:controller:token-cleaner
+/registry/rolebindings/platform-agent-sandbox/agent-sandbox-controller
 /registry/rolebindings/platform-cert-manager/platform-cert-manager-approver-policy
 /registry/rolebindings/platform-cert-manager/platform-cert-manager-approver-policy-secret-create
 /registry/rolebindings/platform-cert-manager/platform-cert-manager-cainjector:leaderelection
@@ -450,6 +451,7 @@
 /registry/roles/kube-system/system:controller:bootstrap-signer
 /registry/roles/kube-system/system:controller:cloud-provider
 /registry/roles/kube-system/system:controller:token-cleaner
+/registry/roles/platform-agent-sandbox/agent-sandbox-controller
 /registry/roles/platform-cert-manager/platform-cert-manager-approver-policy
 /registry/roles/platform-cert-manager/platform-cert-manager-approver-policy-secret-create
 /registry/roles/platform-cert-manager/platform-cert-manager-cainjector:leaderelection
