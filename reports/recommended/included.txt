@@ -377,6 +377,8 @@
 /registry/helm.toolkit.fluxcd.io/helmreleases/platform-cluster/fluxcd-crds
 /registry/helm.toolkit.fluxcd.io/helmreleases/platform-cluster/gateway-api-crds
 /registry/helm.toolkit.fluxcd.io/helmreleases/platform-cluster/platform-rbac
+/registry/helm.toolkit.fluxcd.io/helmreleases/platform-cluster/podplane-operator-crds
+/registry/helm.toolkit.fluxcd.io/helmreleases/platform-cluster/secrets-store-csi-driver-crds
 /registry/helm.toolkit.fluxcd.io/helmreleases/platform-cluster/traefik-crds
 /registry/helm.toolkit.fluxcd.io/helmreleases/platform-cluster/trust-manager-crds
 /registry/helm.toolkit.fluxcd.io/helmreleases/platform-components/platform-components
@@ -473,7 +475,9 @@
 /registry/secrets/platform-cluster/sh.helm.release.v1.platform-fluxcd-crds.v1
 /registry/secrets/platform-cluster/sh.helm.release.v1.platform-fluxcd-crds.v2
 /registry/secrets/platform-cluster/sh.helm.release.v1.platform-gateway-api-crds.v1
+/registry/secrets/platform-cluster/sh.helm.release.v1.platform-podplane-operator-crds.v1
 /registry/secrets/platform-cluster/sh.helm.release.v1.platform-rbac.v1
+/registry/secrets/platform-cluster/sh.helm.release.v1.platform-secrets-store-csi-driver-crds.v1
 /registry/secrets/platform-cluster/sh.helm.release.v1.platform-traefik-crds.v1
 /registry/secrets/platform-cluster/sh.helm.release.v1.platform-trust-manager-crds.v1
 /registry/secrets/platform-components/sh.helm.release.v1.platform-components.v1
@@ -582,6 +586,8 @@
 /registry/source.toolkit.fluxcd.io/helmcharts/platform-components/platform-cluster-fluxcd-crds
 /registry/source.toolkit.fluxcd.io/helmcharts/platform-components/platform-cluster-gateway-api-crds
 /registry/source.toolkit.fluxcd.io/helmcharts/platform-components/platform-cluster-platform-rbac
+/registry/source.toolkit.fluxcd.io/helmcharts/platform-components/platform-cluster-podplane-operator-crds
+/registry/source.toolkit.fluxcd.io/helmcharts/platform-components/platform-cluster-secrets-store-csi-driver-crds
 /registry/source.toolkit.fluxcd.io/helmcharts/platform-components/platform-cluster-traefik-crds
 /registry/source.toolkit.fluxcd.io/helmcharts/platform-components/platform-cluster-trust-manager-crds
 /registry/source.toolkit.fluxcd.io/helmcharts/platform-components/platform-components-platform-components
