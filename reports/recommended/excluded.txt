@@ -10,8 +10,8 @@
 /registry/configmaps/platform-secrets-store-csi-provider-openbao/kube-root-ca.crt
 /registry/configmaps/platform-zot-registry/kube-root-ca.crt
 /registry/daemonsets/platform-envoy-gateway/platform-envoy-gateway
-/registry/events/platform-envoy-gateway/5b9825d2.gateway.envoyproxy.io.18d86d3682fb051c
+/registry/events/platform-envoy-gateway/5b9825d2.gateway.envoyproxy.io.18d877ba7c806c75
 /registry/leases/platform-envoy-gateway/5b9825d2.gateway.envoyproxy.io
-/registry/secrets-store.csi.x-k8s.io/secretproviderclasspodstatuses/platform-envoy-gateway/platform-envoy-gateway-qz9c4-platform-envoy-gateway-platform-envoy-gateway-ingress-certificates
-/registry/secrets-store.csi.x-k8s.io/secretproviderclasspodstatuses/platform-podplane-operator/platform-podplane-operator-c85d9994d-c8mv7-platform-podplane-operator-platform-podplane-operator
+/registry/secrets-store.csi.x-k8s.io/secretproviderclasspodstatuses/platform-envoy-gateway/platform-envoy-gateway-m8296-platform-envoy-gateway-platform-envoy-gateway-ingress-certificates
+/registry/secrets-store.csi.x-k8s.io/secretproviderclasspodstatuses/platform-podplane-operator/platform-podplane-operator-c85d9994d-gntr8-platform-podplane-operator-platform-podplane-operator
 /registry/secrets/platform-secrets-store-csi-provider-openbao/openbao-csi-provider-hmac-key
