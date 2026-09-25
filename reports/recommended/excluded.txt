@@ -8,6 +8,7 @@
 /registry/configmaps/platform-podplane-operator/kube-root-ca.crt
 /registry/configmaps/platform-secrets-store-csi-driver/kube-root-ca.crt
 /registry/configmaps/platform-zot-registry/kube-root-ca.crt
+/registry/daemonsets/platform-envoy-gateway/platform-envoy-gateway
 /registry/events/platform-envoy-gateway/5b9825d2.gateway.envoyproxy.io.18d86d3682fb051c
 /registry/leases/platform-envoy-gateway/5b9825d2.gateway.envoyproxy.io
 /registry/secrets-store.csi.x-k8s.io/secretproviderclasspodstatuses/platform-envoy-gateway/platform-envoy-gateway-qz9c4-platform-envoy-gateway-platform-envoy-gateway-ingress-certificates

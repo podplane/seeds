@@ -282,7 +282,6 @@
 /registry/configmaps/platform-zot-registry/zot-registry-config
 /registry/csidrivers/secrets-store.csi.k8s.io
 /registry/daemonsets/platform-cilium/cilium
-/registry/daemonsets/platform-envoy-gateway/platform-envoy-gateway
 /registry/daemonsets/platform-secrets-store-csi-driver/platform-secrets-store-csi-driver
 /registry/deployments/platform-agent-sandbox/agent-sandbox-controller
 /registry/deployments/platform-cilium/cilium-operator
