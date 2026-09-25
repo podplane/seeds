@@ -70,9 +70,11 @@
 /registry/apiregistration.k8s.io/apiservices/v1.scheduling.k8s.io
 /registry/apiregistration.k8s.io/apiservices/v1.source.toolkit.fluxcd.io
 /registry/apiregistration.k8s.io/apiservices/v1.storage.k8s.io
+/registry/apiregistration.k8s.io/apiservices/v1.storagemigration.k8s.io
 /registry/apiregistration.k8s.io/apiservices/v1alpha1.gateway.networking.x-k8s.io
 /registry/apiregistration.k8s.io/apiservices/v1alpha2.gateway.networking.k8s.io
 /registry/apiregistration.k8s.io/apiservices/v1alpha3.gateway.networking.k8s.io
+/registry/apiregistration.k8s.io/apiservices/v1beta1.certificates.k8s.io
 /registry/apiregistration.k8s.io/apiservices/v1beta1.gateway.networking.k8s.io
 /registry/apiregistration.k8s.io/apiservices/v1beta2.image.toolkit.fluxcd.io
 /registry/apiregistration.k8s.io/apiservices/v1beta2.notification.toolkit.fluxcd.io
@@ -94,6 +96,7 @@
 /registry/clusterrolebindings/platform-group-viewers-crb
 /registry/clusterrolebindings/platform-kube2iam-crb
 /registry/clusterrolebindings/system:basic-user
+/registry/clusterrolebindings/system:cluster-trust-bundle-discovery
 /registry/clusterrolebindings/system:controller:attachdetach-controller
 /registry/clusterrolebindings/system:controller:certificate-controller
 /registry/clusterrolebindings/system:controller:clusterrole-aggregation-controller
@@ -110,11 +113,13 @@
 /registry/clusterrolebindings/system:controller:generic-garbage-collector
 /registry/clusterrolebindings/system:controller:horizontal-pod-autoscaler
 /registry/clusterrolebindings/system:controller:job-controller
+/registry/clusterrolebindings/system:controller:kube-apiserver-serving-clustertrustbundle-publisher
 /registry/clusterrolebindings/system:controller:legacy-service-account-token-cleaner
 /registry/clusterrolebindings/system:controller:namespace-controller
 /registry/clusterrolebindings/system:controller:node-controller
 /registry/clusterrolebindings/system:controller:persistent-volume-binder
 /registry/clusterrolebindings/system:controller:pod-garbage-collector
+/registry/clusterrolebindings/system:controller:podcertificaterequestcleaner
 /registry/clusterrolebindings/system:controller:pv-protection-controller
 /registry/clusterrolebindings/system:controller:pvc-protection-controller
 /registry/clusterrolebindings/system:controller:replicaset-controller
@@ -128,6 +133,7 @@
 /registry/clusterrolebindings/system:controller:service-cidrs-controller
 /registry/clusterrolebindings/system:controller:service-controller
 /registry/clusterrolebindings/system:controller:statefulset-controller
+/registry/clusterrolebindings/system:controller:storage-version-migrator-controller
 /registry/clusterrolebindings/system:controller:ttl-after-finished-controller
 /registry/clusterrolebindings/system:controller:ttl-controller
 /registry/clusterrolebindings/system:controller:validatingadmissionpolicy-status-controller
@@ -163,6 +169,7 @@
 /registry/clusterroles/system:certificates.k8s.io:kube-apiserver-client-kubelet-approver
 /registry/clusterroles/system:certificates.k8s.io:kubelet-serving-approver
 /registry/clusterroles/system:certificates.k8s.io:legacy-unknown-approver
+/registry/clusterroles/system:cluster-trust-bundle-discovery
 /registry/clusterroles/system:controller:attachdetach-controller
 /registry/clusterroles/system:controller:certificate-controller
 /registry/clusterroles/system:controller:clusterrole-aggregation-controller
@@ -179,11 +186,13 @@
 /registry/clusterroles/system:controller:generic-garbage-collector
 /registry/clusterroles/system:controller:horizontal-pod-autoscaler
 /registry/clusterroles/system:controller:job-controller
+/registry/clusterroles/system:controller:kube-apiserver-serving-clustertrustbundle-publisher
 /registry/clusterroles/system:controller:legacy-service-account-token-cleaner
 /registry/clusterroles/system:controller:namespace-controller
 /registry/clusterroles/system:controller:node-controller
 /registry/clusterroles/system:controller:persistent-volume-binder
 /registry/clusterroles/system:controller:pod-garbage-collector
+/registry/clusterroles/system:controller:podcertificaterequestcleaner
 /registry/clusterroles/system:controller:pv-protection-controller
 /registry/clusterroles/system:controller:pvc-protection-controller
 /registry/clusterroles/system:controller:replicaset-controller
@@ -197,6 +206,7 @@
 /registry/clusterroles/system:controller:service-cidrs-controller
 /registry/clusterroles/system:controller:service-controller
 /registry/clusterroles/system:controller:statefulset-controller
+/registry/clusterroles/system:controller:storage-version-migrator-controller
 /registry/clusterroles/system:controller:ttl-after-finished-controller
 /registry/clusterroles/system:controller:ttl-controller
 /registry/clusterroles/system:controller:validatingadmissionpolicy-status-controller
@@ -318,11 +328,13 @@
 /registry/serviceaccounts/kube-system/generic-garbage-collector
 /registry/serviceaccounts/kube-system/horizontal-pod-autoscaler
 /registry/serviceaccounts/kube-system/job-controller
+/registry/serviceaccounts/kube-system/kube-apiserver-serving-clustertrustbundle-publisher
 /registry/serviceaccounts/kube-system/legacy-service-account-token-cleaner
 /registry/serviceaccounts/kube-system/namespace-controller
 /registry/serviceaccounts/kube-system/node-controller
 /registry/serviceaccounts/kube-system/persistent-volume-binder
 /registry/serviceaccounts/kube-system/pod-garbage-collector
+/registry/serviceaccounts/kube-system/podcertificaterequestcleaner
 /registry/serviceaccounts/kube-system/pv-protection-controller
 /registry/serviceaccounts/kube-system/pvc-protection-controller
 /registry/serviceaccounts/kube-system/replicaset-controller
@@ -333,6 +345,7 @@
 /registry/serviceaccounts/kube-system/service-account-controller
 /registry/serviceaccounts/kube-system/service-cidrs-controller
 /registry/serviceaccounts/kube-system/statefulset-controller
+/registry/serviceaccounts/kube-system/storage-version-migrator-controller
 /registry/serviceaccounts/kube-system/ttl-after-finished-controller
 /registry/serviceaccounts/kube-system/ttl-controller
 /registry/serviceaccounts/kube-system/validatingadmissionpolicy-status-controller

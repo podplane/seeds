@@ -1,0 +1,115 @@
+{
+  "key": "/registry/helm.toolkit.fluxcd.io/helmreleases/platform-envoy-gateway/envoy-gateway",
+  "value": {
+    "apiVersion": "helm.toolkit.fluxcd.io/v2",
+    "kind": "HelmRelease",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-components",
+        "meta.helm.sh/release-namespace": "platform-components"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "finalizers": [
+        "finalizers.fluxcd.io"
+      ],
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-components",
+        "helm.toolkit.fluxcd.io/namespace": "platform-components"
+      },
+      "name": "envoy-gateway",
+      "namespace": "platform-envoy-gateway",
+      "uid": "fd97f638-9d37-4d6b-a079-88f51c37a321"
+    },
+    "spec": {
+      "chart": {
+        "spec": {
+          "chart": "./charts/envoy-gateway",
+          "reconcileStrategy": "Revision",
+          "sourceRef": {
+            "kind": "GitRepository",
+            "name": "podplane-components",
+            "namespace": "platform-components"
+          },
+          "version": "*"
+        }
+      },
+      "dependsOn": [
+        {
+          "name": "envoy-gateway-crds",
+          "namespace": "platform-cluster"
+        },
+        {
+          "name": "gateway-api-crds",
+          "namespace": "platform-cluster"
+        },
+        {
+          "name": "secrets-store-csi-driver",
+          "namespace": "platform-secrets-store-csi-driver"
+        },
+        {
+          "name": "podplane-operator",
+          "namespace": "platform-podplane-operator"
+        },
+        {
+          "name": "secrets-store-csi-provider-openbao",
+          "namespace": "platform-secrets-store-csi-provider-openbao"
+        }
+      ],
+      "install": {
+        "crds": "Skip",
+        "remediation": {
+          "retries": 10
+        }
+      },
+      "interval": "10m",
+      "maxHistory": 3,
+      "releaseName": "platform-envoy-gateway",
+      "upgrade": {
+        "crds": "Skip",
+        "remediation": {
+          "retries": 3
+        }
+      },
+      "values": {
+        "gateway-helm": {
+          "global": {
+            "images": {
+              "envoyGateway": {
+                "image": "default-registry.local/mirror/docker.io/envoyproxy/gateway:v1.9.0"
+              },
+              "envoyProxy": {
+                "image": "default-registry.local/mirror/docker.io/envoyproxy/envoy:distroless-v1.39.0"
+              }
+            }
+          }
+        },
+        "platform": {
+          "envoyGateway": {
+            "ingress": {
+              "certificates": {
+                "address": "https://10.0.2.15:19443/vault/default",
+                "caCertPath": "/var/run/podplane/secrets-providers/local-fakevault/ca.crt",
+                "keyPrefix": "default",
+                "mountPath": "secret",
+                "provider": "openbao"
+              },
+              "domains": [
+                {
+                  "apex": "default.localhost"
+                }
+              ],
+              "enabled": true
+            },
+            "sdsSidecar": {
+              "image": {
+                "repository": "default-registry.local/mirror/ghcr.io/podplane/operator"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

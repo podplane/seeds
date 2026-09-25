@@ -1,0 +1,34 @@
+{
+  "key": "/registry/configmaps/platform-envoy-gateway/platform-envoy-gateway",
+  "value": {
+    "apiVersion": "v1",
+    "data": {
+      "xds-certificate.json": "{\"resources\":[{\"@type\":\"type.googleapis.com/envoy.extensions.transport_sockets.tls.v3.Secret\",\"name\":\"xds_certificate\",\"tls_certificate\":{\"certificate_chain\":{\"filename\":\"/certs/tls.crt\"},\"private_key\":{\"filename\":\"/certs/tls.key\"}}}]}",
+      "xds-trusted-ca.json": "{\"resources\":[{\"@type\":\"type.googleapis.com/envoy.extensions.transport_sockets.tls.v3.Secret\",\"name\":\"xds_trusted_ca\",\"validation_context\":{\"trusted_ca\":{\"filename\":\"/certs/ca.crt\"},\"match_typed_subject_alt_names\":[{\"san_type\":\"DNS\",\"matcher\":{\"exact\":\"envoy-gateway\"}}]}}]}",
+      "xds_service_account_token.json": "{\"resources\":[{\"@type\":\"type.googleapis.com/envoy.extensions.transport_sockets.tls.v3.Secret\",\"name\":\"jwt-sa-bearer\",\"generic_secret\":{\"secret\":{\"filename\":\"/var/run/secrets/token/sa-token\"}}}]}"
+    },
+    "kind": "ConfigMap",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/component": "proxy",
+        "app.kubernetes.io/managed-by": "envoy-gateway",
+        "app.kubernetes.io/name": "envoy",
+        "gateway.envoyproxy.io/owning-gateway-name": "platform-envoy-gateway",
+        "gateway.envoyproxy.io/owning-gateway-namespace": "platform-envoy-gateway",
+        "gateway.networking.k8s.io/gateway-name": "platform-envoy-gateway"
+      },
+      "name": "platform-envoy-gateway",
+      "namespace": "platform-envoy-gateway",
+      "ownerReferences": [
+        {
+          "apiVersion": "gateway.networking.k8s.io/v1",
+          "kind": "Gateway",
+          "name": "platform-envoy-gateway",
+          "uid": "80e35f33-4e92-4acf-8a03-2179aab96c38"
+        }
+      ],
+      "uid": "404c8261-a553-417f-a9c6-3cdfdf9193d3"
+    }
+  }
+}

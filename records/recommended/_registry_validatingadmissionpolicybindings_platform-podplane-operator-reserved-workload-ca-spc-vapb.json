@@ -1,0 +1,38 @@
+{
+  "key": "/registry/validatingadmissionpolicybindings/platform-podplane-operator-reserved-workload-ca-spc-vapb",
+  "value": {
+    "apiVersion": "admissionregistration.k8s.io/v1",
+    "kind": "ValidatingAdmissionPolicyBinding",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-podplane-operator",
+        "meta.helm.sh/release-namespace": "platform-podplane-operator"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/component": "operator",
+        "app.kubernetes.io/instance": "platform-podplane-operator",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "podplane-operator",
+        "helm.sh/chart": "podplane-operator-1.0.0_9329f42b9a50",
+        "helm.toolkit.fluxcd.io/name": "podplane-operator",
+        "helm.toolkit.fluxcd.io/namespace": "platform-podplane-operator"
+      },
+      "name": "platform-podplane-operator-reserved-workload-ca-spc-vapb",
+      "uid": "b84588ff-b0a7-4240-a5d4-28f04863181d"
+    },
+    "spec": {
+      "matchResources": {
+        "matchPolicy": "Equivalent",
+        "namespaceSelector": {},
+        "objectSelector": {}
+      },
+      "policyName": "platform-podplane-operator-reserved-workload-ca-spc-vap",
+      "validationActions": [
+        "Deny",
+        "Audit"
+      ]
+    }
+  }
+}

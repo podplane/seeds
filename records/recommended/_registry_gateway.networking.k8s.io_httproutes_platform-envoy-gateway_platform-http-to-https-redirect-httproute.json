@@ -1,0 +1,54 @@
+{
+  "key": "/registry/gateway.networking.k8s.io/httproutes/platform-envoy-gateway/platform-http-to-https-redirect-httproute",
+  "value": {
+    "apiVersion": "gateway.networking.k8s.io/v1",
+    "kind": "HTTPRoute",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-envoy-gateway",
+        "meta.helm.sh/release-namespace": "platform-envoy-gateway"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "envoy-gateway",
+        "helm.toolkit.fluxcd.io/namespace": "platform-envoy-gateway"
+      },
+      "name": "platform-http-to-https-redirect-httproute",
+      "namespace": "platform-envoy-gateway",
+      "uid": "37f48b0f-80cc-4b33-88d2-243bf0de2210"
+    },
+    "spec": {
+      "parentRefs": [
+        {
+          "group": "gateway.networking.k8s.io",
+          "kind": "Gateway",
+          "name": "platform-envoy-gateway",
+          "sectionName": "http"
+        }
+      ],
+      "rules": [
+        {
+          "filters": [
+            {
+              "requestRedirect": {
+                "scheme": "https",
+                "statusCode": 301
+              },
+              "type": "RequestRedirect"
+            }
+          ],
+          "matches": [
+            {
+              "path": {
+                "type": "PathPrefix",
+                "value": "/"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

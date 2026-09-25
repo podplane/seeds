@@ -1,0 +1,69 @@
+{
+  "key": "/registry/mutatingwebhookconfigurations/envoy-gateway-topology-injector.platform-envoy-gateway",
+  "value": {
+    "apiVersion": "admissionregistration.k8s.io/v1",
+    "kind": "MutatingWebhookConfiguration",
+    "metadata": {
+      "annotations": {
+        "certificates.podplane.dev/inject-ca-from": "workload",
+        "helm.sh/hook": "pre-install, pre-upgrade",
+        "helm.sh/hook-weight": "-1"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 2,
+      "labels": {
+        "app.kubernetes.io/component": "topology-injector",
+        "app.kubernetes.io/instance": "platform-envoy-gateway",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "gateway-helm",
+        "app.kubernetes.io/version": "v1.9.0",
+        "helm.sh/chart": "gateway-helm-v1.9.0",
+        "helm.toolkit.fluxcd.io/name": "envoy-gateway",
+        "helm.toolkit.fluxcd.io/namespace": "platform-envoy-gateway"
+      },
+      "name": "envoy-gateway-topology-injector.platform-envoy-gateway",
+      "uid": "1e76d36f-353e-42db-891c-b207e43bfce1"
+    },
+    "webhooks": [
+      {
+        "admissionReviewVersions": [
+          "v1"
+        ],
+        "clientConfig": {
+          "caBundle": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJQVENCOEtBREFnRUNBaEJKUThNNy9IeWxKM0RvY0NxWUJUV1RNQVVHQXl0bGNEQWZNUjB3R3dZRFZRUUQKRXhSUWIyUndiR0Z1WlNCWGIzSnJiRzloWkNCRFFUQWVGdzB5TmpBNU1qVXdNVFEyTVRkYUZ3MHpOakE1TWpVdwpNVFE0TVRkYU1COHhIVEFiQmdOVkJBTVRGRkJ2WkhCc1lXNWxJRmR2Y210c2IyRmtJRU5CTUNvd0JRWURLMlZ3CkF5RUFyOWpGRmloNThsaVhMRzBEUWtwVitRMGovSHVkMUkrUmtINzgvSVBMVStTalFqQkFNQTRHQTFVZER3RUIKL3dRRUF3SUJCakFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlJ3OW1Ra0U5bjFNRFUwNzJwOQo0T2NaaW9UdnRqQUZCZ01yWlhBRFFRRFBGSTNsb3dhcGxKU1huZkVBTDYzTmtHOFFlMUkvS2krV2VBK01uaGZxCjQvcEl0UlRoK1lLYnZWcFFwRzdMbVZqTUNMTHhCS2t4OGMvYTgrdit4NThKCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K",
+          "service": {
+            "name": "envoy-gateway",
+            "namespace": "platform-envoy-gateway",
+            "path": "/inject-pod-topology",
+            "port": 9443
+          }
+        },
+        "failurePolicy": "Ignore",
+        "matchPolicy": "Equivalent",
+        "name": "topology.webhook.gateway.envoyproxy.io",
+        "namespaceSelector": {},
+        "objectSelector": {},
+        "reinvocationPolicy": "Never",
+        "rules": [
+          {
+            "apiGroups": [
+              ""
+            ],
+            "apiVersions": [
+              "v1"
+            ],
+            "operations": [
+              "CREATE"
+            ],
+            "resources": [
+              "pods/binding"
+            ],
+            "scope": "*"
+          }
+        ],
+        "sideEffects": "None",
+        "timeoutSeconds": 10
+      }
+    ]
+  }
+}

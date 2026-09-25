@@ -1,0 +1,112 @@
+{
+  "key": "/registry/roles/platform-envoy-gateway/platform-envoy-gateway-gateway-helm-infra-manager",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "Role",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-envoy-gateway",
+        "meta.helm.sh/release-namespace": "platform-envoy-gateway"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/instance": "platform-envoy-gateway",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "gateway-helm",
+        "app.kubernetes.io/version": "v1.9.0",
+        "helm.sh/chart": "gateway-helm-v1.9.0",
+        "helm.toolkit.fluxcd.io/name": "envoy-gateway",
+        "helm.toolkit.fluxcd.io/namespace": "platform-envoy-gateway"
+      },
+      "name": "platform-envoy-gateway-gateway-helm-infra-manager",
+      "namespace": "platform-envoy-gateway",
+      "uid": "bb35e659-29f0-4892-b148-8d59c00849f9"
+    },
+    "rules": [
+      {
+        "apiGroups": [
+          ""
+        ],
+        "resources": [
+          "serviceaccounts",
+          "services",
+          "configmaps"
+        ],
+        "verbs": [
+          "create",
+          "get",
+          "list",
+          "delete",
+          "deletecollection",
+          "patch",
+          "watch"
+        ]
+      },
+      {
+        "apiGroups": [
+          "apps"
+        ],
+        "resources": [
+          "deployments",
+          "daemonsets"
+        ],
+        "verbs": [
+          "create",
+          "get",
+          "list",
+          "delete",
+          "deletecollection",
+          "patch",
+          "watch"
+        ]
+      },
+      {
+        "apiGroups": [
+          "autoscaling"
+        ],
+        "resources": [
+          "horizontalpodautoscalers"
+        ],
+        "verbs": [
+          "create",
+          "get",
+          "list",
+          "delete",
+          "deletecollection",
+          "patch",
+          "watch"
+        ]
+      },
+      {
+        "apiGroups": [
+          "policy"
+        ],
+        "resources": [
+          "poddisruptionbudgets"
+        ],
+        "verbs": [
+          "create",
+          "get",
+          "list",
+          "delete",
+          "deletecollection",
+          "patch",
+          "watch"
+        ]
+      },
+      {
+        "apiGroups": [
+          "certificates.k8s.io"
+        ],
+        "resources": [
+          "clustertrustbundles"
+        ],
+        "verbs": [
+          "list",
+          "get",
+          "watch"
+        ]
+      }
+    ]
+  }
+}

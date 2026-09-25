@@ -1,0 +1,63 @@
+{
+  "key": "/registry/clusterroles/system:controller:kube-apiserver-serving-clustertrustbundle-publisher",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRole",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "system:controller:kube-apiserver-serving-clustertrustbundle-publisher",
+      "uid": "318730bb-ace9-4394-aa4e-9c4ca1e83eb1"
+    },
+    "rules": [
+      {
+        "apiGroups": [
+          "certificates.k8s.io"
+        ],
+        "resourceNames": [
+          "kubernetes.io/kube-apiserver-serving"
+        ],
+        "resources": [
+          "signers"
+        ],
+        "verbs": [
+          "attest"
+        ]
+      },
+      {
+        "apiGroups": [
+          "certificates.k8s.io"
+        ],
+        "resources": [
+          "clustertrustbundles"
+        ],
+        "verbs": [
+          "create",
+          "delete",
+          "list",
+          "update",
+          "watch"
+        ]
+      },
+      {
+        "apiGroups": [
+          "",
+          "events.k8s.io"
+        ],
+        "resources": [
+          "events"
+        ],
+        "verbs": [
+          "create",
+          "patch",
+          "update"
+        ]
+      }
+    ]
+  }
+}

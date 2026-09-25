@@ -1,0 +1,34 @@
+{
+  "key": "/registry/clusterroles/system:controller:podcertificaterequestcleaner",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRole",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "system:controller:podcertificaterequestcleaner",
+      "uid": "0a0bada9-863f-4daa-856f-56ce8429e3cf"
+    },
+    "rules": [
+      {
+        "apiGroups": [
+          "certificates.k8s.io"
+        ],
+        "resources": [
+          "podcertificaterequests"
+        ],
+        "verbs": [
+          "delete",
+          "get",
+          "list",
+          "watch"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "key": "/registry/source.toolkit.fluxcd.io/helmcharts/platform-components/platform-envoy-gateway-envoy-gateway",
+  "value": {
+    "apiVersion": "source.toolkit.fluxcd.io/v1",
+    "kind": "HelmChart",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "finalizers": [
+        "finalizers.fluxcd.io"
+      ],
+      "generation": 1,
+      "labels": {
+        "helm.toolkit.fluxcd.io/name": "envoy-gateway",
+        "helm.toolkit.fluxcd.io/namespace": "platform-envoy-gateway"
+      },
+      "name": "platform-envoy-gateway-envoy-gateway",
+      "namespace": "platform-components",
+      "uid": "63b9f651-9050-4948-9f1d-f9b88af73899"
+    },
+    "spec": {
+      "chart": "./charts/envoy-gateway",
+      "interval": "10m0s",
+      "reconcileStrategy": "Revision",
+      "sourceRef": {
+        "kind": "GitRepository",
+        "name": "podplane-components"
+      },
+      "version": "*"
+    }
+  }
+}

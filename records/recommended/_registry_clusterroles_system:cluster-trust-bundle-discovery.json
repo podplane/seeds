@@ -1,0 +1,33 @@
+{
+  "key": "/registry/clusterroles/system:cluster-trust-bundle-discovery",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRole",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "system:cluster-trust-bundle-discovery",
+      "uid": "3c0ebe3a-09ba-43c5-8b88-329efbd2fedf"
+    },
+    "rules": [
+      {
+        "apiGroups": [
+          "certificates.k8s.io"
+        ],
+        "resources": [
+          "clustertrustbundles"
+        ],
+        "verbs": [
+          "get",
+          "list",
+          "watch"
+        ]
+      }
+    ]
+  }
+}

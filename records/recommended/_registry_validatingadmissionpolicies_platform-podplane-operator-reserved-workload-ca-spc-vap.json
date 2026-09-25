@@ -1,0 +1,58 @@
+{
+  "key": "/registry/validatingadmissionpolicies/platform-podplane-operator-reserved-workload-ca-spc-vap",
+  "value": {
+    "apiVersion": "admissionregistration.k8s.io/v1",
+    "kind": "ValidatingAdmissionPolicy",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-podplane-operator",
+        "meta.helm.sh/release-namespace": "platform-podplane-operator"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/component": "operator",
+        "app.kubernetes.io/instance": "platform-podplane-operator",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "podplane-operator",
+        "helm.sh/chart": "podplane-operator-1.0.0_9329f42b9a50",
+        "helm.toolkit.fluxcd.io/name": "podplane-operator",
+        "helm.toolkit.fluxcd.io/namespace": "platform-podplane-operator"
+      },
+      "name": "platform-podplane-operator-reserved-workload-ca-spc-vap",
+      "uid": "1a0d6d1f-7e4a-4cb9-b0e3-66b38768f115"
+    },
+    "spec": {
+      "failurePolicy": "Fail",
+      "matchConstraints": {
+        "matchPolicy": "Equivalent",
+        "namespaceSelector": {},
+        "objectSelector": {},
+        "resourceRules": [
+          {
+            "apiGroups": [
+              "secrets-store.csi.x-k8s.io"
+            ],
+            "apiVersions": [
+              "v1"
+            ],
+            "operations": [
+              "CREATE",
+              "UPDATE"
+            ],
+            "resources": [
+              "secretproviderclasses"
+            ],
+            "scope": "*"
+          }
+        ]
+      },
+      "validations": [
+        {
+          "expression": "!object.spec.parameters.exists(key, value, value.contains('workload-ca-key')) || (object.metadata.namespace == 'platform-podplane-operator' &&\n\n\n object.metadata.name == 'platform-podplane-operator')\n",
+          "message": "The reserved workload-ca-key may only be referenced by the managed platform-podplane-operator SecretProviderClass."
+        }
+      ]
+    }
+  }
+}

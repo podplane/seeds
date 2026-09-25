@@ -1,0 +1,87 @@
+{
+  "key": "/registry/gateway.networking.k8s.io/gateways/platform-envoy-gateway/platform-envoy-gateway",
+  "value": {
+    "apiVersion": "gateway.networking.k8s.io/v1",
+    "kind": "Gateway",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-envoy-gateway",
+        "meta.helm.sh/release-namespace": "platform-envoy-gateway"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "envoy-gateway",
+        "helm.toolkit.fluxcd.io/namespace": "platform-envoy-gateway"
+      },
+      "name": "platform-envoy-gateway",
+      "namespace": "platform-envoy-gateway",
+      "uid": "80e35f33-4e92-4acf-8a03-2179aab96c38"
+    },
+    "spec": {
+      "gatewayClassName": "platform-envoy-gateway",
+      "infrastructure": {
+        "parametersRef": {
+          "group": "gateway.envoyproxy.io",
+          "kind": "EnvoyProxy",
+          "name": "platform-envoy-gateway"
+        }
+      },
+      "listeners": [
+        {
+          "allowedRoutes": {
+            "namespaces": {
+              "from": "All"
+            }
+          },
+          "name": "http",
+          "port": 80,
+          "protocol": "HTTP"
+        },
+        {
+          "allowedRoutes": {
+            "namespaces": {
+              "from": "All"
+            }
+          },
+          "hostname": "default.localhost",
+          "name": "https-default-localhost-9464ba90",
+          "port": 443,
+          "protocol": "HTTPS",
+          "tls": {
+            "certificateRefs": [
+              {
+                "group": "",
+                "kind": "Secret",
+                "name": "bundle-9464ba90046c9f91c931fcb4"
+              }
+            ],
+            "mode": "Terminate"
+          }
+        },
+        {
+          "allowedRoutes": {
+            "namespaces": {
+              "from": "All"
+            }
+          },
+          "hostname": "*.default.localhost",
+          "name": "https-wildcard-default-localhost-9464ba90",
+          "port": 443,
+          "protocol": "HTTPS",
+          "tls": {
+            "certificateRefs": [
+              {
+                "group": "",
+                "kind": "Secret",
+                "name": "bundle-9464ba90046c9f91c931fcb4"
+              }
+            ],
+            "mode": "Terminate"
+          }
+        }
+      ]
+    }
+  }
+}

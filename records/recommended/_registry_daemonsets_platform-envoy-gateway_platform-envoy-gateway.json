@@ -1,0 +1,465 @@
+{
+  "key": "/registry/daemonsets/platform-envoy-gateway/platform-envoy-gateway",
+  "value": {
+    "apiVersion": "apps/v1",
+    "kind": "DaemonSet",
+    "metadata": {
+      "annotations": {
+        "deprecated.daemonset.template.generation": "1"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/component": "proxy",
+        "app.kubernetes.io/managed-by": "envoy-gateway",
+        "app.kubernetes.io/name": "envoy",
+        "gateway.envoyproxy.io/owning-gateway-name": "platform-envoy-gateway",
+        "gateway.envoyproxy.io/owning-gateway-namespace": "platform-envoy-gateway",
+        "gateway.networking.k8s.io/gateway-name": "platform-envoy-gateway"
+      },
+      "name": "platform-envoy-gateway",
+      "namespace": "platform-envoy-gateway",
+      "ownerReferences": [
+        {
+          "apiVersion": "gateway.networking.k8s.io/v1",
+          "kind": "Gateway",
+          "name": "platform-envoy-gateway",
+          "uid": "80e35f33-4e92-4acf-8a03-2179aab96c38"
+        }
+      ],
+      "uid": "64bcbfa0-9e3c-4d15-9617-ece49fa0315d"
+    },
+    "spec": {
+      "revisionHistoryLimit": 10,
+      "selector": {
+        "matchLabels": {
+          "app.kubernetes.io/component": "proxy",
+          "app.kubernetes.io/managed-by": "envoy-gateway",
+          "app.kubernetes.io/name": "envoy",
+          "gateway.envoyproxy.io/owning-gateway-name": "platform-envoy-gateway",
+          "gateway.envoyproxy.io/owning-gateway-namespace": "platform-envoy-gateway",
+          "gateway.networking.k8s.io/gateway-name": "platform-envoy-gateway"
+        }
+      },
+      "template": {
+        "metadata": {
+          "annotations": {
+            "prometheus.io/path": "/stats/prometheus",
+            "prometheus.io/port": "19001",
+            "prometheus.io/scrape": "true"
+          },
+          "creationTimestamp": null,
+          "labels": {
+            "app.kubernetes.io/component": "proxy",
+            "app.kubernetes.io/managed-by": "envoy-gateway",
+            "app.kubernetes.io/name": "envoy",
+            "gateway.envoyproxy.io/owning-gateway-name": "platform-envoy-gateway",
+            "gateway.envoyproxy.io/owning-gateway-namespace": "platform-envoy-gateway",
+            "gateway.networking.k8s.io/gateway-name": "platform-envoy-gateway"
+          }
+        },
+        "spec": {
+          "automountServiceAccountToken": false,
+          "containers": [
+            {
+              "args": [
+                "--service-cluster",
+                "platform-envoy-gateway/platform-envoy-gateway",
+                "--service-node",
+                "$(ENVOY_POD_NAME)",
+                "--config-yaml",
+                "admin:\n  access_log:\n  - name: envoy.access_loggers.file\n    typed_config:\n      \"@type\": type.googleapis.com/envoy.extensions.access_loggers.file.v3.FileAccessLog\n      path: /dev/null\n  address:\n    socket_address:\n      address: 127.0.0.1\n      port_value: 19000\ncluster_manager:\n  local_cluster_name: platform-envoy-gateway/platform-envoy-gateway\nnode:\n  locality:\n    zone: $(ENVOY_SERVICE_ZONE)\ndeferredStatOptions:\n  enableDeferredCreationStats: true\nstats_config:\n  use_all_default_tags: true\n  stats_tags:\n  - regex: \\.zone(\\.(([^\\.]+)\\.))\n    tag_name: from_zone\n  - regex: \\.zone\\.[^\\.]+\\.(([^\\.]+)\\.)\n    tag_name: to_zone\n  - regex: \"^cluster(\\\\..+\\\\.(.+))\\\\.total_match_count$\"\n    tag_name: socket_match_name\n  - regex: \"circuit_breakers\\\\.((.+?)\\\\.).+\"\n    tag_name: priority\nlayered_runtime:\n  layers:\n  - name: global_config\n    static_layer:\n      re2.max_program_size.error_level: 4294967295\n      re2.max_program_size.warn_level: 1000\ndynamic_resources:\n  ads_config:\n    api_type: DELTA_GRPC\n    transport_api_version: V3\n    grpc_services:\n    - envoy_grpc:\n        cluster_name: xds_cluster\n    set_node_on_first_message_only: true\n  lds_config:\n    ads: {}\n    initial_fetch_timeout: 0s\n    resource_api_version: V3\n  cds_config:\n    ads: {}\n    initial_fetch_timeout: 0s\n    resource_api_version: V3\nstatic_resources:\n  listeners:\n  - name: envoy-gateway-proxy-stats-0.0.0.0-19001\n    address:\n      socket_address:\n        address: '0.0.0.0'\n        port_value: 19001\n        protocol: TCP\n    bypass_overload_manager: true\n    filter_chains:\n    - filters:\n      - name: envoy.filters.network.http_connection_manager\n        typed_config:\n          \"@type\": type.googleapis.com/envoy.extensions.filters.network.http_connection_manager.v3.HttpConnectionManager\n          stat_prefix: eg-stats-http\n          normalize_path: true\n          route_config:\n            name: local_route\n            virtual_hosts:\n            - name: prometheus_stats\n              domains:\n              - \"*\"\n              routes:\n              - match:\n                  path: /stats/prometheus\n                  headers:\n                  - name: \":method\"\n                    string_match:\n                      exact: GET\n                route:\n                  cluster: prometheus_stats\n          http_filters:\n          - name: envoy.filters.http.router\n            typed_config:\n              \"@type\": type.googleapis.com/envoy.extensions.filters.http.router.v3.Router\n  clusters:\n  - name: prometheus_stats\n    connect_timeout: 0.250s\n    type: STATIC\n    lb_policy: ROUND_ROBIN\n    load_assignment:\n      cluster_name: prometheus_stats\n      endpoints:\n      - lb_endpoints:\n        - endpoint:\n            address:\n              socket_address:\n                address: 127.0.0.1\n                port_value: 19000\n  - connect_timeout: 10s\n    eds_cluster_config:\n      eds_config:\n        ads: {}\n        resource_api_version: 'V3'\n      service_name: platform-envoy-gateway/platform-envoy-gateway\n    load_balancing_policy:\n      policies:\n      - typed_extension_config:\n          name: 'envoy.load_balancing_policies.least_request'\n          typed_config:\n            '@type': 'type.googleapis.com/envoy.extensions.load_balancing_policies.least_request.v3.LeastRequest'\n            locality_lb_config:\n              zone_aware_lb_config:\n                min_cluster_size: '1'\n    name: platform-envoy-gateway/platform-envoy-gateway\n    type: EDS\n  - connect_timeout: 10s\n    load_assignment:\n      cluster_name: xds_cluster\n      endpoints:\n      - load_balancing_weight: 1\n        lb_endpoints:\n        - load_balancing_weight: 1\n          endpoint:\n            address:\n              socket_address:\n                address: envoy-gateway.platform-envoy-gateway.svc.cluster.local.\n                port_value: 18000\n    typed_extension_protocol_options:\n      envoy.extensions.upstreams.http.v3.HttpProtocolOptions:\n        \"@type\": \"type.googleapis.com/envoy.extensions.upstreams.http.v3.HttpProtocolOptions\"\n        explicit_http_config:\n          http2_protocol_options:\n            connection_keepalive:\n              interval: 30s\n              timeout: 5s\n        http_filters:\n        - name: envoy.filters.http.credential_injector\n          typed_config:\n            \"@type\": type.googleapis.com/envoy.extensions.filters.http.credential_injector.v3.CredentialInjector\n            credential:\n              name: envoy.http.injected_credentials.generic\n              typed_config:\n                \"@type\": type.googleapis.com/envoy.extensions.http.injected_credentials.generic.v3.Generic\n                credential:\n                  name: jwt-sa-bearer\n                  sds_config:\n                    path_config_source:\n                      path: /sds/xds_service_account_token.json\n                    resource_api_version: V3\n            overwrite: true\n        - name: envoy.extensions.filters.http.upstream_codec.v3.UpstreamCodec\n          typed_config:\n            \"@type\": type.googleapis.com/envoy.extensions.filters.http.upstream_codec.v3.UpstreamCodec\n    name: xds_cluster\n    type: STRICT_DNS\n    transport_socket:\n      name: envoy.transport_sockets.tls\n      typed_config:\n        \"@type\": type.googleapis.com/envoy.extensions.transport_sockets.tls.v3.UpstreamTlsContext\n        common_tls_context:\n          tls_params:\n            tls_maximum_protocol_version: TLSv1_3\n          validation_context_sds_secret_config:\n            name: xds_trusted_ca\n            sds_config:\n              path_config_source:\n                path: /sds/xds-trusted-ca.json\n              resource_api_version: V3\noverload_manager:\n  refresh_interval: 0.25s\n  resource_monitors:\n  - name: \"envoy.resource_monitors.global_downstream_max_connections\"\n    typed_config:\n      \"@type\": type.googleapis.com/envoy.extensions.resource_monitors.downstream_connections.v3.DownstreamConnectionsConfig\n      max_active_downstream_connections: 50000\n",
+                "--log-level",
+                "warn",
+                "--cpuset-threads",
+                "--drain-strategy",
+                "immediate",
+                "--component-log-level",
+                "misc:error",
+                "--drain-time-s",
+                "60"
+              ],
+              "command": [
+                "envoy"
+              ],
+              "env": [
+                {
+                  "name": "ENVOY_POD_NAMESPACE",
+                  "valueFrom": {
+                    "fieldRef": {
+                      "apiVersion": "v1",
+                      "fieldPath": "metadata.namespace"
+                    }
+                  }
+                },
+                {
+                  "name": "ENVOY_POD_NAME",
+                  "valueFrom": {
+                    "fieldRef": {
+                      "apiVersion": "v1",
+                      "fieldPath": "metadata.name"
+                    }
+                  }
+                },
+                {
+                  "name": "ENVOY_SERVICE_ZONE",
+                  "valueFrom": {
+                    "fieldRef": {
+                      "apiVersion": "v1",
+                      "fieldPath": "metadata.annotations['topology.kubernetes.io/zone']"
+                    }
+                  }
+                }
+              ],
+              "image": "default-registry.local/mirror/docker.io/envoyproxy/envoy:distroless-v1.39.0",
+              "imagePullPolicy": "IfNotPresent",
+              "lifecycle": {
+                "preStop": {
+                  "httpGet": {
+                    "path": "/shutdown/ready",
+                    "port": 19002,
+                    "scheme": "HTTP"
+                  }
+                }
+              },
+              "livenessProbe": {
+                "failureThreshold": 3,
+                "httpGet": {
+                  "path": "/ready",
+                  "port": 19003,
+                  "scheme": "HTTP"
+                },
+                "periodSeconds": 10,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "name": "envoy",
+              "ports": [
+                {
+                  "containerPort": 10080,
+                  "hostPort": 80,
+                  "name": "http-80",
+                  "protocol": "TCP"
+                },
+                {
+                  "containerPort": 10443,
+                  "hostPort": 443,
+                  "name": "https-443",
+                  "protocol": "TCP"
+                },
+                {
+                  "containerPort": 19001,
+                  "name": "metrics",
+                  "protocol": "TCP"
+                },
+                {
+                  "containerPort": 19003,
+                  "name": "readiness",
+                  "protocol": "TCP"
+                }
+              ],
+              "readinessProbe": {
+                "failureThreshold": 1,
+                "httpGet": {
+                  "path": "/ready",
+                  "port": 19003,
+                  "scheme": "HTTP"
+                },
+                "periodSeconds": 5,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "resources": {
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "512Mi"
+                }
+              },
+              "securityContext": {
+                "allowPrivilegeEscalation": false,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ]
+                },
+                "privileged": false,
+                "runAsGroup": 65532,
+                "runAsNonRoot": true,
+                "runAsUser": 65532,
+                "seccompProfile": {
+                  "type": "RuntimeDefault"
+                }
+              },
+              "startupProbe": {
+                "failureThreshold": 30,
+                "httpGet": {
+                  "path": "/ready",
+                  "port": 19003,
+                  "scheme": "HTTP"
+                },
+                "periodSeconds": 10,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/run/podplane-sds",
+                  "name": "podplane-sds"
+                },
+                {
+                  "mountPath": "/certs",
+                  "name": "certs",
+                  "readOnly": true
+                },
+                {
+                  "mountPath": "/sds",
+                  "name": "sds"
+                },
+                {
+                  "mountPath": "/var/run/secrets/token",
+                  "name": "sa-token",
+                  "readOnly": true
+                }
+              ]
+            },
+            {
+              "args": [
+                "sds",
+                "--socket=/var/run/podplane-sds/sds.sock",
+                "--certificates-dir=/var/run/podplane/ingress-certificates",
+                "--certificate=bundle-9464ba90046c9f91c931fcb4=default.localhost"
+              ],
+              "image": "default-registry.local/mirror/ghcr.io/podplane/operator:v0.7.2",
+              "imagePullPolicy": "IfNotPresent",
+              "name": "podplane-sds",
+              "resources": {},
+              "securityContext": {
+                "allowPrivilegeEscalation": false,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ]
+                },
+                "readOnlyRootFilesystem": true,
+                "runAsGroup": 65532,
+                "runAsNonRoot": true,
+                "runAsUser": 65532,
+                "seccompProfile": {
+                  "type": "RuntimeDefault"
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/run/podplane-sds",
+                  "name": "podplane-sds"
+                },
+                {
+                  "mountPath": "/var/run/podplane/ingress-certificates",
+                  "name": "ingress-certificates",
+                  "readOnly": true
+                }
+              ]
+            },
+            {
+              "args": [
+                "envoy",
+                "shutdown-manager"
+              ],
+              "command": [
+                "envoy-gateway"
+              ],
+              "env": [
+                {
+                  "name": "ENVOY_POD_NAMESPACE",
+                  "valueFrom": {
+                    "fieldRef": {
+                      "apiVersion": "v1",
+                      "fieldPath": "metadata.namespace"
+                    }
+                  }
+                },
+                {
+                  "name": "ENVOY_POD_NAME",
+                  "valueFrom": {
+                    "fieldRef": {
+                      "apiVersion": "v1",
+                      "fieldPath": "metadata.name"
+                    }
+                  }
+                },
+                {
+                  "name": "ENVOY_SERVICE_ZONE",
+                  "valueFrom": {
+                    "fieldRef": {
+                      "apiVersion": "v1",
+                      "fieldPath": "metadata.annotations['topology.kubernetes.io/zone']"
+                    }
+                  }
+                }
+              ],
+              "image": "default-registry.local/mirror/docker.io/envoyproxy/gateway:v1.9.0",
+              "imagePullPolicy": "IfNotPresent",
+              "lifecycle": {
+                "preStop": {
+                  "exec": {
+                    "command": [
+                      "envoy-gateway",
+                      "envoy",
+                      "shutdown"
+                    ]
+                  }
+                }
+              },
+              "livenessProbe": {
+                "failureThreshold": 3,
+                "httpGet": {
+                  "path": "/healthz",
+                  "port": 19002,
+                  "scheme": "HTTP"
+                },
+                "periodSeconds": 10,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "name": "shutdown-manager",
+              "readinessProbe": {
+                "failureThreshold": 3,
+                "httpGet": {
+                  "path": "/healthz",
+                  "port": 19002,
+                  "scheme": "HTTP"
+                },
+                "periodSeconds": 10,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "resources": {
+                "requests": {
+                  "cpu": "10m",
+                  "memory": "32Mi"
+                }
+              },
+              "securityContext": {
+                "allowPrivilegeEscalation": false,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ]
+                },
+                "privileged": false,
+                "runAsGroup": 65532,
+                "runAsNonRoot": true,
+                "runAsUser": 65532,
+                "seccompProfile": {
+                  "type": "RuntimeDefault"
+                }
+              },
+              "startupProbe": {
+                "failureThreshold": 30,
+                "httpGet": {
+                  "path": "/healthz",
+                  "port": 19002,
+                  "scheme": "HTTP"
+                },
+                "periodSeconds": 10,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File"
+            }
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "restartPolicy": "Always",
+          "schedulerName": "default-scheduler",
+          "securityContext": {
+            "fsGroup": 65532,
+            "runAsNonRoot": true,
+            "seccompProfile": {
+              "type": "RuntimeDefault"
+            }
+          },
+          "serviceAccount": "platform-envoy-gateway-ingress-certificates",
+          "serviceAccountName": "platform-envoy-gateway-ingress-certificates",
+          "terminationGracePeriodSeconds": 360,
+          "volumes": [
+            {
+              "name": "sa-token",
+              "projected": {
+                "defaultMode": 420,
+                "sources": [
+                  {
+                    "serviceAccountToken": {
+                      "audience": "envoy-gateway.platform-envoy-gateway.svc.cluster.local",
+                      "expirationSeconds": 3600,
+                      "path": "sa-token"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "name": "certs",
+              "projected": {
+                "defaultMode": 420,
+                "sources": [
+                  {
+                    "clusterTrustBundle": {
+                      "name": "certificates.podplane.dev:workload:roots",
+                      "path": "ca.crt"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "emptyDir": {
+                "medium": "Memory"
+              },
+              "name": "podplane-sds"
+            },
+            {
+              "csi": {
+                "driver": "secrets-store.csi.k8s.io",
+                "readOnly": true,
+                "volumeAttributes": {
+                  "secretProviderClass": "platform-envoy-gateway-ingress-certificates"
+                }
+              },
+              "name": "ingress-certificates"
+            },
+            {
+              "configMap": {
+                "defaultMode": 420,
+                "items": [
+                  {
+                    "key": "xds-trusted-ca.json",
+                    "path": "xds-trusted-ca.json"
+                  },
+                  {
+                    "key": "xds_service_account_token.json",
+                    "path": "xds_service_account_token.json"
+                  }
+                ],
+                "name": "platform-envoy-gateway",
+                "optional": false
+              },
+              "name": "sds"
+            }
+          ]
+        }
+      },
+      "updateStrategy": {
+        "rollingUpdate": {
+          "maxSurge": 0,
+          "maxUnavailable": 1
+        },
+        "type": "RollingUpdate"
+      }
+    }
+  }
+}
