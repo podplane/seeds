@@ -279,10 +279,13 @@
 /registry/configmaps/platform-envoy-gateway/envoy-gateway-config
 /registry/configmaps/platform-envoy-gateway/platform-envoy-gateway
 /registry/configmaps/platform-podplane-operator/platform-podplane-operator-config
+/registry/configmaps/platform-secrets-store-csi-provider-openbao/platform-secrets-store-csi-provider-openbao-csi-provider-agent-config
+/registry/configmaps/platform-secrets-store-csi-provider-openbao/podplane-secrets-provider-ca-local-fakevault
 /registry/configmaps/platform-zot-registry/zot-registry-config
 /registry/csidrivers/secrets-store.csi.k8s.io
 /registry/daemonsets/platform-cilium/cilium
 /registry/daemonsets/platform-secrets-store-csi-driver/platform-secrets-store-csi-driver
+/registry/daemonsets/platform-secrets-store-csi-provider-openbao/platform-secrets-store-csi-provider-openbao-csi-provider
 /registry/deployments/platform-agent-sandbox/agent-sandbox-controller
 /registry/deployments/platform-cilium/cilium-operator
 /registry/deployments/platform-coredns/platform-coredns
@@ -341,6 +344,7 @@
 /registry/namespaces/platform-fluxcd
 /registry/namespaces/platform-podplane-operator
 /registry/namespaces/platform-secrets-store-csi-driver
+/registry/namespaces/platform-secrets-store-csi-provider-openbao
 /registry/namespaces/platform-zot-registry
 /registry/priorityclasses/system-cluster-critical
 /registry/priorityclasses/system-node-critical
@@ -364,6 +368,7 @@
 /registry/rolebindings/platform-cilium/cilium-config-agent
 /registry/rolebindings/platform-envoy-gateway/platform-envoy-gateway-gateway-helm-infra-manager
 /registry/rolebindings/platform-envoy-gateway/platform-envoy-gateway-gateway-helm-leader-election-rolebinding
+/registry/rolebindings/platform-secrets-store-csi-provider-openbao/platform-secrets-store-csi-provider-openbao-csi-provider-rolebinding
 /registry/roles/kube-public/system:controller:bootstrap-signer
 /registry/roles/kube-system/extension-apiserver-authentication-reader
 /registry/roles/kube-system/system::leader-locking-kube-controller-manager
@@ -374,6 +379,7 @@
 /registry/roles/platform-cilium/cilium-config-agent
 /registry/roles/platform-envoy-gateway/platform-envoy-gateway-gateway-helm-infra-manager
 /registry/roles/platform-envoy-gateway/platform-envoy-gateway-gateway-helm-leader-election-role
+/registry/roles/platform-secrets-store-csi-provider-openbao/platform-secrets-store-csi-provider-openbao-csi-provider-role
 /registry/secrets-store.csi.x-k8s.io/secretproviderclasses/platform-envoy-gateway/platform-envoy-gateway-ingress-certificates
 /registry/secrets-store.csi.x-k8s.io/secretproviderclasses/platform-podplane-operator/platform-podplane-operator
 /registry/secrets/platform-agent-sandbox/sh.helm.release.v1.platform-agent-sandbox.v1
@@ -460,6 +466,9 @@
 /registry/serviceaccounts/platform-podplane-operator/platform-podplane-operator
 /registry/serviceaccounts/platform-secrets-store-csi-driver/default
 /registry/serviceaccounts/platform-secrets-store-csi-driver/secrets-store-csi-driver
+/registry/serviceaccounts/platform-secrets-store-csi-provider-openbao/default
+/registry/serviceaccounts/platform-secrets-store-csi-provider-openbao/platform-secrets-store-csi-provider-openbao
+/registry/serviceaccounts/platform-secrets-store-csi-provider-openbao/platform-secrets-store-csi-provider-openbao-csi-provider
 /registry/serviceaccounts/platform-zot-registry/default
 /registry/serviceaccounts/platform-zot-registry/zot-registry
 /registry/servicecidrs/kubernetes
