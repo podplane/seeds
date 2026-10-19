@@ -6,7 +6,6 @@ SHELL := /bin/bash
 .SHELLFLAGS := -eu -o pipefail -c
 
 SNAPSHOTS := minimal.netsy platform.netsy agentic.netsy
-JSON_FILES := $(shell find . -path './.git' -prune -o -path './dist' -prune -o -name '*.json' -type f -print 2>/dev/null | sort)
 SHELL_FILES := $(shell find scripts -name '*.sh' -type f 2>/dev/null | sort)
 VERSION ?= dev
 COMPONENTS_VERSION ?= dev
@@ -38,7 +37,8 @@ setup: ## Verify required tools and install git hooks when available
 
 fmt: ## Format committed JSON files
 	@command -v jq >/dev/null 2>&1 || { echo "jq is required but not installed"; exit 1; }
-	@for file in $(JSON_FILES); do \
+	@find . -path './.git' -prune -o -path './dist' -prune -o -name '*.json' -type f -print0 | \
+	while IFS= read -r -d '' file; do \
 		tmp="$$(mktemp)"; \
 		jq . "$$file" > "$$tmp"; \
 		mv "$$tmp" "$$file"; \
@@ -46,7 +46,8 @@ fmt: ## Format committed JSON files
 
 check: ## Check JSON formatting and shell scripts
 	@command -v jq >/dev/null 2>&1 || { echo "jq is required but not installed"; exit 1; }
-	@for file in $(JSON_FILES); do \
+	@find . -path './.git' -prune -o -path './dist' -prune -o -name '*.json' -type f -print0 | \
+	while IFS= read -r -d '' file; do \
 		tmp="$$(mktemp)"; \
 		jq . "$$file" > "$$tmp"; \
 		if ! diff -u "$$file" "$$tmp"; then \
