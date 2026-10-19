@@ -5,7 +5,7 @@
 # Release workflow: publishes signed metadata for committed seed snapshots.
 #
 # For tag vX.Y.Z-N, this:
-#   1. Validates recommended.netsy and minimal.netsy.
+#   1. Validates minimal.netsy, platform.netsy, and agentic.netsy.
 #   2. Generates seeds_X.Y.Z-N.json pointing at tagged raw GitHub URLs.
 #   3. Writes seeds_X.Y.Z-N_checksums.txt (sha512) covering the manifest and
 #      committed snapshot files.
@@ -80,7 +80,7 @@ jobs:
           {
             echo "# seeds: v${VERSION}"
             echo "# components: v${COMPONENTS_VERSION}"
-            shasum -a 512 "dist/release/seeds_${VERSION}.json" recommended.netsy minimal.netsy \
+            shasum -a 512 "dist/release/seeds_${VERSION}.json" minimal.netsy platform.netsy agentic.netsy \
               | sed 's#dist/release/##' \
               | sort -k2
           } > "$checksums"

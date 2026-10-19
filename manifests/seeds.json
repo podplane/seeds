@@ -3,11 +3,14 @@
     "version": "dev",
     "components": "dev",
     "snapshots": {
-      "recommended": {
-        "path": "../recommended.netsy"
-      },
       "minimal": {
         "path": "../minimal.netsy"
+      },
+      "platform": {
+        "path": "../platform.netsy"
+      },
+      "agentic": {
+        "path": "../agentic.netsy"
       }
     }
   }

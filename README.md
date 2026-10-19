@@ -4,10 +4,17 @@ This repository contains Netsy snapshot templates used to seed new Podplane
 cluster state.
 
 A Podplane seed is a Netsy `.netsy` snapshot used to initialize a new cluster
-with platform components already present. Currently there are two options:
+with its initial components already present. The seeds are cumulative:
 
-- Recommended
-- Minimal
+- `minimal` — core cluster components.
+- `platform` — a traditional PaaS with ingress, registry, secrets integration,
+  and the Podplane operator.
+- `agentic` — the platform stack plus an agentic layer include Agent Sandbox
+  and its CRDs. This is the default for new Podplane clusters.
+
+Use the `platform` seed to provision a traditional PaaS, and the `agentic` seed to
+provision an Agentic PaaS. Selecting None skips seeding entirely. Additional
+agent integrations are planned but are not included yet.
 
 The snapshot files are committed in this repository so Git history and tags
 provide a public audit log. For each tagged release, a manifest is published
@@ -55,8 +62,18 @@ The manifest shape is:
     "version": "1.2.3-1",
     "components": "1.2.3",
     "snapshots": {
-      "recommended": {
-        "url": "https://raw.githubusercontent.com/podplane/seeds/v1.2.3-1/recommended.netsy",
+      "minimal": {
+        "url": "https://raw.githubusercontent.com/podplane/seeds/v1.2.3-1/minimal.netsy",
+        "digest": "sha512:...",
+        "size": 123
+      },
+      "platform": {
+        "url": "https://raw.githubusercontent.com/podplane/seeds/v1.2.3-1/platform.netsy",
+        "digest": "sha512:...",
+        "size": 123
+      },
+      "agentic": {
+        "url": "https://raw.githubusercontent.com/podplane/seeds/v1.2.3-1/agentic.netsy",
         "digest": "sha512:...",
         "size": 123
       }

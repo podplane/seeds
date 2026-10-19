@@ -26,7 +26,8 @@ bundle for that checksums file.
 
 ## Conventions
 
-- Keep snapshot filenames stable: `recommended.netsy` and `minimal.netsy`.
+- Keep snapshot filenames stable: `minimal.netsy`, `platform.netsy`, and `agentic.netsy`.
+- Agentic is the default Podplane seed; The platform seed excludes agent-specific components.
 - Do not commit generated release metadata under `dist/`.
 - Prefer changing the snapshot files and tagging a new seed revision over
   rewriting history.

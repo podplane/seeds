@@ -5,7 +5,7 @@
 SHELL := /bin/bash
 .SHELLFLAGS := -eu -o pipefail -c
 
-SNAPSHOTS := recommended.netsy minimal.netsy
+SNAPSHOTS := minimal.netsy platform.netsy agentic.netsy
 JSON_FILES := $(shell find . -path './.git' -prune -o -path './dist' -prune -o -name '*.json' -type f -print 2>/dev/null | sort)
 SHELL_FILES := $(shell find scripts -name '*.sh' -type f 2>/dev/null | sort)
 VERSION ?= dev
