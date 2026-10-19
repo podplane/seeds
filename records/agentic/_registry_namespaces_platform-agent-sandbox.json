@@ -1,0 +1,31 @@
+{
+  "key": "/registry/namespaces/platform-agent-sandbox",
+  "value": {
+    "apiVersion": "v1",
+    "kind": "Namespace",
+    "metadata": {
+      "annotations": {
+        "helm.sh/resource-policy": "keep",
+        "meta.helm.sh/release-name": "platform-components",
+        "meta.helm.sh/release-namespace": "platform-components"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-components",
+        "helm.toolkit.fluxcd.io/namespace": "platform-components",
+        "kubernetes.io/metadata.name": "platform-agent-sandbox",
+        "pod-security.kubernetes.io/audit": "restricted",
+        "pod-security.kubernetes.io/enforce": "restricted",
+        "pod-security.kubernetes.io/warn": "restricted"
+      },
+      "name": "platform-agent-sandbox",
+      "uid": "2c72c417-468a-43e1-b4cd-e36c71f066a3"
+    },
+    "spec": {
+      "finalizers": [
+        "kubernetes"
+      ]
+    }
+  }
+}

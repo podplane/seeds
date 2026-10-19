@@ -20,7 +20,7 @@
       },
       "name": "coredns",
       "namespace": "platform-coredns",
-      "uid": "a9946e0d-6ee4-4ee9-b5f5-ba7493c4bf0b"
+      "uid": "96de6ee7-f38b-4b01-90d3-1b50ff73ce50"
     },
     "spec": {
       "chart": {

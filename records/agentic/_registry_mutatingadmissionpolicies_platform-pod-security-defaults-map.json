@@ -1,0 +1,72 @@
+{
+  "key": "/registry/mutatingadmissionpolicies/platform-pod-security-defaults-map",
+  "value": {
+    "apiVersion": "admissionregistration.k8s.io/v1",
+    "kind": "MutatingAdmissionPolicy",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-rbac",
+        "meta.helm.sh/release-namespace": "platform-cluster"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-rbac",
+        "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
+      },
+      "name": "platform-pod-security-defaults-map",
+      "uid": "661e3ac0-80d7-455d-8526-06cd9c83637c"
+    },
+    "spec": {
+      "failurePolicy": "Fail",
+      "matchConstraints": {
+        "matchPolicy": "Equivalent",
+        "namespaceSelector": {},
+        "objectSelector": {},
+        "resourceRules": [
+          {
+            "apiGroups": [
+              ""
+            ],
+            "apiVersions": [
+              "v1"
+            ],
+            "operations": [
+              "CREATE"
+            ],
+            "resources": [
+              "pods"
+            ],
+            "scope": "*"
+          }
+        ]
+      },
+      "mutations": [
+        {
+          "jsonPatch": {
+            "expression": "object.spec.containers.transformList(i, c,\n\n\n  !c.?securityContext.?capabilities.hasValue() && !c.?securityContext.?privileged.orValue(false),\n  has(c.securityContext)\n    ? JSONPatch{op: \"add\", path: \"/spec/containers/\" + string(i) + \"/securityContext/capabilities\",\n        value: Object.spec.containers.securityContext.capabilities{drop: [\"ALL\"]}}\n    : JSONPatch{op: \"add\", path: \"/spec/containers/\" + string(i) + \"/securityContext\",\n        value: Object.spec.containers.securityContext{\n          capabilities: Object.spec.containers.securityContext.capabilities{drop: [\"ALL\"]}}}) +\n(!has(object.spec.initContainers) ? [] : object.spec.initContainers.transformList(i, c,\n\n\n  !c.?securityContext.?capabilities.hasValue() && !c.?securityContext.?privileged.orValue(false),\n  has(c.securityContext)\n    ? JSONPatch{op: \"add\", path: \"/spec/initContainers/\" + string(i) + \"/securityContext/capabilities\",\n        value: Object.spec.initContainers.securityContext.capabilities{drop: [\"ALL\"]}}\n    : JSONPatch{op: \"add\", path: \"/spec/initContainers/\" + string(i) + \"/securityContext\",\n        value: Object.spec.initContainers.securityContext{\n          capabilities: Object.spec.initContainers.securityContext.capabilities{drop: [\"ALL\"]}}}))\n"
+          },
+          "patchType": "JSONPatch"
+        },
+        {
+          "applyConfiguration": {
+            "expression": "Object{\n\n\n  spec: Object.spec{\n    ?securityContext: object.spec.?securityContext.?seccompProfile.hasValue() ||\n        (object.spec.containers + object.spec.?initContainers.orValue([])).all(c, c.?securityContext.?seccompProfile.hasValue())\n      ? optional.none()\n      : optional.of(Object.spec.securityContext{\n          seccompProfile: Object.spec.securityContext.seccompProfile{type: \"RuntimeDefault\"}\n        }),\n    containers: object.spec.containers.map(c, Object.spec.containers{\n      name: c.name,\n      securityContext: Object.spec.containers.securityContext{\n        ?allowPrivilegeEscalation: c.?securityContext.?allowPrivilegeEscalation.hasValue() ||\n            c.?securityContext.?privileged.orValue(false) ||\n            c.?securityContext.?capabilities.?add.orValue([]).exists(a, a == \"SYS_ADMIN\" || a == \"CAP_SYS_ADMIN\")\n          ? optional.none() : optional.of(false),\n        ?runAsNonRoot: variables.podRunAsNonRoot || c.?securityContext.?runAsNonRoot.hasValue() ||\n            c.?securityContext.?runAsUser.orValue(variables.podRunAsUser) == 0\n          ? optional.none() : optional.of(true)\n      }\n    }),\n    ?initContainers: !has(object.spec.initContainers) ? optional.none() : optional.of(\n      object.spec.initContainers.map(c, Object.spec.initContainers{\n        name: c.name,\n        securityContext: Object.spec.initContainers.securityContext{\n          ?allowPrivilegeEscalation: c.?securityContext.?allowPrivilegeEscalation.hasValue() ||\n              c.?securityContext.?privileged.orValue(false) ||\n              c.?securityContext.?capabilities.?add.orValue([]).exists(a, a == \"SYS_ADMIN\" || a == \"CAP_SYS_ADMIN\")\n            ? optional.none() : optional.of(false),\n          ?runAsNonRoot: variables.podRunAsNonRoot || c.?securityContext.?runAsNonRoot.hasValue() ||\n              c.?securityContext.?runAsUser.orValue(variables.podRunAsUser) == 0\n            ? optional.none() : optional.of(true)\n        }\n      }))\n  }\n}"
+          },
+          "patchType": "ApplyConfiguration"
+        }
+      ],
+      "reinvocationPolicy": "IfNeeded",
+      "variables": [
+        {
+          "expression": "object.spec.?securityContext.?runAsNonRoot.hasValue()",
+          "name": "podRunAsNonRoot"
+        },
+        {
+          "expression": "object.spec.?securityContext.?runAsUser.orValue(-1)",
+          "name": "podRunAsUser"
+        }
+      ]
+    }
+  }
+}

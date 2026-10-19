@@ -10,7 +10,7 @@
       "creationTimestamp": "2015-07-11T04:02:31Z",
       "generation": 1,
       "name": "kube-scheduler",
-      "uid": "3ebf6cef-4938-406b-9f2f-ffcf1c532d7f"
+      "uid": "60ae97dd-60b5-4f38-aeaa-e48a035fad30"
     },
     "spec": {
       "distinguisherMethod": {

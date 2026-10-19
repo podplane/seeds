@@ -1,0 +1,163 @@
+{
+  "key": "/registry/helm.toolkit.fluxcd.io/helmreleases/platform-components/platform-components",
+  "value": {
+    "apiVersion": "helm.toolkit.fluxcd.io/v2",
+    "kind": "HelmRelease",
+    "metadata": {
+      "annotations": {},
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "finalizers": [
+        "finalizers.fluxcd.io"
+      ],
+      "generation": 1,
+      "name": "platform-components",
+      "namespace": "platform-components",
+      "uid": "6fa00aab-2c1f-4984-aa38-0e88a6a1140f"
+    },
+    "spec": {
+      "chart": {
+        "spec": {
+          "chart": "./charts/platform-components",
+          "reconcileStrategy": "Revision",
+          "sourceRef": {
+            "kind": "GitRepository",
+            "name": "podplane-components",
+            "namespace": "platform-components"
+          },
+          "version": "*"
+        }
+      },
+      "interval": "10m",
+      "maxHistory": 3,
+      "releaseName": "platform-components",
+      "values": {
+        "platform": {
+          "components": {
+            "apps": {
+              "agent-sandbox": {
+                "enabled": true
+              },
+              "envoy-gateway": {
+                "enabled": true
+              },
+              "podplane-operator": {
+                "enabled": true
+              },
+              "secrets-store-csi-driver": {
+                "enabled": true
+              },
+              "secrets-store-csi-provider-openbao": {
+                "enabled": true
+              },
+              "zot-registry": {
+                "enabled": true
+              }
+            },
+            "crds": {
+              "agent-sandbox-crds": {
+                "enabled": true
+              },
+              "envoy-gateway-crds": {
+                "enabled": true
+              },
+              "podplane-operator-crds": {
+                "enabled": true
+              },
+              "secrets-store-csi-driver-crds": {
+                "enabled": true
+              }
+            },
+            "imageMirror": {
+              "enabled": true,
+              "hostname": "default-registry.local",
+              "prefix": "mirror"
+            },
+            "values": {
+              "envoy-gateway": {
+                "platform": {
+                  "envoyGateway": {
+                    "ingress": {
+                      "certificates": {
+                        "provider": "node"
+                      },
+                      "domains": [
+                        {
+                          "apex": "default.localhost"
+                        }
+                      ],
+                      "enabled": true
+                    }
+                  }
+                }
+              },
+              "podplane-operator": {
+                "podplane": {
+                  "operator": {
+                    "config": {
+                      "cluster": {
+                        "id": "default",
+                        "oidc": {
+                          "clientID": "default",
+                          "groupsClaim": "groups",
+                          "issuerURL": "https://oidc.localhost:65055/oidc",
+                          "usernameClaim": "email"
+                        },
+                        "spiffe": {
+                          "trustDomain": "default.k8s.localhost"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "secrets-store-csi-provider-openbao": {
+                "openbao": {
+                  "csi": {
+                    "volumeMounts": [
+                      {
+                        "mountPath": "/var/run/podplane/secrets-providers/local-fakevault",
+                        "name": "provider-ca-local-fakevault",
+                        "readOnly": true
+                      }
+                    ],
+                    "volumes": [
+                      {
+                        "configMap": {
+                          "name": "podplane-secrets-provider-ca-local-fakevault"
+                        },
+                        "name": "provider-ca-local-fakevault"
+                      }
+                    ]
+                  }
+                }
+              },
+              "zot-registry": {
+                "platform": {
+                  "zotRegistry": {
+                    "oidc": {
+                      "audience": "default",
+                      "groupsClaim": "groups",
+                      "issuer": "https://oidc.localhost:65055/oidc",
+                      "usernameClaim": "email"
+                    },
+                    "registryHostname": "default-registry.local",
+                    "storage": {
+                      "accessKeyID": "test",
+                      "bucket": "registry",
+                      "driver": "s3",
+                      "endpoint": "http://10.0.2.2:65054/s3/cache",
+                      "forcePathStyle": true,
+                      "region": "local",
+                      "secretAccessKey": "test",
+                      "secure": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "key": "/registry/validatingadmissionpolicies/platform-spc-writer-vap",
+  "value": {
+    "apiVersion": "admissionregistration.k8s.io/v1",
+    "kind": "ValidatingAdmissionPolicy",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-rbac",
+        "meta.helm.sh/release-namespace": "platform-cluster"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-rbac",
+        "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
+      },
+      "name": "platform-spc-writer-vap",
+      "uid": "64834fe0-a1b4-4fce-8a09-f72c2cfed67a"
+    },
+    "spec": {
+      "failurePolicy": "Fail",
+      "matchConstraints": {
+        "matchPolicy": "Equivalent",
+        "namespaceSelector": {},
+        "objectSelector": {},
+        "resourceRules": [
+          {
+            "apiGroups": [
+              "secrets-store.csi.x-k8s.io"
+            ],
+            "apiVersions": [
+              "v1"
+            ],
+            "operations": [
+              "CREATE",
+              "UPDATE"
+            ],
+            "resources": [
+              "secretproviderclasses"
+            ],
+            "scope": "*"
+          }
+        ]
+      },
+      "validations": [
+        {
+          "expression": "request.userInfo.username == 'system:serviceaccount:platform-podplane-operator:platform-podplane-operator' || request.userInfo.username == 'system:serviceaccount:platform-fluxcd:helm-controller' || request.userInfo.groups.exists(group, group == 'podplane:admins' || group == 'system:masters')\n",
+          "message": "Use SecretProviderBinding to request secrets. Raw SecretProviderClasses are restricted to platform administrators and platform controllers."
+        }
+      ]
+    }
+  }
+}

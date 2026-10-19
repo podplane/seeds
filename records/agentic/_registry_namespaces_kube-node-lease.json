@@ -1,0 +1,20 @@
+{
+  "key": "/registry/namespaces/kube-node-lease",
+  "value": {
+    "apiVersion": "v1",
+    "kind": "Namespace",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/metadata.name": "kube-node-lease"
+      },
+      "name": "kube-node-lease",
+      "uid": "2ca9b41f-88f9-4c27-ab95-b6ee47ca9442"
+    },
+    "spec": {
+      "finalizers": [
+        "kubernetes"
+      ]
+    }
+  }
+}

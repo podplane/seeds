@@ -1,0 +1,68 @@
+{
+  "key": "/registry/helm.toolkit.fluxcd.io/helmreleases/platform-coredns/coredns",
+  "value": {
+    "apiVersion": "helm.toolkit.fluxcd.io/v2",
+    "kind": "HelmRelease",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-components",
+        "meta.helm.sh/release-namespace": "platform-components"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "finalizers": [
+        "finalizers.fluxcd.io"
+      ],
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-components",
+        "helm.toolkit.fluxcd.io/namespace": "platform-components"
+      },
+      "name": "coredns",
+      "namespace": "platform-coredns",
+      "uid": "96de6ee7-f38b-4b01-90d3-1b50ff73ce50"
+    },
+    "spec": {
+      "chart": {
+        "spec": {
+          "chart": "./charts/coredns",
+          "reconcileStrategy": "Revision",
+          "sourceRef": {
+            "kind": "GitRepository",
+            "name": "podplane-components",
+            "namespace": "platform-components"
+          },
+          "version": "*"
+        }
+      },
+      "dependsOn": [
+        {
+          "name": "cilium",
+          "namespace": "platform-cilium"
+        }
+      ],
+      "install": {
+        "crds": "Skip",
+        "remediation": {
+          "retries": 10
+        }
+      },
+      "interval": "10m",
+      "maxHistory": 3,
+      "releaseName": "platform-coredns",
+      "upgrade": {
+        "crds": "Skip",
+        "remediation": {
+          "retries": 3
+        }
+      },
+      "values": {
+        "coredns": {
+          "image": {
+            "repository": "default-registry.local/mirror/docker.io/coredns/coredns"
+          }
+        }
+      }
+    }
+  }
+}

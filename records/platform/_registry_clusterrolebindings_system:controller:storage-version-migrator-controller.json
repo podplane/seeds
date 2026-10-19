@@ -1,0 +1,30 @@
+{
+  "key": "/registry/clusterrolebindings/system:controller:storage-version-migrator-controller",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRoleBinding",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "system:controller:storage-version-migrator-controller",
+      "uid": "019d8257-d95b-4a53-92fe-9e2b1f4d46e3"
+    },
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "ClusterRole",
+      "name": "system:controller:storage-version-migrator-controller"
+    },
+    "subjects": [
+      {
+        "kind": "ServiceAccount",
+        "name": "storage-version-migrator-controller",
+        "namespace": "kube-system"
+      }
+    ]
+  }
+}

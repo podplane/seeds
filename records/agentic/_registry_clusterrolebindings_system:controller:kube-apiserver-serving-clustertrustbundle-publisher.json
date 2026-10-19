@@ -1,0 +1,30 @@
+{
+  "key": "/registry/clusterrolebindings/system:controller:kube-apiserver-serving-clustertrustbundle-publisher",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRoleBinding",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "system:controller:kube-apiserver-serving-clustertrustbundle-publisher",
+      "uid": "89fc0eaa-711f-44f4-bd89-7c491d4cff53"
+    },
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "ClusterRole",
+      "name": "system:controller:kube-apiserver-serving-clustertrustbundle-publisher"
+    },
+    "subjects": [
+      {
+        "kind": "ServiceAccount",
+        "name": "kube-apiserver-serving-clustertrustbundle-publisher",
+        "namespace": "kube-system"
+      }
+    ]
+  }
+}

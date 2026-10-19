@@ -22,47 +22,9 @@
         "rbac.authorization.k8s.io/aggregate-to-admin": "true"
       },
       "name": "edit",
-      "uid": "eb187a60-f56e-4583-91cc-e80d1317db13"
+      "uid": "25de1890-04a3-4356-a525-7c97926a2e29"
     },
     "rules": [
-      {
-        "apiGroups": [
-          "notification.toolkit.fluxcd.io",
-          "source.toolkit.fluxcd.io",
-          "source.extensions.fluxcd.io",
-          "helm.toolkit.fluxcd.io",
-          "image.toolkit.fluxcd.io",
-          "kustomize.toolkit.fluxcd.io"
-        ],
-        "resources": [
-          "*"
-        ],
-        "verbs": [
-          "create",
-          "delete",
-          "deletecollection",
-          "patch",
-          "update"
-        ]
-      },
-      {
-        "apiGroups": [
-          "notification.toolkit.fluxcd.io",
-          "source.toolkit.fluxcd.io",
-          "source.extensions.fluxcd.io",
-          "helm.toolkit.fluxcd.io",
-          "image.toolkit.fluxcd.io",
-          "kustomize.toolkit.fluxcd.io"
-        ],
-        "resources": [
-          "*"
-        ],
-        "verbs": [
-          "get",
-          "list",
-          "watch"
-        ]
-      },
       {
         "apiGroups": [
           ""

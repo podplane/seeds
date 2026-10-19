@@ -1,0 +1,29 @@
+{
+  "key": "/registry/validatingadmissionpolicybindings/platform-spc-writer-vapb",
+  "value": {
+    "apiVersion": "admissionregistration.k8s.io/v1",
+    "kind": "ValidatingAdmissionPolicyBinding",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-rbac",
+        "meta.helm.sh/release-namespace": "platform-cluster"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-rbac",
+        "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
+      },
+      "name": "platform-spc-writer-vapb",
+      "uid": "f995d5e7-bf14-497b-b25a-e8015b0605bf"
+    },
+    "spec": {
+      "policyName": "platform-spc-writer-vap",
+      "validationActions": [
+        "Deny",
+        "Audit"
+      ]
+    }
+  }
+}

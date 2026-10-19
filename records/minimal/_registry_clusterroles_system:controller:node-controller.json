@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:controller:node-controller",
-      "uid": "a60f12d3-3516-463d-9f06-2a7a8555a79b"
+      "uid": "ca3e7179-5c3b-4065-a5fe-7e4bbeb2917d"
     },
     "rules": [
       {
@@ -64,6 +64,19 @@
         ],
         "verbs": [
           "delete",
+          "get",
+          "list",
+          "watch"
+        ]
+      },
+      {
+        "apiGroups": [
+          "coordination.k8s.io"
+        ],
+        "resources": [
+          "leases"
+        ],
+        "verbs": [
           "get",
           "list",
           "watch"

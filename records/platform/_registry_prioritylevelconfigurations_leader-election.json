@@ -1,0 +1,31 @@
+{
+  "key": "/registry/prioritylevelconfigurations/leader-election",
+  "value": {
+    "apiVersion": "flowcontrol.apiserver.k8s.io/v1",
+    "kind": "PriorityLevelConfiguration",
+    "metadata": {
+      "annotations": {
+        "apf.kubernetes.io/autoupdate-spec": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "name": "leader-election",
+      "uid": "f0d6f268-107b-4a3c-b91c-e4dc4b06d462"
+    },
+    "spec": {
+      "limited": {
+        "lendablePercent": 0,
+        "limitResponse": {
+          "queuing": {
+            "handSize": 4,
+            "queueLengthLimit": 50,
+            "queues": 16
+          },
+          "type": "Queue"
+        },
+        "nominalConcurrencyShares": 10
+      },
+      "type": "Limited"
+    }
+  }
+}

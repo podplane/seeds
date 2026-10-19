@@ -24,7 +24,7 @@
       },
       "name": "source-controller",
       "namespace": "platform-fluxcd",
-      "uid": "3842e2d4-0e5e-4b09-a6e2-b1449c11fda1"
+      "uid": "d0329863-66c1-4fbb-bf04-513f31141094"
     },
     "spec": {
       "progressDeadlineSeconds": 600,
@@ -44,7 +44,6 @@
             "prometheus.io/port": "8080",
             "prometheus.io/scrape": "true"
           },
-          "creationTimestamp": null,
           "labels": {
             "app": "source-controller"
           }

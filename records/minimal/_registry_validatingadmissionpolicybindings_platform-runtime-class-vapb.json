@@ -1,0 +1,29 @@
+{
+  "key": "/registry/validatingadmissionpolicybindings/platform-runtime-class-vapb",
+  "value": {
+    "apiVersion": "admissionregistration.k8s.io/v1",
+    "kind": "ValidatingAdmissionPolicyBinding",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-runtime",
+        "meta.helm.sh/release-namespace": "platform-cluster"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-runtime",
+        "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
+      },
+      "name": "platform-runtime-class-vapb",
+      "uid": "acdf5605-9d2d-4184-bd38-e46c76d34d09"
+    },
+    "spec": {
+      "policyName": "platform-runtime-class-vap",
+      "validationActions": [
+        "Deny",
+        "Audit"
+      ]
+    }
+  }
+}

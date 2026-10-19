@@ -1,0 +1,47 @@
+{
+  "key": "/registry/mutatingadmissionpolicybindings/platform-pod-security-defaults-mapb",
+  "value": {
+    "apiVersion": "admissionregistration.k8s.io/v1",
+    "kind": "MutatingAdmissionPolicyBinding",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-rbac",
+        "meta.helm.sh/release-namespace": "platform-cluster"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-rbac",
+        "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
+      },
+      "name": "platform-pod-security-defaults-mapb",
+      "uid": "b238b781-23fb-4e06-940f-7bab26b6fb7f"
+    },
+    "spec": {
+      "matchResources": {
+        "matchPolicy": "Equivalent",
+        "namespaceSelector": {
+          "matchExpressions": [
+            {
+              "key": "pod-security.kubernetes.io/enforce",
+              "operator": "NotIn",
+              "values": [
+                "privileged"
+              ]
+            },
+            {
+              "key": "kubernetes.io/metadata.name",
+              "operator": "NotIn",
+              "values": [
+                "kube-system"
+              ]
+            }
+          ]
+        },
+        "objectSelector": {}
+      },
+      "policyName": "platform-pod-security-defaults-map"
+    }
+  }
+}

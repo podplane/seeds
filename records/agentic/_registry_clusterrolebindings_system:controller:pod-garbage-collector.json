@@ -1,0 +1,30 @@
+{
+  "key": "/registry/clusterrolebindings/system:controller:pod-garbage-collector",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRoleBinding",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "system:controller:pod-garbage-collector",
+      "uid": "7efddde1-aa87-4d76-9892-c2c51950e2fa"
+    },
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "ClusterRole",
+      "name": "system:controller:pod-garbage-collector"
+    },
+    "subjects": [
+      {
+        "kind": "ServiceAccount",
+        "name": "pod-garbage-collector",
+        "namespace": "kube-system"
+      }
+    ]
+  }
+}

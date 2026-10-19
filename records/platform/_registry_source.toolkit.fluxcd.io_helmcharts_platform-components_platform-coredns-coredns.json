@@ -1,0 +1,31 @@
+{
+  "key": "/registry/source.toolkit.fluxcd.io/helmcharts/platform-components/platform-coredns-coredns",
+  "value": {
+    "apiVersion": "source.toolkit.fluxcd.io/v1",
+    "kind": "HelmChart",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "finalizers": [
+        "finalizers.fluxcd.io"
+      ],
+      "generation": 1,
+      "labels": {
+        "helm.toolkit.fluxcd.io/name": "coredns",
+        "helm.toolkit.fluxcd.io/namespace": "platform-coredns"
+      },
+      "name": "platform-coredns-coredns",
+      "namespace": "platform-components",
+      "uid": "ec3c4294-37a7-42e0-844e-e5ec10eba842"
+    },
+    "spec": {
+      "chart": "./charts/coredns",
+      "interval": "10m0s",
+      "reconcileStrategy": "Revision",
+      "sourceRef": {
+        "kind": "GitRepository",
+        "name": "podplane-components"
+      },
+      "version": "*"
+    }
+  }
+}

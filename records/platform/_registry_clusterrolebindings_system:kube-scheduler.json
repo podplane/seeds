@@ -1,0 +1,30 @@
+{
+  "key": "/registry/clusterrolebindings/system:kube-scheduler",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRoleBinding",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "system:kube-scheduler",
+      "uid": "6d75fcac-5c0c-4d3d-893c-3fa214e03383"
+    },
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "ClusterRole",
+      "name": "system:kube-scheduler"
+    },
+    "subjects": [
+      {
+        "apiGroup": "rbac.authorization.k8s.io",
+        "kind": "User",
+        "name": "system:kube-scheduler"
+      }
+    ]
+  }
+}

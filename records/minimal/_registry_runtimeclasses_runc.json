@@ -1,0 +1,22 @@
+{
+  "key": "/registry/runtimeclasses/runc",
+  "value": {
+    "apiVersion": "node.k8s.io/v1",
+    "handler": "runc",
+    "kind": "RuntimeClass",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-runtime",
+        "meta.helm.sh/release-namespace": "platform-cluster"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-runtime",
+        "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
+      },
+      "name": "runc",
+      "uid": "c4f8697e-8b4b-41f5-bf76-246577a4cd2b"
+    }
+  }
+}

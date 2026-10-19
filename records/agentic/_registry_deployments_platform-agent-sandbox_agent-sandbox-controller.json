@@ -1,0 +1,144 @@
+{
+  "key": "/registry/deployments/platform-agent-sandbox/agent-sandbox-controller",
+  "value": {
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "annotations": {
+        "deployment.kubernetes.io/revision": "1",
+        "meta.helm.sh/release-name": "platform-agent-sandbox",
+        "meta.helm.sh/release-namespace": "platform-agent-sandbox"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/instance": "platform-agent-sandbox",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "agent-sandbox",
+        "app.kubernetes.io/version": "v1.0.4",
+        "helm.sh/chart": "agent-sandbox-1.0.0_0572a25da961",
+        "helm.toolkit.fluxcd.io/name": "agent-sandbox",
+        "helm.toolkit.fluxcd.io/namespace": "platform-agent-sandbox"
+      },
+      "name": "agent-sandbox-controller",
+      "namespace": "platform-agent-sandbox",
+      "uid": "826795f8-ab3e-4505-a171-f5970458bf2d"
+    },
+    "spec": {
+      "progressDeadlineSeconds": 600,
+      "replicas": 1,
+      "revisionHistoryLimit": 10,
+      "selector": {
+        "matchLabels": {
+          "app.kubernetes.io/instance": "platform-agent-sandbox",
+          "app.kubernetes.io/name": "agent-sandbox"
+        }
+      },
+      "strategy": {
+        "rollingUpdate": {
+          "maxSurge": "25%",
+          "maxUnavailable": "25%"
+        },
+        "type": "RollingUpdate"
+      },
+      "template": {
+        "metadata": {
+          "labels": {
+            "app.kubernetes.io/instance": "platform-agent-sandbox",
+            "app.kubernetes.io/name": "agent-sandbox"
+          }
+        },
+        "spec": {
+          "containers": [
+            {
+              "args": [
+                "--leader-elect=true",
+                "--extensions=true"
+              ],
+              "image": "default-registry.local/mirror/registry.k8s.io/agent-sandbox/agent-sandbox-controller:v1.0.4",
+              "imagePullPolicy": "IfNotPresent",
+              "livenessProbe": {
+                "failureThreshold": 3,
+                "httpGet": {
+                  "path": "/healthz",
+                  "port": "healthz",
+                  "scheme": "HTTP"
+                },
+                "initialDelaySeconds": 15,
+                "periodSeconds": 20,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "name": "agent-sandbox-controller",
+              "ports": [
+                {
+                  "containerPort": 8080,
+                  "name": "metrics",
+                  "protocol": "TCP"
+                },
+                {
+                  "containerPort": 8081,
+                  "name": "healthz",
+                  "protocol": "TCP"
+                }
+              ],
+              "readinessProbe": {
+                "failureThreshold": 3,
+                "httpGet": {
+                  "path": "/readyz",
+                  "port": "healthz",
+                  "scheme": "HTTP"
+                },
+                "initialDelaySeconds": 5,
+                "periodSeconds": 10,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "resources": {},
+              "securityContext": {
+                "allowPrivilegeEscalation": false,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ]
+                },
+                "readOnlyRootFilesystem": true
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/etc/sandbox-config",
+                  "name": "config-volume",
+                  "readOnly": true
+                }
+              ]
+            }
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "restartPolicy": "Always",
+          "schedulerName": "default-scheduler",
+          "securityContext": {
+            "runAsNonRoot": true,
+            "seccompProfile": {
+              "type": "RuntimeDefault"
+            }
+          },
+          "serviceAccount": "agent-sandbox-controller",
+          "serviceAccountName": "agent-sandbox-controller",
+          "terminationGracePeriodSeconds": 30,
+          "volumes": [
+            {
+              "configMap": {
+                "defaultMode": 420,
+                "name": "agent-sandbox-config",
+                "optional": true
+              },
+              "name": "config-volume"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -21,7 +21,7 @@
       },
       "name": "cilium",
       "namespace": "platform-cilium",
-      "uid": "31e0bc8f-fb6c-467f-9d7d-383ff8dfce4c"
+      "uid": "3ce8f4be-e93d-484b-b503-7c3b2dd9e1c7"
     },
     "spec": {
       "revisionHistoryLimit": 10,
@@ -32,7 +32,6 @@
       },
       "template": {
         "metadata": {
-          "creationTimestamp": null,
           "labels": {
             "app.kubernetes.io/name": "cilium-agent",
             "app.kubernetes.io/part-of": "cilium",

@@ -1,0 +1,34 @@
+{
+  "key": "/registry/clusterroles/system:node-bootstrapper",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRole",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "system:node-bootstrapper",
+      "uid": "f9fad97a-b89d-4774-ab55-998f4b66c00d"
+    },
+    "rules": [
+      {
+        "apiGroups": [
+          "certificates.k8s.io"
+        ],
+        "resources": [
+          "certificatesigningrequests"
+        ],
+        "verbs": [
+          "create",
+          "get",
+          "list",
+          "watch"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "key": "/registry/ipaddresses/198.19.255.254",
+  "value": {
+    "apiVersion": "networking.k8s.io/v1",
+    "kind": "IPAddress",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "ipaddress.kubernetes.io/ip-family": "IPv4",
+        "ipaddress.kubernetes.io/managed-by": "ipallocator.k8s.io"
+      },
+      "name": "198.19.255.254",
+      "uid": "e9928f71-05ae-4bc1-ba4a-866eb382894b"
+    },
+    "spec": {
+      "parentRef": {
+        "name": "platform-coredns",
+        "namespace": "platform-coredns",
+        "resource": "services"
+      }
+    }
+  }
+}

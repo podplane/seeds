@@ -13,6 +13,7 @@
       "bpf-lb-external-clusterip": "false",
       "bpf-lb-map-max": "65536",
       "bpf-lb-sock": "false",
+      "bpf-lb-sock-hostns-only": "true",
       "bpf-lb-sock-terminate-pod-connections": "false",
       "bpf-map-dynamic-size-ratio": "0.0025",
       "bpf-policy-map-max": "16384",
@@ -135,7 +136,7 @@
       },
       "name": "cilium-config",
       "namespace": "platform-cilium",
-      "uid": "58034d84-d9a4-477b-bc5b-3c3d115020da"
+      "uid": "f913a99b-0a5d-4937-9cd9-cfc829d9e0f9"
     }
   }
 }

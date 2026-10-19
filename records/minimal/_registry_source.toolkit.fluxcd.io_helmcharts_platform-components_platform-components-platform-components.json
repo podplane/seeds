@@ -15,12 +15,12 @@
       },
       "name": "platform-components-platform-components",
       "namespace": "platform-components",
-      "uid": "1ea37d43-7ff7-43cf-874f-a11a578ab11d"
+      "uid": "fd24b2e2-5140-466f-8ae0-7763d84c7834"
     },
     "spec": {
       "chart": "./charts/platform-components",
       "interval": "10m0s",
-      "reconcileStrategy": "ChartVersion",
+      "reconcileStrategy": "Revision",
       "sourceRef": {
         "kind": "GitRepository",
         "name": "podplane-components"

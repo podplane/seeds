@@ -1,0 +1,167 @@
+{
+  "key": "/registry/deployments/platform-podplane-operator/platform-podplane-operator",
+  "value": {
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "annotations": {
+        "deployment.kubernetes.io/revision": "1",
+        "meta.helm.sh/release-name": "platform-podplane-operator",
+        "meta.helm.sh/release-namespace": "platform-podplane-operator"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/component": "operator",
+        "app.kubernetes.io/instance": "platform-podplane-operator",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "podplane-operator",
+        "helm.sh/chart": "podplane-operator-1.0.0_0572a25da961",
+        "helm.toolkit.fluxcd.io/name": "podplane-operator",
+        "helm.toolkit.fluxcd.io/namespace": "platform-podplane-operator"
+      },
+      "name": "platform-podplane-operator",
+      "namespace": "platform-podplane-operator",
+      "uid": "40d89952-5bc8-4826-bcfe-0d566832e49a"
+    },
+    "spec": {
+      "progressDeadlineSeconds": 600,
+      "replicas": 1,
+      "revisionHistoryLimit": 10,
+      "selector": {
+        "matchLabels": {
+          "app.kubernetes.io/component": "operator",
+          "app.kubernetes.io/instance": "platform-podplane-operator",
+          "app.kubernetes.io/name": "podplane-operator"
+        }
+      },
+      "strategy": {
+        "type": "Recreate"
+      },
+      "template": {
+        "metadata": {
+          "annotations": {
+            "kubectl.kubernetes.io/default-container": "operator"
+          },
+          "labels": {
+            "app.kubernetes.io/component": "operator",
+            "app.kubernetes.io/instance": "platform-podplane-operator",
+            "app.kubernetes.io/name": "podplane-operator"
+          }
+        },
+        "spec": {
+          "containers": [
+            {
+              "args": [
+                "--config=/config/config.json",
+                "--serving-namespace=platform-podplane-operator",
+                "--aggregated-api-bind-address=:8443",
+                "--aggregated-api-tls-cert-file=/var/run/podplane/serving/aggregated-api/tls.crt",
+                "--aggregated-api-tls-private-key-file=/var/run/podplane/serving/aggregated-api/tls.key",
+                "--aggregated-api-service-name=platform-podplane-operator-aggregated-api"
+              ],
+              "image": "default-registry.local/mirror/ghcr.io/podplane/operator:v0.11.0",
+              "imagePullPolicy": "IfNotPresent",
+              "livenessProbe": {
+                "failureThreshold": 6,
+                "httpGet": {
+                  "path": "/livez",
+                  "port": "aggregated-api",
+                  "scheme": "HTTPS"
+                },
+                "periodSeconds": 10,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "name": "operator",
+              "ports": [
+                {
+                  "containerPort": 8443,
+                  "name": "aggregated-api",
+                  "protocol": "TCP"
+                }
+              ],
+              "readinessProbe": {
+                "failureThreshold": 6,
+                "httpGet": {
+                  "path": "/readyz",
+                  "port": "aggregated-api",
+                  "scheme": "HTTPS"
+                },
+                "periodSeconds": 5,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "resources": {},
+              "securityContext": {
+                "allowPrivilegeEscalation": false,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ]
+                },
+                "readOnlyRootFilesystem": true
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/run/podplane/certificates",
+                  "name": "workload-ca-key",
+                  "readOnly": true
+                },
+                {
+                  "mountPath": "/var/run/podplane/serving/aggregated-api",
+                  "name": "aggregated-api-serving-tls"
+                },
+                {
+                  "mountPath": "/config",
+                  "name": "config",
+                  "readOnly": true
+                }
+              ]
+            }
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "restartPolicy": "Always",
+          "schedulerName": "default-scheduler",
+          "securityContext": {
+            "fsGroup": 65532,
+            "runAsGroup": 65532,
+            "runAsNonRoot": true,
+            "runAsUser": 65532,
+            "seccompProfile": {
+              "type": "RuntimeDefault"
+            }
+          },
+          "serviceAccount": "platform-podplane-operator",
+          "serviceAccountName": "platform-podplane-operator",
+          "terminationGracePeriodSeconds": 30,
+          "volumes": [
+            {
+              "csi": {
+                "driver": "secrets-store.csi.k8s.io",
+                "readOnly": true,
+                "volumeAttributes": {
+                  "secretProviderClass": "platform-podplane-operator"
+                }
+              },
+              "name": "workload-ca-key"
+            },
+            {
+              "emptyDir": {},
+              "name": "aggregated-api-serving-tls"
+            },
+            {
+              "configMap": {
+                "defaultMode": 420,
+                "name": "platform-podplane-operator-config"
+              },
+              "name": "config"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

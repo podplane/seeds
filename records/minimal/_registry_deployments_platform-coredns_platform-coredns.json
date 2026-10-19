@@ -25,7 +25,7 @@
       },
       "name": "platform-coredns",
       "namespace": "platform-coredns",
-      "uid": "81815bd2-ac03-446c-827c-f1927f698367"
+      "uid": "959fc585-a95e-4dfc-a016-483576b22e3c"
     },
     "spec": {
       "progressDeadlineSeconds": 600,
@@ -52,7 +52,6 @@
             "cluster-autoscaler.kubernetes.io/safe-to-evict": "false",
             "scheduler.alpha.kubernetes.io/tolerations": "[{\"key\":\"CriticalAddonsOnly\", \"operator\":\"Exists\"}]"
           },
-          "creationTimestamp": null,
           "labels": {
             "app.kubernetes.io/instance": "platform-coredns",
             "app.kubernetes.io/name": "coredns",

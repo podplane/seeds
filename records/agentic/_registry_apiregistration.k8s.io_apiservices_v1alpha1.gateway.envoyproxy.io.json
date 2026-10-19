@@ -1,0 +1,21 @@
+{
+  "key": "/registry/apiregistration.k8s.io/apiservices/v1alpha1.gateway.envoyproxy.io",
+  "value": {
+    "apiVersion": "apiregistration.k8s.io/v1",
+    "kind": "APIService",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kube-aggregator.kubernetes.io/automanaged": "true"
+      },
+      "name": "v1alpha1.gateway.envoyproxy.io",
+      "uid": "f60e53f7-3da5-4706-9ce8-6dc04ccbbcce"
+    },
+    "spec": {
+      "group": "gateway.envoyproxy.io",
+      "groupPriorityMinimum": 1000,
+      "version": "v1alpha1",
+      "versionPriority": 100
+    }
+  }
+}

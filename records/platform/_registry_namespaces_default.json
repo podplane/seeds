@@ -1,0 +1,20 @@
+{
+  "key": "/registry/namespaces/default",
+  "value": {
+    "apiVersion": "v1",
+    "kind": "Namespace",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/metadata.name": "default"
+      },
+      "name": "default",
+      "uid": "e9f269bc-01ec-4e37-a803-ce45dc1ede10"
+    },
+    "spec": {
+      "finalizers": [
+        "kubernetes"
+      ]
+    }
+  }
+}

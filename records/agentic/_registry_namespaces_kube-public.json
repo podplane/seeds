@@ -1,0 +1,20 @@
+{
+  "key": "/registry/namespaces/kube-public",
+  "value": {
+    "apiVersion": "v1",
+    "kind": "Namespace",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/metadata.name": "kube-public"
+      },
+      "name": "kube-public",
+      "uid": "c44e93cf-3a64-4ecf-8ac1-c433bf74339b"
+    },
+    "spec": {
+      "finalizers": [
+        "kubernetes"
+      ]
+    }
+  }
+}

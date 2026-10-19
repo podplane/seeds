@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:controller:disruption-controller",
-      "uid": "e6c41957-b195-44da-ae0d-2517b60fd10e"
+      "uid": "db346700-5c6d-48a0-b984-5d0a4b0a8c6a"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

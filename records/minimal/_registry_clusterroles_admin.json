@@ -21,47 +21,9 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "admin",
-      "uid": "a29f8bec-30a1-4ea5-a639-f5aafe169314"
+      "uid": "cd0146c5-a599-44dd-8404-186b83833be1"
     },
     "rules": [
-      {
-        "apiGroups": [
-          "notification.toolkit.fluxcd.io",
-          "source.toolkit.fluxcd.io",
-          "source.extensions.fluxcd.io",
-          "helm.toolkit.fluxcd.io",
-          "image.toolkit.fluxcd.io",
-          "kustomize.toolkit.fluxcd.io"
-        ],
-        "resources": [
-          "*"
-        ],
-        "verbs": [
-          "create",
-          "delete",
-          "deletecollection",
-          "patch",
-          "update"
-        ]
-      },
-      {
-        "apiGroups": [
-          "notification.toolkit.fluxcd.io",
-          "source.toolkit.fluxcd.io",
-          "source.extensions.fluxcd.io",
-          "helm.toolkit.fluxcd.io",
-          "image.toolkit.fluxcd.io",
-          "kustomize.toolkit.fluxcd.io"
-        ],
-        "resources": [
-          "*"
-        ],
-        "verbs": [
-          "get",
-          "list",
-          "watch"
-        ]
-      },
       {
         "apiGroups": [
           ""

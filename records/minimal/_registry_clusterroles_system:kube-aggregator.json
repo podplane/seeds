@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:kube-aggregator",
-      "uid": "b2536dd7-07f5-44c1-8dc9-85da41bda0db"
+      "uid": "b2d83ce5-a95e-410f-b0e7-0eed4ca6243c"
     },
     "rules": [
       {

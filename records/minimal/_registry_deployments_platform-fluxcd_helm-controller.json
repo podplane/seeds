@@ -24,7 +24,7 @@
       },
       "name": "helm-controller",
       "namespace": "platform-fluxcd",
-      "uid": "63b92372-a701-4ea5-97aa-81bc3a859e7a"
+      "uid": "c76180b0-7e36-4440-9d4b-3a6d7329e407"
     },
     "spec": {
       "progressDeadlineSeconds": 600,
@@ -48,7 +48,6 @@
             "prometheus.io/port": "8080",
             "prometheus.io/scrape": "true"
           },
-          "creationTimestamp": null,
           "labels": {
             "app": "helm-controller"
           }

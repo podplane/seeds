@@ -15,7 +15,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "platform-kube2iam",
-      "uid": "346dd1cf-cc2b-493f-965b-3312b6a0cd63"
+      "uid": "360fe28a-4eeb-4028-8d31-b4f99ef96184"
     },
     "rules": [
       {

@@ -1,0 +1,25 @@
+{
+  "key": "/registry/mutatingadmissionpolicybindings/platform-runtime-class-default-mapb",
+  "value": {
+    "apiVersion": "admissionregistration.k8s.io/v1",
+    "kind": "MutatingAdmissionPolicyBinding",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-runtime",
+        "meta.helm.sh/release-namespace": "platform-cluster"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-runtime",
+        "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
+      },
+      "name": "platform-runtime-class-default-mapb",
+      "uid": "53e07b82-6617-47ca-9c14-35c99b44b6a8"
+    },
+    "spec": {
+      "policyName": "platform-runtime-class-default-map"
+    }
+  }
+}

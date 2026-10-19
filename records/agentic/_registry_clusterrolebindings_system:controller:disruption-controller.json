@@ -1,0 +1,30 @@
+{
+  "key": "/registry/clusterrolebindings/system:controller:disruption-controller",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRoleBinding",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "system:controller:disruption-controller",
+      "uid": "db346700-5c6d-48a0-b984-5d0a4b0a8c6a"
+    },
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "ClusterRole",
+      "name": "system:controller:disruption-controller"
+    },
+    "subjects": [
+      {
+        "kind": "ServiceAccount",
+        "name": "disruption-controller",
+        "namespace": "kube-system"
+      }
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "key": "/registry/validatingadmissionpolicies/platform-reserve-namespace-prefixes-vap",
+  "value": {
+    "apiVersion": "admissionregistration.k8s.io/v1",
+    "kind": "ValidatingAdmissionPolicy",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-rbac",
+        "meta.helm.sh/release-namespace": "platform-cluster"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-rbac",
+        "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
+      },
+      "name": "platform-reserve-namespace-prefixes-vap",
+      "uid": "b0b3e8b6-7bc8-466d-9c43-c838e51eda31"
+    },
+    "spec": {
+      "failurePolicy": "Fail",
+      "matchConstraints": {
+        "matchPolicy": "Equivalent",
+        "namespaceSelector": {},
+        "objectSelector": {},
+        "resourceRules": [
+          {
+            "apiGroups": [
+              ""
+            ],
+            "apiVersions": [
+              "v1"
+            ],
+            "operations": [
+              "CREATE"
+            ],
+            "resources": [
+              "namespaces"
+            ],
+            "scope": "*"
+          }
+        ]
+      },
+      "validations": [
+        {
+          "expression": "!(object.metadata.name.startsWith('kube-') || object.metadata.name.startsWith('platform-')) || request.userInfo.username == 'system:serviceaccount:platform-fluxcd:helm-controller' || request.userInfo.groups.exists(group, group == 'podplane:admins' || group == 'system:masters')\n",
+          "message": "Namespaces prefixed kube- or platform- are reserved for the platform."
+        }
+      ]
+    }
+  }
+}

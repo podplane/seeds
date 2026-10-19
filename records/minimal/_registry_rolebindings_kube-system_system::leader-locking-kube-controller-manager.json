@@ -13,7 +13,7 @@
       },
       "name": "system::leader-locking-kube-controller-manager",
       "namespace": "kube-system",
-      "uid": "d6497ecd-cd94-4c67-8ec5-3f7ed032a074"
+      "uid": "62863f89-a18b-444f-aad5-3251245097e7"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

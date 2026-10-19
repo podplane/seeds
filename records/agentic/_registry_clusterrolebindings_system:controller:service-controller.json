@@ -1,0 +1,30 @@
+{
+  "key": "/registry/clusterrolebindings/system:controller:service-controller",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRoleBinding",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "system:controller:service-controller",
+      "uid": "3bc761ff-4163-45ec-a016-12d564e1717e"
+    },
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "ClusterRole",
+      "name": "system:controller:service-controller"
+    },
+    "subjects": [
+      {
+        "kind": "ServiceAccount",
+        "name": "service-controller",
+        "namespace": "kube-system"
+      }
+    ]
+  }
+}

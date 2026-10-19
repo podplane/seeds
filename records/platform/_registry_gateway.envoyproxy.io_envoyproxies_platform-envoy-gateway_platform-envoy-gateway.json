@@ -1,0 +1,168 @@
+{
+  "key": "/registry/gateway.envoyproxy.io/envoyproxies/platform-envoy-gateway/platform-envoy-gateway",
+  "value": {
+    "apiVersion": "gateway.envoyproxy.io/v1alpha1",
+    "kind": "EnvoyProxy",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-envoy-gateway",
+        "meta.helm.sh/release-namespace": "platform-envoy-gateway"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "envoy-gateway",
+        "helm.toolkit.fluxcd.io/namespace": "platform-envoy-gateway"
+      },
+      "name": "platform-envoy-gateway",
+      "namespace": "platform-envoy-gateway",
+      "uid": "1ddf6cd5-61a2-42d7-9e1d-88abf1b0051b"
+    },
+    "spec": {
+      "logging": {
+        "level": {
+          "default": "warn"
+        }
+      },
+      "provider": {
+        "kubernetes": {
+          "envoyDaemonSet": {
+            "patch": {
+              "type": "StrategicMerge",
+              "value": {
+                "spec": {
+                  "template": {
+                    "metadata": {
+                      "annotations": {
+                        "dev.gvisor.spec.mount.podplane-sds.options": "rw,rprivate",
+                        "dev.gvisor.spec.mount.podplane-sds.share": "pod",
+                        "dev.gvisor.spec.mount.podplane-sds.type": "tmpfs"
+                      }
+                    },
+                    "spec": {
+                      "containers": [
+                        {
+                          "image": "default-registry.local/mirror/docker.io/envoyproxy/envoy:distroless-v1.39.0",
+                          "name": "envoy",
+                          "ports": [
+                            {
+                              "containerPort": 10080,
+                              "hostPort": 80,
+                              "name": "http-80"
+                            },
+                            {
+                              "containerPort": 10443,
+                              "hostPort": 443,
+                              "name": "https-443"
+                            }
+                          ],
+                          "volumeMounts": [
+                            {
+                              "mountPath": "/var/run/podplane-sds",
+                              "name": "podplane-sds"
+                            }
+                          ]
+                        },
+                        {
+                          "args": [
+                            "sds",
+                            "--socket=/var/run/podplane-sds/sds.sock",
+                            "--node-certificate=default.localhost"
+                          ],
+                          "image": "default-registry.local/mirror/ghcr.io/podplane/operator:v0.11.0",
+                          "imagePullPolicy": "IfNotPresent",
+                          "name": "podplane-sds",
+                          "securityContext": {
+                            "allowPrivilegeEscalation": false,
+                            "capabilities": {
+                              "drop": [
+                                "ALL"
+                              ]
+                            },
+                            "readOnlyRootFilesystem": true,
+                            "runAsGroup": 65532,
+                            "runAsNonRoot": true,
+                            "runAsUser": 65532,
+                            "seccompProfile": {
+                              "type": "RuntimeDefault"
+                            }
+                          },
+                          "volumeMounts": [
+                            {
+                              "mountPath": "/var/run/podplane-sds",
+                              "name": "podplane-sds"
+                            },
+                            {
+                              "mountPath": "/var/run/podplane/ingress-certificates",
+                              "name": "ingress-certificates",
+                              "readOnly": true
+                            }
+                          ]
+                        }
+                      ],
+                      "securityContext": {
+                        "fsGroup": 65532,
+                        "runAsNonRoot": true,
+                        "seccompProfile": {
+                          "type": "RuntimeDefault"
+                        }
+                      },
+                      "serviceAccountName": "platform-envoy-gateway-ingress-certificates",
+                      "tolerations": [
+                        {
+                          "effect": "NoSchedule",
+                          "key": "node-role.kubernetes.io/control-plane",
+                          "operator": "Exists"
+                        },
+                        {
+                          "effect": "NoSchedule",
+                          "key": "node-role.kubernetes.io/master",
+                          "operator": "Exists"
+                        }
+                      ],
+                      "volumes": [
+                        {
+                          "configMap": null,
+                          "name": "certs",
+                          "projected": {
+                            "sources": [
+                              {
+                                "clusterTrustBundle": {
+                                  "name": "certificates.podplane.dev:workload:roots",
+                                  "path": "ca.crt"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "emptyDir": {
+                            "medium": "Memory"
+                          },
+                          "name": "podplane-sds"
+                        },
+                        {
+                          "hostPath": {
+                            "path": "/opt/podplane/secrets/ingress",
+                            "type": "Directory"
+                          },
+                          "name": "ingress-certificates"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "envoyService": {
+            "externalTrafficPolicy": "Local",
+            "type": "ClusterIP"
+          }
+        },
+        "type": "Kubernetes"
+      }
+    }
+  }
+}

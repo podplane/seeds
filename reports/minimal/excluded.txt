@@ -52,8 +52,4 @@
 /registry/mutatingwebhookconfigurations/envoy-gateway-topology-injector.platform-envoy-gateway
 /registry/rolebindings/kube-system/platform-podplane-operator-extension-apiserver-authentication-reader
 /registry/validatingadmissionpolicies/platform-deny-editor-shell-vap
-/registry/validatingadmissionpolicies/platform-podplane-operator-reserved-workload-ca-spc-vap
-/registry/validatingadmissionpolicies/platform-podplane-operator-spc-restriction-vap
 /registry/validatingadmissionpolicybindings/platform-deny-editor-shell-vapb
-/registry/validatingadmissionpolicybindings/platform-podplane-operator-reserved-workload-ca-spc-vapb
-/registry/validatingadmissionpolicybindings/platform-podplane-operator-spc-restriction-vapb

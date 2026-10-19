@@ -15,10 +15,12 @@
         "helm.toolkit.fluxcd.io/name": "platform-components",
         "helm.toolkit.fluxcd.io/namespace": "platform-components",
         "kubernetes.io/metadata.name": "platform-cluster",
-        "name": "platform-cluster"
+        "pod-security.kubernetes.io/audit": "restricted",
+        "pod-security.kubernetes.io/enforce": "restricted",
+        "pod-security.kubernetes.io/warn": "restricted"
       },
       "name": "platform-cluster",
-      "uid": "ac199808-8a95-46ab-bac2-8862e456017b"
+      "uid": "29f67e2a-5747-41a8-bcbc-d819f193df1f"
     },
     "spec": {
       "finalizers": [

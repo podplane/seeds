@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:kube-scheduler",
-      "uid": "862f2f27-535a-4ff3-8d76-d6f5a29310ba"
+      "uid": "8fc750d1-a52c-4a1f-aedf-4457534c249f"
     },
     "rules": [
       {
@@ -358,6 +358,19 @@
         "verbs": [
           "create",
           "delete"
+        ]
+      },
+      {
+        "apiGroups": [
+          "resource.k8s.io"
+        ],
+        "resources": [
+          "devicetaintrules"
+        ],
+        "verbs": [
+          "get",
+          "list",
+          "watch"
         ]
       },
       {

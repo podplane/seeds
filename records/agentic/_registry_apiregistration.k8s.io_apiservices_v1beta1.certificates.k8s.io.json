@@ -1,0 +1,21 @@
+{
+  "key": "/registry/apiregistration.k8s.io/apiservices/v1beta1.certificates.k8s.io",
+  "value": {
+    "apiVersion": "apiregistration.k8s.io/v1",
+    "kind": "APIService",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kube-aggregator.kubernetes.io/automanaged": "onstart"
+      },
+      "name": "v1beta1.certificates.k8s.io",
+      "uid": "3fed65ad-4593-42f9-ac31-ec40d00da068"
+    },
+    "spec": {
+      "group": "certificates.k8s.io",
+      "groupPriorityMinimum": 17300,
+      "version": "v1beta1",
+      "versionPriority": 9
+    }
+  }
+}

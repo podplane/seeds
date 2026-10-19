@@ -1,0 +1,32 @@
+{
+  "key": "/registry/namespaces/platform-cilium",
+  "value": {
+    "apiVersion": "v1",
+    "kind": "Namespace",
+    "metadata": {
+      "annotations": {
+        "helm.sh/resource-policy": "keep",
+        "meta.helm.sh/release-name": "platform-components",
+        "meta.helm.sh/release-namespace": "platform-components"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-components",
+        "helm.toolkit.fluxcd.io/namespace": "platform-components",
+        "kubernetes.io/metadata.name": "platform-cilium",
+        "pod-security.kubernetes.io/audit": "privileged",
+        "pod-security.kubernetes.io/enforce": "privileged",
+        "pod-security.kubernetes.io/warn": "privileged",
+        "runtime.podplane.dev/runc": "allowed"
+      },
+      "name": "platform-cilium",
+      "uid": "61bc5a0a-50f9-4ffe-a034-bd35032537c5"
+    },
+    "spec": {
+      "finalizers": [
+        "kubernetes"
+      ]
+    }
+  }
+}

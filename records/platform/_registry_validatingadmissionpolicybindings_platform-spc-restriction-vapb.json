@@ -1,0 +1,34 @@
+{
+  "key": "/registry/validatingadmissionpolicybindings/platform-spc-restriction-vapb",
+  "value": {
+    "apiVersion": "admissionregistration.k8s.io/v1",
+    "kind": "ValidatingAdmissionPolicyBinding",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-rbac",
+        "meta.helm.sh/release-namespace": "platform-cluster"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-rbac",
+        "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
+      },
+      "name": "platform-spc-restriction-vapb",
+      "uid": "20fd3f65-bb36-427a-ac31-6e20880cf9d7"
+    },
+    "spec": {
+      "matchResources": {
+        "matchPolicy": "Equivalent",
+        "namespaceSelector": {},
+        "objectSelector": {}
+      },
+      "policyName": "platform-spc-restriction-vap",
+      "validationActions": [
+        "Deny",
+        "Audit"
+      ]
+    }
+  }
+}

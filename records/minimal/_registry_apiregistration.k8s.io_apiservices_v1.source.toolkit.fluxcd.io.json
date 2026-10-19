@@ -9,7 +9,7 @@
         "kube-aggregator.kubernetes.io/automanaged": "true"
       },
       "name": "v1.source.toolkit.fluxcd.io",
-      "uid": "57ff9041-291c-4ee8-a3f3-42f150aeff0a"
+      "uid": "1c07d863-baea-47b9-94ed-c214985f79c4"
     },
     "spec": {
       "group": "source.toolkit.fluxcd.io",

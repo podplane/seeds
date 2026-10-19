@@ -22,7 +22,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "providers.notification.toolkit.fluxcd.io",
-      "uid": "30849ccd-73d2-4b9b-abc3-ddb833d41046"
+      "uid": "98d6a0ca-5228-40a8-b54f-13e493efb1ba"
     },
     "spec": {
       "conversion": {

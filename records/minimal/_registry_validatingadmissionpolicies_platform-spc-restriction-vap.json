@@ -1,0 +1,54 @@
+{
+  "key": "/registry/validatingadmissionpolicies/platform-spc-restriction-vap",
+  "value": {
+    "apiVersion": "admissionregistration.k8s.io/v1",
+    "kind": "ValidatingAdmissionPolicy",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-rbac",
+        "meta.helm.sh/release-namespace": "platform-cluster"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-rbac",
+        "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
+      },
+      "name": "platform-spc-restriction-vap",
+      "uid": "a92fa526-f7bd-426c-a536-ddc1fe074515"
+    },
+    "spec": {
+      "failurePolicy": "Fail",
+      "matchConstraints": {
+        "matchPolicy": "Equivalent",
+        "namespaceSelector": {},
+        "objectSelector": {},
+        "resourceRules": [
+          {
+            "apiGroups": [
+              ""
+            ],
+            "apiVersions": [
+              "v1"
+            ],
+            "operations": [
+              "CREATE",
+              "UPDATE"
+            ],
+            "resources": [
+              "pods"
+            ],
+            "scope": "*"
+          }
+        ]
+      },
+      "validations": [
+        {
+          "expression": "!has(object.spec.volumes) || object.spec.volumes.all(volume,\n\n\n  !has(volume.csi) ||\n  volume.csi.driver != 'secrets-store.csi.k8s.io' ||\n  (\n    has(object.spec.serviceAccountName) &&\n    object.spec.serviceAccountName != '' &&\n    has(volume.csi.volumeAttributes) &&\n    'secretProviderClass' in volume.csi.volumeAttributes &&\n    volume.csi.volumeAttributes['secretProviderClass'] == object.spec.serviceAccountName\n  )\n)\n",
+          "message": "Secrets Store CSI volumes require an explicit pod serviceAccountName, and secretProviderClass must match it."
+        }
+      ]
+    }
+  }
+}

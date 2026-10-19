@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:controller:endpointslicemirroring-controller",
-      "uid": "ba955add-ec35-4f3a-a03c-dc8d893a1005"
+      "uid": "f4da5472-c216-4844-b318-332606c875ac"
     },
     "rules": [
       {

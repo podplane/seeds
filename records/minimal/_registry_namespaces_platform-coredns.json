@@ -15,10 +15,12 @@
         "helm.toolkit.fluxcd.io/name": "platform-components",
         "helm.toolkit.fluxcd.io/namespace": "platform-components",
         "kubernetes.io/metadata.name": "platform-coredns",
-        "name": "platform-coredns"
+        "pod-security.kubernetes.io/audit": "privileged",
+        "pod-security.kubernetes.io/enforce": "privileged",
+        "pod-security.kubernetes.io/warn": "privileged"
       },
       "name": "platform-coredns",
-      "uid": "8ff0b5b8-5737-4df2-b2d7-3788254e4195"
+      "uid": "e36d1b9d-6654-4d59-ad74-683b461a36cf"
     },
     "spec": {
       "finalizers": [

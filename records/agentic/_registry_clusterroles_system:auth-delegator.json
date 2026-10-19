@@ -1,0 +1,42 @@
+{
+  "key": "/registry/clusterroles/system:auth-delegator",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRole",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "system:auth-delegator",
+      "uid": "7f0c5355-4b58-4ad5-9d1b-40baa4784b9b"
+    },
+    "rules": [
+      {
+        "apiGroups": [
+          "authentication.k8s.io"
+        ],
+        "resources": [
+          "tokenreviews"
+        ],
+        "verbs": [
+          "create"
+        ]
+      },
+      {
+        "apiGroups": [
+          "authorization.k8s.io"
+        ],
+        "resources": [
+          "subjectaccessreviews"
+        ],
+        "verbs": [
+          "create"
+        ]
+      }
+    ]
+  }
+}

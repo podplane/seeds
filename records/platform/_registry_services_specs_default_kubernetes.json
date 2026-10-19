@@ -1,0 +1,40 @@
+{
+  "key": "/registry/services/specs/default/kubernetes",
+  "value": {
+    "apiVersion": "v1",
+    "kind": "Service",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "component": "apiserver",
+        "provider": "kubernetes"
+      },
+      "name": "kubernetes",
+      "namespace": "default",
+      "uid": "23105063-f791-4e92-9d28-106f3246429d"
+    },
+    "spec": {
+      "clusterIP": "198.18.0.1",
+      "clusterIPs": [
+        "198.18.0.1",
+        "fdc6::1"
+      ],
+      "internalTrafficPolicy": "Cluster",
+      "ipFamilies": [
+        "IPv4",
+        "IPv6"
+      ],
+      "ipFamilyPolicy": "PreferDualStack",
+      "ports": [
+        {
+          "name": "https",
+          "port": 443,
+          "protocol": "TCP",
+          "targetPort": 6443
+        }
+      ],
+      "sessionAffinity": "None",
+      "type": "ClusterIP"
+    }
+  }
+}

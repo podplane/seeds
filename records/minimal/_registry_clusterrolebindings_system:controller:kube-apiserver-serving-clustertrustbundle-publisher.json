@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:controller:kube-apiserver-serving-clustertrustbundle-publisher",
-      "uid": "5f8a15fb-159c-48f4-a4e5-ce63fc91c2d3"
+      "uid": "89fc0eaa-711f-44f4-bd89-7c491d4cff53"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

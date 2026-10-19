@@ -1,0 +1,39 @@
+{
+  "key": "/registry/clusterroles/cluster-admin",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRole",
+    "metadata": {
+      "annotations": {
+        "rbac.authorization.kubernetes.io/autoupdate": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kubernetes.io/bootstrapping": "rbac-defaults"
+      },
+      "name": "cluster-admin",
+      "uid": "2fa5f40d-6ffc-48b5-8c85-34ef07341bc2"
+    },
+    "rules": [
+      {
+        "apiGroups": [
+          "*"
+        ],
+        "resources": [
+          "*"
+        ],
+        "verbs": [
+          "*"
+        ]
+      },
+      {
+        "nonResourceURLs": [
+          "*"
+        ],
+        "verbs": [
+          "*"
+        ]
+      }
+    ]
+  }
+}

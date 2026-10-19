@@ -9,7 +9,7 @@
         "kube-aggregator.kubernetes.io/automanaged": "onstart"
       },
       "name": "v1.scheduling.k8s.io",
-      "uid": "d08e5c29-2c89-4d84-b2a8-e0b81ef14ecb"
+      "uid": "22e17e08-9605-42b1-b1a7-ff71b160a53b"
     },
     "spec": {
       "group": "scheduling.k8s.io",

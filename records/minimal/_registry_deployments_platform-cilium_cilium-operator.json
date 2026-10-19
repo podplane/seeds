@@ -22,7 +22,7 @@
       },
       "name": "cilium-operator",
       "namespace": "platform-cilium",
-      "uid": "c2250e64-46cb-47e6-a5a5-361d4abd9dec"
+      "uid": "3b230fba-afa2-4ab7-8dd7-e4ba4feabda8"
     },
     "spec": {
       "progressDeadlineSeconds": 600,
@@ -47,7 +47,6 @@
             "prometheus.io/port": "9963",
             "prometheus.io/scrape": "true"
           },
-          "creationTimestamp": null,
           "labels": {
             "app.kubernetes.io/name": "cilium-operator",
             "app.kubernetes.io/part-of": "cilium",

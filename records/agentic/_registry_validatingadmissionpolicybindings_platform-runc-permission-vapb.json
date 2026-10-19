@@ -1,0 +1,29 @@
+{
+  "key": "/registry/validatingadmissionpolicybindings/platform-runc-permission-vapb",
+  "value": {
+    "apiVersion": "admissionregistration.k8s.io/v1",
+    "kind": "ValidatingAdmissionPolicyBinding",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-runtime",
+        "meta.helm.sh/release-namespace": "platform-cluster"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-runtime",
+        "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
+      },
+      "name": "platform-runc-permission-vapb",
+      "uid": "ed4a4704-2628-42bc-b3bd-5461a5c5b89e"
+    },
+    "spec": {
+      "policyName": "platform-runc-permission-vap",
+      "validationActions": [
+        "Deny",
+        "Audit"
+      ]
+    }
+  }
+}

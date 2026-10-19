@@ -1,0 +1,66 @@
+{
+  "key": "/registry/mutatingadmissionpolicies/platform-runtime-class-default-map",
+  "value": {
+    "apiVersion": "admissionregistration.k8s.io/v1",
+    "kind": "MutatingAdmissionPolicy",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-runtime",
+        "meta.helm.sh/release-namespace": "platform-cluster"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 2,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-runtime",
+        "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
+      },
+      "name": "platform-runtime-class-default-map",
+      "uid": "a8c1acc8-20de-4c42-92aa-4f8fbafce604"
+    },
+    "spec": {
+      "failurePolicy": "Fail",
+      "matchConditions": [
+        {
+          "expression": "!(request.namespace == \"kube-system\" &&\n\n\n  request.userInfo.username.startsWith(\"system:node:\") &&\n  request.userInfo.groups.exists(g, g == \"system:nodes\") &&\n  object.metadata.?annotations[?\"kubernetes.io/config.mirror\"].hasValue())\n",
+          "name": "not-static-pod-mirror"
+        },
+        {
+          "expression": "!has(object.spec.runtimeClassName)",
+          "name": "runtime-class-omitted"
+        }
+      ],
+      "matchConstraints": {
+        "matchPolicy": "Equivalent",
+        "namespaceSelector": {},
+        "objectSelector": {},
+        "resourceRules": [
+          {
+            "apiGroups": [
+              ""
+            ],
+            "apiVersions": [
+              "v1"
+            ],
+            "operations": [
+              "CREATE"
+            ],
+            "resources": [
+              "pods"
+            ],
+            "scope": "*"
+          }
+        ]
+      },
+      "mutations": [
+        {
+          "applyConfiguration": {
+            "expression": "Object{spec: Object.spec{runtimeClassName:\n\n\n  request.namespace in [\"platform-cilium\",\"platform-csi-aws-ebs\",\"platform-secrets-store-csi-driver\",\"platform-secrets-store-csi-provider-aws\",\"platform-secrets-store-csi-provider-gcp\",\"platform-secrets-store-csi-provider-openbao\",\"platform-secrets-store-csi-provider-vault\",\"platform-node-problem-detector\"] ? \"runc\" : \"gvisor\"}}"
+          },
+          "patchType": "ApplyConfiguration"
+        }
+      ],
+      "reinvocationPolicy": "Never"
+    }
+  }
+}

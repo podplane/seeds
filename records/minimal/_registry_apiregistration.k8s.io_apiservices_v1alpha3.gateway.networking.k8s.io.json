@@ -9,7 +9,7 @@
         "kube-aggregator.kubernetes.io/automanaged": "true"
       },
       "name": "v1alpha3.gateway.networking.k8s.io",
-      "uid": "ae77a93d-dedd-4553-b1ea-8df69e8c5a3c"
+      "uid": "c224203d-4eba-47d8-a4c0-d2de9f08a5ef"
     },
     "spec": {
       "group": "gateway.networking.k8s.io",

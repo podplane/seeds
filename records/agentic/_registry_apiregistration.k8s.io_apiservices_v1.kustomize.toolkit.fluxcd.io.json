@@ -1,0 +1,21 @@
+{
+  "key": "/registry/apiregistration.k8s.io/apiservices/v1.kustomize.toolkit.fluxcd.io",
+  "value": {
+    "apiVersion": "apiregistration.k8s.io/v1",
+    "kind": "APIService",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kube-aggregator.kubernetes.io/automanaged": "true"
+      },
+      "name": "v1.kustomize.toolkit.fluxcd.io",
+      "uid": "8f5bc836-7ced-42bb-a96f-2a07f60358c3"
+    },
+    "spec": {
+      "group": "kustomize.toolkit.fluxcd.io",
+      "groupPriorityMinimum": 1000,
+      "version": "v1",
+      "versionPriority": 100
+    }
+  }
+}

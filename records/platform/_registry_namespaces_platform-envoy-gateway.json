@@ -1,0 +1,31 @@
+{
+  "key": "/registry/namespaces/platform-envoy-gateway",
+  "value": {
+    "apiVersion": "v1",
+    "kind": "Namespace",
+    "metadata": {
+      "annotations": {
+        "helm.sh/resource-policy": "keep",
+        "meta.helm.sh/release-name": "platform-components",
+        "meta.helm.sh/release-namespace": "platform-components"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-components",
+        "helm.toolkit.fluxcd.io/namespace": "platform-components",
+        "kubernetes.io/metadata.name": "platform-envoy-gateway",
+        "pod-security.kubernetes.io/audit": "privileged",
+        "pod-security.kubernetes.io/enforce": "privileged",
+        "pod-security.kubernetes.io/warn": "privileged"
+      },
+      "name": "platform-envoy-gateway",
+      "uid": "79430fe9-a062-4fe4-be20-75d2c13674d0"
+    },
+    "spec": {
+      "finalizers": [
+        "kubernetes"
+      ]
+    }
+  }
+}

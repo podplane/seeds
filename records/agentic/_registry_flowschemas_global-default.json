@@ -1,0 +1,70 @@
+{
+  "key": "/registry/flowschemas/global-default",
+  "value": {
+    "apiVersion": "flowcontrol.apiserver.k8s.io/v1",
+    "kind": "FlowSchema",
+    "metadata": {
+      "annotations": {
+        "apf.kubernetes.io/autoupdate-spec": "true"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "name": "global-default",
+      "uid": "c3592653-b443-4969-8786-a20190b35c75"
+    },
+    "spec": {
+      "distinguisherMethod": {
+        "type": "ByUser"
+      },
+      "matchingPrecedence": 9900,
+      "priorityLevelConfiguration": {
+        "name": "global-default"
+      },
+      "rules": [
+        {
+          "nonResourceRules": [
+            {
+              "nonResourceURLs": [
+                "*"
+              ],
+              "verbs": [
+                "*"
+              ]
+            }
+          ],
+          "resourceRules": [
+            {
+              "apiGroups": [
+                "*"
+              ],
+              "clusterScope": true,
+              "namespaces": [
+                "*"
+              ],
+              "resources": [
+                "*"
+              ],
+              "verbs": [
+                "*"
+              ]
+            }
+          ],
+          "subjects": [
+            {
+              "group": {
+                "name": "system:unauthenticated"
+              },
+              "kind": "Group"
+            },
+            {
+              "group": {
+                "name": "system:authenticated"
+              },
+              "kind": "Group"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

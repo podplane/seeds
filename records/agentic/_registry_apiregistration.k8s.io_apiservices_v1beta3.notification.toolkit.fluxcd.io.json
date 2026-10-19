@@ -1,0 +1,21 @@
+{
+  "key": "/registry/apiregistration.k8s.io/apiservices/v1beta3.notification.toolkit.fluxcd.io",
+  "value": {
+    "apiVersion": "apiregistration.k8s.io/v1",
+    "kind": "APIService",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kube-aggregator.kubernetes.io/automanaged": "true"
+      },
+      "name": "v1beta3.notification.toolkit.fluxcd.io",
+      "uid": "01e3b59d-a754-4420-864a-17c3f1100deb"
+    },
+    "spec": {
+      "group": "notification.toolkit.fluxcd.io",
+      "groupPriorityMinimum": 1000,
+      "version": "v1beta3",
+      "versionPriority": 100
+    }
+  }
+}

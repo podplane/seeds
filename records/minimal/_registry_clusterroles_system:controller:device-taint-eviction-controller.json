@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:controller:device-taint-eviction-controller",
-      "uid": "59b4639c-bcc4-44b9-a3c2-211778e72208"
+      "uid": "8cf3fc54-809d-443a-a553-0e634c2df1c4"
     },
     "rules": [
       {
@@ -92,6 +92,31 @@
           "create",
           "patch",
           "update"
+        ]
+      },
+      {
+        "apiGroups": [
+          "resource.k8s.io"
+        ],
+        "resources": [
+          "devicetaintrules/status"
+        ],
+        "verbs": [
+          "patch",
+          "update"
+        ]
+      },
+      {
+        "apiGroups": [
+          "resource.k8s.io"
+        ],
+        "resources": [
+          "devicetaintrules"
+        ],
+        "verbs": [
+          "get",
+          "list",
+          "watch"
         ]
       }
     ]
