@@ -17,7 +17,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-agent-router"
       },
       "name": "envoy-ai-gateway-gateway-pod-mutator.platform-agent-router",
-      "uid": "fa535e72-fbdd-437b-8a95-49c7d43b3473"
+      "uid": "518e279d-37ff-4543-96b6-01e8dc2a17c8"
     },
     "webhooks": [
       {
@@ -38,7 +38,8 @@
         "namespaceSelector": {},
         "objectSelector": {
           "matchLabels": {
-            "app.kubernetes.io/managed-by": "envoy-gateway"
+            "app.kubernetes.io/managed-by": "envoy-gateway",
+            "gateway.envoyproxy.io/owning-gateway-name": "platform-agent-router-gateway"
           }
         },
         "reinvocationPolicy": "Never",

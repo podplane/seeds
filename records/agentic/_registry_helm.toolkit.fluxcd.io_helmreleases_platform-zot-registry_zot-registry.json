@@ -20,7 +20,7 @@
       },
       "name": "zot-registry",
       "namespace": "platform-zot-registry",
-      "uid": "324fb19b-a8be-48dc-beef-289a7d372030"
+      "uid": "37a67dc8-f1bd-4c8a-98d8-a5f81b07cd83"
     },
     "spec": {
       "chart": {
@@ -56,7 +56,7 @@
             "oidc": {
               "audience": "default",
               "groupsClaim": "groups",
-              "issuer": "https://oidc.localhost:49569/oidc",
+              "issuer": "https://oidc.localhost:62769/oidc",
               "usernameClaim": "email"
             },
             "registryHostname": "default-registry.local",
@@ -64,7 +64,7 @@
               "accessKeyID": "test",
               "bucket": "registry",
               "driver": "s3",
-              "endpoint": "http://10.0.2.2:49568/s3/cache",
+              "endpoint": "http://10.0.2.2:62768/s3/cache",
               "forcePathStyle": true,
               "region": "local",
               "secretAccessKey": "test",

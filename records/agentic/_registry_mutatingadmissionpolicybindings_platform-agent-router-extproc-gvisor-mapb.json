@@ -16,7 +16,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-agent-router"
       },
       "name": "platform-agent-router-extproc-gvisor-mapb",
-      "uid": "34e91e34-daa3-4e88-bb23-efc83219358d"
+      "uid": "b09303ef-bf74-48b0-ac51-a9dcd1a7af56"
     },
     "spec": {
       "policyName": "platform-agent-router-extproc-gvisor-map"

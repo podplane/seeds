@@ -17,7 +17,7 @@
       },
       "name": "platform-envoy-gateway",
       "namespace": "platform-envoy-gateway",
-      "uid": "ab6a9c15-b7c5-4d26-be5c-def2247ce096"
+      "uid": "e6cfca89-d65a-4f2b-bbc1-2f74f7051427"
     },
     "spec": {
       "logging": {

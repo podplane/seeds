@@ -19,7 +19,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-sourcegateway"
       },
       "name": "sourcegateway",
-      "uid": "0afc5b1e-7c8b-4785-b1b0-99a79e1aec52"
+      "uid": "30cd783b-2fcd-45da-95c5-47fd4d028a5a"
     },
     "rules": [
       {

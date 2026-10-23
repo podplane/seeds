@@ -20,7 +20,7 @@
       },
       "name": "platform-envoy-gateway-gateway-helm-infra-manager",
       "namespace": "platform-envoy-gateway",
-      "uid": "c59b836d-b5c3-4565-b7da-d67bf41eff0b"
+      "uid": "f38abc09-b13d-4f94-9bb8-eb7f3e20500d"
     },
     "rules": [
       {

@@ -16,7 +16,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "platform-pod-security-defaults-map",
-      "uid": "fb45c535-3f81-4ddb-82cb-01a030a111c4"
+      "uid": "442e970f-1735-4036-849d-52a0fab8b910"
     },
     "spec": {
       "failurePolicy": "Fail",

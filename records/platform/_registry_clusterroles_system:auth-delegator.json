@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:auth-delegator",
-      "uid": "f340b8d2-32de-422b-bcf9-b15b4dda1f41"
+      "uid": "f3c8c59b-7054-4e23-b767-82fa37983784"
     },
     "rules": [
       {

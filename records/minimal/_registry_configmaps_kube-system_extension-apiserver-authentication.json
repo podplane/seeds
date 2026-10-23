@@ -16,7 +16,7 @@
       "creationTimestamp": "2015-07-11T04:02:31Z",
       "name": "extension-apiserver-authentication",
       "namespace": "kube-system",
-      "uid": "83f06a59-5329-433d-9e87-c9c8b3e2ca6b"
+      "uid": "21d5f0f4-46a2-431a-bff7-1a8c27896149"
     }
   }
 }

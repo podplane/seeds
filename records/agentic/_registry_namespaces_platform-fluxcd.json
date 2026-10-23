@@ -20,7 +20,7 @@
         "pod-security.kubernetes.io/warn": "restricted"
       },
       "name": "platform-fluxcd",
-      "uid": "9721a256-1ea5-4f06-88a3-dadd42f30247"
+      "uid": "5eb5144d-e3f4-4cde-a239-38befcbc459f"
     },
     "spec": {
       "finalizers": [

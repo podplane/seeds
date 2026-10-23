@@ -20,7 +20,7 @@
       },
       "name": "envoy-gateway-crds",
       "namespace": "platform-cluster",
-      "uid": "899c9953-332e-4a5b-a865-9e61416605f0"
+      "uid": "534eaa18-7efb-403a-8a64-0663b1e55dd3"
     },
     "spec": {
       "chart": {

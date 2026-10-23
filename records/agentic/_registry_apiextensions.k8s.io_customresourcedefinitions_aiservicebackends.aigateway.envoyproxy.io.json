@@ -17,7 +17,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "aiservicebackends.aigateway.envoyproxy.io",
-      "uid": "b0ebc87d-01fb-462f-88f9-264b66021c64"
+      "uid": "d9a9f7eb-87c9-4b1b-b28d-fc2adeb21898"
     },
     "spec": {
       "additionalPrinterColumns": [

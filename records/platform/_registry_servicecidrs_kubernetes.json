@@ -9,7 +9,7 @@
         "networking.k8s.io/service-cidr-finalizer"
       ],
       "name": "kubernetes",
-      "uid": "8fb879af-4507-454e-83fc-bb5fc06aba3d"
+      "uid": "11c3d195-daf4-4ebc-967c-1d6c547a64af"
     },
     "spec": {
       "cidrs": [

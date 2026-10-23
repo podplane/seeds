@@ -20,12 +20,12 @@
       },
       "name": "sourcegateway",
       "namespace": "platform-sourcegateway",
-      "uid": "a302ad3e-03d8-4400-ba7a-d897938e6048"
+      "uid": "13cd63f6-788e-4115-962e-90a7bff88a35"
     },
     "spec": {
-      "clusterIP": "198.18.0.8",
+      "clusterIP": "198.18.0.7",
       "clusterIPs": [
-        "198.18.0.8"
+        "198.18.0.7"
       ],
       "internalTrafficPolicy": "Cluster",
       "ipFamilies": [

@@ -16,13 +16,13 @@
         "app.kubernetes.io/managed-by": "Helm",
         "app.kubernetes.io/name": "agent-sandbox",
         "app.kubernetes.io/version": "v1.0.4",
-        "helm.sh/chart": "agent-sandbox-1.0.0_574213139127",
+        "helm.sh/chart": "agent-sandbox-1.0.0_967740ed774b",
         "helm.toolkit.fluxcd.io/name": "agent-sandbox",
         "helm.toolkit.fluxcd.io/namespace": "platform-agent-sandbox"
       },
       "name": "agent-sandbox-controller",
       "namespace": "platform-agent-sandbox",
-      "uid": "db27e21b-bb45-4f18-971e-448c941019f0"
+      "uid": "f6479877-1a92-4f75-ac98-c402022670c4"
     },
     "spec": {
       "progressDeadlineSeconds": 600,

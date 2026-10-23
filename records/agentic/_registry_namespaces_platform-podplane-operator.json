@@ -20,7 +20,7 @@
         "pod-security.kubernetes.io/warn": "restricted"
       },
       "name": "platform-podplane-operator",
-      "uid": "b34f4019-2a88-413f-b975-a9e80d57f39d"
+      "uid": "cdb1e7d4-cb0c-4f28-a099-244e9df704ca"
     },
     "spec": {
       "finalizers": [

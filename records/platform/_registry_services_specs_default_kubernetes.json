@@ -11,7 +11,7 @@
       },
       "name": "kubernetes",
       "namespace": "default",
-      "uid": "a8bbde19-d63e-4ea1-a8ba-cd57a7ab0b28"
+      "uid": "5a48021e-0f89-4578-9e0a-a6d7adabe113"
     },
     "spec": {
       "clusterIP": "198.18.0.1",

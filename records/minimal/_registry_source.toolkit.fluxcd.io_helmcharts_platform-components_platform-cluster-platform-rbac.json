@@ -15,7 +15,7 @@
       },
       "name": "platform-cluster-platform-rbac",
       "namespace": "platform-components",
-      "uid": "e542bc1a-d096-4e36-becc-fb72707abfb8"
+      "uid": "319ab16d-bde9-4f29-b21d-7da078f1b9fd"
     },
     "spec": {
       "chart": "./charts/platform-rbac",

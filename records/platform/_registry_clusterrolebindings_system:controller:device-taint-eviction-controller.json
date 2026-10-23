@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:controller:device-taint-eviction-controller",
-      "uid": "be47ab03-b119-4346-846c-ab5e061123d8"
+      "uid": "de3e85f3-ca2e-4612-9176-5198a9de9070"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

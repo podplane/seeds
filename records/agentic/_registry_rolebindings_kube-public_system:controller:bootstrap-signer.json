@@ -13,7 +13,7 @@
       },
       "name": "system:controller:bootstrap-signer",
       "namespace": "kube-public",
-      "uid": "ea0836e8-94b3-4880-8eb7-70964c5222ae"
+      "uid": "1d107be9-423b-4f00-89bb-c4b4f9f8e835"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

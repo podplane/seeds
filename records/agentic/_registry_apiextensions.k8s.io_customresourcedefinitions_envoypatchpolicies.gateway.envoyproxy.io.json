@@ -17,7 +17,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "envoypatchpolicies.gateway.envoyproxy.io",
-      "uid": "887c6a44-0b94-4fbf-a16d-381456cf67a7"
+      "uid": "c49d17b2-f79b-4ebb-aee7-e2138e46b01d"
     },
     "spec": {
       "additionalPrinterColumns": [

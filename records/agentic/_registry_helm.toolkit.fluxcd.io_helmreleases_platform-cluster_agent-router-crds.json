@@ -20,7 +20,7 @@
       },
       "name": "agent-router-crds",
       "namespace": "platform-cluster",
-      "uid": "697776f0-1f58-4455-b580-94b4efca7932"
+      "uid": "679c7099-d71d-4ec2-9df7-80374e503972"
     },
     "spec": {
       "chart": {

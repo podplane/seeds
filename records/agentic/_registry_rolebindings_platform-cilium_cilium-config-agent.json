@@ -17,7 +17,7 @@
       },
       "name": "cilium-config-agent",
       "namespace": "platform-cilium",
-      "uid": "ea19b1f1-f5d7-457d-a2d9-6ade21ac8cff"
+      "uid": "21b6dffa-64e3-4f8d-af3b-f8dcb74ccff6"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

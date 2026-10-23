@@ -17,7 +17,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "objectstoragebuckets.sourcegateway.dev",
-      "uid": "7cd170bd-5e19-41e7-9e36-4e0ea574c1a5"
+      "uid": "a12cfdfe-3f18-4c45-a487-53b1796a6e00"
     },
     "spec": {
       "additionalPrinterColumns": [

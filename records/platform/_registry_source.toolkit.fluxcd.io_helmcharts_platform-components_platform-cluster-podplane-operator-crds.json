@@ -15,7 +15,7 @@
       },
       "name": "platform-cluster-podplane-operator-crds",
       "namespace": "platform-components",
-      "uid": "b03f4457-b39e-47e3-b3d9-407bf25b73a0"
+      "uid": "0db976b1-aa0a-4e42-a56b-65eb4dc17b21"
     },
     "spec": {
       "chart": "./charts/podplane-operator-crds",

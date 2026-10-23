@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:controller:cronjob-controller",
-      "uid": "7908c0d1-7603-4bfe-aa8c-88d60446e3a3"
+      "uid": "a7979070-d7b6-4316-8c87-7ceabae4d314"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

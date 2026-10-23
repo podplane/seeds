@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:volume-scheduler",
-      "uid": "4fb67610-e87e-4091-bb63-5cee52e96b57"
+      "uid": "0c4f0d26-7762-4189-94ec-8f37c3705cd9"
     },
     "rules": [
       {
