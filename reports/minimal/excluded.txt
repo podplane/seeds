@@ -51,6 +51,8 @@
 /registry/clusterrolebindings/openebs-lvm-driver-registrar-binding
 /registry/clusterrolebindings/openebs-lvm-provisioner-binding
 /registry/clusterrolebindings/openebs-lvm-snapshotter-binding
+/registry/clusterrolebindings/platform-agent-router-gateway-helm-cluster-infra-manager
+/registry/clusterrolebindings/platform-agent-router-gateway-helm-envoy-gateway-rolebinding
 /registry/clusterrolebindings/platform-envoy-gateway-gateway-helm-cluster-infra-manager
 /registry/clusterrolebindings/platform-envoy-gateway-gateway-helm-envoy-gateway-rolebinding
 /registry/clusterrolebindings/platform-podplane-operator
@@ -66,6 +68,8 @@
 /registry/clusterroles/openebs-lvm-driver-registrar-role
 /registry/clusterroles/openebs-lvm-provisioner-role
 /registry/clusterroles/openebs-lvm-snapshotter-role
+/registry/clusterroles/platform-agent-router-gateway-helm-cluster-infra-manager
+/registry/clusterroles/platform-agent-router-gateway-helm-envoy-gateway-role
 /registry/clusterroles/platform-envoy-gateway-gateway-helm-cluster-infra-manager
 /registry/clusterroles/platform-envoy-gateway-gateway-helm-envoy-gateway-role
 /registry/clusterroles/platform-podplane-operator

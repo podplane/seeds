@@ -21,7 +21,7 @@
       },
       "name": "sourcegateway-ingress",
       "namespace": "platform-sourcegateway",
-      "uid": "efaf753c-50b7-4292-a681-1b0342343b49"
+      "uid": "4e27d62f-f43f-4ecb-9846-6d6d9becddc9"
     },
     "spec": {
       "ingress": [

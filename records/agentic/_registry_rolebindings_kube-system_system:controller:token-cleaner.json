@@ -13,7 +13,7 @@
       },
       "name": "system:controller:token-cleaner",
       "namespace": "kube-system",
-      "uid": "328d91bd-c531-4c76-a1ed-6a594571b896"
+      "uid": "56ea3875-0f35-481c-bcad-27c2bc44bd24"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

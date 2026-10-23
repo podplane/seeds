@@ -20,7 +20,7 @@
       },
       "name": "envoy-gateway",
       "namespace": "platform-envoy-gateway",
-      "uid": "a8a773b8-7f88-41a7-95e2-f551c96ed051"
+      "uid": "68b55835-ef51-46fd-bcae-3b46ffe21d74"
     },
     "spec": {
       "chart": {
@@ -66,13 +66,6 @@
       },
       "values": {
         "gateway-helm": {
-          "config": {
-            "envoyGateway": {
-              "extensionApis": {
-                "enableBackend": true
-              }
-            }
-          },
           "global": {
             "images": {
               "envoyGateway": {

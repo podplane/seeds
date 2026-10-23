@@ -22,7 +22,7 @@
       },
       "name": "agent-router",
       "namespace": "platform-agent-router",
-      "uid": "d455f8b1-2f9b-4dc4-9d42-72a435defae2"
+      "uid": "4c70a132-e59f-43d2-9697-37891d8344a5"
     },
     "spec": {
       "progressDeadlineSeconds": 600,
@@ -58,7 +58,7 @@
                 "--extProcImagePullPolicy=IfNotPresent",
                 "--extProcLogLevel=info",
                 "--extProcLogFormat=text",
-                "--envoyGatewayNamespace=platform-envoy-gateway",
+                "--envoyGatewayNamespace=platform-agent-router",
                 "--extProcEnableRedaction=true",
                 "--endpointPrefixes=openai:,cohere:/cohere,anthropic:/anthropic,typesafe:/typesafe",
                 "--extProcExtraEnvVars=DISABLE_PPROF=true",

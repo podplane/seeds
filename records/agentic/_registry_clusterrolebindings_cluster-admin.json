@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "cluster-admin",
-      "uid": "f067544a-45e0-498a-8b36-1e661b01d867"
+      "uid": "9c1c65eb-d96c-442a-aa23-f0195e611ad4"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

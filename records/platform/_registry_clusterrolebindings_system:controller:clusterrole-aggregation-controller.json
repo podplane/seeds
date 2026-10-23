@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:controller:clusterrole-aggregation-controller",
-      "uid": "bfa4dcb2-d7cf-444b-9c04-4f8a4a3c6f7b"
+      "uid": "53a0fcf1-e9fd-4e9d-8b51-08ed7ceefc8c"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

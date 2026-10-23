@@ -12,7 +12,7 @@
       "generation": 1,
       "name": "platform-components",
       "namespace": "platform-components",
-      "uid": "728db54c-5167-4fde-b6f0-fed45f74e193"
+      "uid": "855cd6f8-e4f4-4348-a698-91d1acee1c81"
     },
     "spec": {
       "chart": {
@@ -120,7 +120,7 @@
                         "oidc": {
                           "clientID": "default",
                           "groupsClaim": "groups",
-                          "issuerURL": "https://oidc.localhost:62769/oidc",
+                          "issuerURL": "https://oidc.localhost:56335/oidc",
                           "usernameClaim": "email"
                         },
                         "spiffe": {
@@ -158,7 +158,7 @@
                     "oidc": {
                       "audience": "default",
                       "groupsClaim": "groups",
-                      "issuer": "https://oidc.localhost:62769/oidc",
+                      "issuer": "https://oidc.localhost:56335/oidc",
                       "usernameClaim": "email"
                     },
                     "registryHostname": "default-registry.local",
@@ -166,7 +166,7 @@
                       "accessKeyID": "test",
                       "bucket": "registry",
                       "driver": "s3",
-                      "endpoint": "http://10.0.2.2:62768/s3/cache",
+                      "endpoint": "http://10.0.2.2:56334/s3/cache",
                       "forcePathStyle": true,
                       "region": "local",
                       "secretAccessKey": "test",

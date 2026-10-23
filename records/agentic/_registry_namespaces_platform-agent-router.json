@@ -20,7 +20,7 @@
         "pod-security.kubernetes.io/warn": "restricted"
       },
       "name": "platform-agent-router",
-      "uid": "e85d30b5-980e-4b52-b618-bd1324b910eb"
+      "uid": "80432ed9-bc70-4648-a0d6-e92f4f512627"
     },
     "spec": {
       "finalizers": [

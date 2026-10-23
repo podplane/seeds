@@ -3,7 +3,7 @@
   "value": {
     "apiVersion": "v1",
     "data": {
-      "envoy-gateway.yaml": "apiVersion: gateway.envoyproxy.io/v1alpha1\nkind: EnvoyGateway\nenvoyProxy:\n  mergeGateways: false\n  provider:\n    kubernetes:\n      envoyDeployment:\n        container:\n          image: default-registry.local/mirror/docker.io/envoyproxy/envoy:distroless-v1.39.1\n    type: Kubernetes\nextensionApis:\n  enableBackend: true\n  enableSDSSecretRef: true\nextensionManager:\n  hooks:\n    xdsTranslator:\n      post:\n      - Translation\n      - Cluster\n      - Route\n      translation:\n        cluster:\n          includeAll: true\n        listener:\n          includeAll: true\n        route:\n          includeAll: true\n        secret:\n          includeAll: true\n  service:\n    fqdn:\n      hostname: agent-router.platform-agent-router.svc.cluster.local\n      port: 1063\ngateway:\n  controllerName: gateway.envoyproxy.io/gatewayclass-controller\nlogging:\n  level:\n    default: info\nprovider:\n  kubernetes:\n    deploy:\n      type: GatewayNamespace\n    rateLimitDeployment:\n      container:\n        image: docker.io/envoyproxy/ratelimit:0482748e\n      patch:\n        type: StrategicMerge\n        value:\n          spec:\n            template:\n              spec:\n                containers:\n                - imagePullPolicy: IfNotPresent\n                  name: envoy-ratelimit\n    shutdownManager:\n      image: default-registry.local/mirror/docker.io/envoyproxy/gateway:v1.9.2\n  type: Kubernetes"
+      "envoy-gateway.yaml": "apiVersion: gateway.envoyproxy.io/v1alpha1\nkind: EnvoyGateway\nenvoyProxy:\n  mergeGateways: false\n  provider:\n    kubernetes:\n      envoyDeployment:\n        container:\n          image: default-registry.local/mirror/docker.io/envoyproxy/envoy:distroless-v1.39.1\n    type: Kubernetes\nextensionApis:\n  enableSDSSecretRef: true\ngateway:\n  controllerName: gateway.envoyproxy.io/gatewayclass-controller\nlogging:\n  level:\n    default: info\nprovider:\n  kubernetes:\n    deploy:\n      type: GatewayNamespace\n    rateLimitDeployment:\n      container:\n        image: docker.io/envoyproxy/ratelimit:0482748e\n      patch:\n        type: StrategicMerge\n        value:\n          spec:\n            template:\n              spec:\n                containers:\n                - imagePullPolicy: IfNotPresent\n                  name: envoy-ratelimit\n    shutdownManager:\n      image: default-registry.local/mirror/docker.io/envoyproxy/gateway:v1.9.2\n  type: Kubernetes"
     },
     "kind": "ConfigMap",
     "metadata": {
@@ -23,7 +23,7 @@
       },
       "name": "envoy-gateway-config",
       "namespace": "platform-envoy-gateway",
-      "uid": "d44da00e-eab3-4ee1-b72e-83d308557fdd"
+      "uid": "392e1742-29ad-4ca6-a922-91410358b789"
     }
   }
 }

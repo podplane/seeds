@@ -15,7 +15,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-agent-router"
       },
       "name": "agent-router:platform-agent-router",
-      "uid": "8036e701-0dd3-41a9-8ac1-e0cfc3c5c273"
+      "uid": "9b4742c1-733c-455c-9e75-49e995ac9da9"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

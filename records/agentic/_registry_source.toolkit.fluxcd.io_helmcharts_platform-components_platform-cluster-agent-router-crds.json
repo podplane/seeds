@@ -15,7 +15,7 @@
       },
       "name": "platform-cluster-agent-router-crds",
       "namespace": "platform-components",
-      "uid": "a82a3b0e-1fec-4b2f-9498-2460f935dcde"
+      "uid": "7b20323d-d295-49ef-bbef-25c4231ba3ce"
     },
     "spec": {
       "chart": "./charts/agent-router-crds",

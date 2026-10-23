@@ -16,7 +16,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cilium"
       },
       "name": "cilium-operator",
-      "uid": "e57a8b11-e61a-4af4-9bd8-51f729419cff"
+      "uid": "661566a9-a3fc-4572-aebe-7cdd1c644c8d"
     },
     "rules": [
       {

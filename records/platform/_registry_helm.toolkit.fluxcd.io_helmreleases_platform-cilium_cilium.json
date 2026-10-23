@@ -20,7 +20,7 @@
       },
       "name": "cilium",
       "namespace": "platform-cilium",
-      "uid": "52646b32-8771-4bc9-b969-f3e6e40ff9c2"
+      "uid": "10191150-bea7-491e-8e4e-49c65371228b"
     },
     "spec": {
       "chart": {

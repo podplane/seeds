@@ -20,7 +20,7 @@
       },
       "name": "agent-router",
       "namespace": "platform-agent-router",
-      "uid": "84f90571-0721-46cc-8818-bead387c199c"
+      "uid": "97d970cf-d3fb-4906-9094-2500e7983820"
     },
     "spec": {
       "chart": {
@@ -41,8 +41,16 @@
           "namespace": "platform-cluster"
         },
         {
-          "name": "envoy-gateway",
-          "namespace": "platform-envoy-gateway"
+          "name": "envoy-gateway-crds",
+          "namespace": "platform-cluster"
+        },
+        {
+          "name": "gateway-api-crds",
+          "namespace": "platform-cluster"
+        },
+        {
+          "name": "podplane-operator",
+          "namespace": "platform-podplane-operator"
         }
       ],
       "install": {
@@ -70,6 +78,15 @@
           "extProc": {
             "image": {
               "repository": "default-registry.local/mirror/docker.io/envoyproxy/ai-gateway-extproc"
+            }
+          }
+        },
+        "gateway-helm": {
+          "global": {
+            "images": {
+              "envoyGateway": {
+                "image": "default-registry.local/mirror/docker.io/envoyproxy/gateway:v1.9.2"
+              }
             }
           }
         },

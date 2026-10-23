@@ -16,7 +16,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "platform-deny-cilium-exec-vapb",
-      "uid": "f1a2177a-83eb-41b8-bda4-86c67df3a1b5"
+      "uid": "ca67e2eb-06ef-4d80-9e8b-5706da76a717"
     },
     "spec": {
       "matchResources": {

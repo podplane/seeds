@@ -20,7 +20,7 @@
         "pod-security.kubernetes.io/warn": "privileged"
       },
       "name": "platform-coredns",
-      "uid": "256ed7d3-82c3-41ca-a0f9-1d258d72860b"
+      "uid": "7363bdb0-43d6-4458-adaf-babf0bc4d93a"
     },
     "spec": {
       "finalizers": [

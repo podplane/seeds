@@ -19,7 +19,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-fluxcd"
       },
       "name": "crd-controller",
-      "uid": "4ff59798-c6c8-4322-9e6d-dac277434978"
+      "uid": "e4f1c8af-361f-4956-8811-ed04ac57b307"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

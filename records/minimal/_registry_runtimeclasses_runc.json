@@ -16,7 +16,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "runc",
-      "uid": "e76b501c-45a2-40fd-946e-0c292a473f36"
+      "uid": "2f6c18cf-4729-495a-a986-afe785226a63"
     }
   }
 }

@@ -21,7 +21,7 @@
       },
       "name": "source-controller",
       "namespace": "platform-fluxcd",
-      "uid": "d1d49027-7dc1-4cfb-95c9-341c31dca430"
+      "uid": "32d6b88c-3e04-43b7-8ee7-083e0b3e0009"
     },
     "spec": {
       "clusterIP": "198.18.0.2",

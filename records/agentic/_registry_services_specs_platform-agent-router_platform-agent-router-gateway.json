@@ -20,10 +20,10 @@
           "apiVersion": "gateway.networking.k8s.io/v1",
           "kind": "Gateway",
           "name": "platform-agent-router-gateway",
-          "uid": "347392e1-d555-4eaf-bb97-3b16e3c022f0"
+          "uid": "8b1fb724-8a98-45fb-b5e5-4be6d2798aae"
         }
       ],
-      "uid": "03159bd7-5833-4451-a8e9-3f1e214f9697"
+      "uid": "6ff923ca-84b1-4a1c-aee5-9a7c1a20ea13"
     },
     "spec": {
       "clusterIP": "198.18.0.10",

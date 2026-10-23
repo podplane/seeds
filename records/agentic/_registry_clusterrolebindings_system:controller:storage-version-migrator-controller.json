@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:controller:storage-version-migrator-controller",
-      "uid": "bcf4e37f-4a06-4e8c-9590-72ec490c89f0"
+      "uid": "29a1fc03-443e-4e54-8322-30f7176d4324"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

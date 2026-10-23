@@ -19,7 +19,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-envoy-gateway"
       },
       "name": "platform-envoy-gateway-gateway-helm-envoy-gateway-rolebinding",
-      "uid": "74bd145a-285a-43c6-b87a-d656ff5c27e4"
+      "uid": "f80366b7-43e4-4a04-a36e-3637ec8ae1dd"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

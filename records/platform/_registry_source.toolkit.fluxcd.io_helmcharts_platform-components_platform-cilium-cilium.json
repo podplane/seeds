@@ -15,7 +15,7 @@
       },
       "name": "platform-cilium-cilium",
       "namespace": "platform-components",
-      "uid": "18a908da-df57-47e8-be80-9b43455f3e0e"
+      "uid": "646608d0-0e3d-401c-9df7-2424a6856e18"
     },
     "spec": {
       "chart": "./charts/cilium",

@@ -20,7 +20,7 @@
       },
       "name": "agent-sandbox-crds",
       "namespace": "platform-cluster",
-      "uid": "2e2fb7a0-d780-477c-b976-2976e2868de5"
+      "uid": "cbb18276-1f57-4e1b-9471-643631e442ee"
     },
     "spec": {
       "chart": {

@@ -20,7 +20,7 @@
         "pod-security.kubernetes.io/warn": "restricted"
       },
       "name": "platform-cluster",
-      "uid": "a22486dc-a4c8-4dbf-8a92-ec5d8df284d0"
+      "uid": "a9111b2f-a5d7-4a5e-a686-0b7c64d865cf"
     },
     "spec": {
       "finalizers": [

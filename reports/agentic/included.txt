@@ -126,6 +126,8 @@
 /registry/clusterrolebindings/cluster-reconciler
 /registry/clusterrolebindings/crd-controller
 /registry/clusterrolebindings/envoy-ai-gateway-inference-pool-reader-binding:platform-agent-router
+/registry/clusterrolebindings/platform-agent-router-gateway-helm-cluster-infra-manager
+/registry/clusterrolebindings/platform-agent-router-gateway-helm-envoy-gateway-rolebinding
 /registry/clusterrolebindings/platform-coredns
 /registry/clusterrolebindings/platform-envoy-gateway-gateway-helm-cluster-infra-manager
 /registry/clusterrolebindings/platform-envoy-gateway-gateway-helm-envoy-gateway-rolebinding
@@ -200,6 +202,8 @@
 /registry/clusterroles/crd-controller
 /registry/clusterroles/edit
 /registry/clusterroles/envoy-ai-gateway-inference-pool-reader:platform-agent-router
+/registry/clusterroles/platform-agent-router-gateway-helm-cluster-infra-manager
+/registry/clusterroles/platform-agent-router-gateway-helm-envoy-gateway-role
 /registry/clusterroles/platform-coredns
 /registry/clusterroles/platform-envoy-gateway-gateway-helm-cluster-infra-manager
 /registry/clusterroles/platform-envoy-gateway-gateway-helm-envoy-gateway-role
@@ -286,6 +290,7 @@
 /registry/clusterroles/view
 /registry/configmaps/kube-system/extension-apiserver-authentication
 /registry/configmaps/kube-system/kube-apiserver-legacy-service-account-token-tracking
+/registry/configmaps/platform-agent-router/envoy-gateway-config
 /registry/configmaps/platform-agent-router/platform-agent-router-gateway
 /registry/configmaps/platform-cilium/cilium-config
 /registry/configmaps/platform-coredns/platform-coredns
@@ -301,6 +306,7 @@
 /registry/daemonsets/platform-secrets-store-csi-driver/platform-secrets-store-csi-driver
 /registry/daemonsets/platform-secrets-store-csi-provider-openbao/platform-secrets-store-csi-provider-openbao-csi-provider
 /registry/deployments/platform-agent-router/agent-router
+/registry/deployments/platform-agent-router/envoy-gateway
 /registry/deployments/platform-agent-router/platform-agent-router-gateway
 /registry/deployments/platform-agent-sandbox/agent-sandbox-controller
 /registry/deployments/platform-cilium/cilium-operator
@@ -398,6 +404,8 @@
 /registry/rolebindings/kube-system/system:controller:bootstrap-signer
 /registry/rolebindings/kube-system/system:controller:cloud-provider
 /registry/rolebindings/kube-system/system:controller:token-cleaner
+/registry/rolebindings/platform-agent-router/platform-agent-router-gateway-helm-infra-manager
+/registry/rolebindings/platform-agent-router/platform-agent-router-gateway-helm-leader-election-rolebinding
 /registry/rolebindings/platform-cilium/cilium-config-agent
 /registry/rolebindings/platform-envoy-gateway/platform-envoy-gateway-gateway-helm-infra-manager
 /registry/rolebindings/platform-envoy-gateway/platform-envoy-gateway-gateway-helm-leader-election-rolebinding
@@ -409,6 +417,8 @@
 /registry/roles/kube-system/system:controller:bootstrap-signer
 /registry/roles/kube-system/system:controller:cloud-provider
 /registry/roles/kube-system/system:controller:token-cleaner
+/registry/roles/platform-agent-router/platform-agent-router-gateway-helm-infra-manager
+/registry/roles/platform-agent-router/platform-agent-router-gateway-helm-leader-election-role
 /registry/roles/platform-cilium/cilium-config-agent
 /registry/roles/platform-envoy-gateway/platform-envoy-gateway-gateway-helm-infra-manager
 /registry/roles/platform-envoy-gateway/platform-envoy-gateway-gateway-helm-leader-election-role
@@ -484,6 +494,7 @@
 /registry/serviceaccounts/kube-system/volumeattributesclass-protection-controller
 /registry/serviceaccounts/platform-agent-router/agent-router
 /registry/serviceaccounts/platform-agent-router/default
+/registry/serviceaccounts/platform-agent-router/envoy-gateway
 /registry/serviceaccounts/platform-agent-router/platform-agent-router-gateway
 /registry/serviceaccounts/platform-agent-sandbox/agent-sandbox-controller
 /registry/serviceaccounts/platform-agent-sandbox/default
@@ -514,6 +525,7 @@
 /registry/servicecidrs/kubernetes
 /registry/services/specs/default/kubernetes
 /registry/services/specs/platform-agent-router/agent-router
+/registry/services/specs/platform-agent-router/envoy-gateway
 /registry/services/specs/platform-agent-router/platform-agent-router-gateway
 /registry/services/specs/platform-agent-sandbox/agent-sandbox-controller
 /registry/services/specs/platform-coredns/platform-coredns

@@ -1,0 +1,38 @@
+{
+  "key": "/registry/rolebindings/platform-agent-router/platform-agent-router-gateway-helm-infra-manager",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "RoleBinding",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-agent-router",
+        "meta.helm.sh/release-namespace": "platform-agent-router"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/instance": "platform-agent-router",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "gateway-helm",
+        "app.kubernetes.io/version": "v1.9.2",
+        "helm.sh/chart": "gateway-helm-v1.9.2",
+        "helm.toolkit.fluxcd.io/name": "agent-router",
+        "helm.toolkit.fluxcd.io/namespace": "platform-agent-router"
+      },
+      "name": "platform-agent-router-gateway-helm-infra-manager",
+      "namespace": "platform-agent-router",
+      "uid": "f0c37103-3091-48b9-ad7c-c639442fa7b3"
+    },
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "Role",
+      "name": "platform-agent-router-gateway-helm-infra-manager"
+    },
+    "subjects": [
+      {
+        "kind": "ServiceAccount",
+        "name": "envoy-gateway",
+        "namespace": "platform-agent-router"
+      }
+    ]
+  }
+}

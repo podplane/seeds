@@ -13,7 +13,7 @@
       },
       "name": "system:controller:cloud-provider",
       "namespace": "kube-system",
-      "uid": "164fbd80-67dc-4be9-94a1-08f5e857ff1d"
+      "uid": "9301a5c2-dd02-4273-bfd5-89467426f259"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

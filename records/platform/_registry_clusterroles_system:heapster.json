@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:heapster",
-      "uid": "ec26d83e-e4db-449b-87ef-2eae28341df1"
+      "uid": "253f0fcf-ea43-4c8e-a5da-375f1e1db448"
     },
     "rules": [
       {

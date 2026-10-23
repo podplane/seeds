@@ -20,7 +20,7 @@
       },
       "name": "fluxcd",
       "namespace": "platform-fluxcd",
-      "uid": "6a0f54be-29ab-4c67-812b-23f3b3c007f2"
+      "uid": "290eb78c-56a8-4917-9c53-a49992196c78"
     },
     "spec": {
       "chart": {

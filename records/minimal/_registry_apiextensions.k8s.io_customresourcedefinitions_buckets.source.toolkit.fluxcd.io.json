@@ -22,7 +22,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "buckets.source.toolkit.fluxcd.io",
-      "uid": "2f38d15b-3e61-48b8-9e8e-83cb5272720b"
+      "uid": "8c8fed71-3b92-4482-8f9d-9ce39a3a5991"
     },
     "spec": {
       "additionalPrinterColumns": [

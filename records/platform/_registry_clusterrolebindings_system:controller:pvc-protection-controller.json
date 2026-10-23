@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:controller:pvc-protection-controller",
-      "uid": "a3ac4359-e02c-48f4-93a3-9a9e57f7f890"
+      "uid": "1da04594-943f-4f22-ae4f-a2c8f809f925"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

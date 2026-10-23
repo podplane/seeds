@@ -9,7 +9,7 @@
         "kube-aggregator.kubernetes.io/automanaged": "true"
       },
       "name": "v1beta1.aigateway.envoyproxy.io",
-      "uid": "cdc544bf-dab8-42ac-8933-0a1cfaa25a83"
+      "uid": "2179ed19-6cd1-4437-8b37-4a685b6e75dd"
     },
     "spec": {
       "group": "aigateway.envoyproxy.io",

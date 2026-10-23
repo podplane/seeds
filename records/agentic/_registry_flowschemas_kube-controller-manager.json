@@ -10,7 +10,7 @@
       "creationTimestamp": "2015-07-11T04:02:31Z",
       "generation": 1,
       "name": "kube-controller-manager",
-      "uid": "784d037c-2199-4a8b-a537-3f65d2b4ae7a"
+      "uid": "f1f5be38-42e0-4ad0-917d-015c07413d04"
     },
     "spec": {
       "distinguisherMethod": {

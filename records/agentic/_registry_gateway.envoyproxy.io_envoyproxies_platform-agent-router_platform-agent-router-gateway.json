@@ -17,7 +17,7 @@
       },
       "name": "platform-agent-router-gateway",
       "namespace": "platform-agent-router",
-      "uid": "28a10822-cf6e-4fa9-acb3-7109e4d8788f"
+      "uid": "85f05f65-ee4c-46c5-8eb2-db73a252dfa3"
     },
     "spec": {
       "logging": {
