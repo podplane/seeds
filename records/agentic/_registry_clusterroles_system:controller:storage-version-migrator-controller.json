@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:controller:storage-version-migrator-controller",
-      "uid": "50eeebd7-34d9-42ce-9a9a-3769c0615b3b"
+      "uid": "c86be00b-38f9-45a2-b93c-dbf7c10ef710"
     },
     "rules": [
       {

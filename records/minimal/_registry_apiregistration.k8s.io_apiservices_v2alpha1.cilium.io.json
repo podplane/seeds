@@ -9,7 +9,7 @@
         "kube-aggregator.kubernetes.io/automanaged": "true"
       },
       "name": "v2alpha1.cilium.io",
-      "uid": "e8cb2afd-dd6f-437a-adcb-daf6768a2863"
+      "uid": "552edc21-5c2e-48f3-903f-c33b5fef75d0"
     },
     "spec": {
       "group": "cilium.io",

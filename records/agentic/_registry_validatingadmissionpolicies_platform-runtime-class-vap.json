@@ -16,7 +16,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "platform-runtime-class-vap",
-      "uid": "81342dfc-b3fe-4103-8c70-91260053f5e4"
+      "uid": "35a397e0-abcd-4275-a039-fd2baf03af92"
     },
     "spec": {
       "failurePolicy": "Fail",

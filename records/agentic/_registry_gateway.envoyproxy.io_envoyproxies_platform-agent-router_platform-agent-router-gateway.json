@@ -1,0 +1,79 @@
+{
+  "key": "/registry/gateway.envoyproxy.io/envoyproxies/platform-agent-router/platform-agent-router-gateway",
+  "value": {
+    "apiVersion": "gateway.envoyproxy.io/v1alpha1",
+    "kind": "EnvoyProxy",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-agent-router",
+        "meta.helm.sh/release-namespace": "platform-agent-router"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "agent-router",
+        "helm.toolkit.fluxcd.io/namespace": "platform-agent-router"
+      },
+      "name": "platform-agent-router-gateway",
+      "namespace": "platform-agent-router",
+      "uid": "64d25012-64b6-41b7-bfb3-8a177e9a5bf7"
+    },
+    "spec": {
+      "logging": {
+        "level": {
+          "default": "warn"
+        }
+      },
+      "mergeType": "Replace",
+      "provider": {
+        "kubernetes": {
+          "envoyDeployment": {
+            "container": {
+              "image": "default-registry.local/mirror/docker.io/envoyproxy/envoy:distroless-v1.39.1"
+            },
+            "patch": {
+              "type": "StrategicMerge",
+              "value": {
+                "spec": {
+                  "template": {
+                    "spec": {
+                      "securityContext": {
+                        "fsGroup": 65532,
+                        "runAsNonRoot": true,
+                        "seccompProfile": {
+                          "type": "RuntimeDefault"
+                        }
+                      },
+                      "volumes": [
+                        {
+                          "configMap": null,
+                          "name": "certs",
+                          "projected": {
+                            "sources": [
+                              {
+                                "clusterTrustBundle": {
+                                  "name": "certificates.podplane.dev:workload:roots",
+                                  "path": "ca.crt"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "envoyService": {
+            "externalTrafficPolicy": "Local",
+            "type": "ClusterIP"
+          }
+        },
+        "type": "Kubernetes"
+      }
+    }
+  }
+}

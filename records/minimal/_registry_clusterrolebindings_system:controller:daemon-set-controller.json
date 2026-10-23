@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:controller:daemon-set-controller",
-      "uid": "d2713fd6-39cf-4e00-9ef4-ed5ac9e22b97"
+      "uid": "f2711323-eb9e-4832-b2f7-ab9b7643a121"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

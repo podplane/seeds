@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:certificates.k8s.io:certificatesigningrequests:selfnodeclient",
-      "uid": "805bccd9-a8eb-4431-828d-313fdf20437d"
+      "uid": "f5b794a2-cc48-4237-be96-e1b1028f003e"
     },
     "rules": [
       {

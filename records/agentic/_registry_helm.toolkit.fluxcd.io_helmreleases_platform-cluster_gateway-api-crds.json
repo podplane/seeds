@@ -20,7 +20,7 @@
       },
       "name": "gateway-api-crds",
       "namespace": "platform-cluster",
-      "uid": "853ae0ab-9a24-4716-b8fe-fbfed9da3b5a"
+      "uid": "f7809e06-10b6-4c35-8248-2bd5cc2df461"
     },
     "spec": {
       "chart": {

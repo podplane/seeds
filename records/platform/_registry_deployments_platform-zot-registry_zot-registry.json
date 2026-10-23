@@ -22,7 +22,7 @@
       },
       "name": "zot-registry",
       "namespace": "platform-zot-registry",
-      "uid": "a8f1a81f-bf04-4fc2-b05e-6f0300587208"
+      "uid": "5a59c877-bc5a-41a7-82b9-5c36c05870a7"
     },
     "spec": {
       "progressDeadlineSeconds": 600,

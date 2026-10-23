@@ -1,0 +1,60 @@
+{
+  "key": "/registry/mutatingadmissionpolicies/platform-agent-router-extproc-gvisor-map",
+  "value": {
+    "apiVersion": "admissionregistration.k8s.io/v1",
+    "kind": "MutatingAdmissionPolicy",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-agent-router",
+        "meta.helm.sh/release-namespace": "platform-agent-router"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "agent-router",
+        "helm.toolkit.fluxcd.io/namespace": "platform-agent-router"
+      },
+      "name": "platform-agent-router-extproc-gvisor-map",
+      "uid": "cf827b85-a4ae-4beb-82f4-6326b441611e"
+    },
+    "spec": {
+      "failurePolicy": "Fail",
+      "matchConstraints": {
+        "matchPolicy": "Equivalent",
+        "namespaceSelector": {},
+        "objectSelector": {
+          "matchLabels": {
+            "app.kubernetes.io/managed-by": "envoy-gateway"
+          }
+        },
+        "resourceRules": [
+          {
+            "apiGroups": [
+              ""
+            ],
+            "apiVersions": [
+              "v1"
+            ],
+            "operations": [
+              "CREATE"
+            ],
+            "resources": [
+              "pods"
+            ],
+            "scope": "*"
+          }
+        ]
+      },
+      "mutations": [
+        {
+          "applyConfiguration": {
+            "expression": "Object{metadata: Object.metadata{annotations:\n\n\n  object.spec.?volumes.orValue([]).exists(v, v.name == \"ai-gateway-extproc-uds\") ? {\n    \"dev.gvisor.spec.mount.ai-gateway-extproc-uds.share\": \"pod\",\n    \"dev.gvisor.spec.mount.ai-gateway-extproc-uds.type\": \"tmpfs\",\n    \"dev.gvisor.spec.mount.ai-gateway-extproc-uds.options\": \"rw,rprivate\"\n  } : {}\n}}"
+          },
+          "patchType": "ApplyConfiguration"
+        }
+      ],
+      "reinvocationPolicy": "IfNeeded"
+    }
+  }
+}

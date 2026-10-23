@@ -6,7 +6,7 @@
     "metadata": {
       "annotations": {
         "api-approved.kubernetes.io": "https://github.com/kubernetes-sigs/gateway-api/pull/4530",
-        "gateway.networking.k8s.io/bundle-version": "v1.5.1",
+        "gateway.networking.k8s.io/bundle-version": "v1.6.1",
         "gateway.networking.k8s.io/channel": "experimental",
         "meta.helm.sh/release-name": "platform-gateway-api-crds",
         "meta.helm.sh/release-namespace": "platform-cluster"
@@ -19,7 +19,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "xmeshes.gateway.networking.x-k8s.io",
-      "uid": "340af658-f906-4bf7-98fa-b1b59c0d5291"
+      "uid": "cc4d48c9-a9b2-4b3f-b36d-90cef868905f"
     },
     "spec": {
       "additionalPrinterColumns": [

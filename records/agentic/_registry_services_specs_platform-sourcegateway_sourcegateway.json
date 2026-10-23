@@ -1,0 +1,52 @@
+{
+  "key": "/registry/services/specs/platform-sourcegateway/sourcegateway",
+  "value": {
+    "apiVersion": "v1",
+    "kind": "Service",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-sourcegateway",
+        "meta.helm.sh/release-namespace": "platform-sourcegateway"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/instance": "platform-sourcegateway",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "sourcegateway",
+        "app.kubernetes.io/version": "v0.1.5",
+        "helm.sh/chart": "sourcegateway-0.1.5",
+        "helm.toolkit.fluxcd.io/name": "sourcegateway",
+        "helm.toolkit.fluxcd.io/namespace": "platform-sourcegateway"
+      },
+      "name": "sourcegateway",
+      "namespace": "platform-sourcegateway",
+      "uid": "a302ad3e-03d8-4400-ba7a-d897938e6048"
+    },
+    "spec": {
+      "clusterIP": "198.18.0.8",
+      "clusterIPs": [
+        "198.18.0.8"
+      ],
+      "internalTrafficPolicy": "Cluster",
+      "ipFamilies": [
+        "IPv4",
+        "IPv6"
+      ],
+      "ipFamilyPolicy": "PreferDualStack",
+      "ports": [
+        {
+          "name": "https",
+          "port": 443,
+          "protocol": "TCP",
+          "targetPort": "https"
+        }
+      ],
+      "selector": {
+        "app.kubernetes.io/instance": "platform-sourcegateway",
+        "app.kubernetes.io/name": "sourcegateway"
+      },
+      "sessionAffinity": "None",
+      "type": "ClusterIP"
+    }
+  }
+}

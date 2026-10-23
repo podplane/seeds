@@ -16,7 +16,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "platform-spc-restriction-vap",
-      "uid": "a92fa526-f7bd-426c-a536-ddc1fe074515"
+      "uid": "5d9d199d-ba56-42c9-bb93-c993393fb9a1"
     },
     "spec": {
       "failurePolicy": "Fail",

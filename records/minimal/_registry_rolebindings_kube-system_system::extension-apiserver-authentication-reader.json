@@ -13,7 +13,7 @@
       },
       "name": "system::extension-apiserver-authentication-reader",
       "namespace": "kube-system",
-      "uid": "c2385ec1-97cc-4745-8535-9dcbd7cd72ad"
+      "uid": "f38930d1-7608-4fcb-ac41-89863bdb7123"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

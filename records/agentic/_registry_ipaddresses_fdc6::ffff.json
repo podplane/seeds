@@ -10,7 +10,7 @@
         "ipaddress.kubernetes.io/managed-by": "ipallocator.k8s.io"
       },
       "name": "fdc6::ffff",
-      "uid": "641b1831-90e1-434f-acfc-0f7f75a55ae1"
+      "uid": "7d3787e1-6d09-4277-816b-d7b2ff166f17"
     },
     "spec": {
       "parentRef": {

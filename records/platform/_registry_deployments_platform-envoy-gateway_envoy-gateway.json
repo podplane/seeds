@@ -15,15 +15,15 @@
         "app.kubernetes.io/instance": "platform-envoy-gateway",
         "app.kubernetes.io/managed-by": "Helm",
         "app.kubernetes.io/name": "gateway-helm",
-        "app.kubernetes.io/version": "v1.9.0",
+        "app.kubernetes.io/version": "v1.9.2",
         "control-plane": "envoy-gateway",
-        "helm.sh/chart": "gateway-helm-v1.9.0",
+        "helm.sh/chart": "gateway-helm-v1.9.2",
         "helm.toolkit.fluxcd.io/name": "envoy-gateway",
         "helm.toolkit.fluxcd.io/namespace": "platform-envoy-gateway"
       },
       "name": "envoy-gateway",
       "namespace": "platform-envoy-gateway",
-      "uid": "b361a749-bb66-4d63-a302-9ef185dc53ea"
+      "uid": "e73c4219-565d-4329-8ebe-cdd32b4bfef8"
     },
     "spec": {
       "progressDeadlineSeconds": 600,
@@ -74,11 +74,24 @@
                   }
                 },
                 {
+                  "name": "ENVOY_GATEWAY_SERVICE_ACCOUNT",
+                  "valueFrom": {
+                    "fieldRef": {
+                      "apiVersion": "v1",
+                      "fieldPath": "spec.serviceAccountName"
+                    }
+                  }
+                },
+                {
+                  "name": "ENVOY_GATEWAY_FULLNAME",
+                  "value": "platform-envoy-gateway-gateway-helm"
+                },
+                {
                   "name": "KUBERNETES_CLUSTER_DOMAIN",
                   "value": "cluster.local"
                 }
               ],
-              "image": "default-registry.local/mirror/docker.io/envoyproxy/gateway:v1.9.0",
+              "image": "default-registry.local/mirror/docker.io/envoyproxy/gateway:v1.9.2",
               "imagePullPolicy": "IfNotPresent",
               "livenessProbe": {
                 "failureThreshold": 3,

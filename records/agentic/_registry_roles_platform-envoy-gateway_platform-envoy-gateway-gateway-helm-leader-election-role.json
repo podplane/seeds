@@ -13,14 +13,14 @@
         "app.kubernetes.io/instance": "platform-envoy-gateway",
         "app.kubernetes.io/managed-by": "Helm",
         "app.kubernetes.io/name": "gateway-helm",
-        "app.kubernetes.io/version": "v1.9.0",
-        "helm.sh/chart": "gateway-helm-v1.9.0",
+        "app.kubernetes.io/version": "v1.9.2",
+        "helm.sh/chart": "gateway-helm-v1.9.2",
         "helm.toolkit.fluxcd.io/name": "envoy-gateway",
         "helm.toolkit.fluxcd.io/namespace": "platform-envoy-gateway"
       },
       "name": "platform-envoy-gateway-gateway-helm-leader-election-role",
       "namespace": "platform-envoy-gateway",
-      "uid": "9fc42291-d923-45ef-92f9-101c73283d0b"
+      "uid": "b0f2b322-5a09-4e3c-886f-85850beef6d2"
     },
     "rules": [
       {

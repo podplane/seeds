@@ -16,7 +16,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "gvisor",
-      "uid": "bc0cf3ca-578f-4cf4-b1b3-269768949677"
+      "uid": "39123d3b-db48-4f7f-8e5e-2fae202e3e39"
     }
   }
 }

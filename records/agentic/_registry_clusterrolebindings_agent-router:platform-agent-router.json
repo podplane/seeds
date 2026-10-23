@@ -1,0 +1,33 @@
+{
+  "key": "/registry/clusterrolebindings/agent-router:platform-agent-router",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRoleBinding",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-agent-router",
+        "meta.helm.sh/release-namespace": "platform-agent-router"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "agent-router",
+        "helm.toolkit.fluxcd.io/namespace": "platform-agent-router"
+      },
+      "name": "agent-router:platform-agent-router",
+      "uid": "5677f46e-ebd1-4cbc-a9e3-0f0c79df93b5"
+    },
+    "roleRef": {
+      "apiGroup": "rbac.authorization.k8s.io",
+      "kind": "ClusterRole",
+      "name": "agent-router:platform-agent-router"
+    },
+    "subjects": [
+      {
+        "kind": "ServiceAccount",
+        "name": "agent-router",
+        "namespace": "platform-agent-router"
+      }
+    ]
+  }
+}

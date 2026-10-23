@@ -9,7 +9,7 @@
         "kube-aggregator.kubernetes.io/automanaged": "onstart"
       },
       "name": "v1.certificates.k8s.io",
-      "uid": "4cf0c571-f551-41eb-889f-b975f057da86"
+      "uid": "5a09cafd-8684-4c51-addd-844e7cb1c16c"
     },
     "spec": {
       "group": "certificates.k8s.io",

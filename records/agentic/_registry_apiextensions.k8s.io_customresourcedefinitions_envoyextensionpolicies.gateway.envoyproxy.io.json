@@ -17,7 +17,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "envoyextensionpolicies.gateway.envoyproxy.io",
-      "uid": "113495f5-7550-4626-bf94-4fee12f690f9"
+      "uid": "b838fa0e-4825-4329-926a-35747b146a73"
     },
     "spec": {
       "additionalPrinterColumns": [
@@ -2028,7 +2028,7 @@
                                 "type": "string"
                               },
                               "tls": {
-                                "description": "TLS configuration when connecting to the Wasm code source.",
+                                "description": "TLS configuration when connecting to the Wasm code source.\nIf unset, system trust store is used for HTTPS url.",
                                 "properties": {
                                   "caCertificateRef": {
                                     "description": "CACertificateRef contains a reference to\nKubernetes objects that contain TLS certificates of\nthe Certificate Authorities that can be used\nas a trust anchor to validate the certificates presented by the Wasm code source.\n\nKubernetes ConfigMap, Kubernetes Secret, and Kubernetes ClusterTrustBundle are supported.",
@@ -2135,7 +2135,7 @@
                                 "type": "string"
                               },
                               "tls": {
-                                "description": "TLS configuration when connecting to the Wasm code source.",
+                                "description": "TLS configuration when connecting to the Wasm code source.\nIf unset, system trust store is used.",
                                 "properties": {
                                   "caCertificateRef": {
                                     "description": "CACertificateRef contains a reference to\nKubernetes objects that contain TLS certificates of\nthe Certificate Authorities that can be used\nas a trust anchor to validate the certificates presented by the Wasm code source.\n\nKubernetes ConfigMap, Kubernetes Secret, and Kubernetes ClusterTrustBundle are supported.",

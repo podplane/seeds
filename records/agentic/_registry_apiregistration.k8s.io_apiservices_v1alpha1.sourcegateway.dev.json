@@ -1,0 +1,21 @@
+{
+  "key": "/registry/apiregistration.k8s.io/apiservices/v1alpha1.sourcegateway.dev",
+  "value": {
+    "apiVersion": "apiregistration.k8s.io/v1",
+    "kind": "APIService",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "kube-aggregator.kubernetes.io/automanaged": "true"
+      },
+      "name": "v1alpha1.sourcegateway.dev",
+      "uid": "e142eaf1-6a0b-4bce-9aa6-f71bd2c537c8"
+    },
+    "spec": {
+      "group": "sourcegateway.dev",
+      "groupPriorityMinimum": 1000,
+      "version": "v1alpha1",
+      "versionPriority": 100
+    }
+  }
+}

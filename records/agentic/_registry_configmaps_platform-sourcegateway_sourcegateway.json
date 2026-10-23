@@ -1,0 +1,29 @@
+{
+  "key": "/registry/configmaps/platform-sourcegateway/sourcegateway",
+  "value": {
+    "apiVersion": "v1",
+    "data": {
+      "config.jsonc": "{\n  \"credentials\": {\n    \"gitRepository\": {},\n    \"objectStorageBucket\": {}\n  },\n  \"credentialsDirectory\": \"/var/run/sourcegateway/secrets\",\n  \"githubUserAnnotation\": \"sourcegateway.dev/github-user\",\n  \"listenAddress\": \":8443\",\n  \"maxObjectSize\": \"15Mi\",\n  \"metricsAddress\": \":9443\",\n  \"objectCacheCapacity\": \"20Gi\",\n  \"storageDirectory\": \"/var/lib/sourcegateway\",\n  \"tlsCertificateFile\": \"/var/run/sourcegateway/tls/tls.crt\",\n  \"tlsPrivateKeyFile\": \"/var/run/sourcegateway/tls/tls.key\",\n  \"tokenAudience\": \"sourcegateway.dev\"\n}"
+    },
+    "kind": "ConfigMap",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-sourcegateway",
+        "meta.helm.sh/release-namespace": "platform-sourcegateway"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/instance": "platform-sourcegateway",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "sourcegateway",
+        "app.kubernetes.io/version": "v0.1.5",
+        "helm.sh/chart": "sourcegateway-0.1.5",
+        "helm.toolkit.fluxcd.io/name": "sourcegateway",
+        "helm.toolkit.fluxcd.io/namespace": "platform-sourcegateway"
+      },
+      "name": "sourcegateway",
+      "namespace": "platform-sourcegateway",
+      "uid": "2ad35ca0-3804-4a6c-b108-1240a6661f6a"
+    }
+  }
+}

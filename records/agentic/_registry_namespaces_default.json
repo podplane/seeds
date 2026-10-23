@@ -9,7 +9,7 @@
         "kubernetes.io/metadata.name": "default"
       },
       "name": "default",
-      "uid": "e9f269bc-01ec-4e37-a803-ce45dc1ede10"
+      "uid": "36439923-fa3e-426f-8da5-3c1ce351c9c0"
     },
     "spec": {
       "finalizers": [

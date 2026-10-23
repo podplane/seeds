@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:cluster-trust-bundle-discovery",
-      "uid": "c4c90bc0-0b77-470f-a3e5-9597f5d424f8"
+      "uid": "98d72c6c-99f5-4f58-b7d4-3a2a29294ae6"
     },
     "rules": [
       {

@@ -1,0 +1,74 @@
+{
+  "key": "/registry/services/specs/platform-agent-router/agent-router",
+  "value": {
+    "apiVersion": "v1",
+    "kind": "Service",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-agent-router",
+        "meta.helm.sh/release-namespace": "platform-agent-router"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/instance": "platform-agent-router",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "ai-gateway-helm",
+        "app.kubernetes.io/version": "v1.2.0",
+        "helm.sh/chart": "ai-gateway-helm-v1.2.0",
+        "helm.toolkit.fluxcd.io/name": "agent-router",
+        "helm.toolkit.fluxcd.io/namespace": "platform-agent-router"
+      },
+      "name": "agent-router",
+      "namespace": "platform-agent-router",
+      "uid": "0905e3e9-e1b5-4044-9169-dd688316b91d"
+    },
+    "spec": {
+      "clusterIP": "198.18.0.9",
+      "clusterIPs": [
+        "198.18.0.9"
+      ],
+      "internalTrafficPolicy": "Cluster",
+      "ipFamilies": [
+        "IPv4",
+        "IPv6"
+      ],
+      "ipFamilyPolicy": "PreferDualStack",
+      "ports": [
+        {
+          "appProtocol": "http",
+          "name": "mutating-webhook",
+          "port": 9443,
+          "protocol": "TCP",
+          "targetPort": 9443
+        },
+        {
+          "appProtocol": "grpc",
+          "name": "grpc",
+          "port": 1063,
+          "protocol": "TCP",
+          "targetPort": 1063
+        },
+        {
+          "appProtocol": "http",
+          "name": "http-metrics",
+          "port": 8080,
+          "protocol": "TCP",
+          "targetPort": 8080
+        },
+        {
+          "appProtocol": "grpc",
+          "name": "ratelimit-xds",
+          "port": 18002,
+          "protocol": "TCP",
+          "targetPort": 18002
+        }
+      ],
+      "selector": {
+        "app.kubernetes.io/instance": "platform-agent-router",
+        "app.kubernetes.io/name": "ai-gateway-helm"
+      },
+      "sessionAffinity": "None",
+      "type": "ClusterIP"
+    }
+  }
+}

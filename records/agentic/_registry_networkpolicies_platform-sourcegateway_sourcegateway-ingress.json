@@ -1,0 +1,48 @@
+{
+  "key": "/registry/networkpolicies/platform-sourcegateway/sourcegateway-ingress",
+  "value": {
+    "apiVersion": "networking.k8s.io/v1",
+    "kind": "NetworkPolicy",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-sourcegateway",
+        "meta.helm.sh/release-namespace": "platform-sourcegateway"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/instance": "platform-sourcegateway",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "sourcegateway",
+        "app.kubernetes.io/version": "v0.1.5",
+        "helm.sh/chart": "sourcegateway-0.1.5",
+        "helm.toolkit.fluxcd.io/name": "sourcegateway",
+        "helm.toolkit.fluxcd.io/namespace": "platform-sourcegateway"
+      },
+      "name": "sourcegateway-ingress",
+      "namespace": "platform-sourcegateway",
+      "uid": "a93bcc68-b30a-44b7-b1c7-f67aa6a6d02d"
+    },
+    "spec": {
+      "ingress": [
+        {
+          "ports": [
+            {
+              "port": "https",
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ],
+      "podSelector": {
+        "matchLabels": {
+          "app.kubernetes.io/instance": "platform-sourcegateway",
+          "app.kubernetes.io/name": "sourcegateway"
+        }
+      },
+      "policyTypes": [
+        "Ingress"
+      ]
+    }
+  }
+}

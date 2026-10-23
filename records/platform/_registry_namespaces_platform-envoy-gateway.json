@@ -20,7 +20,7 @@
         "pod-security.kubernetes.io/warn": "privileged"
       },
       "name": "platform-envoy-gateway",
-      "uid": "79430fe9-a062-4fe4-be20-75d2c13674d0"
+      "uid": "8c4ad88a-3319-473c-b77a-18e2a8f459df"
     },
     "spec": {
       "finalizers": [

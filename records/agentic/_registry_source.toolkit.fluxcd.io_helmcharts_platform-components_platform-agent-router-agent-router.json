@@ -1,0 +1,31 @@
+{
+  "key": "/registry/source.toolkit.fluxcd.io/helmcharts/platform-components/platform-agent-router-agent-router",
+  "value": {
+    "apiVersion": "source.toolkit.fluxcd.io/v1",
+    "kind": "HelmChart",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "finalizers": [
+        "finalizers.fluxcd.io"
+      ],
+      "generation": 1,
+      "labels": {
+        "helm.toolkit.fluxcd.io/name": "agent-router",
+        "helm.toolkit.fluxcd.io/namespace": "platform-agent-router"
+      },
+      "name": "platform-agent-router-agent-router",
+      "namespace": "platform-components",
+      "uid": "f90d462c-5f06-4f21-bf40-13f4e3cc39ac"
+    },
+    "spec": {
+      "chart": "./charts/agent-router",
+      "interval": "10m0s",
+      "reconcileStrategy": "Revision",
+      "sourceRef": {
+        "kind": "GitRepository",
+        "name": "podplane-components"
+      },
+      "version": "*"
+    }
+  }
+}

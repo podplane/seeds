@@ -1,0 +1,76 @@
+{
+  "key": "/registry/helm.toolkit.fluxcd.io/helmreleases/platform-sourcegateway/sourcegateway",
+  "value": {
+    "apiVersion": "helm.toolkit.fluxcd.io/v2",
+    "kind": "HelmRelease",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-components",
+        "meta.helm.sh/release-namespace": "platform-components"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "finalizers": [
+        "finalizers.fluxcd.io"
+      ],
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-components",
+        "helm.toolkit.fluxcd.io/namespace": "platform-components"
+      },
+      "name": "sourcegateway",
+      "namespace": "platform-sourcegateway",
+      "uid": "152b6aa3-7237-4ac3-9d8f-9c4677512a8b"
+    },
+    "spec": {
+      "chart": {
+        "spec": {
+          "chart": "./charts/sourcegateway",
+          "reconcileStrategy": "Revision",
+          "sourceRef": {
+            "kind": "GitRepository",
+            "name": "podplane-components",
+            "namespace": "platform-components"
+          },
+          "version": "*"
+        }
+      },
+      "dependsOn": [
+        {
+          "name": "sourcegateway-crds",
+          "namespace": "platform-cluster"
+        },
+        {
+          "name": "podplane-operator",
+          "namespace": "platform-podplane-operator"
+        },
+        {
+          "name": "secrets-store-csi-driver",
+          "namespace": "platform-secrets-store-csi-driver"
+        }
+      ],
+      "install": {
+        "crds": "Skip",
+        "remediation": {
+          "retries": 10
+        }
+      },
+      "interval": "10m",
+      "maxHistory": 3,
+      "releaseName": "platform-sourcegateway",
+      "upgrade": {
+        "crds": "Skip",
+        "remediation": {
+          "retries": 3
+        }
+      },
+      "values": {
+        "sourcegateway": {
+          "image": {
+            "repository": "default-registry.local/mirror/ghcr.io/sourcegateway/sourcegateway"
+          }
+        }
+      }
+    }
+  }
+}

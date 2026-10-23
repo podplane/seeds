@@ -20,7 +20,7 @@
       },
       "name": "agent-sandbox",
       "namespace": "platform-agent-sandbox",
-      "uid": "3ec22d98-f281-4867-ba57-4329f5820983"
+      "uid": "bf561e17-fd7b-4fae-afec-6c7df49360db"
     },
     "spec": {
       "chart": {

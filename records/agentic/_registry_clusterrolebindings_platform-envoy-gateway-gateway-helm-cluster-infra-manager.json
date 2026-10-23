@@ -13,13 +13,13 @@
         "app.kubernetes.io/instance": "platform-envoy-gateway",
         "app.kubernetes.io/managed-by": "Helm",
         "app.kubernetes.io/name": "gateway-helm",
-        "app.kubernetes.io/version": "v1.9.0",
-        "helm.sh/chart": "gateway-helm-v1.9.0",
+        "app.kubernetes.io/version": "v1.9.2",
+        "helm.sh/chart": "gateway-helm-v1.9.2",
         "helm.toolkit.fluxcd.io/name": "envoy-gateway",
         "helm.toolkit.fluxcd.io/namespace": "platform-envoy-gateway"
       },
       "name": "platform-envoy-gateway-gateway-helm-cluster-infra-manager",
-      "uid": "5d410e5b-d3ea-4795-9f02-d561f5ca580a"
+      "uid": "9df19346-9baf-4097-bc8b-3976b3bb804d"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

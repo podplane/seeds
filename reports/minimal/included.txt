@@ -43,6 +43,7 @@
 /registry/apiextensions.k8s.io/customresourcedefinitions/tcproutes.gateway.networking.k8s.io
 /registry/apiextensions.k8s.io/customresourcedefinitions/tlsroutes.gateway.networking.k8s.io
 /registry/apiextensions.k8s.io/customresourcedefinitions/udproutes.gateway.networking.k8s.io
+/registry/apiextensions.k8s.io/customresourcedefinitions/xbackends.gateway.networking.x-k8s.io
 /registry/apiextensions.k8s.io/customresourcedefinitions/xbackendtrafficpolicies.gateway.networking.x-k8s.io
 /registry/apiextensions.k8s.io/customresourcedefinitions/xmeshes.gateway.networking.x-k8s.io
 /registry/apiregistration.k8s.io/apiservices/v1.
@@ -306,7 +307,6 @@
 /registry/secrets/platform-cluster/sh.helm.release.v1.platform-rbac.v1
 /registry/secrets/platform-cluster/sh.helm.release.v1.platform-runtime.v1
 /registry/secrets/platform-cluster/sh.helm.release.v1.platform-runtime.v2
-/registry/secrets/platform-components/sh.helm.release.v1.platform-components.v1
 /registry/secrets/platform-coredns/sh.helm.release.v1.platform-coredns.v1
 /registry/secrets/platform-coredns/sh.helm.release.v1.platform-coredns.v2
 /registry/secrets/platform-fluxcd/sh.helm.release.v1.platform-fluxcd.v1

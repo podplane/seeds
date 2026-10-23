@@ -17,7 +17,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "securitypolicies.gateway.envoyproxy.io",
-      "uid": "e5b32a97-fd82-4e77-ab89-681b73986de5"
+      "uid": "519e4b8d-0b22-4c37-9c06-0c72b750ded8"
     },
     "spec": {
       "additionalPrinterColumns": [
@@ -7095,7 +7095,7 @@
                         },
                         "issuer": {
                           "description": "The OIDC Provider's [issuer identifier](https://openid.net/specs/openid-connect-discovery-1_0.html#IssuerDiscovery).\nIssuer MUST be a URI RFC 3986 [RFC3986] with a scheme component that MUST\nbe https, a host component, and optionally, port and path components and\nno query or fragment components.",
-                          "minLength": 1,
+                          "pattern": "^https://[^/?#@]+(/[^?#]*)?$",
                           "type": "string"
                         },
                         "tokenEndpoint": {

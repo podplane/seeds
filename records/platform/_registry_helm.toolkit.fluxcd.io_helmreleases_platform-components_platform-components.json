@@ -12,7 +12,7 @@
       "generation": 1,
       "name": "platform-components",
       "namespace": "platform-components",
-      "uid": "6fa00aab-2c1f-4984-aa38-0e88a6a1140f"
+      "uid": "9b08c50b-ad56-45f0-a0be-3493867983ab"
     },
     "spec": {
       "chart": {
@@ -34,6 +34,9 @@
         "platform": {
           "components": {
             "apps": {
+              "csi-openebs-lvm": {
+                "enabled": true
+              },
               "envoy-gateway": {
                 "enabled": true
               },
@@ -51,6 +54,9 @@
               }
             },
             "crds": {
+              "csi-openebs-lvm-crds": {
+                "enabled": true
+              },
               "envoy-gateway-crds": {
                 "enabled": true
               },
@@ -58,6 +64,9 @@
                 "enabled": true
               },
               "secrets-store-csi-driver-crds": {
+                "enabled": true
+              },
+              "snapshot-crds": {
                 "enabled": true
               }
             },
@@ -93,7 +102,7 @@
                         "oidc": {
                           "clientID": "default",
                           "groupsClaim": "groups",
-                          "issuerURL": "https://oidc.localhost:65055/oidc",
+                          "issuerURL": "https://oidc.localhost:49569/oidc",
                           "usernameClaim": "email"
                         },
                         "spiffe": {
@@ -131,7 +140,7 @@
                     "oidc": {
                       "audience": "default",
                       "groupsClaim": "groups",
-                      "issuer": "https://oidc.localhost:65055/oidc",
+                      "issuer": "https://oidc.localhost:49569/oidc",
                       "usernameClaim": "email"
                     },
                     "registryHostname": "default-registry.local",
@@ -139,7 +148,7 @@
                       "accessKeyID": "test",
                       "bucket": "registry",
                       "driver": "s3",
-                      "endpoint": "http://10.0.2.2:65054/s3/cache",
+                      "endpoint": "http://10.0.2.2:49568/s3/cache",
                       "forcePathStyle": true,
                       "region": "local",
                       "secretAccessKey": "test",

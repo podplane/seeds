@@ -16,13 +16,13 @@
         "app.kubernetes.io/instance": "platform-envoy-gateway",
         "app.kubernetes.io/managed-by": "Helm",
         "app.kubernetes.io/name": "gateway-helm",
-        "app.kubernetes.io/version": "v1.9.0",
-        "helm.sh/chart": "gateway-helm-v1.9.0",
+        "app.kubernetes.io/version": "v1.9.2",
+        "helm.sh/chart": "gateway-helm-v1.9.2",
         "helm.toolkit.fluxcd.io/name": "envoy-gateway",
         "helm.toolkit.fluxcd.io/namespace": "platform-envoy-gateway"
       },
       "name": "envoy-gateway-topology-injector.platform-envoy-gateway",
-      "uid": "2d447686-509b-42a0-b782-6ccb61d4966c"
+      "uid": "b057f207-2bdc-428d-9e9e-f74bb9e0e15e"
     },
     "webhooks": [
       {
@@ -30,7 +30,7 @@
           "v1"
         ],
         "clientConfig": {
-          "caBundle": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJQVENCOEtBREFnRUNBaEF4YWU5ZGo3SEVLK3RBN055ZFloN29NQVVHQXl0bGNEQWZNUjB3R3dZRFZRUUQKRXhSUWIyUndiR0Z1WlNCWGIzSnJiRzloWkNCRFFUQWVGdzB5TmpFd01Ua3hNakV4TlRGYUZ3MHpOakV3TVRreApNakV6TlRGYU1COHhIVEFiQmdOVkJBTVRGRkJ2WkhCc1lXNWxJRmR2Y210c2IyRmtJRU5CTUNvd0JRWURLMlZ3CkF5RUFZODUvcE5DWDdMWWVNc0Z1TTRFVlBIOVd1aTJOKzMyVXA3ZEVKZG50Tzl1alFqQkFNQTRHQTFVZER3RUIKL3dRRUF3SUJCakFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlFGWHZ1bm9xRC91dENZNnoxZwpnQTE5bmV0Q01EQUZCZ01yWlhBRFFRQ3JOWitMbHFQTzBiYlFtbHZZNHZ3dm1FQ1RzdWRWNmRZV0pSazdlWGJPClRheC9vOFphOFNwcnpNMUFSMm91UUplS1dhQVBVQWoyQVRVL3V4ZTdVUUlNCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K",
+          "caBundle": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJQVENCOEtBREFnRUNBaEFkRWlkeVU0S3ZwbFZkQmFud3FhTklNQVVHQXl0bGNEQWZNUjB3R3dZRFZRUUQKRXhSUWIyUndiR0Z1WlNCWGIzSnJiRzloWkNCRFFUQWVGdzB5TmpFd01qTXdNRFEwTlRsYUZ3MHpOakV3TWpNdwpNRFEyTlRsYU1COHhIVEFiQmdOVkJBTVRGRkJ2WkhCc1lXNWxJRmR2Y210c2IyRmtJRU5CTUNvd0JRWURLMlZ3CkF5RUFsS0twemlyMHllVGRlSnFIK1dFeUNoclByeVpmdVllSkpKa3gwTjlZSksralFqQkFNQTRHQTFVZER3RUIKL3dRRUF3SUJCakFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlM0VEJiakpwdnZOQUNhRDMwdwovRURTWDhMQkVqQUZCZ01yWlhBRFFRRFBmVDljYzh6MW8zaFpmdnJWSTB0Q2c0VzkrZUZFT2Z4aStuaktnZkl4CkVDMU4wbkN1akF1empoWEdTZm9EazFkVUZiZ0c0KzZTL0g2amt3b3ZWVzRQCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K",
           "service": {
             "name": "envoy-gateway",
             "namespace": "platform-envoy-gateway",

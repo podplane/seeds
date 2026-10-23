@@ -1,0 +1,25 @@
+{
+  "key": "/registry/mutatingadmissionpolicybindings/platform-agent-router-extproc-gvisor-mapb",
+  "value": {
+    "apiVersion": "admissionregistration.k8s.io/v1",
+    "kind": "MutatingAdmissionPolicyBinding",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-agent-router",
+        "meta.helm.sh/release-namespace": "platform-agent-router"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "agent-router",
+        "helm.toolkit.fluxcd.io/namespace": "platform-agent-router"
+      },
+      "name": "platform-agent-router-extproc-gvisor-mapb",
+      "uid": "34e91e34-daa3-4e88-bb23-efc83219358d"
+    },
+    "spec": {
+      "policyName": "platform-agent-router-extproc-gvisor-map"
+    }
+  }
+}

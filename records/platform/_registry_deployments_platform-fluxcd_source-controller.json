@@ -24,7 +24,7 @@
       },
       "name": "source-controller",
       "namespace": "platform-fluxcd",
-      "uid": "d0329863-66c1-4fbb-bf04-513f31141094"
+      "uid": "3cd0c392-2f5a-4a45-b009-9cf2f8702f46"
     },
     "spec": {
       "progressDeadlineSeconds": 600,

@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:controller:expand-controller",
-      "uid": "79ed9034-6cb9-4171-9bb3-11fdebdf9962"
+      "uid": "74ecbeb7-40b6-4de5-912a-0c9d451cda49"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

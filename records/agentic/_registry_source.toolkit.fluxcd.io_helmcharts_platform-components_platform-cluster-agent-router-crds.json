@@ -1,0 +1,31 @@
+{
+  "key": "/registry/source.toolkit.fluxcd.io/helmcharts/platform-components/platform-cluster-agent-router-crds",
+  "value": {
+    "apiVersion": "source.toolkit.fluxcd.io/v1",
+    "kind": "HelmChart",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "finalizers": [
+        "finalizers.fluxcd.io"
+      ],
+      "generation": 1,
+      "labels": {
+        "helm.toolkit.fluxcd.io/name": "agent-router-crds",
+        "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
+      },
+      "name": "platform-cluster-agent-router-crds",
+      "namespace": "platform-components",
+      "uid": "893ab50d-12ae-40bf-bdb3-6db3cb1a4b0d"
+    },
+    "spec": {
+      "chart": "./charts/agent-router-crds",
+      "interval": "10m0s",
+      "reconcileStrategy": "Revision",
+      "sourceRef": {
+        "kind": "GitRepository",
+        "name": "podplane-components"
+      },
+      "version": "*"
+    }
+  }
+}

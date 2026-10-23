@@ -20,7 +20,7 @@
       },
       "name": "platform-runtime",
       "namespace": "platform-cluster",
-      "uid": "4bf8b521-9d28-4363-9cf7-a24eff7b3d80"
+      "uid": "2019fb3a-f6ed-498a-ac7b-96e4db73e508"
     },
     "spec": {
       "chart": {

@@ -16,7 +16,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "platform-runtime-class-default-map",
-      "uid": "a8c1acc8-20de-4c42-92aa-4f8fbafce604"
+      "uid": "e74f74b3-5510-4428-917c-faa58abe982a"
     },
     "spec": {
       "failurePolicy": "Fail",
@@ -55,7 +55,7 @@
       "mutations": [
         {
           "applyConfiguration": {
-            "expression": "Object{spec: Object.spec{runtimeClassName:\n\n\n  request.namespace in [\"platform-cilium\",\"platform-csi-aws-ebs\",\"platform-secrets-store-csi-driver\",\"platform-secrets-store-csi-provider-aws\",\"platform-secrets-store-csi-provider-gcp\",\"platform-secrets-store-csi-provider-openbao\",\"platform-secrets-store-csi-provider-vault\",\"platform-node-problem-detector\"] ? \"runc\" : \"gvisor\"}}"
+            "expression": "Object{spec: Object.spec{runtimeClassName:\n\n\n  request.namespace in [\"platform-cilium\",\"platform-csi-aws-ebs\",\"platform-csi-gce-pd\",\"platform-csi-openebs-lvm\",\"platform-secrets-store-csi-driver\",\"platform-secrets-store-csi-provider-aws\",\"platform-secrets-store-csi-provider-gcp\",\"platform-secrets-store-csi-provider-openbao\",\"platform-secrets-store-csi-provider-vault\",\"platform-node-problem-detector\"] ? \"runc\" : \"gvisor\"}}"
           },
           "patchType": "ApplyConfiguration"
         }

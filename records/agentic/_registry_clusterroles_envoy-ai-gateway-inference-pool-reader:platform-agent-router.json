@@ -1,0 +1,36 @@
+{
+  "key": "/registry/clusterroles/envoy-ai-gateway-inference-pool-reader:platform-agent-router",
+  "value": {
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRole",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-agent-router",
+        "meta.helm.sh/release-namespace": "platform-agent-router"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "agent-router",
+        "helm.toolkit.fluxcd.io/namespace": "platform-agent-router"
+      },
+      "name": "envoy-ai-gateway-inference-pool-reader:platform-agent-router",
+      "uid": "79ace3a2-b1d2-4f4b-ad96-00cd1027c5af"
+    },
+    "rules": [
+      {
+        "apiGroups": [
+          "inference.networking.k8s.io"
+        ],
+        "resources": [
+          "inferencepools"
+        ],
+        "verbs": [
+          "get",
+          "list",
+          "watch"
+        ]
+      }
+    ]
+  }
+}

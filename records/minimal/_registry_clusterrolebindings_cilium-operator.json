@@ -16,7 +16,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cilium"
       },
       "name": "cilium-operator",
-      "uid": "b445ac37-924a-4790-aca4-5607bd10baf0"
+      "uid": "51fb71df-ab88-4913-b66f-cf33a8f34fa1"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

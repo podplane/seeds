@@ -1,0 +1,31 @@
+{
+  "key": "/registry/source.toolkit.fluxcd.io/helmcharts/platform-components/platform-sourcegateway-sourcegateway",
+  "value": {
+    "apiVersion": "source.toolkit.fluxcd.io/v1",
+    "kind": "HelmChart",
+    "metadata": {
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "finalizers": [
+        "finalizers.fluxcd.io"
+      ],
+      "generation": 1,
+      "labels": {
+        "helm.toolkit.fluxcd.io/name": "sourcegateway",
+        "helm.toolkit.fluxcd.io/namespace": "platform-sourcegateway"
+      },
+      "name": "platform-sourcegateway-sourcegateway",
+      "namespace": "platform-components",
+      "uid": "dd958db7-eb3e-4ece-b69c-d93ced7e174c"
+    },
+    "spec": {
+      "chart": "./charts/sourcegateway",
+      "interval": "10m0s",
+      "reconcileStrategy": "Revision",
+      "sourceRef": {
+        "kind": "GitRepository",
+        "name": "podplane-components"
+      },
+      "version": "*"
+    }
+  }
+}

@@ -21,7 +21,7 @@
         "kubernetes.io/name": "CoreDNS"
       },
       "name": "platform-coredns",
-      "uid": "c7361627-2e14-4db3-b744-dfe2d2daeb36"
+      "uid": "3f75670f-d831-4a7a-bbba-a1e4973cdb40"
     },
     "rules": [
       {

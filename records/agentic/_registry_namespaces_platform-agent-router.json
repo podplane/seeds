@@ -1,0 +1,31 @@
+{
+  "key": "/registry/namespaces/platform-agent-router",
+  "value": {
+    "apiVersion": "v1",
+    "kind": "Namespace",
+    "metadata": {
+      "annotations": {
+        "helm.sh/resource-policy": "keep",
+        "meta.helm.sh/release-name": "platform-components",
+        "meta.helm.sh/release-namespace": "platform-components"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-components",
+        "helm.toolkit.fluxcd.io/namespace": "platform-components",
+        "kubernetes.io/metadata.name": "platform-agent-router",
+        "pod-security.kubernetes.io/audit": "restricted",
+        "pod-security.kubernetes.io/enforce": "restricted",
+        "pod-security.kubernetes.io/warn": "restricted"
+      },
+      "name": "platform-agent-router",
+      "uid": "338f7dd0-22a2-4d11-b99b-945a53dc924a"
+    },
+    "spec": {
+      "finalizers": [
+        "kubernetes"
+      ]
+    }
+  }
+}

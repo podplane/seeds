@@ -13,15 +13,15 @@
         "app.kubernetes.io/instance": "platform-envoy-gateway",
         "app.kubernetes.io/managed-by": "Helm",
         "app.kubernetes.io/name": "gateway-helm",
-        "app.kubernetes.io/version": "v1.9.0",
+        "app.kubernetes.io/version": "v1.9.2",
         "control-plane": "envoy-gateway",
-        "helm.sh/chart": "gateway-helm-v1.9.0",
+        "helm.sh/chart": "gateway-helm-v1.9.2",
         "helm.toolkit.fluxcd.io/name": "envoy-gateway",
         "helm.toolkit.fluxcd.io/namespace": "platform-envoy-gateway"
       },
       "name": "envoy-gateway",
       "namespace": "platform-envoy-gateway",
-      "uid": "e63da92e-a32a-4ee5-bf0c-85bc57e5fb41"
+      "uid": "1dd8949f-c97b-4a97-95d2-2ed74ab610b0"
     },
     "spec": {
       "clusterIP": "198.18.0.5",

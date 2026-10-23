@@ -19,7 +19,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-fluxcd"
       },
       "name": "crd-controller",
-      "uid": "4ec0d420-8003-4b6b-9c1a-c7550cada29d"
+      "uid": "35791070-ac0a-480b-8bf7-bfba8665af52"
     },
     "rules": [
       {

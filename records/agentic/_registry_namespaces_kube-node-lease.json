@@ -9,7 +9,7 @@
         "kubernetes.io/metadata.name": "kube-node-lease"
       },
       "name": "kube-node-lease",
-      "uid": "2ca9b41f-88f9-4c27-ab95-b6ee47ca9442"
+      "uid": "7e5d7550-7f9c-4a64-b627-8e4b8fbe89da"
     },
     "spec": {
       "finalizers": [

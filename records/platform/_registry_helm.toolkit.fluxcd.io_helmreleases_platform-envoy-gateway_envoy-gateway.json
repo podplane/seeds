@@ -20,7 +20,7 @@
       },
       "name": "envoy-gateway",
       "namespace": "platform-envoy-gateway",
-      "uid": "afebb51f-4408-4142-8053-660ced0e9216"
+      "uid": "82d54fae-8010-4c66-b49c-b77341effc55"
     },
     "spec": {
       "chart": {
@@ -66,13 +66,20 @@
       },
       "values": {
         "gateway-helm": {
+          "config": {
+            "envoyGateway": {
+              "extensionApis": {
+                "enableBackend": true
+              }
+            }
+          },
           "global": {
             "images": {
               "envoyGateway": {
-                "image": "default-registry.local/mirror/docker.io/envoyproxy/gateway:v1.9.0"
+                "image": "default-registry.local/mirror/docker.io/envoyproxy/gateway:v1.9.2"
               },
               "envoyProxy": {
-                "image": "default-registry.local/mirror/docker.io/envoyproxy/envoy:distroless-v1.39.0"
+                "image": "default-registry.local/mirror/docker.io/envoyproxy/envoy:distroless-v1.39.1"
               }
             }
           }

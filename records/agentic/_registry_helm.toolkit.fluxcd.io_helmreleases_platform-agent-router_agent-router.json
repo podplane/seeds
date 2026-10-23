@@ -1,0 +1,86 @@
+{
+  "key": "/registry/helm.toolkit.fluxcd.io/helmreleases/platform-agent-router/agent-router",
+  "value": {
+    "apiVersion": "helm.toolkit.fluxcd.io/v2",
+    "kind": "HelmRelease",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-components",
+        "meta.helm.sh/release-namespace": "platform-components"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "finalizers": [
+        "finalizers.fluxcd.io"
+      ],
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "platform-components",
+        "helm.toolkit.fluxcd.io/namespace": "platform-components"
+      },
+      "name": "agent-router",
+      "namespace": "platform-agent-router",
+      "uid": "c38e10a4-2c30-44f3-b26c-2bd6cdc22677"
+    },
+    "spec": {
+      "chart": {
+        "spec": {
+          "chart": "./charts/agent-router",
+          "reconcileStrategy": "Revision",
+          "sourceRef": {
+            "kind": "GitRepository",
+            "name": "podplane-components",
+            "namespace": "platform-components"
+          },
+          "version": "*"
+        }
+      },
+      "dependsOn": [
+        {
+          "name": "agent-router-crds",
+          "namespace": "platform-cluster"
+        },
+        {
+          "name": "envoy-gateway",
+          "namespace": "platform-envoy-gateway"
+        }
+      ],
+      "install": {
+        "crds": "Skip",
+        "remediation": {
+          "retries": 10
+        }
+      },
+      "interval": "10m",
+      "maxHistory": 3,
+      "releaseName": "platform-agent-router",
+      "upgrade": {
+        "crds": "Skip",
+        "remediation": {
+          "retries": 3
+        }
+      },
+      "values": {
+        "ai-gateway-helm": {
+          "controller": {
+            "image": {
+              "repository": "default-registry.local/mirror/docker.io/envoyproxy/ai-gateway-controller"
+            }
+          },
+          "extProc": {
+            "image": {
+              "repository": "default-registry.local/mirror/docker.io/envoyproxy/ai-gateway-extproc"
+            }
+          }
+        },
+        "platform": {
+          "agentRouter": {
+            "envoyProxy": {
+              "image": "default-registry.local/mirror/docker.io/envoyproxy/envoy:distroless-v1.39.1"
+            }
+          }
+        }
+      }
+    }
+  }
+}
