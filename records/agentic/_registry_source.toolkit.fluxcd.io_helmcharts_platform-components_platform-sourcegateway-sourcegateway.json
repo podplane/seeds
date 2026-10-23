@@ -15,7 +15,7 @@
       },
       "name": "platform-sourcegateway-sourcegateway",
       "namespace": "platform-components",
-      "uid": "d72c1040-59f5-40b3-9120-b15e3a78462c"
+      "uid": "d13f9453-fd2d-4eb4-b68e-9b012b673e31"
     },
     "spec": {
       "chart": "./charts/sourcegateway",

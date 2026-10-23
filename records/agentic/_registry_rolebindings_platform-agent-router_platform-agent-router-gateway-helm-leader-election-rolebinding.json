@@ -20,7 +20,7 @@
       },
       "name": "platform-agent-router-gateway-helm-leader-election-rolebinding",
       "namespace": "platform-agent-router",
-      "uid": "007fc5df-973b-457b-b3a8-b7cbddc38752"
+      "uid": "15308c52-e895-4e32-af12-c852baf2c4e9"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

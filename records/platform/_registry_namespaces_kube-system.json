@@ -9,7 +9,7 @@
         "kubernetes.io/metadata.name": "kube-system"
       },
       "name": "kube-system",
-      "uid": "c2e7d7b3-b1e5-4264-a0e9-5fb37a2dd8e1"
+      "uid": "7ad34326-4a24-44cc-9981-cb579587e8d5"
     },
     "spec": {
       "finalizers": [

@@ -10,7 +10,7 @@
       "creationTimestamp": "2015-07-11T04:02:31Z",
       "generation": 1,
       "name": "system-leader-election",
-      "uid": "adc3a685-6a5e-418c-9f54-725484d51445"
+      "uid": "3f627379-87df-4adf-904c-c398175dbe99"
     },
     "spec": {
       "distinguisherMethod": {

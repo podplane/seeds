@@ -17,7 +17,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "gitrepositories.sourcegateway.dev",
-      "uid": "6feeb1d6-9a7e-4bd7-8487-6c898d580c81"
+      "uid": "459a6bfa-7b84-4893-a0cd-892605344b6d"
     },
     "spec": {
       "additionalPrinterColumns": [
@@ -131,9 +131,10 @@
                   "type": "object"
                 },
                 "upstream": {
-                  "description": "GitUpstream identifies the repository and credential used to reach it.",
+                  "description": "GitUpstream identifies the repository and optional credential used to reach it.",
                   "properties": {
                     "credential": {
+                      "description": "Credential names an operator-configured credential. Omit it for anonymous\nupstream access; clients still require authentication and authorization.",
                       "minLength": 1,
                       "type": "string"
                     },
@@ -143,7 +144,6 @@
                     }
                   },
                   "required": [
-                    "credential",
                     "url"
                   ],
                   "type": "object"

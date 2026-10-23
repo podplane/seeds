@@ -15,7 +15,7 @@
       },
       "name": "platform-zot-registry-zot-registry",
       "namespace": "platform-components",
-      "uid": "8aa81a72-8e8d-4421-9f6f-2a98329bb0e7"
+      "uid": "fe9b2d97-4617-4eb5-a3f0-05edf29a26b2"
     },
     "spec": {
       "chart": "./charts/zot-registry",

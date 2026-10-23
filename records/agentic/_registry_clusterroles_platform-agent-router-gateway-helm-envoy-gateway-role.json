@@ -19,7 +19,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-agent-router"
       },
       "name": "platform-agent-router-gateway-helm-envoy-gateway-role",
-      "uid": "74024583-12e7-4809-9053-a59efdd51766"
+      "uid": "0df39676-6310-4487-b91d-78f2e578acf6"
     },
     "rules": [
       {

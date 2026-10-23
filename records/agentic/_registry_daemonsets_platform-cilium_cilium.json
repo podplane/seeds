@@ -21,7 +21,7 @@
       },
       "name": "cilium",
       "namespace": "platform-cilium",
-      "uid": "a6a29d4e-1664-4016-a456-8554500f1b46"
+      "uid": "dca9e067-64ad-47b8-89c9-0dad0b34f819"
     },
     "spec": {
       "revisionHistoryLimit": 10,

@@ -13,7 +13,7 @@
       },
       "name": "extension-apiserver-authentication-reader",
       "namespace": "kube-system",
-      "uid": "fe657489-ae6e-47d6-9282-83e495dd4a40"
+      "uid": "2f71c2ac-1937-411e-a467-923efc50028f"
     },
     "rules": [
       {

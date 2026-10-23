@@ -13,13 +13,13 @@
         "app.kubernetes.io/instance": "platform-sourcegateway",
         "app.kubernetes.io/managed-by": "Helm",
         "app.kubernetes.io/name": "sourcegateway",
-        "app.kubernetes.io/version": "v0.1.5",
-        "helm.sh/chart": "sourcegateway-0.1.5",
+        "app.kubernetes.io/version": "v0.2.1",
+        "helm.sh/chart": "sourcegateway-0.2.1",
         "helm.toolkit.fluxcd.io/name": "sourcegateway",
         "helm.toolkit.fluxcd.io/namespace": "platform-sourcegateway"
       },
       "name": "sourcegateway",
-      "uid": "8868e76a-41e6-4d31-8f51-4cfc16045aae"
+      "uid": "3501ca17-40cf-45e5-bebf-bff2e2bd61e7"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

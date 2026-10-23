@@ -20,7 +20,7 @@
       },
       "name": "fluxcd-crds",
       "namespace": "platform-cluster",
-      "uid": "727d12b9-82e7-46f7-abf1-980f1fd0da53"
+      "uid": "cfd74979-4756-40c2-acd7-6b6846e596f6"
     },
     "spec": {
       "chart": {

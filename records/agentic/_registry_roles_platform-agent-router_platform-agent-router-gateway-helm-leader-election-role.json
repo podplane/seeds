@@ -20,7 +20,7 @@
       },
       "name": "platform-agent-router-gateway-helm-leader-election-role",
       "namespace": "platform-agent-router",
-      "uid": "75a68764-b27c-42b8-a172-5698c21d6c47"
+      "uid": "16372efd-b21b-4abf-8e32-c69be1900889"
     },
     "rules": [
       {

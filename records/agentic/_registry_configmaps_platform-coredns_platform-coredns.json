@@ -3,7 +3,7 @@
   "value": {
     "apiVersion": "v1",
     "data": {
-      "Corefile": ".:53 {\n    errors\n    health {\n        lameduck 10s\n    }\n    ready\n    kubernetes cluster.local in-addr.arpa ip6.arpa {\n        pods insecure\n        fallthrough in-addr.arpa ip6.arpa\n        ttl 30\n    }\n    autopath @kubernetes\n    prometheus 0.0.0.0:9153\n    forward . /etc/resolv.conf\n    cache 30\n    loop\n    reload\n    loadbalance\n}"
+      "Corefile": ".:53 {\n    errors\n    health {\n        lameduck 10s\n    }\n    ready\n    hosts /etc/coredns-static/hosts {\n        ttl 30\n        fallthrough\n    }\n    kubernetes cluster.local in-addr.arpa ip6.arpa {\n        pods insecure\n        fallthrough in-addr.arpa ip6.arpa\n        ttl 30\n    }\n    autopath @kubernetes\n    prometheus 0.0.0.0:9153\n    forward . /etc/resolv.conf\n    cache 30\n    loop\n    reload\n    loadbalance\n}"
     },
     "kind": "ConfigMap",
     "metadata": {
@@ -25,7 +25,7 @@
       },
       "name": "platform-coredns",
       "namespace": "platform-coredns",
-      "uid": "5d69a6ff-7002-4001-b343-e3e5faa238ac"
+      "uid": "68d6cdc6-9d9e-4647-9c91-17a74ea7596f"
     }
   }
 }

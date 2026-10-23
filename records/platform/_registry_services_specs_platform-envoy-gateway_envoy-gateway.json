@@ -21,7 +21,7 @@
       },
       "name": "envoy-gateway",
       "namespace": "platform-envoy-gateway",
-      "uid": "2dcba7ca-9665-4b83-bfb9-c8e8967a0df8"
+      "uid": "ac2bcd83-1cb5-4f48-945a-497ab8634637"
     },
     "spec": {
       "clusterIP": "198.18.0.5",

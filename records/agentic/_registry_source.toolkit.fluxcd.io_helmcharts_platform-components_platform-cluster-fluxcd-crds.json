@@ -15,7 +15,7 @@
       },
       "name": "platform-cluster-fluxcd-crds",
       "namespace": "platform-components",
-      "uid": "92ca97c5-b6c7-490e-ac42-2f20c7a62fa8"
+      "uid": "d12448a8-686d-42d4-b59a-dc2f1f8c03f3"
     },
     "spec": {
       "chart": "./charts/fluxcd-crds",

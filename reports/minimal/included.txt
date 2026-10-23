@@ -227,6 +227,7 @@
 /registry/configmaps/kube-system/kube-apiserver-legacy-service-account-token-tracking
 /registry/configmaps/platform-cilium/cilium-config
 /registry/configmaps/platform-coredns/platform-coredns
+/registry/configmaps/platform-coredns/platform-coredns-static-records
 /registry/daemonsets/platform-cilium/cilium
 /registry/deployments/platform-cilium/cilium-operator
 /registry/deployments/platform-coredns/platform-coredns

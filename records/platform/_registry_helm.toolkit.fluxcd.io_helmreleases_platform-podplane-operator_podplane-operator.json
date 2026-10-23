@@ -20,7 +20,7 @@
       },
       "name": "podplane-operator",
       "namespace": "platform-podplane-operator",
-      "uid": "2ff404b3-45b5-4db3-8fb4-4fac496a3486"
+      "uid": "562fdab5-2552-4818-b2ba-d266ad8279bc"
     },
     "spec": {
       "chart": {
@@ -73,7 +73,7 @@
                 "oidc": {
                   "clientID": "default",
                   "groupsClaim": "groups",
-                  "issuerURL": "https://oidc.localhost:56335/oidc",
+                  "issuerURL": "https://oidc.localhost:58927/oidc",
                   "usernameClaim": "email"
                 },
                 "spiffe": {

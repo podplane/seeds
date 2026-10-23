@@ -9,7 +9,7 @@
         "kube-aggregator.kubernetes.io/automanaged": "true"
       },
       "name": "v1alpha1.sourcegateway.dev",
-      "uid": "b1b791b6-3462-49cb-b604-82f50f70d3fb"
+      "uid": "5a887276-bf09-48d3-a8d4-76e51e271b36"
     },
     "spec": {
       "group": "sourcegateway.dev",

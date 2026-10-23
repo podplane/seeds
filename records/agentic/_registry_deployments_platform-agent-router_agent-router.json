@@ -22,7 +22,7 @@
       },
       "name": "agent-router",
       "namespace": "platform-agent-router",
-      "uid": "4c70a132-e59f-43d2-9697-37891d8344a5"
+      "uid": "20d05438-c298-4e0e-aca5-fb29c4e1fa03"
     },
     "spec": {
       "progressDeadlineSeconds": 600,

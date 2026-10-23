@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:controller:persistent-volume-binder",
-      "uid": "dd825227-c6bd-4eef-bb77-37d4ad381f84"
+      "uid": "0c84dc62-3782-461b-932a-acc8e863e1ce"
     },
     "rules": [
       {

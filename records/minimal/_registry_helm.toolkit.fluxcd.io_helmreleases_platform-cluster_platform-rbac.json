@@ -20,7 +20,7 @@
       },
       "name": "platform-rbac",
       "namespace": "platform-cluster",
-      "uid": "a8437d43-28c8-4ca9-9978-e3a502f02ec5"
+      "uid": "9bad6e01-2ccd-48af-967c-eb978b50400e"
     },
     "spec": {
       "chart": {

@@ -16,7 +16,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "platform-reserved-workload-ca-spc-vapb",
-      "uid": "44eb5824-9984-4dd3-85e0-9220bcfe05e9"
+      "uid": "f77f4136-6f69-4d88-a598-d9e6383691a4"
     },
     "spec": {
       "matchResources": {

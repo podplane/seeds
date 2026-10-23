@@ -13,7 +13,7 @@
         "rbac.authorization.k8s.io/aggregate-to-admin": "true"
       },
       "name": "system:aggregate-to-admin",
-      "uid": "03f121a5-c480-453c-b86f-5c6288c8b0bb"
+      "uid": "9294b8a1-af37-4bb2-a2c6-62dc05e0c626"
     },
     "rules": [
       {

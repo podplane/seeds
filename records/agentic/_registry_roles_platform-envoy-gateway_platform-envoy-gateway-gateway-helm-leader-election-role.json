@@ -20,7 +20,7 @@
       },
       "name": "platform-envoy-gateway-gateway-helm-leader-election-role",
       "namespace": "platform-envoy-gateway",
-      "uid": "7c0727ea-e864-4c5c-a698-9d375471e6db"
+      "uid": "edeb1e97-0320-40ff-9704-514284cb4062"
     },
     "rules": [
       {

@@ -25,10 +25,10 @@
           "apiVersion": "gateway.networking.k8s.io/v1",
           "kind": "Gateway",
           "name": "platform-agent-router-gateway",
-          "uid": "8b1fb724-8a98-45fb-b5e5-4be6d2798aae"
+          "uid": "30c6603e-8edf-4a1d-a816-4ed740c05f32"
         }
       ],
-      "uid": "6c5c69de-15fd-4836-b14f-7dd503b6abef"
+      "uid": "29be1290-3610-4968-963d-a509e8fdcf3d"
     }
   }
 }

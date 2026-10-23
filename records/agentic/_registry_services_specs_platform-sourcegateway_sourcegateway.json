@@ -13,19 +13,19 @@
         "app.kubernetes.io/instance": "platform-sourcegateway",
         "app.kubernetes.io/managed-by": "Helm",
         "app.kubernetes.io/name": "sourcegateway",
-        "app.kubernetes.io/version": "v0.1.5",
-        "helm.sh/chart": "sourcegateway-0.1.5",
+        "app.kubernetes.io/version": "v0.2.1",
+        "helm.sh/chart": "sourcegateway-0.2.1",
         "helm.toolkit.fluxcd.io/name": "sourcegateway",
         "helm.toolkit.fluxcd.io/namespace": "platform-sourcegateway"
       },
       "name": "sourcegateway",
       "namespace": "platform-sourcegateway",
-      "uid": "369e2292-89ec-4761-94b0-3198959909c9"
+      "uid": "156c6eeb-4979-4020-9f1d-870e0b486d14"
     },
     "spec": {
-      "clusterIP": "198.18.0.9",
+      "clusterIP": "198.18.0.6",
       "clusterIPs": [
-        "198.18.0.9"
+        "198.18.0.6"
       ],
       "internalTrafficPolicy": "Cluster",
       "ipFamilies": [

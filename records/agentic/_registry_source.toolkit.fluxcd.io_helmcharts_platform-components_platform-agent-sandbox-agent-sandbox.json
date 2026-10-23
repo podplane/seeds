@@ -15,7 +15,7 @@
       },
       "name": "platform-agent-sandbox-agent-sandbox",
       "namespace": "platform-components",
-      "uid": "95da8fbd-fe50-4eea-9a25-c5a12789dacd"
+      "uid": "3200d0d5-cb92-49f2-87b1-bbf1cf52e15c"
     },
     "spec": {
       "chart": "./charts/agent-sandbox",

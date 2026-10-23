@@ -15,7 +15,7 @@
       },
       "name": "platform-coredns-coredns",
       "namespace": "platform-components",
-      "uid": "6cac6f93-237b-4f0d-aae4-6b49fb65c903"
+      "uid": "b9da12cd-5a39-41c5-b8e5-fe6883e24131"
     },
     "spec": {
       "chart": "./charts/coredns",

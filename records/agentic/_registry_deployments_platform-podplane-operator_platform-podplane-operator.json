@@ -16,13 +16,13 @@
         "app.kubernetes.io/instance": "platform-podplane-operator",
         "app.kubernetes.io/managed-by": "Helm",
         "app.kubernetes.io/name": "podplane-operator",
-        "helm.sh/chart": "podplane-operator-1.0.0_7d5a9ae0b0a2",
+        "helm.sh/chart": "podplane-operator-1.0.0_99eb53a09258",
         "helm.toolkit.fluxcd.io/name": "podplane-operator",
         "helm.toolkit.fluxcd.io/namespace": "platform-podplane-operator"
       },
       "name": "platform-podplane-operator",
       "namespace": "platform-podplane-operator",
-      "uid": "82dd078b-2ebc-4203-948a-9180426c49d6"
+      "uid": "9ae67b0f-7c5b-4cde-b341-061901cdadd5"
     },
     "spec": {
       "progressDeadlineSeconds": 600,

@@ -16,14 +16,14 @@
         "app.kubernetes.io/instance": "platform-sourcegateway",
         "app.kubernetes.io/managed-by": "Helm",
         "app.kubernetes.io/name": "sourcegateway",
-        "app.kubernetes.io/version": "v0.1.5",
-        "helm.sh/chart": "sourcegateway-0.1.5",
+        "app.kubernetes.io/version": "v0.2.1",
+        "helm.sh/chart": "sourcegateway-0.2.1",
         "helm.toolkit.fluxcd.io/name": "sourcegateway",
         "helm.toolkit.fluxcd.io/namespace": "platform-sourcegateway"
       },
       "name": "sourcegateway",
       "namespace": "platform-sourcegateway",
-      "uid": "2b6b8346-efc5-433e-897b-d9882f61e25b"
+      "uid": "eee6f6c1-7bd3-43b3-9dfc-40b1862eecec"
     }
   }
 }

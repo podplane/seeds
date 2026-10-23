@@ -15,7 +15,7 @@
       },
       "name": "platform-podplane-operator-podplane-operator",
       "namespace": "platform-components",
-      "uid": "1150b33f-c315-48e1-806a-b2f87cec878c"
+      "uid": "9987df4e-6a0e-4891-9562-e3dc6bc0c541"
     },
     "spec": {
       "chart": "./charts/podplane-operator",

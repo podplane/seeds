@@ -15,14 +15,14 @@
         "app.kubernetes.io/instance": "platform-sourcegateway",
         "app.kubernetes.io/managed-by": "Helm",
         "app.kubernetes.io/name": "sourcegateway",
-        "app.kubernetes.io/version": "v0.1.5",
-        "helm.sh/chart": "sourcegateway-0.1.5",
+        "app.kubernetes.io/version": "v0.2.1",
+        "helm.sh/chart": "sourcegateway-0.2.1",
         "helm.toolkit.fluxcd.io/name": "sourcegateway",
         "helm.toolkit.fluxcd.io/namespace": "platform-sourcegateway"
       },
       "name": "sourcegateway",
       "namespace": "platform-sourcegateway",
-      "uid": "7b226d80-e146-4e7c-8e71-00f684ff9a98"
+      "uid": "b401ecde-9fff-408f-9490-84c1ab92cdb0"
     },
     "spec": {
       "progressDeadlineSeconds": 600,
@@ -55,7 +55,7 @@
               "args": [
                 "--config=/etc/sourcegateway/config.jsonc"
               ],
-              "image": "default-registry.local/mirror/ghcr.io/sourcegateway/sourcegateway:v0.1.5",
+              "image": "default-registry.local/mirror/ghcr.io/sourcegateway/sourcegateway:v0.2.1",
               "imagePullPolicy": "IfNotPresent",
               "livenessProbe": {
                 "failureThreshold": 3,

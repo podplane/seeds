@@ -15,7 +15,7 @@
       },
       "name": "platform-cluster-agent-sandbox-crds",
       "namespace": "platform-components",
-      "uid": "1ff4aef4-9b34-4d16-b250-73db1e7560d1"
+      "uid": "20de2b08-7f67-444b-b6b9-607f61b7941b"
     },
     "spec": {
       "chart": "./charts/agent-sandbox-crds",

@@ -25,7 +25,7 @@
       },
       "name": "platform-coredns",
       "namespace": "platform-coredns",
-      "uid": "cb7dc123-41c6-476f-b355-2429b4ebe9c5"
+      "uid": "422f916e-a0e5-4317-b5de-20cd44f437b7"
     },
     "spec": {
       "progressDeadlineSeconds": 600,
@@ -48,7 +48,7 @@
       "template": {
         "metadata": {
           "annotations": {
-            "checksum/config": "e0b5cdbb28088b71f501290fdb27e0c964969d8674310742588fdec069713932",
+            "checksum/config": "f98b963147b8fe25308428abea9fdf5e07c4bbfac93d066c7579e30a7603b6c6",
             "cluster-autoscaler.kubernetes.io/safe-to-evict": "false",
             "scheduler.alpha.kubernetes.io/tolerations": "[{\"key\":\"CriticalAddonsOnly\", \"operator\":\"Exists\"}]"
           },
@@ -137,6 +137,11 @@
                   "mountPath": "/etc/resolv.conf",
                   "name": "systemd-resolve",
                   "readOnly": true
+                },
+                {
+                  "mountPath": "/etc/coredns-static",
+                  "name": "static-records",
+                  "readOnly": true
                 }
               ]
             }
@@ -175,6 +180,13 @@
                 "type": "File"
               },
               "name": "systemd-resolve"
+            },
+            {
+              "configMap": {
+                "defaultMode": 420,
+                "name": "platform-coredns-static-records"
+              },
+              "name": "static-records"
             }
           ]
         }

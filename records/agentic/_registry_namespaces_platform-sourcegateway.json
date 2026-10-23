@@ -20,7 +20,7 @@
         "pod-security.kubernetes.io/warn": "restricted"
       },
       "name": "platform-sourcegateway",
-      "uid": "14886f6c-982d-4142-a9bd-7aadf56bc9e1"
+      "uid": "68e9e888-ce78-4338-83c5-334908e1454e"
     },
     "spec": {
       "finalizers": [

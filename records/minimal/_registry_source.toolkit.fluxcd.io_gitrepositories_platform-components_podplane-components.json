@@ -12,7 +12,7 @@
       "generation": 1,
       "name": "podplane-components",
       "namespace": "platform-components",
-      "uid": "49c75084-ce10-43b0-9294-97f47f8b7a5b"
+      "uid": "c9585fd5-4e51-43d7-9f08-2e33406a4825"
     },
     "spec": {
       "interval": "10m",

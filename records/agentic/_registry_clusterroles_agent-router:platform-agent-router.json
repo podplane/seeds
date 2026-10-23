@@ -15,7 +15,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-agent-router"
       },
       "name": "agent-router:platform-agent-router",
-      "uid": "ba3f8c9d-ebb0-45bc-96cc-d82c3049a6d3"
+      "uid": "343c541f-422b-40f5-97b2-df1fef1b9560"
     },
     "rules": [
       {

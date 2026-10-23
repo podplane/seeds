@@ -13,7 +13,7 @@
       },
       "name": "system::leader-locking-kube-controller-manager",
       "namespace": "kube-system",
-      "uid": "dd9c7421-11a0-4ac7-b689-3f19c814a203"
+      "uid": "f40a5450-353d-4054-8473-9558543d8821"
     },
     "rules": [
       {

@@ -16,7 +16,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "platform-runtime-class-default-mapb",
-      "uid": "5b010bbb-4511-463d-ab0f-028f313b05da"
+      "uid": "9dc5d000-fc43-432e-832b-5f9858ab0e9f"
     },
     "spec": {
       "policyName": "platform-runtime-class-default-map"

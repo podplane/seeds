@@ -17,7 +17,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "ciliumpodippools.cilium.io",
-      "uid": "df7fb5a2-40f6-4fc4-a976-926d549c92c3"
+      "uid": "30b15c55-5807-4e9c-af60-f342a5d51a1c"
     },
     "spec": {
       "conversion": {

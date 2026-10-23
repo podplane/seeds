@@ -19,7 +19,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-agent-router"
       },
       "name": "platform-agent-router-gateway-helm-cluster-infra-manager",
-      "uid": "e43fba2c-9abd-42be-b217-f643225cc2c1"
+      "uid": "c6d11065-903f-447f-a9c2-d79fbf437554"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

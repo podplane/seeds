@@ -1,0 +1,25 @@
+{
+  "key": "/registry/configmaps/platform-coredns/platform-coredns-static-records",
+  "value": {
+    "apiVersion": "v1",
+    "data": {
+      "hosts": ""
+    },
+    "kind": "ConfigMap",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-coredns",
+        "meta.helm.sh/release-namespace": "platform-coredns"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "coredns",
+        "helm.toolkit.fluxcd.io/namespace": "platform-coredns"
+      },
+      "name": "platform-coredns-static-records",
+      "namespace": "platform-coredns",
+      "uid": "ec1026ba-22f4-4f65-b0d5-938c1df9f583"
+    }
+  }
+}

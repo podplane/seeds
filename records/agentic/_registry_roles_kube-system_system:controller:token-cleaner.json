@@ -13,7 +13,7 @@
       },
       "name": "system:controller:token-cleaner",
       "namespace": "kube-system",
-      "uid": "4a9479c8-e6dd-42d9-b158-9f42300fc44d"
+      "uid": "7c387361-4954-425d-ab79-827e51df4f81"
     },
     "rules": [
       {

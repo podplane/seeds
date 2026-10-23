@@ -15,7 +15,7 @@
       },
       "name": "platform-cluster-sourcegateway-crds",
       "namespace": "platform-components",
-      "uid": "ae8629f2-a92d-4382-893d-8258e3ab0c02"
+      "uid": "f4df7bc0-04a1-4be1-8e1a-6231621fa88f"
     },
     "spec": {
       "chart": "./charts/sourcegateway-crds",

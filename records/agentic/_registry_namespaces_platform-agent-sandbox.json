@@ -20,7 +20,7 @@
         "pod-security.kubernetes.io/warn": "restricted"
       },
       "name": "platform-agent-sandbox",
-      "uid": "3355c0e1-ae78-4724-adac-0d75021d0495"
+      "uid": "8003870f-82f9-447a-be71-98aeb04d66ae"
     },
     "spec": {
       "finalizers": [

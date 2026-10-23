@@ -294,6 +294,7 @@
 /registry/configmaps/platform-agent-router/platform-agent-router-gateway
 /registry/configmaps/platform-cilium/cilium-config
 /registry/configmaps/platform-coredns/platform-coredns
+/registry/configmaps/platform-coredns/platform-coredns-static-records
 /registry/configmaps/platform-envoy-gateway/envoy-gateway-config
 /registry/configmaps/platform-envoy-gateway/platform-envoy-gateway
 /registry/configmaps/platform-podplane-operator/platform-podplane-operator-config
