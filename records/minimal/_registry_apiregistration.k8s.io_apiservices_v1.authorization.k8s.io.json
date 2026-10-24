@@ -9,7 +9,7 @@
         "kube-aggregator.kubernetes.io/automanaged": "onstart"
       },
       "name": "v1.authorization.k8s.io",
-      "uid": "fd7d1207-2950-48a1-95bf-93eeed234a31"
+      "uid": "30e3371b-71b0-47d7-8bcf-ea3852636462"
     },
     "spec": {
       "group": "authorization.k8s.io",

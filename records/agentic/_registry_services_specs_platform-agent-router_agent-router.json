@@ -20,12 +20,12 @@
       },
       "name": "agent-router",
       "namespace": "platform-agent-router",
-      "uid": "a47b3264-aecb-440b-baf3-45e3ca43941d"
+      "uid": "3de49f05-8657-418b-8174-c5cfdefc3c96"
     },
     "spec": {
-      "clusterIP": "198.18.0.8",
+      "clusterIP": "198.18.0.7",
       "clusterIPs": [
-        "198.18.0.8"
+        "198.18.0.7"
       ],
       "internalTrafficPolicy": "Cluster",
       "ipFamilies": [

@@ -8,7 +8,7 @@
       "creationTimestamp": "2015-07-11T04:02:31Z",
       "generation": 1,
       "name": "system-node-critical",
-      "uid": "d3d25df1-eceb-4cc2-9b6e-37df25581d05"
+      "uid": "255c4878-5313-4740-afd7-82fb3fd00d8a"
     },
     "preemptionPolicy": "PreemptLowerPriority",
     "value": 2000001000

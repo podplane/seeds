@@ -15,7 +15,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-agent-router"
       },
       "name": "envoy-ai-gateway-inference-pool-reader:platform-agent-router",
-      "uid": "91a7d476-afc0-44f0-af77-9a32b229a950"
+      "uid": "1507daa3-2d5f-42db-8259-dc12aa81698c"
     },
     "rules": [
       {

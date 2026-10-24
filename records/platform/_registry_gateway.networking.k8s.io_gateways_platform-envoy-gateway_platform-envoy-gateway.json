@@ -17,7 +17,7 @@
       },
       "name": "platform-envoy-gateway",
       "namespace": "platform-envoy-gateway",
-      "uid": "481b43c1-3d33-4514-a736-59c35aaae251"
+      "uid": "cf6b6569-9bda-4123-a57b-8fab82c60833"
     },
     "spec": {
       "gatewayClassName": "platform-envoy-gateway",

@@ -19,7 +19,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-envoy-gateway"
       },
       "name": "platform-envoy-gateway-gateway-helm-cluster-infra-manager",
-      "uid": "359ac058-3eda-4a6b-bfd1-460dac3bd265"
+      "uid": "34330027-2b43-406c-95fd-f4d226d69d13"
     },
     "rules": [
       {

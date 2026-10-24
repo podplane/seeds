@@ -16,7 +16,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "platform-pod-security-defaults-mapb",
-      "uid": "08647551-c978-4129-ad39-6877465fa2d3"
+      "uid": "9c40e8a5-5bd9-4d18-ad46-eff5cc3d55c4"
     },
     "spec": {
       "matchResources": {

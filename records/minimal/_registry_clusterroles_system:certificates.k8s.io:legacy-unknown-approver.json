@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:certificates.k8s.io:legacy-unknown-approver",
-      "uid": "6ab18a75-2229-4e46-8333-8c03c8b95fbf"
+      "uid": "7b92cb6c-79e6-4b98-b6e5-fa887ee34db7"
     },
     "rules": [
       {

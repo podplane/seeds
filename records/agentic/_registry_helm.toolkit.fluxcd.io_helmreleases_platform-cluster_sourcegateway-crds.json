@@ -20,7 +20,7 @@
       },
       "name": "sourcegateway-crds",
       "namespace": "platform-cluster",
-      "uid": "2c336b0b-ee7b-476f-94a9-859fd35b79d5"
+      "uid": "1386886a-1f85-4924-9006-41d80e843486"
     },
     "spec": {
       "chart": {

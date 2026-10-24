@@ -20,7 +20,7 @@
       },
       "name": "zot-registry",
       "namespace": "platform-zot-registry",
-      "uid": "e91daaef-b024-4add-ba9b-26f97fa55b99"
+      "uid": "a5041bcd-d001-4b93-b8dc-99f143da0258"
     },
     "spec": {
       "clusterIP": "198.18.0.2",

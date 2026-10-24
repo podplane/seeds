@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:controller:root-ca-cert-publisher",
-      "uid": "b09119ea-d775-4adf-be77-6104c0c96b4b"
+      "uid": "210a5448-b7eb-4334-a2bd-2abec227ab44"
     },
     "rules": [
       {

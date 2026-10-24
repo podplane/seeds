@@ -22,7 +22,7 @@
       },
       "name": "cilium-operator",
       "namespace": "platform-cilium",
-      "uid": "2e7199ab-f4a2-4434-bfe8-90a351b3431a"
+      "uid": "dad94ebf-bbb7-46b0-93f0-321a8b62068a"
     },
     "spec": {
       "progressDeadlineSeconds": 600,

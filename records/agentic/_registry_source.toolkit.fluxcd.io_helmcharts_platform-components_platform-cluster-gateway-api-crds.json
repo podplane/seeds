@@ -15,7 +15,7 @@
       },
       "name": "platform-cluster-gateway-api-crds",
       "namespace": "platform-components",
-      "uid": "5341bff5-ba16-4783-ae27-37d994eacfc8"
+      "uid": "fcedad0c-731d-43c8-946c-1f5181ec719c"
     },
     "spec": {
       "chart": "./charts/gateway-api-crds",

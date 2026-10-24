@@ -21,12 +21,12 @@
       },
       "name": "envoy-gateway",
       "namespace": "platform-agent-router",
-      "uid": "a2a8c7e2-4a06-4a1f-bb19-2563c5511796"
+      "uid": "7a493fae-8305-4bad-b420-4c3d2d033588"
     },
     "spec": {
-      "clusterIP": "198.18.0.7",
+      "clusterIP": "198.18.0.8",
       "clusterIPs": [
-        "198.18.0.7"
+        "198.18.0.8"
       ],
       "internalTrafficPolicy": "Cluster",
       "ipFamilies": [

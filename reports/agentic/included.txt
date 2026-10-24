@@ -329,6 +329,7 @@
 /registry/flowschemas/system-leader-election
 /registry/flowschemas/system-node-high
 /registry/flowschemas/system-nodes
+/registry/gateway.envoyproxy.io/clienttrafficpolicies/platform-agent-router/platform-agent-router-gateway
 /registry/gateway.envoyproxy.io/envoyproxies/platform-agent-router/platform-agent-router-gateway
 /registry/gateway.envoyproxy.io/envoyproxies/platform-envoy-gateway/platform-envoy-gateway
 /registry/gateway.networking.k8s.io/gatewayclasses/platform-envoy-gateway

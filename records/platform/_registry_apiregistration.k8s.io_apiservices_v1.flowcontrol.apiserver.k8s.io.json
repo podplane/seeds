@@ -9,7 +9,7 @@
         "kube-aggregator.kubernetes.io/automanaged": "onstart"
       },
       "name": "v1.flowcontrol.apiserver.k8s.io",
-      "uid": "bbc0afcd-c7f8-4988-9635-701c639b5d92"
+      "uid": "ac09b3f6-1f3f-4116-9a3d-e70496436eac"
     },
     "spec": {
       "group": "flowcontrol.apiserver.k8s.io",

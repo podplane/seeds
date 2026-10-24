@@ -20,7 +20,7 @@
       },
       "name": "envoy-gateway",
       "namespace": "platform-envoy-gateway",
-      "uid": "ffde095c-565a-4272-8ee3-8656132ddc35"
+      "uid": "88e2d037-1d54-4c9b-82cd-0ce39c13b7b8"
     },
     "spec": {
       "chart": {

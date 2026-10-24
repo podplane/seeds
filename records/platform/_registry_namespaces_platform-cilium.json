@@ -21,7 +21,7 @@
         "runtime.podplane.dev/runc": "allowed"
       },
       "name": "platform-cilium",
-      "uid": "5505ded6-c613-4a3d-b6bf-82cf3787ff1a"
+      "uid": "06631d53-7278-4724-a7b7-c38ed90cc6a7"
     },
     "spec": {
       "finalizers": [

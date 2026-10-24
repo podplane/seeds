@@ -20,7 +20,7 @@
         "pod-security.kubernetes.io/warn": "restricted"
       },
       "name": "platform-zot-registry",
-      "uid": "65972bb8-8319-4629-ba7f-475e5a9cc1a2"
+      "uid": "71860e5d-2d45-40f7-bff0-90460ca54c13"
     },
     "spec": {
       "finalizers": [

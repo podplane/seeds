@@ -15,7 +15,7 @@
       },
       "name": "platform-components-platform-components",
       "namespace": "platform-components",
-      "uid": "5ec09ae4-de5c-4421-acac-56faf6ed9042"
+      "uid": "4176ea36-89e9-46d3-93b0-963638c08995"
     },
     "spec": {
       "chart": "./charts/platform-components",

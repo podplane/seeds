@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:controller:horizontal-pod-autoscaler",
-      "uid": "cc711e2a-29b2-48c2-b7a3-ece923970472"
+      "uid": "18e5a0f7-d4fe-453e-b980-4b4f974e7adc"
     },
     "rules": [
       {

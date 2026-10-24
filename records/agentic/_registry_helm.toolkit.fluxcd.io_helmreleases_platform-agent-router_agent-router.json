@@ -20,7 +20,7 @@
       },
       "name": "agent-router",
       "namespace": "platform-agent-router",
-      "uid": "d9d2ce53-40ec-4a3d-aa62-f81f116d418a"
+      "uid": "c01c6ea8-46bb-449f-aa85-98c75eca9bd4"
     },
     "spec": {
       "chart": {

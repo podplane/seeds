@@ -22,7 +22,7 @@
         "rbac.authorization.k8s.io/aggregate-to-edit": "true"
       },
       "name": "view",
-      "uid": "2a818d75-e8d9-4f87-8560-5b8c67a65c66"
+      "uid": "51df2408-ebdd-45da-a09c-41b26267613a"
     },
     "rules": [
       {

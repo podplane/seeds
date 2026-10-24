@@ -17,7 +17,7 @@
       },
       "name": "cilium-config-agent",
       "namespace": "platform-cilium",
-      "uid": "08aa9cc5-7e07-4df8-834f-1ef7ed952c1b"
+      "uid": "e12c8fca-3623-4f87-8404-c51bfa66d9bb"
     },
     "rules": [
       {

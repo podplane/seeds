@@ -1,0 +1,36 @@
+{
+  "key": "/registry/gateway.envoyproxy.io/clienttrafficpolicies/platform-agent-router/platform-agent-router-gateway",
+  "value": {
+    "apiVersion": "gateway.envoyproxy.io/v1alpha1",
+    "kind": "ClientTrafficPolicy",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-agent-router",
+        "meta.helm.sh/release-namespace": "platform-agent-router"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "agent-router",
+        "helm.toolkit.fluxcd.io/namespace": "platform-agent-router"
+      },
+      "name": "platform-agent-router-gateway",
+      "namespace": "platform-agent-router",
+      "uid": "bfb4beec-ffe1-4d39-819c-bf54e53ce81f"
+    },
+    "spec": {
+      "connection": {
+        "bufferLimit": "50Mi",
+        "maxAcceptPerSocketEvent": 1
+      },
+      "targetRefs": [
+        {
+          "group": "gateway.networking.k8s.io",
+          "kind": "Gateway",
+          "name": "platform-agent-router-gateway"
+        }
+      ]
+    }
+  }
+}

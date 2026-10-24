@@ -16,7 +16,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "platform-runc-permission-vapb",
-      "uid": "b029f419-84db-4956-8d3d-a5428340e6b5"
+      "uid": "e58189be-f0b9-4c67-8b03-6ff95d8769d0"
     },
     "spec": {
       "policyName": "platform-runc-permission-vap",

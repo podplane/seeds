@@ -15,7 +15,7 @@
       },
       "name": "platform-cluster-platform-runtime",
       "namespace": "platform-components",
-      "uid": "0d47f44d-9877-46bc-9fa1-7c88acf982d3"
+      "uid": "dff6848b-caa9-4c59-be10-ad9dd40de344"
     },
     "spec": {
       "chart": "./charts/platform-runtime",

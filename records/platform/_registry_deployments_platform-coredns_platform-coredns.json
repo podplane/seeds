@@ -25,7 +25,7 @@
       },
       "name": "platform-coredns",
       "namespace": "platform-coredns",
-      "uid": "422f916e-a0e5-4317-b5de-20cd44f437b7"
+      "uid": "11cc2ccb-ef02-4fc6-a3fa-6449fa49b798"
     },
     "spec": {
       "progressDeadlineSeconds": 600,

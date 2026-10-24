@@ -20,15 +20,15 @@
           "apiVersion": "gateway.networking.k8s.io/v1",
           "kind": "Gateway",
           "name": "platform-envoy-gateway",
-          "uid": "481b43c1-3d33-4514-a736-59c35aaae251"
+          "uid": "cf6b6569-9bda-4123-a57b-8fab82c60833"
         }
       ],
-      "uid": "30bae59f-1fda-45b4-a48c-fc168025aaa9"
+      "uid": "6e1ce15e-f026-4748-817e-30ec564a7d86"
     },
     "spec": {
-      "clusterIP": "198.18.0.10",
+      "clusterIP": "198.18.0.11",
       "clusterIPs": [
-        "198.18.0.10"
+        "198.18.0.11"
       ],
       "internalTrafficPolicy": "Cluster",
       "ipFamilies": [

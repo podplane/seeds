@@ -16,7 +16,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "platform-spc-writer-vapb",
-      "uid": "d3dda137-e8d5-460d-8a7f-f14299c6e010"
+      "uid": "f7009e89-fdb4-4369-8c32-23eefd11392c"
     },
     "spec": {
       "policyName": "platform-spc-writer-vap",

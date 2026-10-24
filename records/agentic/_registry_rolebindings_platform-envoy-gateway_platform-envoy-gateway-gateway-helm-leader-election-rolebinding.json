@@ -20,7 +20,7 @@
       },
       "name": "platform-envoy-gateway-gateway-helm-leader-election-rolebinding",
       "namespace": "platform-envoy-gateway",
-      "uid": "b4e768b1-ba65-4d9b-80f0-65b4511e03e4"
+      "uid": "1443c73a-6fac-47d1-b6c3-2d161ba02080"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

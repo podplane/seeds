@@ -15,7 +15,7 @@
       },
       "name": "platform-agent-router-agent-router",
       "namespace": "platform-components",
-      "uid": "37210a9c-abbe-416a-b761-a0a18dfce490"
+      "uid": "b06c2711-877b-495c-bb3f-89ec3601ecee"
     },
     "spec": {
       "chart": "./charts/agent-router",

@@ -8,7 +8,7 @@
       "creationTimestamp": "2015-07-11T04:02:31Z",
       "generation": 1,
       "name": "system-cluster-critical",
-      "uid": "46f2e51e-041a-4b50-b093-56d029616b20"
+      "uid": "26a21365-a2d3-4ce0-9dfd-e35776fdf5b7"
     },
     "preemptionPolicy": "PreemptLowerPriority",
     "value": 2000000000

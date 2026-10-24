@@ -19,7 +19,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-envoy-gateway"
       },
       "name": "platform-envoy-gateway",
-      "uid": "3a63ba54-a070-4dcf-96b9-0140647e1f2c"
+      "uid": "7f01d582-1d91-416c-b639-1e4071a6886c"
     },
     "spec": {
       "controllerName": "gateway.envoyproxy.io/gatewayclass-controller"

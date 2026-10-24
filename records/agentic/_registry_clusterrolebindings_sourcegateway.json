@@ -19,7 +19,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-sourcegateway"
       },
       "name": "sourcegateway",
-      "uid": "3501ca17-40cf-45e5-bebf-bff2e2bd61e7"
+      "uid": "505d7501-0db9-4e2f-96e5-845876c03a7e"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",
