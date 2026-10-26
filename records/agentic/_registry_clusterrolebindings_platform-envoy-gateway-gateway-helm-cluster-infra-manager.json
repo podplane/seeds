@@ -19,7 +19,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-envoy-gateway"
       },
       "name": "platform-envoy-gateway-gateway-helm-cluster-infra-manager",
-      "uid": "e1764ff6-bd38-4349-b710-c69f6ef45404"
+      "uid": "9e8b2d57-5c00-4fee-b331-ef5702afe6d2"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

@@ -25,10 +25,10 @@
           "apiVersion": "gateway.networking.k8s.io/v1",
           "kind": "Gateway",
           "name": "platform-envoy-gateway",
-          "uid": "cf6b6569-9bda-4123-a57b-8fab82c60833"
+          "uid": "94ebfcbe-5293-4e73-9c36-f77ef8e0bec4"
         }
       ],
-      "uid": "a32313a3-d658-44e4-b7c0-fd3a0ced3ae0"
+      "uid": "c18c8c70-aefa-4fce-b5a8-160098ff269b"
     }
   }
 }

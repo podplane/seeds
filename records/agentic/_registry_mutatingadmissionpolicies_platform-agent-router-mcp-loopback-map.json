@@ -1,0 +1,68 @@
+{
+  "key": "/registry/mutatingadmissionpolicies/platform-agent-router-mcp-loopback-map",
+  "value": {
+    "apiVersion": "admissionregistration.k8s.io/v1",
+    "kind": "MutatingAdmissionPolicy",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-agent-router",
+        "meta.helm.sh/release-namespace": "platform-agent-router"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "agent-router",
+        "helm.toolkit.fluxcd.io/namespace": "platform-agent-router"
+      },
+      "name": "platform-agent-router-mcp-loopback-map",
+      "uid": "27cd20f4-438e-4f28-9369-e5a41834a8b6"
+    },
+    "spec": {
+      "failurePolicy": "Fail",
+      "matchConstraints": {
+        "matchPolicy": "Equivalent",
+        "namespaceSelector": {},
+        "objectSelector": {
+          "matchLabels": {
+            "app.kubernetes.io/managed-by": "envoy-gateway",
+            "gateway.envoyproxy.io/owning-gateway-name": "platform-agent-router-gateway",
+            "gateway.envoyproxy.io/owning-gateway-namespace": "platform-agent-router"
+          }
+        },
+        "resourceRules": [
+          {
+            "apiGroups": [
+              ""
+            ],
+            "apiVersions": [
+              "v1"
+            ],
+            "operations": [
+              "CREATE"
+            ],
+            "resources": [
+              "pods"
+            ],
+            "scope": "*"
+          }
+        ]
+      },
+      "mutations": [
+        {
+          "jsonPatch": {
+            "expression": "object.spec.?containers.orValue([]).transformList(i, c,\n\n\n  c.name == \"ai-gateway-extproc\" &&\n  c.?args.orValue([]).exists(j, arg,\n    j > 0 && arg == \":9856\" && c.args[j - 1] == \"-mcpAddr\"),\n  JSONPatch{\n    op: \"replace\",\n    path: \"/spec/containers/\" + string(i) + \"/args\",\n    value: c.args.transformList(j, arg,\n      j > 0 && arg == \":9856\" && c.args[j - 1] == \"-mcpAddr\"\n        ? \"127.0.0.1:9856\" : arg)\n  })\n"
+          },
+          "patchType": "JSONPatch"
+        },
+        {
+          "jsonPatch": {
+            "expression": "object.spec.?initContainers.orValue([]).transformList(i, c,\n\n\n  c.name == \"ai-gateway-extproc\" &&\n  c.?args.orValue([]).exists(j, arg,\n    j > 0 && arg == \":9856\" && c.args[j - 1] == \"-mcpAddr\"),\n  JSONPatch{\n    op: \"replace\",\n    path: \"/spec/initContainers/\" + string(i) + \"/args\",\n    value: c.args.transformList(j, arg,\n      j > 0 && arg == \":9856\" && c.args[j - 1] == \"-mcpAddr\"\n        ? \"127.0.0.1:9856\" : arg)\n  })"
+          },
+          "patchType": "JSONPatch"
+        }
+      ],
+      "reinvocationPolicy": "IfNeeded"
+    }
+  }
+}

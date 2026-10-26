@@ -20,7 +20,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "xbackendtrafficpolicies.gateway.networking.x-k8s.io",
-      "uid": "52f522e1-3cad-4d7c-8baf-f29137c65dcd"
+      "uid": "970d5efb-0015-49a3-8306-b8b5a7c70711"
     },
     "spec": {
       "additionalPrinterColumns": [

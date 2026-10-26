@@ -9,7 +9,7 @@
         "kube-aggregator.kubernetes.io/automanaged": "onstart"
       },
       "name": "v1.batch",
-      "uid": "cf084b5d-9142-416f-9efe-2d081fe4fdc6"
+      "uid": "84bb4e06-7ec5-4ff9-b9b9-6f2b652c3ff9"
     },
     "spec": {
       "group": "batch",

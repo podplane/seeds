@@ -22,7 +22,7 @@
       },
       "name": "agent-router",
       "namespace": "platform-agent-router",
-      "uid": "f2e4ee03-5d06-452c-a9e1-0c21d63e8e2c"
+      "uid": "9bafd70d-540b-4035-a478-27cb87f6834b"
     },
     "spec": {
       "progressDeadlineSeconds": 600,
@@ -120,7 +120,7 @@
                   "protocol": "TCP"
                 },
                 {
-                  "containerPort": 1063,
+                  "containerPort": 1163,
                   "protocol": "TCP"
                 },
                 {
@@ -128,7 +128,7 @@
                   "protocol": "TCP"
                 },
                 {
-                  "containerPort": 18002,
+                  "containerPort": 18003,
                   "protocol": "TCP"
                 }
               ],
@@ -177,6 +177,62 @@
                   "mountPath": "/certs",
                   "name": "certs",
                   "readOnly": true
+                },
+                {
+                  "mountPath": "/etc/podplane-tls",
+                  "name": "controller-tls-config"
+                }
+              ]
+            },
+            {
+              "args": [
+                "-c",
+                "/etc/podplane-tls/envoy.yaml",
+                "--concurrency",
+                "1",
+                "--log-level",
+                "warning"
+              ],
+              "image": "default-registry.local/mirror/docker.io/envoyproxy/envoy:distroless-v1.39.1",
+              "imagePullPolicy": "IfNotPresent",
+              "name": "controller-tls",
+              "readinessProbe": {
+                "failureThreshold": 3,
+                "periodSeconds": 10,
+                "successThreshold": 1,
+                "tcpSocket": {
+                  "port": 1163
+                },
+                "timeoutSeconds": 1
+              },
+              "resources": {},
+              "securityContext": {
+                "allowPrivilegeEscalation": false,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ]
+                },
+                "readOnlyRootFilesystem": true,
+                "runAsGroup": 65532,
+                "runAsNonRoot": true,
+                "runAsUser": 65532,
+                "seccompProfile": {
+                  "type": "RuntimeDefault"
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/certs",
+                  "name": "certs",
+                  "readOnly": true
+                },
+                {
+                  "mountPath": "/etc/podplane-tls",
+                  "name": "controller-tls-config",
+                  "readOnly": true
                 }
               ]
             }
@@ -224,6 +280,13 @@
                   }
                 ]
               }
+            },
+            {
+              "configMap": {
+                "defaultMode": 420,
+                "name": "agent-router-controller-tls"
+              },
+              "name": "controller-tls-config"
             }
           ]
         }

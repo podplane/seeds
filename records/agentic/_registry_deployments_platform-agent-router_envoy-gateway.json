@@ -23,7 +23,7 @@
       },
       "name": "envoy-gateway",
       "namespace": "platform-agent-router",
-      "uid": "cdef364e-ff2d-4fcb-b745-d4ec5d828693"
+      "uid": "24db8d8a-eef9-4b0e-910b-46817624ef37"
     },
     "spec": {
       "progressDeadlineSeconds": 600,

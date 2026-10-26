@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:controller:selinux-warning-controller",
-      "uid": "7d7e147b-d2bf-4e64-98f3-11b551a56fb8"
+      "uid": "751ba274-61b3-421d-a866-e0d229a80ca8"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

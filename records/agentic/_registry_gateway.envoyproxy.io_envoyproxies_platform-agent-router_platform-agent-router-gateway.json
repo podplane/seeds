@@ -17,7 +17,7 @@
       },
       "name": "platform-agent-router-gateway",
       "namespace": "platform-agent-router",
-      "uid": "2ae540b4-8f8b-47c3-9d5b-40e9c51fca28"
+      "uid": "a9892f46-d1dc-4800-af33-e91740d1748f"
     },
     "spec": {
       "logging": {
@@ -37,7 +37,63 @@
               "value": {
                 "spec": {
                   "template": {
+                    "metadata": {
+                      "annotations": {
+                        "dev.gvisor.spec.mount.podplane-sds.options": "rw,rprivate",
+                        "dev.gvisor.spec.mount.podplane-sds.share": "pod",
+                        "dev.gvisor.spec.mount.podplane-sds.type": "tmpfs"
+                      }
+                    },
                     "spec": {
+                      "containers": [
+                        {
+                          "name": "envoy",
+                          "volumeMounts": [
+                            {
+                              "mountPath": "/var/run/podplane-sds",
+                              "name": "podplane-sds",
+                              "readOnly": true
+                            }
+                          ]
+                        },
+                        {
+                          "args": [
+                            "sds",
+                            "--socket=/var/run/podplane-sds/sds.sock",
+                            "--certificates-dir=/var/run/podplane/serving",
+                            "--workload-certificate=serving=platform-agent-router-gateway.platform-agent-router.svc.cluster.local"
+                          ],
+                          "image": "default-registry.local/mirror/ghcr.io/podplane/operator:v0.16.0",
+                          "imagePullPolicy": "IfNotPresent",
+                          "name": "podplane-sds",
+                          "securityContext": {
+                            "allowPrivilegeEscalation": false,
+                            "capabilities": {
+                              "drop": [
+                                "ALL"
+                              ]
+                            },
+                            "readOnlyRootFilesystem": true,
+                            "runAsGroup": 65532,
+                            "runAsNonRoot": true,
+                            "runAsUser": 65532,
+                            "seccompProfile": {
+                              "type": "RuntimeDefault"
+                            }
+                          },
+                          "volumeMounts": [
+                            {
+                              "mountPath": "/var/run/podplane-sds",
+                              "name": "podplane-sds"
+                            },
+                            {
+                              "mountPath": "/var/run/podplane/serving",
+                              "name": "serving-certificate",
+                              "readOnly": true
+                            }
+                          ]
+                        }
+                      ],
                       "securityContext": {
                         "fsGroup": 65532,
                         "runAsNonRoot": true,
@@ -59,6 +115,30 @@
                               }
                             ]
                           }
+                        },
+                        {
+                          "emptyDir": {
+                            "medium": "Memory"
+                          },
+                          "name": "podplane-sds"
+                        },
+                        {
+                          "name": "serving-certificate",
+                          "projected": {
+                            "sources": [
+                              {
+                                "podCertificate": {
+                                  "credentialBundlePath": "serving",
+                                  "keyType": "ECDSAP256",
+                                  "signerName": "certificates.podplane.dev/workload",
+                                  "userAnnotations": {
+                                    "certificates.podplane.dev/mode": "service",
+                                    "certificates.podplane.dev/service": "platform-agent-router-gateway"
+                                  }
+                                }
+                              }
+                            ]
+                          }
                         }
                       ]
                     }
@@ -69,6 +149,7 @@
           },
           "envoyService": {
             "externalTrafficPolicy": "Local",
+            "name": "platform-agent-router-gateway",
             "type": "ClusterIP"
           }
         },

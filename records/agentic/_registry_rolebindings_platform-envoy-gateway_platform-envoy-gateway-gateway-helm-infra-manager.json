@@ -20,7 +20,7 @@
       },
       "name": "platform-envoy-gateway-gateway-helm-infra-manager",
       "namespace": "platform-envoy-gateway",
-      "uid": "7e246def-d9e7-4672-9f8d-9e63bcf8db96"
+      "uid": "e8411f9a-33db-4f67-8c32-b81c96b4f323"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

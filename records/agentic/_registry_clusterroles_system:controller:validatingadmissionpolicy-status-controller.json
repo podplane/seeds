@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:controller:validatingadmissionpolicy-status-controller",
-      "uid": "f0136fb9-3999-4bb8-aab4-795ea2d8f596"
+      "uid": "414fa4b5-8e89-4b27-b5a0-2186099a5194"
     },
     "rules": [
       {

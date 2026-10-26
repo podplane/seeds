@@ -9,7 +9,7 @@
         "kube-aggregator.kubernetes.io/automanaged": "onstart"
       },
       "name": "v1.",
-      "uid": "33da109d-2f4c-40c3-802c-5940f3ce4e79"
+      "uid": "2690af4c-4327-4c67-97fa-dcd16d63c19b"
     },
     "spec": {
       "groupPriorityMinimum": 18000,

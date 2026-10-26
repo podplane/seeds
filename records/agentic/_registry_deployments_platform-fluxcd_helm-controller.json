@@ -24,7 +24,7 @@
       },
       "name": "helm-controller",
       "namespace": "platform-fluxcd",
-      "uid": "899993a0-3a12-415e-97aa-6fb3d92d75b0"
+      "uid": "bc9c4a90-f09e-4192-a659-17d297b8a99e"
     },
     "spec": {
       "progressDeadlineSeconds": 600,

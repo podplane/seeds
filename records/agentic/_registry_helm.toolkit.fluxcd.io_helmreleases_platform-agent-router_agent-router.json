@@ -20,7 +20,7 @@
       },
       "name": "agent-router",
       "namespace": "platform-agent-router",
-      "uid": "c01c6ea8-46bb-449f-aa85-98c75eca9bd4"
+      "uid": "494d5643-49ff-4f86-882b-8153451a7d31"
     },
     "spec": {
       "chart": {
@@ -71,6 +71,11 @@
       "values": {
         "ai-gateway-helm": {
           "controller": {
+            "extraContainers": {
+              "controller-tls": {
+                "image": "default-registry.local/mirror/docker.io/envoyproxy/envoy:distroless-v1.39.1"
+              }
+            },
             "image": {
               "repository": "default-registry.local/mirror/docker.io/envoyproxy/ai-gateway-controller"
             }
@@ -86,6 +91,9 @@
             "images": {
               "envoyGateway": {
                 "image": "default-registry.local/mirror/docker.io/envoyproxy/gateway:v1.9.2"
+              },
+              "envoyProxy": {
+                "image": "default-registry.local/mirror/docker.io/envoyproxy/envoy:distroless-v1.39.1"
               }
             }
           }
@@ -94,7 +102,13 @@
           "agentRouter": {
             "envoyProxy": {
               "image": "default-registry.local/mirror/docker.io/envoyproxy/envoy:distroless-v1.39.1"
-            }
+            },
+            "sdsSidecar": {
+              "image": {
+                "repository": "default-registry.local/mirror/ghcr.io/podplane/operator"
+              }
+            },
+            "spiffeTrustDomain": "default.k8s.localhost"
           }
         }
       }

@@ -20,7 +20,7 @@
       },
       "name": "platform-agent-router-gateway-helm-infra-manager",
       "namespace": "platform-agent-router",
-      "uid": "8ab37c5a-a189-4b18-97cc-3c050dbd15e2"
+      "uid": "896618f1-11bf-4111-b7c9-748c63807d1b"
     },
     "rules": [
       {

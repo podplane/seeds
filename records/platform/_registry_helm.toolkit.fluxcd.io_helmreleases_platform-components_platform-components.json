@@ -12,7 +12,7 @@
       "generation": 1,
       "name": "platform-components",
       "namespace": "platform-components",
-      "uid": "8196feb8-6ce0-4521-943a-e195cd06e59b"
+      "uid": "664d7a4f-1163-4f81-9a6e-7e4daa92cf56"
     },
     "spec": {
       "chart": {
@@ -76,6 +76,17 @@
               "prefix": "mirror"
             },
             "values": {
+              "coredns": {
+                "platform": {
+                  "coredns": {
+                    "staticRecords": {
+                      "host.podplane.internal": [
+                        "10.0.2.2"
+                      ]
+                    }
+                  }
+                }
+              },
               "envoy-gateway": {
                 "platform": {
                   "envoyGateway": {
@@ -102,7 +113,7 @@
                         "oidc": {
                           "clientID": "default",
                           "groupsClaim": "groups",
-                          "issuerURL": "https://oidc.localhost:62686/oidc",
+                          "issuerURL": "https://oidc.localhost:52440/oidc",
                           "usernameClaim": "email"
                         },
                         "spiffe": {
@@ -140,7 +151,7 @@
                     "oidc": {
                       "audience": "default",
                       "groupsClaim": "groups",
-                      "issuer": "https://oidc.localhost:62686/oidc",
+                      "issuer": "https://oidc.localhost:52440/oidc",
                       "usernameClaim": "email"
                     },
                     "registryHostname": "default-registry.local",
@@ -148,7 +159,7 @@
                       "accessKeyID": "test",
                       "bucket": "registry",
                       "driver": "s3",
-                      "endpoint": "http://10.0.2.2:62685/s3/cache",
+                      "endpoint": "http://10.0.2.2:52439/s3/cache",
                       "forcePathStyle": true,
                       "region": "local",
                       "secretAccessKey": "test",

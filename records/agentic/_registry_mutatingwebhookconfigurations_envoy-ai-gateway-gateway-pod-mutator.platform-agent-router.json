@@ -17,7 +17,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-agent-router"
       },
       "name": "envoy-ai-gateway-gateway-pod-mutator.platform-agent-router",
-      "uid": "6905ca49-6634-47a5-9c5d-bf6866a6c767"
+      "uid": "17ed4c60-a21e-48ee-97b4-9e43564c246f"
     },
     "webhooks": [
       {

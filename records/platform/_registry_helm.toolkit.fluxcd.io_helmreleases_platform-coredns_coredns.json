@@ -20,7 +20,7 @@
       },
       "name": "coredns",
       "namespace": "platform-coredns",
-      "uid": "dd5f4d80-e3de-4ada-8a4b-22e21b606e42"
+      "uid": "21e59e7b-bd7c-4b08-a522-bcbe8f7e1456"
     },
     "spec": {
       "chart": {
@@ -60,6 +60,15 @@
         "coredns": {
           "image": {
             "repository": "default-registry.local/mirror/docker.io/coredns/coredns"
+          }
+        },
+        "platform": {
+          "coredns": {
+            "staticRecords": {
+              "host.podplane.internal": [
+                "10.0.2.2"
+              ]
+            }
           }
         }
       }

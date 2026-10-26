@@ -9,7 +9,7 @@
         "kube-aggregator.kubernetes.io/automanaged": "true"
       },
       "name": "v1beta1.agents.x-k8s.io",
-      "uid": "1aa83139-2712-402f-ba16-70e853e32d90"
+      "uid": "85f0bd6c-f0f6-483d-b91e-4b0197460401"
     },
     "spec": {
       "group": "agents.x-k8s.io",

@@ -14,12 +14,12 @@
         "app.kubernetes.io/instance": "platform-podplane-operator",
         "app.kubernetes.io/managed-by": "Helm",
         "app.kubernetes.io/name": "podplane-operator",
-        "helm.sh/chart": "podplane-operator-1.0.0_f81e05657ba7",
+        "helm.sh/chart": "podplane-operator-1.0.0_0bf1ef0d2e0f",
         "helm.toolkit.fluxcd.io/name": "podplane-operator",
         "helm.toolkit.fluxcd.io/namespace": "platform-podplane-operator"
       },
       "name": "platform-podplane-operator-auth-delegator",
-      "uid": "fa298369-ac87-4bfd-94a3-ee32acd78f7b"
+      "uid": "ff4284f9-b943-465f-9177-2d104d69b12d"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

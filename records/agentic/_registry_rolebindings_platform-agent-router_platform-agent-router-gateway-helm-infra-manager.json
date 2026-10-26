@@ -20,7 +20,7 @@
       },
       "name": "platform-agent-router-gateway-helm-infra-manager",
       "namespace": "platform-agent-router",
-      "uid": "a2318330-3d09-4e83-9f1b-5ebd1f338d47"
+      "uid": "a53be3c0-d94a-4036-b25b-0171e8736760"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

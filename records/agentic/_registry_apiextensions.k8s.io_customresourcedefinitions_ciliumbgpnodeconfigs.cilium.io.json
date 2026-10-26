@@ -17,7 +17,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "ciliumbgpnodeconfigs.cilium.io",
-      "uid": "29addca8-af80-4a7a-a818-428864e87b3c"
+      "uid": "9db8c3f4-43c9-47ee-977b-bf4cf0eee9c7"
     },
     "spec": {
       "additionalPrinterColumns": [

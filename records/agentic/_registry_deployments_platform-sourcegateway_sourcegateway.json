@@ -22,7 +22,7 @@
       },
       "name": "sourcegateway",
       "namespace": "platform-sourcegateway",
-      "uid": "caff8ac3-1ecb-4527-b832-42a550189e4c"
+      "uid": "ba91e41e-d8b9-49af-83b7-52668de3744a"
     },
     "spec": {
       "progressDeadlineSeconds": 600,

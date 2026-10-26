@@ -17,7 +17,7 @@
       },
       "name": "platform-http-to-https-redirect-httproute",
       "namespace": "platform-envoy-gateway",
-      "uid": "0af8d306-3fef-4d2a-a681-95093fd9821d"
+      "uid": "e9134302-c56a-401c-9869-77c7eea1ae29"
     },
     "spec": {
       "parentRefs": [

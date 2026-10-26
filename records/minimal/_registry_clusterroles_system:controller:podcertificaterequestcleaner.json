@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:controller:podcertificaterequestcleaner",
-      "uid": "9f8ede1b-19bb-4891-b5ac-da993a316e3e"
+      "uid": "276caac5-896b-45be-8742-5cff884ab644"
     },
     "rules": [
       {

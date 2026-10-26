@@ -17,7 +17,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-cluster"
       },
       "name": "gitrepositories.sourcegateway.dev",
-      "uid": "05834d41-9e47-461c-afc1-8e72795bd2af"
+      "uid": "3c90df88-1f91-48db-801e-ced757817d52"
     },
     "spec": {
       "additionalPrinterColumns": [

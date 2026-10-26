@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:monitoring",
-      "uid": "917ddf87-c578-4b47-9f9a-7572537a661b"
+      "uid": "7d6dee0b-7b40-48b8-bdac-d0e552d92f2c"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

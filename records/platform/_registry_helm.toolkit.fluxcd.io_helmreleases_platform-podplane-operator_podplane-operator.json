@@ -20,7 +20,7 @@
       },
       "name": "podplane-operator",
       "namespace": "platform-podplane-operator",
-      "uid": "ed2e4fc8-5768-444d-bd8c-373755f7beff"
+      "uid": "40ea3a46-298f-4799-b1bc-12c61b8d81c2"
     },
     "spec": {
       "chart": {
@@ -73,7 +73,7 @@
                 "oidc": {
                   "clientID": "default",
                   "groupsClaim": "groups",
-                  "issuerURL": "https://oidc.localhost:62686/oidc",
+                  "issuerURL": "https://oidc.localhost:52440/oidc",
                   "usernameClaim": "email"
                 },
                 "spiffe": {
@@ -89,6 +89,11 @@
                     "kind": "openbao",
                     "mountPath": "secret"
                   }
+                }
+              },
+              "workloadCertificates": {
+                "trustBundleSync": {
+                  "resources": []
                 }
               }
             },

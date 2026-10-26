@@ -20,12 +20,12 @@
       },
       "name": "agent-router",
       "namespace": "platform-agent-router",
-      "uid": "3de49f05-8657-418b-8174-c5cfdefc3c96"
+      "uid": "7254c451-1439-4b15-95ce-4733c1215d3f"
     },
     "spec": {
-      "clusterIP": "198.18.0.7",
+      "clusterIP": "198.18.0.6",
       "clusterIPs": [
-        "198.18.0.7"
+        "198.18.0.6"
       ],
       "internalTrafficPolicy": "Cluster",
       "ipFamilies": [
@@ -35,18 +35,18 @@
       "ipFamilyPolicy": "PreferDualStack",
       "ports": [
         {
-          "appProtocol": "http",
+          "appProtocol": "https",
           "name": "mutating-webhook",
           "port": 9443,
           "protocol": "TCP",
           "targetPort": 9443
         },
         {
-          "appProtocol": "grpc",
+          "appProtocol": "https",
           "name": "grpc",
           "port": 1063,
           "protocol": "TCP",
-          "targetPort": 1063
+          "targetPort": 1163
         },
         {
           "appProtocol": "http",
@@ -56,11 +56,11 @@
           "targetPort": 8080
         },
         {
-          "appProtocol": "grpc",
+          "appProtocol": "https",
           "name": "ratelimit-xds",
           "port": 18002,
           "protocol": "TCP",
-          "targetPort": 18002
+          "targetPort": 18003
         }
       ],
       "selector": {

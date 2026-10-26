@@ -3,7 +3,7 @@
   "value": {
     "apiVersion": "v1",
     "data": {
-      "config.json": "{\n  \"certificates\": {\n    \"ca_path\": \"/var/run/podplane/certificates/workload-ca-key\"\n  },\n  \"cluster\": {\n    \"id\": \"default\",\n    \"oidc\": {\n      \"client_id\": \"default\",\n      \"groups_claim\": \"groups\",\n      \"issuer_url\": \"https://oidc.localhost:62686/oidc\",\n      \"username_claim\": \"email\"\n    },\n    \"spiffe\": {\n      \"trust_domain\": \"default.k8s.localhost\"\n    }\n  },\n  \"rbac\": {\n    \"namespace_group_bindings\": true\n  },\n  \"secrets\": {\n    \"allow_sync_to_kubernetes_secrets\": false,\n    \"default_provider\": \"local-fakevault\",\n    \"key_rotation\": \"6h\",\n    \"providers\": {\n      \"local-fakevault\": {\n        \"address\": \"https://10.0.2.15:19443/vault/default\",\n        \"ca_cert\": \"-----BEGIN CERTIFICATE-----\\nMIIDDzCCAfegAwIBAgIRAO1g9euKF5CxZEsSYC40iK4wDQYJKoZIhvcNAQELBQAw\\nITEfMB0GA1UEAxMWcG9kcGxhbmUtbG9jYWwtb2lkYy1jYTAeFw0yNjA1MjIxMjE5\\nMzVaFw0zNjA1MjIxMzE5MzVaMCExHzAdBgNVBAMTFnBvZHBsYW5lLWxvY2FsLW9p\\nZGMtY2EwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC8bUNK6SJivnvX\\nuS2roOg0hB+p2tvb8nuvAcwN3FcLh+ewvFr4GCrYxU4LLkHopTU452rUc1DpQwEx\\nPeNco69LTY38pDopXHyKBI7KPZBJQQfmtP7a9lyDOcjoN8/syNgy7QeaJ8E+59t+\\n+xcnRd0+hlkoOkIqagtOc48Wp11C8VG4s4p6fBwANUemeocTADw3Jbm6uvXO1gGr\\nRX6M3QrFep/DlvUMiuUq7AFagXmNLDxvrb9UlrSkKiM5GvRgTP9swrbBlliW0NAN\\n+5VYIu8XXv2LOtpwRZkGBqfP66NR3hN4SaCsrdsFV1SCtfhN7MRDQdlOMaSR5w8e\\nU+PwboHrAgMBAAGjQjBAMA4GA1UdDwEB/wQEAwIBBjAPBgNVHRMBAf8EBTADAQH/\\nMB0GA1UdDgQWBBS8f9G6jYIA/jrVnqIHsQzEDEgITTANBgkqhkiG9w0BAQsFAAOC\\nAQEALSGJB7xOW1p8N3t3n2vaIdmbFNYW66E08kqnZcA7VOMbtlRrqhbKm12j43RV\\nsZo93L5H/pY7RCiUYKNvM0tTDc++JNcB5sxdiSuaKskcP7IaNnpXQYpM8EUbQFr7\\nIW4nQvZKwCH+2DmhjW/ew4GyWQz5FlarUsCwFtQAxTjyuD2jIFhHFGpBx+cJ+53h\\negyxnQf8wYOeYRsvsMQdHBglCGyXCQDl3VVjkhbY08rrQBLPQtK/L+vkH8lujOBq\\ntRfbYIelaVLrK5allWxplt6x1kCIjR6Ka0p6ktaRG+R2jGm1HrUM6ylBZjW7DG2v\\nOIk/ivfPOqtmfrMDr/o58TVQpQ==\\n-----END CERTIFICATE-----\\n\",\n        \"kind\": \"openbao\",\n        \"mount_path\": \"secret\"\n      }\n    }\n  }\n}"
+      "config.json": "{\"certificates\":{\"ca_path\":\"/var/run/podplane/certificates/workload-ca-key\",\"trust_bundle_sync\":{\"create_if_missing\":false,\"resources\":[]}},\"cluster\":{\"id\":\"default\",\"oidc\":{\"client_id\":\"default\",\"groups_claim\":\"groups\",\"issuer_url\":\"https://oidc.localhost:52440/oidc\",\"username_claim\":\"email\"},\"spiffe\":{\"trust_domain\":\"default.k8s.localhost\"}},\"rbac\":{\"namespace_group_bindings\":true},\"secrets\":{\"allow_sync_to_kubernetes_secrets\":false,\"default_provider\":\"local-fakevault\",\"key_rotation\":\"6h\",\"providers\":{\"local-fakevault\":{\"address\":\"https://10.0.2.15:19443/vault/default\",\"ca_cert\":\"-----BEGIN CERTIFICATE-----\\nMIIDDzCCAfegAwIBAgIRAO1g9euKF5CxZEsSYC40iK4wDQYJKoZIhvcNAQELBQAw\\nITEfMB0GA1UEAxMWcG9kcGxhbmUtbG9jYWwtb2lkYy1jYTAeFw0yNjA1MjIxMjE5\\nMzVaFw0zNjA1MjIxMzE5MzVaMCExHzAdBgNVBAMTFnBvZHBsYW5lLWxvY2FsLW9p\\nZGMtY2EwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC8bUNK6SJivnvX\\nuS2roOg0hB+p2tvb8nuvAcwN3FcLh+ewvFr4GCrYxU4LLkHopTU452rUc1DpQwEx\\nPeNco69LTY38pDopXHyKBI7KPZBJQQfmtP7a9lyDOcjoN8/syNgy7QeaJ8E+59t+\\n+xcnRd0+hlkoOkIqagtOc48Wp11C8VG4s4p6fBwANUemeocTADw3Jbm6uvXO1gGr\\nRX6M3QrFep/DlvUMiuUq7AFagXmNLDxvrb9UlrSkKiM5GvRgTP9swrbBlliW0NAN\\n+5VYIu8XXv2LOtpwRZkGBqfP66NR3hN4SaCsrdsFV1SCtfhN7MRDQdlOMaSR5w8e\\nU+PwboHrAgMBAAGjQjBAMA4GA1UdDwEB/wQEAwIBBjAPBgNVHRMBAf8EBTADAQH/\\nMB0GA1UdDgQWBBS8f9G6jYIA/jrVnqIHsQzEDEgITTANBgkqhkiG9w0BAQsFAAOC\\nAQEALSGJB7xOW1p8N3t3n2vaIdmbFNYW66E08kqnZcA7VOMbtlRrqhbKm12j43RV\\nsZo93L5H/pY7RCiUYKNvM0tTDc++JNcB5sxdiSuaKskcP7IaNnpXQYpM8EUbQFr7\\nIW4nQvZKwCH+2DmhjW/ew4GyWQz5FlarUsCwFtQAxTjyuD2jIFhHFGpBx+cJ+53h\\negyxnQf8wYOeYRsvsMQdHBglCGyXCQDl3VVjkhbY08rrQBLPQtK/L+vkH8lujOBq\\ntRfbYIelaVLrK5allWxplt6x1kCIjR6Ka0p6ktaRG+R2jGm1HrUM6ylBZjW7DG2v\\nOIk/ivfPOqtmfrMDr/o58TVQpQ==\\n-----END CERTIFICATE-----\\n\",\"kind\":\"openbao\",\"mount_path\":\"secret\"}}}}"
     },
     "kind": "ConfigMap",
     "metadata": {
@@ -17,13 +17,13 @@
         "app.kubernetes.io/instance": "platform-podplane-operator",
         "app.kubernetes.io/managed-by": "Helm",
         "app.kubernetes.io/name": "podplane-operator",
-        "helm.sh/chart": "podplane-operator-1.0.0_f81e05657ba7",
+        "helm.sh/chart": "podplane-operator-1.0.0_0bf1ef0d2e0f",
         "helm.toolkit.fluxcd.io/name": "podplane-operator",
         "helm.toolkit.fluxcd.io/namespace": "platform-podplane-operator"
       },
       "name": "platform-podplane-operator-config",
       "namespace": "platform-podplane-operator",
-      "uid": "2c52bf93-53a4-447c-81a0-53282f6adb74"
+      "uid": "1fb9352c-896c-4d95-9442-31a8c8680299"
     }
   }
 }

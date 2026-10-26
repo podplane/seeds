@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:controller:generic-garbage-collector",
-      "uid": "a7d16f6d-0936-4d5f-a122-36b955be5ccf"
+      "uid": "3a440ef3-a3e6-4b34-960f-938dd68775b4"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

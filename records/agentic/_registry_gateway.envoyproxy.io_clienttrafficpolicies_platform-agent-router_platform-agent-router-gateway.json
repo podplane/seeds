@@ -17,12 +17,20 @@
       },
       "name": "platform-agent-router-gateway",
       "namespace": "platform-agent-router",
-      "uid": "bfb4beec-ffe1-4d39-819c-bf54e53ce81f"
+      "uid": "aa302fdf-acbb-45e6-81ad-39f10ef5f15e"
     },
     "spec": {
       "connection": {
         "bufferLimit": "50Mi",
         "maxAcceptPerSocketEvent": 1
+      },
+      "headers": {
+        "xForwardedClientCert": {
+          "certDetailsToAdd": [
+            "URI"
+          ],
+          "mode": "SanitizeSet"
+        }
       },
       "targetRefs": [
         {
@@ -30,7 +38,19 @@
           "kind": "Gateway",
           "name": "platform-agent-router-gateway"
         }
-      ]
+      ],
+      "tls": {
+        "clientValidation": {
+          "caCertificateRefs": [
+            {
+              "group": "",
+              "kind": "ConfigMap",
+              "name": "workload-ca"
+            }
+          ],
+          "mode": "VerifyIfGiven"
+        }
+      }
     }
   }
 }

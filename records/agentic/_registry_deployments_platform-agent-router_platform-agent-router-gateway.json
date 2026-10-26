@@ -24,10 +24,10 @@
           "apiVersion": "gateway.networking.k8s.io/v1",
           "kind": "Gateway",
           "name": "platform-agent-router-gateway",
-          "uid": "a31e437c-f5ec-4acc-8678-1d691dcf7612"
+          "uid": "3736d49b-2735-400e-9c9a-2da6a66d76a1"
         }
       ],
-      "uid": "c6af87c1-3204-4093-a5f6-51e217afa699"
+      "uid": "d1051bb0-478e-420d-9a15-b2b8277c8ec7"
     },
     "spec": {
       "progressDeadlineSeconds": 600,
@@ -53,6 +53,9 @@
       "template": {
         "metadata": {
           "annotations": {
+            "dev.gvisor.spec.mount.podplane-sds.options": "rw,rprivate",
+            "dev.gvisor.spec.mount.podplane-sds.share": "pod",
+            "dev.gvisor.spec.mount.podplane-sds.type": "tmpfs",
             "prometheus.io/path": "/stats/prometheus",
             "prometheus.io/port": "19001",
             "prometheus.io/scrape": "true"
@@ -201,6 +204,11 @@
               "terminationMessagePolicy": "File",
               "volumeMounts": [
                 {
+                  "mountPath": "/var/run/podplane-sds",
+                  "name": "podplane-sds",
+                  "readOnly": true
+                },
+                {
                   "mountPath": "/certs",
                   "name": "certs",
                   "readOnly": true
@@ -212,6 +220,46 @@
                 {
                   "mountPath": "/var/run/secrets/token",
                   "name": "sa-token",
+                  "readOnly": true
+                }
+              ]
+            },
+            {
+              "args": [
+                "sds",
+                "--socket=/var/run/podplane-sds/sds.sock",
+                "--certificates-dir=/var/run/podplane/serving",
+                "--workload-certificate=serving=platform-agent-router-gateway.platform-agent-router.svc.cluster.local"
+              ],
+              "image": "default-registry.local/mirror/ghcr.io/podplane/operator:v0.16.0",
+              "imagePullPolicy": "IfNotPresent",
+              "name": "podplane-sds",
+              "resources": {},
+              "securityContext": {
+                "allowPrivilegeEscalation": false,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ]
+                },
+                "readOnlyRootFilesystem": true,
+                "runAsGroup": 65532,
+                "runAsNonRoot": true,
+                "runAsUser": 65532,
+                "seccompProfile": {
+                  "type": "RuntimeDefault"
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/run/podplane-sds",
+                  "name": "podplane-sds"
+                },
+                {
+                  "mountPath": "/var/run/podplane/serving",
+                  "name": "serving-certificate",
                   "readOnly": true
                 }
               ]
@@ -363,6 +411,31 @@
                     "clusterTrustBundle": {
                       "name": "certificates.podplane.dev:workload:roots",
                       "path": "ca.crt"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "emptyDir": {
+                "medium": "Memory"
+              },
+              "name": "podplane-sds"
+            },
+            {
+              "name": "serving-certificate",
+              "projected": {
+                "defaultMode": 420,
+                "sources": [
+                  {
+                    "podCertificate": {
+                      "credentialBundlePath": "serving",
+                      "keyType": "ECDSAP256",
+                      "signerName": "certificates.podplane.dev/workload",
+                      "userAnnotations": {
+                        "certificates.podplane.dev/mode": "service",
+                        "certificates.podplane.dev/service": "platform-agent-router-gateway"
+                      }
                     }
                   }
                 ]

@@ -3,7 +3,7 @@
   "value": {
     "apiVersion": "v1",
     "data": {
-      "envoy-gateway.yaml": "apiVersion: gateway.envoyproxy.io/v1alpha1\nkind: EnvoyGateway\nextensionApis:\n  enableBackend: true\nextensionManager:\n  hooks:\n    xdsTranslator:\n      post:\n      - Translation\n      - Cluster\n      - Route\n      translation:\n        cluster:\n          includeAll: true\n        listener:\n          includeAll: true\n        route:\n          includeAll: true\n        secret:\n          includeAll: true\n  service:\n    fqdn:\n      hostname: agent-router.platform-agent-router.svc.cluster.local\n      port: 1063\ngateway:\n  controllerName: gateway.envoyproxy.io/platform-agent-router\nlogging:\n  level:\n    default: info\nprovider:\n  kubernetes:\n    deploy:\n      type: GatewayNamespace\n    rateLimitDeployment:\n      container:\n        image: docker.io/envoyproxy/ratelimit:0482748e\n      patch:\n        type: StrategicMerge\n        value:\n          spec:\n            template:\n              spec:\n                containers:\n                - imagePullPolicy: IfNotPresent\n                  name: envoy-ratelimit\n    shutdownManager:\n      image: default-registry.local/mirror/docker.io/envoyproxy/gateway:v1.9.2\n  type: Kubernetes\nproxyTopologyInjector:\n  disabled: true"
+      "envoy-gateway.yaml": "apiVersion: gateway.envoyproxy.io/v1alpha1\nkind: EnvoyGateway\nenvoyProxy:\n  provider:\n    kubernetes:\n      envoyDeployment:\n        container:\n          image: default-registry.local/mirror/docker.io/envoyproxy/envoy:distroless-v1.39.1\n    type: Kubernetes\nextensionApis:\n  enableBackend: true\n  enableSDSSecretRef: true\nextensionManager:\n  hooks:\n    xdsTranslator:\n      post:\n      - Translation\n      - Cluster\n      - Route\n      translation:\n        cluster:\n          includeAll: true\n        listener:\n          includeAll: true\n        route:\n          includeAll: true\n        secret:\n          includeAll: true\n  service:\n    fqdn:\n      hostname: agent-router.platform-agent-router.svc.cluster.local\n      port: 1063\n    tls:\n      certificateRef:\n        kind: Secret\n        name: workload-ca\ngateway:\n  controllerName: gateway.envoyproxy.io/platform-agent-router\nlogging:\n  level:\n    default: info\nprovider:\n  kubernetes:\n    deploy:\n      type: GatewayNamespace\n    rateLimitDeployment:\n      container:\n        image: docker.io/envoyproxy/ratelimit:0482748e\n      patch:\n        type: StrategicMerge\n        value:\n          spec:\n            template:\n              spec:\n                containers:\n                - imagePullPolicy: IfNotPresent\n                  name: envoy-ratelimit\n    shutdownManager:\n      image: default-registry.local/mirror/docker.io/envoyproxy/gateway:v1.9.2\n  type: Kubernetes\nproxyTopologyInjector:\n  disabled: true"
     },
     "kind": "ConfigMap",
     "metadata": {
@@ -23,7 +23,7 @@
       },
       "name": "envoy-gateway-config",
       "namespace": "platform-agent-router",
-      "uid": "defee10a-c3e0-47c0-9100-33e702d8bc64"
+      "uid": "f9a1946b-2ae3-48b0-928c-39d3b24d3908"
     }
   }
 }

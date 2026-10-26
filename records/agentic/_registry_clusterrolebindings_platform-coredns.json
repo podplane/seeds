@@ -21,7 +21,7 @@
         "kubernetes.io/name": "CoreDNS"
       },
       "name": "platform-coredns",
-      "uid": "9f19e487-bac9-4da0-b76e-dbd159f8746f"
+      "uid": "22939d81-7c0e-47ff-855b-47c816dd7c39"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

@@ -1,0 +1,56 @@
+{
+  "key": "/registry/networkpolicies/platform-agent-router/platform-agent-router-proxy",
+  "value": {
+    "apiVersion": "networking.k8s.io/v1",
+    "kind": "NetworkPolicy",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-agent-router",
+        "meta.helm.sh/release-namespace": "platform-agent-router"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "agent-router",
+        "helm.toolkit.fluxcd.io/namespace": "platform-agent-router"
+      },
+      "name": "platform-agent-router-proxy",
+      "namespace": "platform-agent-router",
+      "uid": "d5eec556-202a-42aa-a201-9de8f92f2ab6"
+    },
+    "spec": {
+      "ingress": [
+        {
+          "ports": [
+            {
+              "port": 10443,
+              "protocol": "TCP"
+            },
+            {
+              "port": 1064,
+              "protocol": "TCP"
+            },
+            {
+              "port": 19001,
+              "protocol": "TCP"
+            },
+            {
+              "port": 19003,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ],
+      "podSelector": {
+        "matchLabels": {
+          "gateway.envoyproxy.io/owning-gateway-name": "platform-agent-router-gateway",
+          "gateway.envoyproxy.io/owning-gateway-namespace": "platform-agent-router"
+        }
+      },
+      "policyTypes": [
+        "Ingress"
+      ]
+    }
+  }
+}

@@ -19,7 +19,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-fluxcd"
       },
       "name": "cluster-reconciler",
-      "uid": "0b7d9753-8ea3-4c58-9e66-05c7d94bd65c"
+      "uid": "548dc3b2-1f0c-456a-870d-2228a3347300"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

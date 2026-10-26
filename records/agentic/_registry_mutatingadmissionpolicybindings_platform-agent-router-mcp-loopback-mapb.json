@@ -1,0 +1,25 @@
+{
+  "key": "/registry/mutatingadmissionpolicybindings/platform-agent-router-mcp-loopback-mapb",
+  "value": {
+    "apiVersion": "admissionregistration.k8s.io/v1",
+    "kind": "MutatingAdmissionPolicyBinding",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-agent-router",
+        "meta.helm.sh/release-namespace": "platform-agent-router"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "agent-router",
+        "helm.toolkit.fluxcd.io/namespace": "platform-agent-router"
+      },
+      "name": "platform-agent-router-mcp-loopback-mapb",
+      "uid": "3a7cff67-4437-49a1-b446-d40555e6f4e2"
+    },
+    "spec": {
+      "policyName": "platform-agent-router-mcp-loopback-map"
+    }
+  }
+}

@@ -15,7 +15,7 @@
         "helm.toolkit.fluxcd.io/namespace": "platform-agent-sandbox"
       },
       "name": "agent-sandbox-controller",
-      "uid": "cd495f16-5383-4753-9b7b-6c5cf12649f9"
+      "uid": "216d9a75-bd3a-4404-9aa8-5b1a5189327e"
     },
     "rules": [
       {

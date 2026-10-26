@@ -20,7 +20,7 @@
       },
       "name": "podplane-operator-crds",
       "namespace": "platform-cluster",
-      "uid": "d4c17203-2cb4-4f5c-a8a4-cfd862634193"
+      "uid": "e0da7109-0451-401d-8bc9-ba63ce61e82a"
     },
     "spec": {
       "chart": {

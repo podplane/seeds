@@ -17,7 +17,7 @@
       },
       "name": "platform-envoy-gateway",
       "namespace": "platform-envoy-gateway",
-      "uid": "1abd59d7-d8a1-4942-b2fc-42b27ce89848"
+      "uid": "b494b725-dbf3-4333-b069-2660a8d75e0f"
     },
     "spec": {
       "logging": {
@@ -71,7 +71,7 @@
                             "--socket=/var/run/podplane-sds/sds.sock",
                             "--node-certificate=default.localhost"
                           ],
-                          "image": "default-registry.local/mirror/ghcr.io/podplane/operator:v0.14.1",
+                          "image": "default-registry.local/mirror/ghcr.io/podplane/operator:v0.16.0",
                           "imagePullPolicy": "IfNotPresent",
                           "name": "podplane-sds",
                           "securityContext": {

@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:controller:pv-protection-controller",
-      "uid": "b41f08ef-274d-4a1b-ae0b-919919dc12d7"
+      "uid": "8b2bbe46-caff-4533-825f-02b815f27779"
     },
     "rules": [
       {

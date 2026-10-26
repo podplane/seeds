@@ -290,6 +290,7 @@
 /registry/clusterroles/view
 /registry/configmaps/kube-system/extension-apiserver-authentication
 /registry/configmaps/kube-system/kube-apiserver-legacy-service-account-token-tracking
+/registry/configmaps/platform-agent-router/agent-router-controller-tls
 /registry/configmaps/platform-agent-router/envoy-gateway-config
 /registry/configmaps/platform-agent-router/platform-agent-router-gateway
 /registry/configmaps/platform-cilium/cilium-config
@@ -362,9 +363,11 @@
 /registry/ipaddresses/198.19.255.254
 /registry/ipaddresses/fdc6::ffff
 /registry/mutatingadmissionpolicies/platform-agent-router-extproc-gvisor-map
+/registry/mutatingadmissionpolicies/platform-agent-router-mcp-loopback-map
 /registry/mutatingadmissionpolicies/platform-pod-security-defaults-map
 /registry/mutatingadmissionpolicies/platform-runtime-class-default-map
 /registry/mutatingadmissionpolicybindings/platform-agent-router-extproc-gvisor-mapb
+/registry/mutatingadmissionpolicybindings/platform-agent-router-mcp-loopback-mapb
 /registry/mutatingadmissionpolicybindings/platform-pod-security-defaults-mapb
 /registry/mutatingadmissionpolicybindings/platform-runtime-class-default-mapb
 /registry/mutatingwebhookconfigurations/envoy-ai-gateway-gateway-pod-mutator.platform-agent-router
@@ -386,6 +389,8 @@
 /registry/namespaces/platform-secrets-store-csi-provider-openbao
 /registry/namespaces/platform-sourcegateway
 /registry/namespaces/platform-zot-registry
+/registry/networkpolicies/platform-agent-router/platform-agent-router-controller
+/registry/networkpolicies/platform-agent-router/platform-agent-router-proxy
 /registry/networkpolicies/platform-sourcegateway/sourcegateway-ingress
 /registry/priorityclasses/system-cluster-critical
 /registry/priorityclasses/system-node-critical
@@ -408,6 +413,7 @@
 /registry/rolebindings/kube-system/system:controller:token-cleaner
 /registry/rolebindings/platform-agent-router/platform-agent-router-gateway-helm-infra-manager
 /registry/rolebindings/platform-agent-router/platform-agent-router-gateway-helm-leader-election-rolebinding
+/registry/rolebindings/platform-agent-router/platform-podplane-operator-trust-bundle-sync
 /registry/rolebindings/platform-cilium/cilium-config-agent
 /registry/rolebindings/platform-envoy-gateway/platform-envoy-gateway-gateway-helm-infra-manager
 /registry/rolebindings/platform-envoy-gateway/platform-envoy-gateway-gateway-helm-leader-election-rolebinding
@@ -421,6 +427,7 @@
 /registry/roles/kube-system/system:controller:token-cleaner
 /registry/roles/platform-agent-router/platform-agent-router-gateway-helm-infra-manager
 /registry/roles/platform-agent-router/platform-agent-router-gateway-helm-leader-election-role
+/registry/roles/platform-agent-router/platform-podplane-operator-trust-bundle-sync
 /registry/roles/platform-cilium/cilium-config-agent
 /registry/roles/platform-envoy-gateway/platform-envoy-gateway-gateway-helm-infra-manager
 /registry/roles/platform-envoy-gateway/platform-envoy-gateway-gateway-helm-leader-election-role
@@ -561,6 +568,7 @@
 /registry/source.toolkit.fluxcd.io/helmcharts/platform-components/platform-secrets-store-csi-provider-openbao-secrets-store-csi-provider-openbao
 /registry/source.toolkit.fluxcd.io/helmcharts/platform-components/platform-sourcegateway-sourcegateway
 /registry/source.toolkit.fluxcd.io/helmcharts/platform-components/platform-zot-registry-zot-registry
+/registry/validatingadmissionpolicies/platform-agent-router-routes-vap
 /registry/validatingadmissionpolicies/platform-deny-cilium-exec-vap
 /registry/validatingadmissionpolicies/platform-deny-editor-shell-vap
 /registry/validatingadmissionpolicies/platform-reserve-namespace-prefixes-vap
@@ -569,6 +577,7 @@
 /registry/validatingadmissionpolicies/platform-runtime-class-vap
 /registry/validatingadmissionpolicies/platform-spc-restriction-vap
 /registry/validatingadmissionpolicies/platform-spc-writer-vap
+/registry/validatingadmissionpolicybindings/platform-agent-router-routes-vapb
 /registry/validatingadmissionpolicybindings/platform-deny-cilium-exec-vapb
 /registry/validatingadmissionpolicybindings/platform-deny-editor-shell-vapb
 /registry/validatingadmissionpolicybindings/platform-reserve-namespace-prefixes-vapb

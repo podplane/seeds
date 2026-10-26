@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "cluster-admin",
-      "uid": "899f5961-d678-4b05-9d41-346985e1615d"
+      "uid": "512c12c8-d40e-4515-b413-0331ec5213cf"
     },
     "rules": [
       {

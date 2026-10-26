@@ -16,13 +16,13 @@
         "app.kubernetes.io/instance": "platform-podplane-operator",
         "app.kubernetes.io/managed-by": "Helm",
         "app.kubernetes.io/name": "podplane-operator",
-        "helm.sh/chart": "podplane-operator-1.0.0_f81e05657ba7",
+        "helm.sh/chart": "podplane-operator-1.0.0_0bf1ef0d2e0f",
         "helm.toolkit.fluxcd.io/name": "podplane-operator",
         "helm.toolkit.fluxcd.io/namespace": "platform-podplane-operator"
       },
       "name": "platform-podplane-operator",
       "namespace": "platform-podplane-operator",
-      "uid": "5132bdba-9836-4863-a450-faffde62fbad"
+      "uid": "a2365223-db0f-4105-9fc9-7894bea07a17"
     },
     "spec": {
       "progressDeadlineSeconds": 600,
@@ -60,7 +60,7 @@
                 "--aggregated-api-tls-private-key-file=/var/run/podplane/serving/aggregated-api/tls.key",
                 "--aggregated-api-service-name=platform-podplane-operator-aggregated-api"
               ],
-              "image": "default-registry.local/mirror/ghcr.io/podplane/operator:v0.14.1",
+              "image": "default-registry.local/mirror/ghcr.io/podplane/operator:v0.16.0",
               "imagePullPolicy": "IfNotPresent",
               "livenessProbe": {
                 "failureThreshold": 6,

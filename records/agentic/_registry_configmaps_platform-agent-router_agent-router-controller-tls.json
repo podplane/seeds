@@ -1,0 +1,26 @@
+{
+  "key": "/registry/configmaps/platform-agent-router/agent-router-controller-tls",
+  "value": {
+    "apiVersion": "v1",
+    "data": {
+      "envoy.yaml": "node: {id: agent-router-controller-tls, cluster: agent-router}\nstatic_resources:\n  listeners:\n    - name: extension\n      address:\n        socket_address: {address: \"::\", ipv4_compat: true, port_value: 1163}\n      filter_chains:\n        - transport_socket:\n            name: envoy.transport_sockets.tls\n            typed_config:\n              \"@type\": type.googleapis.com/envoy.extensions.transport_sockets.tls.v3.DownstreamTlsContext\n              common_tls_context:\n                alpn_protocols: [h2]\n                tls_params:\n                  tls_minimum_protocol_version: TLSv1_2\n                tls_certificate_sds_secret_configs:\n                  - name: serving\n                    sds_config:\n                      resource_api_version: V3\n                      path_config_source:\n                        path: /etc/podplane-tls/serving.yaml\n          filters:\n            - name: envoy.filters.network.tcp_proxy\n              typed_config:\n                \"@type\": type.googleapis.com/envoy.extensions.filters.network.tcp_proxy.v3.TcpProxy\n                stat_prefix: extension\n                cluster: extension\n                idle_timeout: 0s\n    - name: ratelimit-xds\n      address:\n        socket_address: {address: \"::\", ipv4_compat: true, port_value: 18003}\n      filter_chains:\n        - transport_socket:\n            name: envoy.transport_sockets.tls\n            typed_config:\n              \"@type\": type.googleapis.com/envoy.extensions.transport_sockets.tls.v3.DownstreamTlsContext\n              common_tls_context:\n                alpn_protocols: [h2]\n                tls_params:\n                  tls_minimum_protocol_version: TLSv1_2\n                tls_certificate_sds_secret_configs:\n                  - name: serving\n                    sds_config:\n                      resource_api_version: V3\n                      path_config_source:\n                        path: /etc/podplane-tls/serving.yaml\n          filters:\n            - name: envoy.filters.network.tcp_proxy\n              typed_config:\n                \"@type\": type.googleapis.com/envoy.extensions.filters.network.tcp_proxy.v3.TcpProxy\n                stat_prefix: ratelimit-xds\n                cluster: ratelimit-xds\n                idle_timeout: 0s\n  clusters:\n    - name: extension\n      type: STATIC\n      connect_timeout: 5s\n      load_assignment:\n        cluster_name: extension\n        endpoints:\n          - lb_endpoints:\n              - endpoint:\n                  address:\n                    socket_address: {address: 127.0.0.1, port_value: 1063}\n    - name: ratelimit-xds\n      type: STATIC\n      connect_timeout: 5s\n      load_assignment:\n        cluster_name: ratelimit-xds\n        endpoints:\n          - lb_endpoints:\n              - endpoint:\n                  address:\n                    socket_address: {address: 127.0.0.1, port_value: 18002}\n",
+      "serving.yaml": "resources:\n  - \"@type\": type.googleapis.com/envoy.extensions.transport_sockets.tls.v3.Secret\n    name: serving\n    tls_certificate:\n      certificate_chain: {filename: /certs/tls.crt}\n      private_key: {filename: /certs/tls.key}\n      watched_directory: {path: /certs}"
+    },
+    "kind": "ConfigMap",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-agent-router",
+        "meta.helm.sh/release-namespace": "platform-agent-router"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "agent-router",
+        "helm.toolkit.fluxcd.io/namespace": "platform-agent-router"
+      },
+      "name": "agent-router-controller-tls",
+      "namespace": "platform-agent-router",
+      "uid": "1d3b860e-ea36-4672-bdbe-154a07d99526"
+    }
+  }
+}

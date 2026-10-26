@@ -9,7 +9,7 @@
         "kube-aggregator.kubernetes.io/automanaged": "onstart"
       },
       "name": "v1.autoscaling",
-      "uid": "cfa20b4c-bf5b-4bf5-9031-e0030a24ac49"
+      "uid": "6939706a-72c4-4e41-944c-8bc988e43aba"
     },
     "spec": {
       "group": "autoscaling",

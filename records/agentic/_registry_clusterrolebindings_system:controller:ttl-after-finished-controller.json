@@ -12,7 +12,7 @@
         "kubernetes.io/bootstrapping": "rbac-defaults"
       },
       "name": "system:controller:ttl-after-finished-controller",
-      "uid": "7e8749a9-d592-44b4-ad79-cca426b10930"
+      "uid": "04a78c00-bcbb-431c-80db-d962cd453a99"
     },
     "roleRef": {
       "apiGroup": "rbac.authorization.k8s.io",

@@ -387,7 +387,6 @@
 /registry/secrets/platform-coredns/sh.helm.release.v1.platform-coredns.v2
 /registry/secrets/platform-fluxcd/sh.helm.release.v1.platform-fluxcd.v1
 /registry/secrets/platform-fluxcd/sh.helm.release.v1.platform-fluxcd.v2
-/registry/secrets/platform-podplane-operator/sh.helm.release.v1.platform-podplane-operator.v1
 /registry/secrets/platform-secrets-store-csi-driver/sh.helm.release.v1.platform-secrets-store-csi-driver.v1
 /registry/secrets/platform-secrets-store-csi-provider-openbao/sh.helm.release.v1.platform-secrets-store-csi-provider-openbao.v1
 /registry/secrets/platform-zot-registry/sh.helm.release.v1.platform-zot-registry.v1

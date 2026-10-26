@@ -91,7 +91,9 @@
 /registry/csidrivers/local.csi.openebs.io
 /registry/csidrivers/secrets-store.csi.k8s.io
 /registry/mutatingadmissionpolicies/platform-agent-router-extproc-gvisor-map
+/registry/mutatingadmissionpolicies/platform-agent-router-mcp-loopback-map
 /registry/mutatingadmissionpolicybindings/platform-agent-router-extproc-gvisor-mapb
+/registry/mutatingadmissionpolicybindings/platform-agent-router-mcp-loopback-mapb
 /registry/mutatingwebhookconfigurations/envoy-ai-gateway-gateway-pod-mutator.platform-agent-router
 /registry/mutatingwebhookconfigurations/envoy-gateway-topology-injector.platform-envoy-gateway
 /registry/priorityclasses/platform-csi-openebs-lvm-lvm-localpv-csi-controller-critical
@@ -99,5 +101,7 @@
 /registry/rolebindings/kube-system/platform-podplane-operator-extension-apiserver-authentication-reader
 /registry/secrets/platform-components/sh.helm.release.v1.platform-components.v1
 /registry/storageclasses/platform-openebs-lvm-default
+/registry/validatingadmissionpolicies/platform-agent-router-routes-vap
 /registry/validatingadmissionpolicies/platform-deny-editor-shell-vap
+/registry/validatingadmissionpolicybindings/platform-agent-router-routes-vapb
 /registry/validatingadmissionpolicybindings/platform-deny-editor-shell-vapb

@@ -1,0 +1,56 @@
+{
+  "key": "/registry/networkpolicies/platform-agent-router/platform-agent-router-controller",
+  "value": {
+    "apiVersion": "networking.k8s.io/v1",
+    "kind": "NetworkPolicy",
+    "metadata": {
+      "annotations": {
+        "meta.helm.sh/release-name": "platform-agent-router",
+        "meta.helm.sh/release-namespace": "platform-agent-router"
+      },
+      "creationTimestamp": "2015-07-11T04:02:31Z",
+      "generation": 1,
+      "labels": {
+        "app.kubernetes.io/managed-by": "Helm",
+        "helm.toolkit.fluxcd.io/name": "agent-router",
+        "helm.toolkit.fluxcd.io/namespace": "platform-agent-router"
+      },
+      "name": "platform-agent-router-controller",
+      "namespace": "platform-agent-router",
+      "uid": "152c5b50-0f95-42cf-b317-c51a9b3907af"
+    },
+    "spec": {
+      "ingress": [
+        {
+          "ports": [
+            {
+              "port": 1163,
+              "protocol": "TCP"
+            },
+            {
+              "port": 18003,
+              "protocol": "TCP"
+            },
+            {
+              "port": 9443,
+              "protocol": "TCP"
+            },
+            {
+              "port": 8080,
+              "protocol": "TCP"
+            }
+          ]
+        }
+      ],
+      "podSelector": {
+        "matchLabels": {
+          "app.kubernetes.io/instance": "platform-agent-router",
+          "app.kubernetes.io/name": "ai-gateway-helm"
+        }
+      },
+      "policyTypes": [
+        "Ingress"
+      ]
+    }
+  }
+}

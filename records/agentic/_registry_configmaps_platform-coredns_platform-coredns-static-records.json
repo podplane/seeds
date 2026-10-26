@@ -3,7 +3,7 @@
   "value": {
     "apiVersion": "v1",
     "data": {
-      "hosts": ""
+      "hosts": "10.0.2.2 host.podplane.internal"
     },
     "kind": "ConfigMap",
     "metadata": {
@@ -19,7 +19,7 @@
       },
       "name": "platform-coredns-static-records",
       "namespace": "platform-coredns",
-      "uid": "0cd67046-f205-4b0f-8485-c5763110766f"
+      "uid": "dce0dd38-5ba0-45d8-85bb-090a108265e2"
     }
   }
 }
